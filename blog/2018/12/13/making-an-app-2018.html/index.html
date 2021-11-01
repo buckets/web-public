@@ -1,0 +1,529 @@
+<!doctype html><html>
+<head>
+<title>
+Making a Cross-Platform App in 2018
+</title>
+<link rel="shortcut icon" href=/img/favicon.png type=image/png>
+<link rel=stylesheet type=text/css href=/css/buckets.css>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=stylesheet type=text/css href=/css/buckets-blog.css>
+<link rel=alternate hreflang=es href=https://www.budgetwithbuckets.com/es/blog/2018/12/13/making-an-app-2018.html/>
+</head>
+<body>
+<div class=buckets-nav>
+<section>
+<a class=logo href=/>
+<img src=/img/logo.png>
+</a>
+<a href=/guide/>Guide</a>
+<a class=active href=/blog/>Blog</a>
+<a target=_blank href=https://github.com/buckets/application/blob/master/CHANGELOG.md>Changelog</a>
+<a target=_blank href=https://github.com/buckets/application/issues>Issue Tracker</a>
+</section>
+<section>
+<a class=download-button href=/download/>
+<img src=/images/download.svg width=15 height=15>
+Download
+</a>
+<a class=buy-button href=/buy/>Buy $49</a>
+</section>
+</div>
+<div class=wrapper>
+<div class=post>
+<header class=post-header>
+<div class=next-prev-links>
+<a class=prev href=/blog/2018/12/04/survey2018results.html/>&larr; Prev</a>
+<a class=next href=/blog/2019/01/19/priceup.html/>Next &rarr;</a>
+</div>
+<div class="post-tag tech">
+<div class=tag-name>Tech post</div>
+<div class=tag-description>This post is about the development of Buckets rather than budgeting.</div>
+</div>
+<h1 class=blog-title>Making a Cross-Platform App in 2018</h1>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<p class=post-meta>
+Dec 13, 2018
+• Matt
+</p>
+</header>
+<article class=post-content>
+<p>What does it take to make a cross platform (macOS, Linux, Windows, Android and iOS) application in 2018? Insanity, mostly. It&rsquo;s a little bit nuts.</p>
+<img alt=Nuts src=./nuts.jpg style=border-radius:6px>
+<p>Read on for what I found while researching options for the upcoming <a href=https://www.budgetwithbuckets.com>Buckets</a> mobile apps. Keep in mind that I have specific requirements that might not be <em>your</em> requirements.</p>
+<h2 id=tldr>tl;dr<a class=anchor-link href=#tldr>&para;</a></h2>
+<p>My desktop app is currently in JavaScript. If I have to move away from JavaScript, I&rsquo;d rather move up the portability continuum, not down. C is one of the most portable languages there is. But JavaScript is a safe bet—it isn&rsquo;t going anywhere. So I&rsquo;m going to try a combination of C (via Nim) and JavaScript.</p>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<p>Here are the top contenders ordered by my preference (though there are <a href="https://docs.google.com/spreadsheets/d/1dTZIp6z2J1IL7YgBlHG_x68x0_zfecU0MTsjTXn1E3A/edit?usp=sharing">many, many more</a>).</p>
+<table>
+<thead>
+<tr>
+<th>Framework</th>
+<th style=text-align:center>Desktop</th>
+<th style=text-align:center>Mobile</th>
+<th>Language</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wiish</td>
+<td style=text-align:center>⭐</td>
+<td style=text-align:center>⭐</td>
+<td>Nim + JS</td>
+<td>I might spend more time working on Wiish than on Buckets if I go this route. But it&rsquo;s fast and has great potential. If it doesn&rsquo;t work out, I&rsquo;ll also still have a portable C library.</td>
+</tr>
+<tr>
+<td>ReactNative</td>
+<td style=text-align:center>-</td>
+<td style=text-align:center>⭐</td>
+<td>JS</td>
+<td>I spent too much time digging into native Android/iOS (getting the right version of SQLite). I feel like the promise of <em>easy</em> will never actually be easy with this. If I have to spend a lot of time digging down into the native layer, I might as well just do a native app. I&rsquo;m also doubtful about FB continuing to support it.</td>
+</tr>
+<tr>
+<td>Electron</td>
+<td style=text-align:center>⭐</td>
+<td style=text-align:center>-</td>
+<td>JS</td>
+<td>For desktop, this works fine.</td>
+</tr>
+<tr>
+<td>JUCE</td>
+<td style=text-align:center>⭐</td>
+<td style=text-align:center>⭐</td>
+<td>C++</td>
+<td>If Wiish doesn&rsquo;t work out, this is another favorite option, though the watermark in the free version is annoying. The lack of accessibility is also a problem.</td>
+</tr>
+<tr>
+<td>Flutter</td>
+<td style=text-align:center>-</td>
+<td style=text-align:center>⭐</td>
+<td>Dart</td>
+<td>I have high hopes for Flutter. Once it supports <a href=https://github.com/dart-lang/sdk/issues/34452>C libs through FFI</a>, I&rsquo;ll consider it.</td>
+</tr>
+<tr>
+<td>OpenFL</td>
+<td style=text-align:center>⭐</td>
+<td style=text-align:center>⭐</td>
+<td>Haxe</td>
+<td>This is <em>great</em> for games, but not so much for text-heavy productivity apps.</td>
+</tr>
+<tr>
+<td>webview</td>
+<td style=text-align:center>⭐</td>
+<td style=text-align:center>-</td>
+<td>C</td>
+<td>This could one day be a great alternative to Electron. It&rsquo;s just missing some of the auxiliary features that make Electron shine.</td>
+</tr>
+<tr>
+<td>Android native</td>
+<td style=text-align:center>-</td>
+<td style=text-align:center>Android only</td>
+<td>Java</td>
+<td>Maximum flexibility on the platform. But Java&mldr;</td>
+</tr>
+<tr>
+<td>iOS native</td>
+<td style=text-align:center>-</td>
+<td style=text-align:center>iOS only</td>
+<td>Swift/ObjC</td>
+<td>Maximum flexibility on the platform. Good C integration. Might not be a bad idea.</td>
+</tr>
+<tr>
+<td>QT</td>
+<td style=text-align:center>⭐</td>
+<td style=text-align:center>⭐</td>
+<td>C, QML</td>
+<td>Licensing is too onerous for a single dev. Not even a real option.</td>
+</tr>
+</tbody>
+</table>
+<p>And here&rsquo;s some subjective scoring:</p>
+<ul>
+<li><em>Accessibility</em> - For those with disabilities</li>
+<li><em>Sunk Cost</em> - If I choose this option, how much will I regret it if the project is abandoned or I otherwise want to use something else? Will I have to start over or will I get to use/port parts of what I&rsquo;ve done?</li>
+<li><em>C Interop</em> - How well does it integrate with C libraries (e.g. SQLite).</li>
+<li><em>JS Code Reuse</em> - How much of my existing JS code do I get to reuse?</li>
+<li><em>Shared Code</em> - How much of the code gets shared between platforms?</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Framework</th>
+<th style=text-align:center>Accessibility</th>
+<th style=text-align:center>Sunk Cost</th>
+<th style=text-align:center>C Interop</th>
+<th style=text-align:center>JS Code Reuse</th>
+<th style=text-align:center>Shared Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wiish</td>
+<td style=text-align:center>⭐</td>
+<td style=text-align:center>⭐</td>
+<td style=text-align:center>⭐</td>
+<td style=text-align:center>⭐</td>
+<td style=text-align:center>⭐</td>
+</tr>
+<tr>
+<td>ReactNative</td>
+<td style=text-align:center><a href=https://facebook.github.io/react-native/docs/accessibility.html>⭐</a></td>
+<td style=text-align:center>⭐</td>
+<td style=text-align:center>meh</td>
+<td style=text-align:center>⭐</td>
+<td style=text-align:center>⭐</td>
+</tr>
+<tr>
+<td>Electron</td>
+<td style=text-align:center>⭐</td>
+<td style=text-align:center>⭐</td>
+<td style=text-align:center>meh</td>
+<td style=text-align:center>⭐</td>
+<td style=text-align:center>⭐</td>
+</tr>
+<tr>
+<td>JUCE</td>
+<td style=text-align:center>❌</td>
+<td style=text-align:center>meh</td>
+<td style=text-align:center>⭐</td>
+<td style=text-align:center>❌</td>
+<td style=text-align:center>⭐</td>
+</tr>
+<tr>
+<td>Flutter</td>
+<td style=text-align:center><a href=https://flutter.io/docs/development/accessibility-and-localization/accessibility>⭐</a></td>
+<td style=text-align:center>❌</td>
+<td style=text-align:center>❓</td>
+<td style=text-align:center>❌</td>
+<td style=text-align:center>⭐</td>
+</tr>
+<tr>
+<td>OpenFL</td>
+<td style=text-align:center><a href=https://api.haxe.org/flash/accessibility/AccessibilityProperties.html>❓</a></td>
+<td style=text-align:center>meh</td>
+<td style=text-align:center>⭐</td>
+<td style=text-align:center>❌</td>
+<td style=text-align:center>⭐</td>
+</tr>
+<tr>
+<td>webview</td>
+<td style=text-align:center>⭐</td>
+<td style=text-align:center>⭐</td>
+<td style=text-align:center>⭐</td>
+<td style=text-align:center>⭐</td>
+<td style=text-align:center>⭐</td>
+</tr>
+<tr>
+<td>Android native</td>
+<td style=text-align:center>⭐</td>
+<td style=text-align:center>meh</td>
+<td style=text-align:center>meh</td>
+<td style=text-align:center>❌</td>
+<td style=text-align:center>❌</td>
+</tr>
+<tr>
+<td>iOS native</td>
+<td style=text-align:center>⭐</td>
+<td style=text-align:center>meh</td>
+<td style=text-align:center>⭐</td>
+<td style=text-align:center>❌</td>
+<td style=text-align:center>❌</td>
+</tr>
+</tbody>
+</table>
+<h2 id=detailed-blabbering>Detailed Blabbering<a class=anchor-link href=#detailed-blabbering>&para;</a></h2>
+<h3 id=wiish>Wiish<a class=anchor-link href=#wiish>&para;</a></h3>
+<p><a href=https://github.com/iffy/wiish>Wiish</a> is a Nim library that can make desktop or mobile apps. The UI layer is swappable, so you can use webviews (and JavaScript) or SDL2/OpenGL if that&rsquo;s more your thing.</p>
+<p>Pros:</p>
+<ul>
+<li>Can be speedy</li>
+<li>Very lightweight</li>
+<li>JavaScript reuse</li>
+<li>Generates C</li>
+<li>Nim is pleasant to use</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Maintained by me :)</li>
+<li>Nim is pre v1</li>
+<li>A bit buggy at this point</li>
+</ul>
+<h3 id=reactnative>ReactNative<a class=anchor-link href=#reactnative>&para;</a></h3>
+<p><a href=https://facebook.github.io/react-native/>ReactNative</a> lets you use JavaScript to build native interfaces. It provides access to native APIs.</p>
+<p>Pros:</p>
+<ul>
+<li>Speedy</li>
+<li>Native widgets</li>
+<li>JavaScript code reuse</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Integrating with C libs is non-trivial</li>
+<li>Bug fixes not super speedy</li>
+<li>I don&rsquo;t trust Facebook&rsquo;s longevity</li>
+</ul>
+<h3 id=electron>Electron<a class=anchor-link href=#electron>&para;</a></h3>
+<p><a href=https://electronjs.org/>Electron</a> has been a game-changer for desktop app development. You can write your application in JavaScript (including the never-ending JavaScript ecosystem):</p>
+<p>Pros:</p>
+<ul>
+<li>Easy to get started quickly</li>
+<li>Built-in automatic updates</li>
+<li>Heavy code reuse (JavaScript, in this case)</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Massive application file size</li>
+<li>Heavy memory consumption</li>
+<li>Lackluster speed in some cases</li>
+</ul>
+<h3 id=juce>JUCE<a class=anchor-link href=#juce>&para;</a></h3>
+<p><a href=https://juce.com/>JUCE</a> includes a full IDE for making applications in C/C++. It has primarily been used for audio applications and is optimized for that case, but could be used for other types of application.</p>
+<p>Pros:</p>
+<ul>
+<li>Great UI builder</li>
+<li>Very cross platform</li>
+<li>Speedy</li>
+<li>Some hot-reload capabilities for UI development</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>No accessibility</li>
+<li>You write in C++</li>
+<li>Licensing/cost</li>
+</ul>
+<h3 id=flutter>Flutter<a class=anchor-link href=#flutter>&para;</a></h3>
+<p><a href=https://flutter.io/>Flutter</a> is a Google project that has its own versions of native widgets. You use the Dart language.</p>
+<p>Pros:</p>
+<ul>
+<li>Speedy</li>
+<li>Looks pleasant to use</li>
+<li>Hot code reload</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Dart language. If I choose Dart, it won&rsquo;t be easy to move to something else later.</li>
+<li>Google projects have short lives</li>
+<li>Lacks good C interop (but it&rsquo;s coming!)</li>
+</ul>
+<h3 id=openfl>OpenFL<a class=anchor-link href=#openfl>&para;</a></h3>
+<p><a href=https://www.openfl.org/>OpenFL</a> is an open implementation of Flash and lets you write apps using the Haxe language (which compiles to C).</p>
+<p>Pros:</p>
+<ul>
+<li>Very cross platform</li>
+<li>Haxe is a fun language</li>
+<li>Good C interoperability</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Not great for text-heavy applications</li>
+<li>Some quirks involved in Flash API</li>
+</ul>
+<h3 id=webview>webview<a class=anchor-link href=#webview>&para;</a></h3>
+<p><a href=https://github.com/zserge/webview>webview</a> is a C library that provides you a window with a browser in it. There are various language bindings if you don&rsquo;t want to write C.</p>
+<p>Pros:</p>
+<ul>
+<li>Very lightweight</li>
+<li>JavaScript reuse</li>
+<li>Speedy</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Browser differences</li>
+<li>Not feature complete yet</li>
+</ul>
+<h3 id=android-native>Android native<a class=anchor-link href=#android-native>&para;</a></h3>
+<p>Pros:</p>
+<ul>
+<li>Full, unlayered access to APIs</li>
+<li>Good UI builder</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Java</li>
+<li>Little to no code reuse for iOS app</li>
+</ul>
+<h3 id=ios-native>iOS native<a class=anchor-link href=#ios-native>&para;</a></h3>
+<p>Pros:</p>
+<ul>
+<li>Full, unlayered access to APIs</li>
+<li>C interoperability is nice</li>
+<li>Great UI builder</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Little to no code reuse for Android app</li>
+</ul>
+<h2 id=conclusion>Conclusion<a class=anchor-link href=#conclusion>&para;</a></h2>
+<p>And here&rsquo;s a little tease to end with :)</p>
+<div style="display:flex;align-items:flex-start;justify-content:space-around;margin:2rem 0">
+<div>
+<img height=437 alt="iPhone showing Buckets launching" src=./iphone.gif style=border-radius:4px>
+</div>
+<div>
+<img height=437 alt="Android with Buckets icon" src=./android.png>
+</div>
+</div>
+<p>Comment below if you have had good success with other options for mobile/desktop app development.</p>
+<p>Happy budgeting!</p>
+<p>— Matt</p>
+</article>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<div class="next-prev-links close" style=margin-top:1rem>
+<a class=prev href=/blog/2018/12/04/survey2018results.html/>&larr; Prev</a>
+<a class=next href=/blog/2019/01/19/priceup.html/>Next &rarr;</a>
+</div>
+<h2 style=margin-top:2rem>Comments</h2>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/58d13dd43e911c3a0e72f15d87a571b0?s=64">
+<div>
+<div class=details>
+<div class=author>Kenny D</div>
+<div class=date>Sun Dec 16, 2018 5:38</div>
+</div>
+<div class=message>I've done some Cordova aka PhoneGap for a project. If you can do it in 100% JS it works pretty great. As soon as you start linking up with native libraries that are even a tiny bit different across iOS and Android, you end up having to build wrappers around the libraries on both platforms and lose the "one codebase for two platforms" advantage. I'd look into it for Buckets since I'm pretty sure sqlite will be cross-platform friendly.</div>
+</div>
+</div>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/58d13dd43e911c3a0e72f15d87a571b0?s=64">
+<div>
+<div class=details>
+<div class=author>Kenny D</div>
+<div class=date>Fri Dec 21, 2018 3:40</div>
+</div>
+<div class=message>Just realized that while you show a teaser demo of the mobile app, you never did say which tech that version is built with. It looks very fast and slick. Well done!</div>
+</div>
+</div>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/3a760317157c33e6b977df8e35ae857d?s=64">
+<div>
+<div class=details>
+<div class=author>Matt</div>
+<div class=date>Fri Dec 21, 2018 5:10</div>
+</div>
+<div class=message>Kenny, the teaser is made with Wiish :)
+And thanks for the reminder about PhoneGap/Cordova. The native libs are really the sticking point for a lot of these options. I wish Android didn't use Java :)</div>
+</div>
+</div>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/?s=64">
+<div>
+<div class=details>
+<div class=author>bytespiller</div>
+<div class=date>Mon Dec 24, 2018 9:17</div>
+</div>
+<div class=message>Wiish makes sense; you have full knowledge & control over it and can easily extend it with needed features, so there'll be no compromises in the Buckets due to a framework. Sure, Wiish will probably "steal" development time from Buckets, but ultimately the benefits of that work will spill into Buckets making it better and more customizable.</div>
+</div>
+</div>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/a1705cc1e2d22e396cf0943493453c75?s=64">
+<div>
+<div class=details>
+<div class=author>Limezy</div>
+<div class=date>Fri Dec 28, 2018 3:14</div>
+</div>
+<div class=message>Thanks for this post, interesting to see how the root foundations and your actuall decisions will be important for the future of Buckets !
+I'm not an expert yet i would tend to agree with bytespiller.
+Is Wiish used for other projects than Buckets ?</div>
+</div>
+</div>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/f2e58853b07f3408135aec74d541eaf2?s=64">
+<div>
+<div class=details>
+<div class=author>Walter</div>
+<div class=date>Sat Dec 29, 2018 10:04</div>
+</div>
+<div class=message>Out of curiosity, did you consider proprietary options at all, Delphi specifically? (I'm guessing the lack of JS reuse would be a show stopper, as possibly the commercial nature of the toolstack, or other concerns such as concerns over maturity and/or support...)</div>
+</div>
+</div>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/?s=64">
+<div>
+<div class=details>
+<div class=author>TRK</div>
+<div class=date>Mon Jun 10, 2019 12:49</div>
+</div>
+<div class=message>Hi
+Thanks for the post
+Have you considered using Kotlin Multiplatform ?
+Kotlin is the officially supported language for Android development.
+Kotlin Multiplatform is a way of sharing Kotlin code among different platforms JVM / Android / JS / iOS / Native
+</div>
+</div>
+</div>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/?s=64">
+<div>
+<div class=details>
+<div class=author>adrian</div>
+<div class=date>Wed Oct 16, 2019 8:32</div>
+</div>
+<div class=message>In my experience the best way currently is to go with cordova and do the javascript part with a decent language and framework - options are Haxe/coconut or nim/karax - a nice JavaScript framework for native look and feel is Framework7.
+HaxeUI is another option for desktop and Android, but no iOS (only via OpenFL).</div>
+</div>
+</div>
+<div id=comment-form style=display:none>
+<a name=comment-form></a>
+<script>window.location.search.substr(1).indexOf('comment=submitted')!==-1&&document.write(`<div class="notification">Comment submitted!  Your comment will be posted here after being reviewed.</div>`)</script>
+<script>function setCommentStatus(b,c){const a=document.getElementById('comment-notification');a.innerText=b,a.setAttribute('class',c),a.setAttribute('style','')}function submitComment(c){const b=document.getElementById('comment-submit');b.disabled=!0,setCommentStatus('Submitting...','notification'),c.preventDefault();const d=document.getElementById('comment-message').value,e=document.getElementById('comment-email').value,f=document.getElementById('comment-name').value,g=document.getElementById('comment-slug').value,h={comment:d,email:e,name:f,subdir:g};let a=new XMLHttpRequest;a.addEventListener('load',a=>{setCommentStatus('Comment submitted!  Your comment will be posted here after being reviewed.','notification'),b.disabled=!1}),a.addEventListener('error',a=>{console.log('Error',a),setCommentStatus('Error submitting comment.  If it continues not to work, please email us.','notification error'),b.disabled=!1}),a.open('POST','https://7nd5a97217.execute-api.us-east-1.amazonaws.com/default/GitHubJekyllComments'),a.send(JSON.stringify(h))}XMLHttpRequest&&document.getElementById('comment-form').setAttribute('style','')</script>
+<form method=post class=comment-form onsubmit="return submitComment(event),!1">
+<input type=hidden id=comment-slug value=making-an-app-2018>
+<label>Name:<br><input id=comment-name type=text></label>
+<label>Email (optional&mdash;not displayed):<br><input id=comment-email type=email></label>
+<label>Message:</label>
+<textarea id=comment-message></textarea>
+<button type=submit id=comment-submit>Add comment</button>
+</form>
+<div id=comment-notification style=display:none></div>
+</div>
+<div class=mailing-list-main style=margin-top:2rem>
+<div class=mailing-list-title>Get these posts in your email, monthly:</div>
+<p>
+<link href=//cdn-images.mailchimp.com/embedcode/classic-10_7.css rel=stylesheet type=text/css>
+<style type=text/css>#mc_embed_signup{background:0 0;clear:left}#mc_embed_signup form{padding:0}#mc_embed_signup input{border-radius:3px}#mc_embed_signup input[type=submit]{background-color:#08c}</style>
+<div id=mc_embed_signup>
+<form action="https://bucketsisbetter.us8.list-manage.com/subscribe/post?u=bc109895c8df246ae54ad4d71&id=0960a6d05e" method=post id=mc-embedded-subscribe-form name=mc-embedded-subscribe-form class=validate target=_blank novalidate>
+<div id=mc_embed_signup_scroll>
+<div class=mc-field-group>
+<label for=mce-EMAIL>Email Address
+</label>
+<input type=email name=EMAIL class="required email" id=mce-EMAIL>
+</div>
+<div class=mc-field-group>
+<label for=mce-FNAME>First Name
+</label>
+<input type=text name=FNAME class=required id=mce-FNAME>
+</div>
+<div id=mce-responses class=clear>
+<div class=response id=mce-error-response style=display:none></div>
+<div class=response id=mce-success-response style=display:none></div>
+</div>
+<div style=position:absolute;left:-5000px aria-hidden=true><input type=text name=b_bc109895c8df246ae54ad4d71_0960a6d05e tabindex=-1></div>
+<div class=clear><input type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe class=button></div>
+</div>
+</form>
+</div>
+</p>
+</div>
+</div>
+</div>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<footer>
+<div><a href=https://onepartrain.com target=_blank>&copy; One Part Rain, LLC</a></div>
+<div><a href=mailto:hello@budgetwithbuckets.com>hello@budgetwithbuckets.com</a></div>
+<div><a href=https://www.patreon.com/iffy target=_blank>Donate</a></div>
+<div><a href=https://github.com/buckets/policies/blob/master/privacy-policy.md target=_blank>Privacy</a></div>
+<div>
+<details>
+<summary>English</summary>
+<div><a href=https://www.budgetwithbuckets.com/es/blog/2018/12/13/making-an-app-2018.html/>español</a></div>
+</details>
+</div>
+</footer>
+<script type=text/javascript>var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date;(function(){var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.async=!0,a.src='https://embed.tawk.to/59835f8ed1385b2b2e285765/default',a.charset='UTF-8',a.setAttribute('crossorigin','*'),b.parentNode.insertBefore(a,b)})()</script>
+</body>
+</html>

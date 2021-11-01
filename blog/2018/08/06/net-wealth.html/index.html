@@ -1,0 +1,173 @@
+<!doctype html><html>
+<head>
+<title>
+New Feature: New Wealth Charts
+</title>
+<link rel="shortcut icon" href=/img/favicon.png type=image/png>
+<link rel=stylesheet type=text/css href=/css/buckets.css>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=stylesheet type=text/css href=/css/buckets-blog.css>
+<link rel=alternate hreflang=es href=https://www.budgetwithbuckets.com/es/blog/2018/08/06/net-wealth.html/>
+</head>
+<body>
+<div class=buckets-nav>
+<section>
+<a class=logo href=/>
+<img src=/img/logo.png>
+</a>
+<a href=/guide/>Guide</a>
+<a class=active href=/blog/>Blog</a>
+<a target=_blank href=https://github.com/buckets/application/blob/master/CHANGELOG.md>Changelog</a>
+<a target=_blank href=https://github.com/buckets/application/issues>Issue Tracker</a>
+</section>
+<section>
+<a class=download-button href=/download/>
+<img src=/images/download.svg width=15 height=15>
+Download
+</a>
+<a class=buy-button href=/buy/>Buy $49</a>
+</section>
+</div>
+<div class=wrapper>
+<div class=post>
+<header class=post-header>
+<div class=next-prev-links>
+<a class=prev href=/blog/2018/07/30/debt.html/>&larr; Prev</a>
+<a class=next href=/blog/2018/08/27/sqlite-changelog.html/>Next &rarr;</a>
+</div>
+<h1 class=blog-title>New Feature: New Wealth Charts</h1>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<p class=post-meta>
+Aug 6, 2018
+• Matt
+</p>
+</header>
+<article class=post-content>
+<p>With the release of Buckets v0.51.0, you can now track your net wealth over time.</p>
+<figure>
+<img alt="Net Wealth Chart" src=./netwealthchart.png>
+</figure>
+<p>Find the new charts by clicking <em>Analysis</em> then <em>Net Wealth</em>. This is a first draft. I imagine the look of the charts may change over time. Now would be a good time for feedback 😉</p>
+<p>Every time I work on charts, I&rsquo;m surprised how many decisions have to be made to make the chart work well. For instance, using a continuous line to represent Net Wealth is deceptive. In the above chart the line somewhat implies that half way between the end of April and the end of May the Net Wealth was around -20,000. In reality, it changed in one big leap from -34,000 to -10,000.</p>
+<p>So we chose to make the line dashed instead of solid to help indicate that not every point on the line actually happened.</p>
+<p>Anyway, feedback is welcome :)</p>
+<h2 id=why-wealth-instead-of-worth>Why &ldquo;Wealth&rdquo; instead of &ldquo;Worth?&rdquo;<a class=anchor-link href=#why-wealth-instead-of-worth>&para;</a></h2>
+<p>Buckets intentionally uses the term <em>Net Wealth</em> instead of the standard accounting term <em>Net Worth</em> because Buckets doesn&rsquo;t have the ability to measure your worth, only your wealth.</p>
+<p>It&rsquo;s too easy to get tricked into thinking that our worth is defined by some number in a bank account. We are worth so much more than that. As evidence, here&rsquo;s one of my daughters—worth everything in the world to me but without a cent to her name.</p>
+<img alt="A baby" src=./baby.jpg style=border-radius:6px>
+<p>And remember that someone else feels about you the same way I feel about her.</p>
+<p>Okay, sentimental preachiness over :)</p>
+<p>— Matt</p>
+</article>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<div class="next-prev-links close" style=margin-top:1rem>
+<a class=prev href=/blog/2018/07/30/debt.html/>&larr; Prev</a>
+<a class=next href=/blog/2018/08/27/sqlite-changelog.html/>Next &rarr;</a>
+</div>
+<h2 style=margin-top:2rem>Comments</h2>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/a1705cc1e2d22e396cf0943493453c75?s=64">
+<div>
+<div class=details>
+<div class=author>Limezy</div>
+<div class=date>Wed Aug 22, 2018 5:52</div>
+</div>
+<div class=message>Already thinking about how to accurately translate that net "Wealth" into French !</div>
+</div>
+</div>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/e36582ff7796cbf820f4c0a27b256feb?s=64">
+<div>
+<div class=details>
+<div class=author>Guillaume Demers-Loiselle</div>
+<div class=date>Sun Aug 26, 2018 4:30</div>
+</div>
+<div class=message>Glad to see this feature comming in!</div>
+</div>
+</div>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/8ceda52d932162c258802765e1460464?s=64">
+<div>
+<div class=details>
+<div class=author>J Travis Washburn</div>
+<div class=date>Wed Sep 5, 2018 6:07</div>
+</div>
+<div class=message>This is a great feature! (And thank you for the sentimentality, ha ha. I like it.) </div>
+</div>
+</div>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/d9e1438324ffdb3b860b5f84f291af1f?s=64">
+<div>
+<div class=details>
+<div class=author>Carlos Barreto</div>
+<div class=date>Sat Sep 8, 2018 8:36</div>
+</div>
+<div class=message>That seems to be very good,
+And I also liked the sentimental comparison.... Btw your daughter is very cute.
+Great work Matt, thanks.</div>
+</div>
+</div>
+<div id=comment-form style=display:none>
+<a name=comment-form></a>
+<script>window.location.search.substr(1).indexOf('comment=submitted')!==-1&&document.write(`<div class="notification">Comment submitted!  Your comment will be posted here after being reviewed.</div>`)</script>
+<script>function setCommentStatus(b,c){const a=document.getElementById('comment-notification');a.innerText=b,a.setAttribute('class',c),a.setAttribute('style','')}function submitComment(c){const b=document.getElementById('comment-submit');b.disabled=!0,setCommentStatus('Submitting...','notification'),c.preventDefault();const d=document.getElementById('comment-message').value,e=document.getElementById('comment-email').value,f=document.getElementById('comment-name').value,g=document.getElementById('comment-slug').value,h={comment:d,email:e,name:f,subdir:g};let a=new XMLHttpRequest;a.addEventListener('load',a=>{setCommentStatus('Comment submitted!  Your comment will be posted here after being reviewed.','notification'),b.disabled=!1}),a.addEventListener('error',a=>{console.log('Error',a),setCommentStatus('Error submitting comment.  If it continues not to work, please email us.','notification error'),b.disabled=!1}),a.open('POST','https://7nd5a97217.execute-api.us-east-1.amazonaws.com/default/GitHubJekyllComments'),a.send(JSON.stringify(h))}XMLHttpRequest&&document.getElementById('comment-form').setAttribute('style','')</script>
+<form method=post class=comment-form onsubmit="return submitComment(event),!1">
+<input type=hidden id=comment-slug value=net-wealth>
+<label>Name:<br><input id=comment-name type=text></label>
+<label>Email (optional&mdash;not displayed):<br><input id=comment-email type=email></label>
+<label>Message:</label>
+<textarea id=comment-message></textarea>
+<button type=submit id=comment-submit>Add comment</button>
+</form>
+<div id=comment-notification style=display:none></div>
+</div>
+<div class=mailing-list-main style=margin-top:2rem>
+<div class=mailing-list-title>Get these posts in your email, monthly:</div>
+<p>
+<link href=//cdn-images.mailchimp.com/embedcode/classic-10_7.css rel=stylesheet type=text/css>
+<style type=text/css>#mc_embed_signup{background:0 0;clear:left}#mc_embed_signup form{padding:0}#mc_embed_signup input{border-radius:3px}#mc_embed_signup input[type=submit]{background-color:#08c}</style>
+<div id=mc_embed_signup>
+<form action="https://bucketsisbetter.us8.list-manage.com/subscribe/post?u=bc109895c8df246ae54ad4d71&id=0960a6d05e" method=post id=mc-embedded-subscribe-form name=mc-embedded-subscribe-form class=validate target=_blank novalidate>
+<div id=mc_embed_signup_scroll>
+<div class=mc-field-group>
+<label for=mce-EMAIL>Email Address
+</label>
+<input type=email name=EMAIL class="required email" id=mce-EMAIL>
+</div>
+<div class=mc-field-group>
+<label for=mce-FNAME>First Name
+</label>
+<input type=text name=FNAME class=required id=mce-FNAME>
+</div>
+<div id=mce-responses class=clear>
+<div class=response id=mce-error-response style=display:none></div>
+<div class=response id=mce-success-response style=display:none></div>
+</div>
+<div style=position:absolute;left:-5000px aria-hidden=true><input type=text name=b_bc109895c8df246ae54ad4d71_0960a6d05e tabindex=-1></div>
+<div class=clear><input type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe class=button></div>
+</div>
+</form>
+</div>
+</p>
+</div>
+</div>
+</div>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<footer>
+<div><a href=https://onepartrain.com target=_blank>&copy; One Part Rain, LLC</a></div>
+<div><a href=mailto:hello@budgetwithbuckets.com>hello@budgetwithbuckets.com</a></div>
+<div><a href=https://www.patreon.com/iffy target=_blank>Donate</a></div>
+<div><a href=https://github.com/buckets/policies/blob/master/privacy-policy.md target=_blank>Privacy</a></div>
+<div>
+<details>
+<summary>English</summary>
+<div><a href=https://www.budgetwithbuckets.com/es/blog/2018/08/06/net-wealth.html/>español</a></div>
+</details>
+</div>
+</footer>
+<script type=text/javascript>var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date;(function(){var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.async=!0,a.src='https://embed.tawk.to/59835f8ed1385b2b2e285765/default',a.charset='UTF-8',a.setAttribute('crossorigin','*'),b.parentNode.insertBefore(a,b)})()</script>
+</body>
+</html>

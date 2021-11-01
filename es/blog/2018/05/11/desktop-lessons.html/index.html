@@ -1,0 +1,234 @@
+<!doctype html><html>
+<head>
+<title>
+Desktop App: Lessons Learned
+</title>
+<link rel="shortcut icon" href=/img/favicon.png type=image/png>
+<link rel=stylesheet type=text/css href=/css/buckets.css>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=stylesheet type=text/css href=/css/buckets-blog.css>
+<link rel=alternate hreflang=en href=https://www.budgetwithbuckets.com/blog/2018/05/11/desktop-lessons.html/>
+</head>
+<body>
+<div class=buckets-nav>
+<section>
+<a class=logo href=/es/>
+<img src=/img/logo.png>
+</a>
+<a href=/es/guide/>Guía</a>
+<a class=active href=/blog/>Blog</a>
+<a target=_blank href=https://github.com/buckets/application/blob/master/CHANGELOG.md>Cambios</a>
+<a target=_blank href=https://github.com/buckets/application/issues>Cuestiones</a>
+</section>
+<section>
+<a class=download-button href=/es/download/>
+<img src=/images/download.svg width=15 height=15>
+Descargar
+</a>
+<a class=buy-button href=/es/buy/>Comprar $49</a>
+</section>
+</div>
+<div class=wrapper>
+<div class=post>
+<header class=post-header>
+<div class=next-prev-links>
+<a class=prev href=/es/blog/2018/04/30/clearing-trans.html/>&larr; Prev</a>
+<a class=next href=/es/blog/2018/06/14/june-2018-update.html/>Next &rarr;</a>
+</div>
+<div class="post-tag tech">
+<div class=tag-name>Tech post</div>
+<div class=tag-description>This post is about the development of Buckets rather than budgeting.</div>
+</div>
+<h1 class=blog-title>Desktop App: Lessons Learned</h1>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<p class=post-meta>
+May 11, 2018
+• Matt
+</p>
+</header>
+<article class=post-content>
+<p>Last year I finished porting <a href=https://www.budgetwithbuckets.com>Buckets</a> from the web to a desktop app. I&rsquo;m pleased both with how it turned out and with what I&rsquo;ve learned. For the benefit of anyone else making desktop applications in 2018, here&rsquo;s a few thoughts.</p>
+<p><img src=./bucketsondesktop.jpg alt="Photo by Clément H on Unsplash with cheesy addition of Buckets logo by me"></p>
+<h2 id=the-most-important-feature-is-bug-reporting>The most important feature is bug reporting<a class=anchor-link href=#the-most-important-feature-is-bug-reporting>&para;</a></h2>
+<p>Buckets' <strong>most important feature</strong> has nothing to do with budgeting—it&rsquo;s bug reporting. Arguably, this is true for web applications too. In either case, you want to know when your program fails. But even in the worst web environment, you usually still have access logs. For a desktop app, you get nothing by default.</p>
+<p>For bug reporting:</p>
+<ul>
+<li>
+<p><strong>Spend the time</strong></p>
+<p>I&rsquo;ve spent much more time working on the error reporting and logging features than I planned to. But it has been worth it. Make bug reporting seamless.</p>
+</li>
+<li>
+<p><strong>Test often</strong></p>
+<p>As in any context, if your bug reporting feature is broken&mldr; there&rsquo;s no way for users to report it :) So one step in my release process for <em>every</em> version is to submit a bug and make sure I get the report.</p>
+</li>
+<li>
+<p><strong>Simplify</strong></p>
+<p>In an earlier version, errors would prompt users with three actions: report the error, ignore the error or chat with me about it. Since cutting it down to just <strong>report</strong> and <strong>ignore</strong> the number of bug reports has increased. I may further simplify the error form, too.</p>
+</li>
+</ul>
+<p><img src=./error-prompt.png alt="Error form"></p>
+<h2 id=no-server-is-the-best-server>No server is the best server<a class=anchor-link href=#no-server-is-the-best-server>&para;</a></h2>
+<p>Since moving to the desktop, I haven&rsquo;t received a single complaint about the website being down&mldr; because the database has never gone down&mldr; because there is no database. <a href=https://stripe.com>Stripe</a>, <a href=https://www.paypal.com>PayPal</a> and email are my database.</p>
+<p>And I <strong>love</strong> it!</p>
+<ul>
+<li>
+<p><strong>Peace</strong></p>
+<p>Knowing that the website can go down and people will still be able to use their application gives me peace.</p>
+</li>
+<li>
+<p><strong>Privacy</strong></p>
+<p>I store almost nothing about users. If you buy a license or email me, I&rsquo;ll have your email address, and that&rsquo;s about it.</p>
+</li>
+<li>
+<p><strong>Cost</strong></p>
+<p>The cost of running a mostly static site is very low.</p>
+</li>
+</ul>
+<h2 id=translations>Translations<a class=anchor-link href=#translations>&para;</a></h2>
+<p>The value of internationalization (I18N) surprised me. Early on in development, somewhat on a whim, I translated Buckets into Spanish. I hesitated a bit because I knew it would increase the complexity of the application (potentially, by a lot). But I&rsquo;m glad I did, because it has made Buckets available to more people.</p>
+<ul>
+<li>
+<p><strong>International users</strong></p>
+<p>Getting to interact with people who speak other languages is very fun for me (I&rsquo;m kind of a language nerd). And I&rsquo;ve been pleasantly surprised by the <a href=https://github.com/buckets/translations#current-language-support>volunteer translators</a> efforts. But I hadn&rsquo;t considered how much I18N and L10N would increase Buckets' appeal. There are people all over the world using Buckets.</p>
+</li>
+<li>
+<p><strong>Forced simplicity</strong></p>
+<p>Knowing that whatever I write will have to be translated forces me to be simpler in how I communicate. Take a sentence like &ldquo;You have 5 left.&rdquo; Suppose the 5 might sometimes be 4, sometimes 1 and sometimes 0. How do you translate that into Spanish? What&rsquo;s the gender of the noun? What are the variations in German? Instead of attempting to deal with these possible problems, it&rsquo;s often easier to put an icon next to a 5.</p>
+</li>
+<li>
+<p><strong>Do it early</strong></p>
+<p>I&rsquo;m glad I put I18N and L10N in early on. It would be a lot of work to retrofit. That said, it wouldn&rsquo;t be <em>impossible</em> to retrofit and supporting multiple languages may not be a requirement for your app.</p>
+</li>
+</ul>
+<h3 id=translation-technical-details>Translation technical details<a class=anchor-link href=#translation-technical-details>&para;</a></h3>
+<p>The localization module is homegrown and uses TypeScript to provide context to translators and ensure that translations aren&rsquo;t omitted (see below). I may later open source it if there&rsquo;s interest. I can mark up strings in one of three ways (similar to gettext):</p>
+<ol>
+<li>
+<p>Simple (for short strings)</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-typescript data-lang=typescript><span style=color:#a6e22e>sss</span>(<span style=color:#e6db74>&#39;Click me&#39;</span>)
+</code></pre></div></li>
+<li>
+<p>Tagged (for long strings)</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-typescript data-lang=typescript><span style=color:#a6e22e>sss</span>(<span style=color:#e6db74>&#39;look-out&#39;</span>, <span style=color:#e6db74>&#34;Look out behind you, good sir.&#34;</span>)
+</code></pre></div></li>
+<li>
+<p>Function (for anything you can imagine)</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-typescript data-lang=typescript><span style=color:#a6e22e>sss</span>(<span style=color:#e6db74>&#39;x-left&#39;</span>, (<span style=color:#a6e22e>x</span>:<span style=color:#66d9ef>number</span>) <span style=color:#f92672>=&gt;</span> {
+    <span style=color:#66d9ef>return</span> <span style=color:#e6db74>`You have </span><span style=color:#e6db74>${</span><span style=color:#a6e22e>x</span><span style=color:#e6db74>}</span><span style=color:#e6db74> left.`</span>
+})
+</code></pre></div></li>
+</ol>
+<p>Additional context can be put in a comment. (Since comments are removed during compilation, <em>in theory</em> this reduces the app&rsquo;s file size and JavaScript loading time. In <em>practice</em>, Buckets is an Electron app, so executable size is already ridiculous):</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-typescript data-lang=typescript><span style=color:#a6e22e>sss</span>(<span style=color:#e6db74>&#39;Ugly&#39;</span><span style=color:#75715e>/* adjective referring to a boat */</span>)
+</code></pre></div><p>Using TypeScript&rsquo;s compiler, message files <a href=https://github.com/buckets/translations/blob/master/langs/fr.tsx#L31>like these</a> are extracted from the source. Here&rsquo;s an example message as would be given to a translator:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-typescript data-lang=typescript>  <span style=color:#e6db74>&#34;Animation&#34;</span><span style=color:#f92672>:</span> {
+    <span style=color:#75715e>/* Label for application preference enabling/disabling animations */</span>
+    <span style=color:#a6e22e>val</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;Animations&#34;</span>,
+    <span style=color:#a6e22e>translated</span>: <span style=color:#66d9ef>true</span>,
+    <span style=color:#a6e22e>h</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;Vk4XaMgXNIEY4+Gcal1n+qdnamgr4Q5af/+wzFRoIHU=&#34;</span>,
+  },
+  <span style=color:#e6db74>&#34;match-count&#34;</span><span style=color:#f92672>:</span> {
+    <span style=color:#a6e22e>val</span><span style=color:#f92672>:</span> (<span style=color:#a6e22e>current_match</span>:<span style=color:#66d9ef>number</span>, <span style=color:#a6e22e>total_matches</span>:<span style=color:#66d9ef>number</span>) <span style=color:#f92672>=&gt;</span> {
+        <span style=color:#66d9ef>return</span> <span style=color:#e6db74>`</span><span style=color:#e6db74>${</span><span style=color:#a6e22e>current_match</span><span style=color:#e6db74>}</span><span style=color:#e6db74> parmi </span><span style=color:#e6db74>${</span><span style=color:#a6e22e>total_matches</span><span style=color:#e6db74>}</span><span style=color:#e6db74>`</span>;
+      },
+    <span style=color:#a6e22e>translated</span>: <span style=color:#66d9ef>true</span>,
+    <span style=color:#a6e22e>h</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;gGpkwXhLiDpxY0YOCXAFl6Q8D6sb7BX93TqgFRObOqo=&#34;</span>,
+  },
+</code></pre></div><p>Yes, the translators are translating a TypeScript function. It beats inventing a new message format.</p>
+<h2 id=electron>Electron<a class=anchor-link href=#electron>&para;</a></h2>
+<p>Buckets is an <a href=https://electronjs.org>Electron</a> app. I like Electron. I&rsquo;ve enjoyed how easy it has been for me to make a cross-platform app. Perhaps it was especially easy given that Buckets was a web app first.</p>
+<ul>
+<li>
+<p><strong>Hello, World!</strong></p>
+<p>Of all the cross-platform application libraries out there, Electron has the <a href=https://github.com/electron/electron-quick-start#to-use>best Hello World</a>. With Electron, I went from nothing to cross-platform app in minutes.</p>
+<p>That said, a Hello World is only one metric (and possibly a deceptive one). Easy to start does not necessarily mean easy to maintain.</p>
+</li>
+<li>
+<p><strong>Auto updating</strong></p>
+<p>Thanks to <a href=https://electron.build>electron-builder</a>, it&rsquo;s pretty easy to have an auto-updating app <em>that doesn&rsquo;t even require running another server.</em> Check out <a href=https://github.com/iffy/electron-updater-example>my most popular repo on GitHub :)</a></p>
+</li>
+</ul>
+<p>Electron justifiably has critics. It consumes a good chunk of memory, can hog the CPU and application file sizes are large. But the simple startup and familiar technologies win. I&rsquo;m always looking at <a href="https://docs.google.com/spreadsheets/d/1dTZIp6z2J1IL7YgBlHG_x68x0_zfecU0MTsjTXn1E3A/edit?usp=sharing">alternatives</a>, but I still haven&rsquo;t successfully launched a Qt application.</p>
+<h3 id=challenge>Challenge<a class=anchor-link href=#challenge>&para;</a></h3>
+<p>In fact, I offer a challenge to every cross-platform app-making technology. Provide a single GitHub repo that:</p>
+<ul>
+<li>Launches a dev build of a Hello World app with a single command (e.g. <code>electron .</code>)</li>
+<li>Builds a distributable version of the app with a single command (e.g. <code>electron-builder -mwl</code>)</li>
+<li>Auto-updates from GitHub (or an HTTP server)</li>
+<li>Is code signed</li>
+</ul>
+<h2 id=would-do-it-again>Would do it again<a class=anchor-link href=#would-do-it-again>&para;</a></h2>
+<p>Moving to a desktop app was the right move for Buckets. Maybe it&rsquo;s the right move for your app?</p>
+<p>(And if you&rsquo;re looking for a budgeting app, give <a href=https://www.budgetwithbuckets.com>Buckets</a> a try)</p>
+<p>— Matt</p>
+</article>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<div class="next-prev-links close" style=margin-top:1rem>
+<a class=prev href=/es/blog/2018/04/30/clearing-trans.html/>&larr; Prev</a>
+<a class=next href=/es/blog/2018/06/14/june-2018-update.html/>Next &rarr;</a>
+</div>
+<h2 style=margin-top:2rem>Comments</h2>
+<div id=comment-form style=display:none>
+<a name=comment-form></a>
+<script>window.location.search.substr(1).indexOf('comment=submitted')!==-1&&document.write(`<div class="notification">Comment submitted!  Your comment will be posted here after being reviewed.</div>`)</script>
+<script>function setCommentStatus(b,c){const a=document.getElementById('comment-notification');a.innerText=b,a.setAttribute('class',c),a.setAttribute('style','')}function submitComment(c){const b=document.getElementById('comment-submit');b.disabled=!0,setCommentStatus('Submitting...','notification'),c.preventDefault();const d=document.getElementById('comment-message').value,e=document.getElementById('comment-email').value,f=document.getElementById('comment-name').value,g=document.getElementById('comment-slug').value,h={comment:d,email:e,name:f,subdir:g};let a=new XMLHttpRequest;a.addEventListener('load',a=>{setCommentStatus('Comment submitted!  Your comment will be posted here after being reviewed.','notification'),b.disabled=!1}),a.addEventListener('error',a=>{console.log('Error',a),setCommentStatus('Error submitting comment.  If it continues not to work, please email us.','notification error'),b.disabled=!1}),a.open('POST','https://7nd5a97217.execute-api.us-east-1.amazonaws.com/default/GitHubJekyllComments'),a.send(JSON.stringify(h))}XMLHttpRequest&&document.getElementById('comment-form').setAttribute('style','')</script>
+<form method=post class=comment-form onsubmit="return submitComment(event),!1">
+<input type=hidden id=comment-slug value=desktop-lessons>
+<label>Name:<br><input id=comment-name type=text></label>
+<label>Email (optional&mdash;not displayed):<br><input id=comment-email type=email></label>
+<label>Message:</label>
+<textarea id=comment-message></textarea>
+<button type=submit id=comment-submit>Add comment</button>
+</form>
+<div id=comment-notification style=display:none></div>
+</div>
+<div class=mailing-list-main style=margin-top:2rem>
+<div class=mailing-list-title>Get these posts in your email, monthly:</div>
+<p>
+<link href=//cdn-images.mailchimp.com/embedcode/classic-10_7.css rel=stylesheet type=text/css>
+<style type=text/css>#mc_embed_signup{background:0 0;clear:left}#mc_embed_signup form{padding:0}#mc_embed_signup input{border-radius:3px}#mc_embed_signup input[type=submit]{background-color:#08c}</style>
+<div id=mc_embed_signup>
+<form action="https://bucketsisbetter.us8.list-manage.com/subscribe/post?u=bc109895c8df246ae54ad4d71&id=0960a6d05e" method=post id=mc-embedded-subscribe-form name=mc-embedded-subscribe-form class=validate target=_blank novalidate>
+<div id=mc_embed_signup_scroll>
+<div class=mc-field-group>
+<label for=mce-EMAIL>Email Address
+</label>
+<input type=email name=EMAIL class="required email" id=mce-EMAIL>
+</div>
+<div class=mc-field-group>
+<label for=mce-FNAME>First Name
+</label>
+<input type=text name=FNAME class=required id=mce-FNAME>
+</div>
+<div id=mce-responses class=clear>
+<div class=response id=mce-error-response style=display:none></div>
+<div class=response id=mce-success-response style=display:none></div>
+</div>
+<div style=position:absolute;left:-5000px aria-hidden=true><input type=text name=b_bc109895c8df246ae54ad4d71_0960a6d05e tabindex=-1></div>
+<div class=clear><input type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe class=button></div>
+</div>
+</form>
+</div>
+</p>
+</div>
+</div>
+</div>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<footer>
+<div><a href=https://onepartrain.com target=_blank>&copy; One Part Rain, LLC</a></div>
+<div><a href=mailto:hello@budgetwithbuckets.com>hello@budgetwithbuckets.com</a></div>
+<div><a href=https://www.patreon.com/iffy target=_blank>Donar</a></div>
+<div><a href=https://github.com/buckets/policies/blob/master/privacy-policy.md target=_blank>Privacidad</a></div>
+<div>
+<details>
+<summary>español</summary>
+<div><a href=https://www.budgetwithbuckets.com/blog/2018/05/11/desktop-lessons.html/>English</a></div>
+</details>
+</div>
+</footer>
+<script type=text/javascript>var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date;(function(){var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.async=!0,a.src='https://embed.tawk.to/59835f8ed1385b2b2e285765/default',a.charset='UTF-8',a.setAttribute('crossorigin','*'),b.parentNode.insertBefore(a,b)})()</script>
+</body>
+</html>

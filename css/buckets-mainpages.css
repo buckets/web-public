@@ -1,0 +1,10 @@
+p {
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+p em {
+  color: rgba(26, 188, 156,1.0);
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: bold
+}

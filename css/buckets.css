@@ -1,0 +1,187 @@
+/*------------------------------------------------------------
+Buckets, common style sheet.
+--------------------------------------------------------------*/
+@import 'https://fonts.googleapis.com/css?family=Lato';
+*,
+input {
+  font-family: 'Lato', sans-serif;
+  box-sizing: border-box;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Nav bar */
+.buckets-nav {
+  background-color: rgba(52, 73, 94,1.0);
+  padding: .5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+  position: relative;
+}
+.buckets-nav section {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.buckets-nav a {
+  color: white;
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  margin: 0 .5rem;
+  border-bottom: 1px solid transparent;
+  text-align: center;
+  border-radius: 2px;
+}
+.buckets-nav a:visited {
+  color: white;
+}
+.buckets-nav a:hover {
+  color: white;
+  background-color: rgba(41, 128, 185,1.0);
+}
+.buckets-nav a.logo img {
+  height: 46px;
+}
+.buckets-nav a.logo:hover {
+  border-bottom-color: transparent;
+  background-color: transparent;
+}
+.buckets-nav a.active {
+  background-color: rgba(52, 152, 219,1.0);
+}
+.buckets-nav a.active:hover {
+  background-color: rgba(22, 160, 133,1.0);
+  border-bottom-color: transparent;
+}
+.buckets-nav a.download-button {
+  background-color: rgba(41, 128, 185,1.0);
+}
+.buckets-nav a.download-button:hover,
+.buckets-nav a.download-button.active {
+  background-color: #3498db;
+}
+.buckets-nav a.buy-button {
+  background-color: rgba(26, 188, 156,1.0);
+}
+.buckets-nav a.buy-button:hover,
+.buckets-nav a.buy-button.active {
+  background-color: #3498db;
+}
+
+a {
+  color: #3498db;
+}
+a:visited {
+  color: #2980b9;
+}
+a:hover {
+  color: #27ae60;
+}
+
+a.button,
+button {
+  border-radius: 4px;
+  color: white;
+  text-decoration: none;
+  background-color: rgba(52, 152, 219,1.0);
+  padding: 0.25rem 0.5rem;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+a.button:visited {
+  color: white;
+}
+a.button:hover,
+button:hover {
+  background-color: rgba(22, 160, 133,1.0);
+}
+
+table {
+  border-collapse: collapse;
+}
+td, th {
+  padding: .5rem .5rem;
+  border: 1px solid lightgrey;
+  border-width: 1px 0;
+  font-size: 1rem;
+}
+th {
+  font-weight: bold;
+  background-color: lightgrey;
+  border-color: grey;
+}
+td:last-child,
+th:last-child {
+  border-right-width: 1px;
+}
+td:first-child,
+th:first-child {
+  border-left-width: 1px;
+}
+
+h1,h2,h3,h4,h5 {
+  color: rgba(52, 73, 94,1.0);
+}
+h2 {
+  margin-top: 5rem;
+}
+h3 {
+  margin-top: 3rem;
+}
+
+footer {
+  padding: 1rem 1.75rem 2rem;
+  margin-left: 0rem;
+  margin-right: 0rem;
+  font-size: .75rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+footer section {
+  margin-right: 2rem;
+  padding-left: 2rem;
+  border-left: 1px solid #ccc;
+}
+footer section:first-child {
+  border: 0;
+  padding-left: 0;
+}
+footer a {
+  text-decoration: none;
+}
+footer div {
+  padding: 0 1rem;
+}
+footer details div {
+  padding-left: 1rem;
+}
+svg .rotate {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: rotate(45deg);
+}
+
+
+a.anchor-link {
+  color: grey;
+  display: inline-block;
+  margin-left: 1rem;
+  text-decoration: none;
+  opacity: 0.1;
+}
+a.anchor-link:hover {
+  opacity: 1;
+}
+a.anchor-link:visited {
+  color: grey;
+}

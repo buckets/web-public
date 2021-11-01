@@ -1,0 +1,243 @@
+h1,h2,h3,h4,h5 {
+  font-weight: 300;
+}
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: -1px;
+  line-height: 1;
+  font-family: Georgia;
+  font-style: italic;
+  text-align: center;
+}
+h1.blog-title {
+  margin-top: 1rem;
+  line-height: 3.5rem;;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.6rem;
+}
+.post img {
+  max-width: 100%;
+}
+.post-meta {
+  font-size: 14px;
+  color: #828282;
+  text-align: center;
+}
+
+.wrapper {
+  max-width: calc(800px - (30px * 2));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: #111;
+}
+
+.post-list img {
+  max-width: 100%;
+}
+.post-listing {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas:
+    "meta title"
+    "meta excerpt";
+}
+.post-listing-meta {
+  grid-area: meta;
+  border-right: 1px solid #e8e8e8;
+  text-align: right;
+  padding-top: 3.5rem;
+  padding-right: 1rem;
+  font-size: .8rem;
+  color: #828282;
+}
+.post-listing-title {
+  grid-area: title;
+  padding-top: 3rem;
+  padding-left: 1rem;
+}
+.post-listing-title a {
+  font-family: Georgia;
+  font-size: 1.5rem;
+  font-style: italic;
+  text-decoration: none;
+}
+.post-listing-excerpt {
+  grid-area: excerpt;
+  spadding-top: 1rem;
+  padding-left: 1rem;
+}
+.post-listing.old .post-listing-meta {
+  padding-top: 1rem;
+}
+.post-listing.old .post-listing-title {
+  padding-top: 1rem;
+}
+.post-listing.old .post-listing-title a {
+  font-size: 1.1rem;
+}
+
+
+pre {
+  font-family: monospace !important;
+  color: white;
+  padding: 8px 12px;
+  overflow-x: auto;
+  line-height: 1.5;
+}
+pre, code {
+  font-size: 15px;
+  border-radius: 3px;
+  font-family: monospace;
+}
+pre *,
+code * {
+  font-family: monospace;
+}
+
+.next-prev-links {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin: .25rem;
+}
+.next-prev-links a {
+  text-decoration: none;
+  flex-basis: 50%
+}
+.next-prev-links .next {
+  text-align: right;
+}
+.next-prev-links .next:first-child {
+  flex-basis: 100%;
+}
+.next-prev-links .prev {
+  text-align: left;
+  /* padding-right: .5rem; */
+}
+.next-prev-links.close {
+  justify-content: center;
+}
+.next-prev-links.close a {
+  flex-basis: 30%;
+}
+.next-prev-links.close .next {
+  text-align: left;
+  padding-left: 2rem;
+}
+.next-prev-links.close .prev {
+  text-align: right;
+  padding-right: 2rem;
+}
+.next-prev-links.close .prev:last-child {
+  text-align: left;
+}
+
+/* ------------------- Blog Comments ----------------------- */
+
+.comment {
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 2rem;
+}
+.comment img {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+  border-radius: 6px;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+.comment .details {
+  display: flex;
+}
+.comment .details .author {
+  color: #34495e;
+  font-size: .9rem;
+}
+.comment .details .date {
+  color: #bdc3c7;
+  font-size: .9rem;
+  margin-left: .5rem;
+}
+.comment .message {
+  white-space: pre-wrap;
+}
+
+.comment-form label {
+  margin-top: 1rem;
+  display: block;
+}
+.comment-form input {
+  padding: .5rem;
+  width: 100%;
+  font-size: 1rem;
+}
+.comment-form textarea {
+  padding: .5rem;
+  width: 100%;
+  font-size: 1rem;
+  min-height: 6rem;
+}
+.comment-form button {
+  margin-top: 1rem;
+}
+
+/* ------------------- Blog Tags ----------------------- */
+.post-tag {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 3px;
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.post-tag .tag-name {
+  padding: .5rem 1rem;
+  flex-shrink: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: lightgrey;
+}
+.post-tag .tag-description {
+  padding: .5rem 1rem;
+  flex-grow: 1;
+  border: 1px solid lightgrey;
+  border-width: 1px 1px 1px 0;
+}
+.post-tag.tech .tag-name {
+  background-color: #27ae60;
+  background-color: #2ecc71;
+  border-right: 0px solid white;
+}
+
+/* ------------------- Mailing list ----------------------- */
+.mailing-list-main {
+  margin-top: 0rem;
+  background-color: rgba(236, 240, 241,1.0);
+  padding: 2rem 2rem 1rem 2rem;
+  border-radius: 4px;
+}
+.mailing-list-main .mailing-list-title {
+  font-size: 1.5rem;
+}

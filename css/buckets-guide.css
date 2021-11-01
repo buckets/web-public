@@ -1,0 +1,134 @@
+/*
+  CSS shared by the 2 flavors of docs output
+*/
+.main-wrap {
+  display: flex;
+  min-height: 75vh;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.main-nav {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 15rem;
+  background-color: rgba(236, 240, 241,1.0);
+  padding-top: 1rem;
+  border-radius: 0 0 12px 0;
+}
+.main-nav a {
+  display: block;
+  padding: .25rem 1rem;
+  color: rgba(52, 73, 94,1.0);
+  text-decoration: none;
+}
+.main-nav a:visited {
+  color: rgba(52, 73, 94,1.0);
+}
+.main-nav .subheading {
+  font-weight: bold;
+}
+.main-nav a.active {
+  background-color: rgba(52, 152, 219,1.0);
+  color: white;
+}
+.main-nav .sub a {
+  padding-left: 2rem;
+}
+
+.main-nav .logo-wrap {
+  text-align: center;
+  padding: 1rem;
+}
+
+.main-body {
+  flex-grow: 1;
+  padding: 2rem;
+}
+.main-body h1 {
+  margin-top: 0;
+}
+.main-body p {
+  line-height: 1.25rem;
+  max-width: 30rem;
+}
+.main-body img {
+  text-align: center;
+  max-width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+.main-body ul,
+.main-body ol {
+  line-height: 1.25rem;
+  max-width: 30rem;
+}
+.main-body a:visited {
+  color: #8e44ad;
+}
+
+h1,h2,h3,h4,h5 {
+  color: rgba(52, 73, 94,1.0);
+}
+h2 {
+  margin-top: 5rem;
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+h3 {
+  margin-top: 3rem;
+}
+
+code {
+  font-family: monospace;
+  background-color: rgba(236, 240, 241,1.0);
+  padding: 1px 4px;
+}
+.highlight pre {
+  padding: .5rem;
+  font-family: monospace;
+}
+.highlight code {
+  background-color: transparent;
+  padding: 0;
+}
+
+p.warning {
+  background-color: rgba(243, 156, 18,0.5);
+  padding: 1rem;
+  margin: 1rem 0;
+  display: block;
+}
+p.notice {
+  background-color: rgba(52, 152, 219, 0.25);
+  padding: 1rem;
+  margin: 1rem 0;
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+}
+td, th {
+  padding: .5rem .5rem;
+  border: 1px solid lightgrey;
+  border-width: 1px 0;
+  font-size: .9rem;
+}
+th {
+  font-weight: bold;
+  background-color: lightgrey;
+  border-color: grey;
+}
+td:last-child,
+th:last-child {
+  border-right-width: 1px;
+}
+td:first-child,
+th:first-child {
+  border-left-width: 1px;
+}
+
+p {
+  font-size: initial;
+  line-height: initial;
+}

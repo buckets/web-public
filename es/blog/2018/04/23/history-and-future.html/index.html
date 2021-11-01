@@ -1,0 +1,330 @@
+<!doctype html><html>
+<head>
+<title>
+History and Future of Buckets
+</title>
+<link rel="shortcut icon" href=/img/favicon.png type=image/png>
+<link rel=stylesheet type=text/css href=/css/buckets.css>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=stylesheet type=text/css href=/css/buckets-blog.css>
+<link rel=alternate hreflang=en href=https://www.budgetwithbuckets.com/blog/2018/04/23/history-and-future.html/>
+</head>
+<body>
+<div class=buckets-nav>
+<section>
+<a class=logo href=/es/>
+<img src=/img/logo.png>
+</a>
+<a href=/es/guide/>Guía</a>
+<a class=active href=/blog/>Blog</a>
+<a target=_blank href=https://github.com/buckets/application/blob/master/CHANGELOG.md>Cambios</a>
+<a target=_blank href=https://github.com/buckets/application/issues>Cuestiones</a>
+</section>
+<section>
+<a class=download-button href=/es/download/>
+<img src=/images/download.svg width=15 height=15>
+Descargar
+</a>
+<a class=buy-button href=/es/buy/>Comprar $49</a>
+</section>
+</div>
+<div class=wrapper>
+<div class=post>
+<header class=post-header>
+<div class=next-prev-links>
+<a class=prev href=/es/blog/2018/04/01/organic.html/>&larr; Prev</a>
+<a class=next href=/es/blog/2018/04/30/clearing-trans.html/>Next &rarr;</a>
+</div>
+<h1 class=blog-title>History and Future of Buckets</h1>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<p class=post-meta>
+Apr 23, 2018
+• Matt
+</p>
+</header>
+<article class=post-content>
+<p>I&rsquo;ve stated that Buckets is a &ldquo;keep-going&rdquo; (not a start-up). Let me explain.</p>
+<p><img src=./hero.jpg alt="map and compass"></p>
+<h2 id=in-summary>In summary<a class=anchor-link href=#in-summary>&para;</a></h2>
+<ul>
+<li><em>We</em> use Buckets. We want it to stick around.</li>
+<li>I&rsquo;m a budgeting nerd.</li>
+<li>I enjoy budgeting and working on Buckets.</li>
+<li>I get tremendous satisfaction knowing that people find it useful.</li>
+<li>I&rsquo;m still enthusiastic about the work even after having worked on it for 7 years.</li>
+<li>If I&rsquo;m ever unable or unwilling to continue, my first choice is to make Buckets open source.</li>
+</ul>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<h2 id=history>History<a class=anchor-link href=#history>&para;</a></h2>
+<h3 id=early-years---php-and-mysql>Early years - PHP and MySQL<a class=anchor-link href=#early-years---php-and-mysql>&para;</a></h3>
+<p>The bank was the closest business to my house growing up. I visited it a lot. In 7th grade, I asked my mom about T-Bills, CDs and stocks and she helped me get an appointment with someone at the bank to tell me about them. The surprised man said that he wished <em>he</em> had been interested in investing when he was my age. I thought it was weird that other kids weren&rsquo;t interested. Who wouldn&rsquo;t want free money?</p>
+<p>As a teenager, I started buying CDs (I still remember that amazing 7%, 2-year CD!). And suddenly, I didn&rsquo;t just have a single bank account any more. I needed something to help me manage my combined accounts and categorize them. So I grabbed some PHP and MySQL and made the first incarnation of Buckets. It was no-frills and perfect.</p>
+<h3 id=africa>Africa<a class=anchor-link href=#africa>&para;</a></h3>
+<p>At 19, I served for two years <a href=https://www.mormonnewsroom.org/topic/missionary-program>as a missionary</a> in southern Africa. I learned firsthand that money does not bring happiness. If anything, it feels like the inverse is true. There are extremes, for sure, but more money isn&rsquo;t the basis for a happy life. I&rsquo;m grateful to have learned that lesson (though it sure is hard to believe sometimes).</p>
+<h3 id=college---spreadsheet>College - Spreadsheet<a class=anchor-link href=#college---spreadsheet>&para;</a></h3>
+<p>Once in college, without a computer of my own, I built a budget tracker in Google Sheets. It met my needs and was extensible enough to allow for any kind of crazy thing I wanted to do. It worked great&mldr; until I met a cute girl and married her.</p>
+<h3 id=marriage>Marriage<a class=anchor-link href=#marriage>&para;</a></h3>
+<p>Suddenly, my home-grown spreadsheet wasn&rsquo;t cutting it. My wife and I were determined to be united in our finances. We looked at several applications, but most were either too accounting-y, too simplistic, too invasive, or not cross-platform. (It&rsquo;s here that I must admit that I did, in fact, convince my wife to use Linux as our first desktop OS. I liked it. And we&rsquo;ll leave it at that).</p>
+<p>So we started with a spreadsheet and spent 2 or more hours every month updating it. It was painful. It was often confusing. <em>There must be a better way!</em></p>
+<p>And that&rsquo;s how the first version of Buckets was born: a web application first hosted locally, then eventually opened up for others to use. It was perfect for us.</p>
+<p>But no one bought it (except kind friends). Thanks, friends. However, even though no one else liked it, I <em>still</em> enjoyed working on it.</p>
+<h3 id=desktop>Desktop<a class=anchor-link href=#desktop>&para;</a></h3>
+<p>Then, in August 2017 I ported the web app to a desktop app and we tried it for our budget that month. We knew immediately that the desktop was where Buckets belongs. So in October 2017, the first cross-platform, desktop version of Buckets came out.</p>
+<p>People like it. In fact, complete strangers have paid for it.</p>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<h2 id=future>Future<a class=anchor-link href=#future>&para;</a></h2>
+<p>I enjoy working on Buckets, and foresee working on it for many years to come. Will Buckets make me a millionaire? Nope, probably not—at least I don&rsquo;t expect it to.</p>
+<p>Where does Buckets go from here? Here&rsquo;s a high-level road map (subject to change and missing lots of detail, of course):</p>
+<ul>
+<li>Fix every reported bug</li>
+<li>Off budget accounting (net wealth, etc&mldr;)</li>
+<li>Debt management</li>
+<li>Mobile companion app (won&rsquo;t have all the features of desktop)</li>
+<li>Full documentation</li>
+<li>Partial categorization</li>
+<li>Accessibility</li>
+<li>Improve bank macros</li>
+<li>Code sign the application</li>
+</ul>
+<p>I&rsquo;m hoping to get to the mobile app before the end of 2018.</p>
+<p>— Matt</p>
+</article>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<div class="next-prev-links close" style=margin-top:1rem>
+<a class=prev href=/es/blog/2018/04/01/organic.html/>&larr; Prev</a>
+<a class=next href=/es/blog/2018/04/30/clearing-trans.html/>Next &rarr;</a>
+</div>
+<h2 style=margin-top:2rem>Comments</h2>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/bb7cd7261b6d188eaf785a71c2cbea4e?s=64">
+<div>
+<div class=details>
+<div class=author>Ron Phillipchuk</div>
+<div class=date>mié. abr. 25, 2018 1:57</div>
+</div>
+<div class=message>Thanks for the "Off Budget" Accounts... Greatly Appreciated !!!!</div>
+</div>
+</div>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/3a760317157c33e6b977df8e35ae857d?s=64">
+<div>
+<div class=details>
+<div class=author>Matt</div>
+<div class=date>dom. abr. 29, 2018 3:11</div>
+</div>
+<div class=message>Ron, you're welcome. Expect some charts related to off-budget accounts very soon!</div>
+</div>
+</div>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/d9e1438324ffdb3b860b5f84f291af1f?s=64">
+<div>
+<div class=details>
+<div class=author>Carlos Barreto</div>
+<div class=date>sáb. mayo 5, 2018 5:32</div>
+</div>
+<div class=message>After reading this story I couldn´t any longer to buy my license of buckets.
+Matt, you are doing really great!
+Thanks a lot!</div>
+</div>
+</div>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/cfb30165bd9ee7ec88a01010f15f50e1?s=64">
+<div>
+<div class=details>
+<div class=author>Andrew</div>
+<div class=date>dom. nov. 25, 2018 11:47</div>
+</div>
+<div class=message>Glad to hear you would consider going open source :)</div>
+</div>
+</div>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/?s=64">
+<div>
+<div class=details>
+<div class=author>Garo </div>
+<div class=date>dom. jun. 2, 2019 6:32</div>
+</div>
+<div class=message>Any update on the mobile apps? Asking because that is the only thing preventing me to switch to buckets. I’m on the go most of the time, and don’t use a comouter often. So a phone app (to at least add transactions) would be awesome!</div>
+</div>
+</div>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/3a760317157c33e6b977df8e35ae857d?s=64">
+<div>
+<div class=details>
+<div class=author>Matt</div>
+<div class=date>lun. jun. 3, 2019 12:38</div>
+</div>
+<div class=message>Garo,
+I don't have anything for you yet on the mobile front (sorry), but I'm still working on it in between fixing bugs in the desktop app.</div>
+</div>
+</div>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/?s=64">
+<div>
+<div class=details>
+<div class=author>TR</div>
+<div class=date>jue. sept. 12, 2019 11:33</div>
+</div>
+<div class=message>New to Buckets - making the switch from YNAB-4. Is there a way to schedule recurring transactions such as weekly pay (deposit), monthly mortgage (withdrawal), etc. so they don' have to be manually entered every month and to allow planning ahead?</div>
+</div>
+</div>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/?s=64">
+<div>
+<div class=details>
+<div class=author>Matt</div>
+<div class=date>vie. sept. 20, 2019 6:24</div>
+</div>
+<div class=message>Just signed up for newsletter. Waiting for mobile app and syncing. Once that's on board, I'm in.
+Keep up the good work!</div>
+</div>
+</div>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/15bed9f02fc6a5099f5c3169acfd4257?s=64">
+<div>
+<div class=details>
+<div class=author>Frostregen</div>
+<div class=date>lun. oct. 7, 2019 10:48</div>
+</div>
+<div class=message>Hi Matt,
+your application looks nice - I just imported everything from YNAB4 :)
+It worked ok in general, with just a few issues:
+-All transfers were "uncategorized" and I had to manually set them up as "transfer".
+-A few split transactions got lost. I think it was related to moving money between buckets in YNAB by having a split transaction outgoing from bucket A, incoming to bucket B. (Which is not how it should be done anyway)
+Feedback:
+-I'm missing the "Payee" column, which auto-filled the category/bucket. Not a big deal I guess, since it was mostly for analysis / searching.
+-"Search" seems to ignore the amount column? (Workaround is using CTRL+F inside transaction view, but this only works month-by-month
+My biggest issue right now is the same as TR postet:
+-I cannot shedule recurring transactions. This was really helpful as a reminder, and not having to write everything again manually each month / 3 month / year.
+Greetings,
+Frostregen</div>
+</div>
+</div>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/5d12cdfbcfa7ad66a5b890265b824178?s=64">
+<div>
+<div class=details>
+<div class=author>alan</div>
+<div class=date>lun. oct. 14, 2019 4:13</div>
+</div>
+<div class=message>I found your website and application earlier today. I was looking at cross platform apps that were build with ElectronJS.
+</div>
+</div>
+</div>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/ba7d0dea213a557312864b8cb3e248d6?s=64">
+<div>
+<div class=details>
+<div class=author>Danielle</div>
+<div class=date>mar. oct. 15, 2019 7:11</div>
+</div>
+<div class=message>Having just migrated to Linux Mint Mate, I'm SO THRILLED and thankful to know this is cross-platform! Now if I can just get my mate to use a budget program... ;)</div>
+</div>
+</div>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/cdb0a5c42e060ba3ffed26351a7f2db8?s=64">
+<div>
+<div class=details>
+<div class=author>Alyson</div>
+<div class=date>sáb. jul. 11, 2020 9:04</div>
+</div>
+<div class=message>When is the ios app coming out?</div>
+</div>
+</div>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/3a760317157c33e6b977df8e35ae857d?s=64">
+<div>
+<div class=details>
+<div class=author>Matt</div>
+<div class=date>dom. jul. 12, 2020 2:30</div>
+</div>
+<div class=message>Alyson,
+I still don't have an ETA on the mobile apps. It consumes almost all of my development time, but it's slow going. I wish I had a better answer.</div>
+</div>
+</div>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/7842d230189a1554fa361a4e4d0152b1?s=64">
+<div>
+<div class=details>
+<div class=author>Sandy</div>
+<div class=date>jue. nov. 12, 2020 5:02</div>
+</div>
+<div class=message>I downloaded your software today and have been plunking in a bunch of info but after I closed out the program and tried to get back in I am getting an error message. Would like to chat with you about it.</div>
+</div>
+</div>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/81c230a7a258bdc028cca7cc9f24f5b6?s=64">
+<div>
+<div class=details>
+<div class=author>lc</div>
+<div class=date>sáb. jun. 12, 2021 5:29</div>
+</div>
+<div class=message>Hey! This looks fantastic, and would love to switch, just need it available for the android!</div>
+</div>
+</div>
+<div id=comment-form style=display:none>
+<a name=comment-form></a>
+<script>window.location.search.substr(1).indexOf('comment=submitted')!==-1&&document.write(`<div class="notification">Comment submitted!  Your comment will be posted here after being reviewed.</div>`)</script>
+<script>function setCommentStatus(b,c){const a=document.getElementById('comment-notification');a.innerText=b,a.setAttribute('class',c),a.setAttribute('style','')}function submitComment(c){const b=document.getElementById('comment-submit');b.disabled=!0,setCommentStatus('Submitting...','notification'),c.preventDefault();const d=document.getElementById('comment-message').value,e=document.getElementById('comment-email').value,f=document.getElementById('comment-name').value,g=document.getElementById('comment-slug').value,h={comment:d,email:e,name:f,subdir:g};let a=new XMLHttpRequest;a.addEventListener('load',a=>{setCommentStatus('Comment submitted!  Your comment will be posted here after being reviewed.','notification'),b.disabled=!1}),a.addEventListener('error',a=>{console.log('Error',a),setCommentStatus('Error submitting comment.  If it continues not to work, please email us.','notification error'),b.disabled=!1}),a.open('POST','https://7nd5a97217.execute-api.us-east-1.amazonaws.com/default/GitHubJekyllComments'),a.send(JSON.stringify(h))}XMLHttpRequest&&document.getElementById('comment-form').setAttribute('style','')</script>
+<form method=post class=comment-form onsubmit="return submitComment(event),!1">
+<input type=hidden id=comment-slug value=history-and-future>
+<label>Name:<br><input id=comment-name type=text></label>
+<label>Email (optional&mdash;not displayed):<br><input id=comment-email type=email></label>
+<label>Message:</label>
+<textarea id=comment-message></textarea>
+<button type=submit id=comment-submit>Add comment</button>
+</form>
+<div id=comment-notification style=display:none></div>
+</div>
+<div class=mailing-list-main style=margin-top:2rem>
+<div class=mailing-list-title>Get these posts in your email, monthly:</div>
+<p>
+<link href=//cdn-images.mailchimp.com/embedcode/classic-10_7.css rel=stylesheet type=text/css>
+<style type=text/css>#mc_embed_signup{background:0 0;clear:left}#mc_embed_signup form{padding:0}#mc_embed_signup input{border-radius:3px}#mc_embed_signup input[type=submit]{background-color:#08c}</style>
+<div id=mc_embed_signup>
+<form action="https://bucketsisbetter.us8.list-manage.com/subscribe/post?u=bc109895c8df246ae54ad4d71&id=0960a6d05e" method=post id=mc-embedded-subscribe-form name=mc-embedded-subscribe-form class=validate target=_blank novalidate>
+<div id=mc_embed_signup_scroll>
+<div class=mc-field-group>
+<label for=mce-EMAIL>Email Address
+</label>
+<input type=email name=EMAIL class="required email" id=mce-EMAIL>
+</div>
+<div class=mc-field-group>
+<label for=mce-FNAME>First Name
+</label>
+<input type=text name=FNAME class=required id=mce-FNAME>
+</div>
+<div id=mce-responses class=clear>
+<div class=response id=mce-error-response style=display:none></div>
+<div class=response id=mce-success-response style=display:none></div>
+</div>
+<div style=position:absolute;left:-5000px aria-hidden=true><input type=text name=b_bc109895c8df246ae54ad4d71_0960a6d05e tabindex=-1></div>
+<div class=clear><input type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe class=button></div>
+</div>
+</form>
+</div>
+</p>
+</div>
+</div>
+</div>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<footer>
+<div><a href=https://onepartrain.com target=_blank>&copy; One Part Rain, LLC</a></div>
+<div><a href=mailto:hello@budgetwithbuckets.com>hello@budgetwithbuckets.com</a></div>
+<div><a href=https://www.patreon.com/iffy target=_blank>Donar</a></div>
+<div><a href=https://github.com/buckets/policies/blob/master/privacy-policy.md target=_blank>Privacidad</a></div>
+<div>
+<details>
+<summary>español</summary>
+<div><a href=https://www.budgetwithbuckets.com/blog/2018/04/23/history-and-future.html/>English</a></div>
+</details>
+</div>
+</footer>
+<script type=text/javascript>var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date;(function(){var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.async=!0,a.src='https://embed.tawk.to/59835f8ed1385b2b2e285765/default',a.charset='UTF-8',a.setAttribute('crossorigin','*'),b.parentNode.insertBefore(a,b)})()</script>
+</body>
+</html>

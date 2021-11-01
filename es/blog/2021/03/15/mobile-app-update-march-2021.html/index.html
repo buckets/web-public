@@ -1,0 +1,206 @@
+<!doctype html><html>
+<head>
+<title>
+Buckets Mobile Update &amp;mdash; March 2021
+</title>
+<link rel="shortcut icon" href=/img/favicon.png type=image/png>
+<link rel=stylesheet type=text/css href=/css/buckets.css>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=stylesheet type=text/css href=/css/buckets-blog.css>
+<link rel=alternate hreflang=en href=https://www.budgetwithbuckets.com/blog/2021/03/15/mobile-app-update-march-2021.html/>
+</head>
+<body>
+<div class=buckets-nav>
+<section>
+<a class=logo href=/es/>
+<img src=/img/logo.png>
+</a>
+<a href=/es/guide/>Guía</a>
+<a class=active href=/blog/>Blog</a>
+<a target=_blank href=https://github.com/buckets/application/blob/master/CHANGELOG.md>Cambios</a>
+<a target=_blank href=https://github.com/buckets/application/issues>Cuestiones</a>
+</section>
+<section>
+<a class=download-button href=/es/download/>
+<img src=/images/download.svg width=15 height=15>
+Descargar
+</a>
+<a class=buy-button href=/es/buy/>Comprar $49</a>
+</section>
+</div>
+<div class=wrapper>
+<div class=post>
+<header class=post-header>
+<div class=next-prev-links>
+<a class=prev href=/es/blog/2020/10/20/whats-taking-so-long.html/>&larr; Prev</a>
+<a class=next href=/es/blog/2021/10/27/fall-update-2021.html/>Next &rarr;</a>
+</div>
+<h1 class=blog-title>Buckets Mobile Update &mdash; March 2021</h1>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<p class=post-meta>
+Mar 15, 2021
+• Matt
+</p>
+</header>
+<article class=post-content>
+<p>Hello again! I wanted to post an update about the upcoming Buckets mobile app. Before too many words, here&rsquo;s what it looks like in the iOS Simulator:</p>
+<div style=text-align:center>
+<img alt="Buckets Mobile home screen" src=./homescreen.png>
+</div>
+<p>Yes, the grey buttons aren&rsquo;t much to look at, but I&rsquo;d rather have the app working first and beautiful later. Android will look the same (no screenshot at the moment because I recently broke some things there). Rather than follow the operating system&rsquo;s styling, Buckets Mobile will be consistent among platforms.</p>
+<p>So what exactly is the status?</p>
+<h2 id=ios>iOS<a class=anchor-link href=#ios>&para;</a></h2>
+<p>I&rsquo;ve submitted the first draft of Buckets Mobile to Apple&rsquo;s App Store! From reading others' experience developing iOS apps, there will be several more submissions before the app is validated and accepted. I can&rsquo;t adequately explain how relieved I felt when I finally submitted it. It&rsquo;s been a long time coming!</p>
+<p>Once it&rsquo;s accepted, a limited number of alpha testers will be sent an email with instructions for installing the app. <a href="https://docs.google.com/forms/d/e/1FAIpQLSfti1Bmm6Zi8I8zauwPpZcMLNUZgwRG9QRWkW6Ki6Szi9lLlw/viewform?usp=sf_link">Sign up here</a> if you&rsquo;d like to be one of them. Since Apple limits the number of testers, I can&rsquo;t guarantee you&rsquo;ll get a spot but I&rsquo;ll give out as many invitations as I can!</p>
+<h2 id=android>Android<a class=anchor-link href=#android>&para;</a></h2>
+<p>Since the codebase is largely the same for iOS and Android, I only need to fix some Android-specific shared library compilation before an alpha version is ready for Android. If the iOS app review process takes a long time, Android might be ready first.</p>
+<p>If you want to be a tester for Android, <a href="https://docs.google.com/forms/d/e/1FAIpQLSfti1Bmm6Zi8I8zauwPpZcMLNUZgwRG9QRWkW6Ki6Szi9lLlw/viewform?usp=sf_link">sign up with the same link.</a></p>
+<h2 id=expectations>Expectations<a class=anchor-link href=#expectations>&para;</a></h2>
+<p>I need to clearly set some expectations about the initial release of the mobile app.</p>
+<p>First, though, more eye candy 🍬 Here&rsquo;s a snapshot of how it currently looks when pairing two devices. (Yes, that&rsquo;s the Trial Version of Buckets—I really ought to save up for a license some day&mldr;)</p>
+<img alt="Buckets Mobile syncing with Buckets Desktop" src=./linking.png>
+<p>So&mldr; expectations: please lower them 😁 It has taken months and months for this app to come out. You would be justified in thinking that Buckets Mobile is going to be amazing. It certainly has taken a long time, but most of the work has been effort required for making any generic mobile app. The budgeting part of Buckets Mobile? Accounts, buckets and transaction? That took a few days. The iOS skeleton, Java-to-C interoperation, desktop-to-mobile communication and shared-code extraction has taken 90% or more of the time.</p>
+<p>As noted <a href=/2019/09/07/mobile-update-sep2019.html>when we first sent out the call for alpha testers</a>, this first version is just Phase 1. Once Phase 1 is out and some long-standing bugs are fixed in Buckets Desktop, I expect Phase 2 will follow very quickly. In summary the phases are:</p>
+<ul>
+<li>Phase 1: Desktop-to-mobile, one-way wifi sync. Mobile devices can&rsquo;t alter the budget.</li>
+<li>Phase 2: Two-way wifi sync. Mobile devices can alter the budget (e.g. add and categorize transactions, create buckets, etc&mldr;) <em>This is the version you&rsquo;re probably waiting for!</em></li>
+<li>Phase 3: Sync over the Internet, via a Buckets-provided relay or your own system (i.e. Dropbox, Google Drive, some other filesharing service, etc&mldr;)</li>
+</ul>
+<p>Thank you all for supporting Buckets! It brings me great pleasure knowing that Buckets helps you with your finances. Stay tuned and happy budgeting!</p>
+<p>(One more screenshot, just for fun)</p>
+<div style=text-align:center>
+<img alt="Buckets Mobile month picker" src=./monthpicker.png>
+</div>
+<p>— Matt</p>
+</article>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<div class="next-prev-links close" style=margin-top:1rem>
+<a class=prev href=/es/blog/2020/10/20/whats-taking-so-long.html/>&larr; Prev</a>
+<a class=next href=/es/blog/2021/10/27/fall-update-2021.html/>Next &rarr;</a>
+</div>
+<h2 style=margin-top:2rem>Comments</h2>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/?s=64">
+<div>
+<div class=details>
+<div class=author>Linux Bucket User</div>
+<div class=date>lun. abr. 5, 2021 2:24</div>
+</div>
+<div class=message>First, Thank you for all you hard work on Buckets and for making it available on Linux! This is awesome news on the mobile development, can't wait to try it out and take Buckets with me when I'm on the go!!!</div>
+</div>
+</div>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/5562581cc8f48d574eedf37cf1dbfdc4?s=64">
+<div>
+<div class=details>
+<div class=author>Daniel Melo</div>
+<div class=date>mié. abr. 14, 2021 7:43</div>
+</div>
+<div class=message>If you need help translating the app to pt-br, let me know.</div>
+</div>
+</div>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/?s=64">
+<div>
+<div class=details>
+<div class=author>Pete</div>
+<div class=date>sáb. mayo 1, 2021 1:15</div>
+</div>
+<div class=message>Great to hear this looking forward to trying it out!</div>
+</div>
+</div>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/032ca3485dd26b966ba08333c8028c13?s=64">
+<div>
+<div class=details>
+<div class=author>bill</div>
+<div class=date>sáb. oct. 16, 2021 8:00</div>
+</div>
+<div class=message>hi. is this product still active and are you continuing to develop it?
+bill</div>
+</div>
+</div>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/3a760317157c33e6b977df8e35ae857d?s=64">
+<div>
+<div class=details>
+<div class=author>Matt</div>
+<div class=date>lun. oct. 18, 2021 2:08</div>
+</div>
+<div class=message>Yep, I'm still plugging away!</div>
+</div>
+</div>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/?s=64">
+<div>
+<div class=details>
+<div class=author>Ivo</div>
+<div class=date>mié. oct. 27, 2021 6:45</div>
+</div>
+<div class=message>It looks awesome! Can't wait to try it!</div>
+</div>
+</div>
+<div id=comment-form style=display:none>
+<a name=comment-form></a>
+<script>window.location.search.substr(1).indexOf('comment=submitted')!==-1&&document.write(`<div class="notification">Comment submitted!  Your comment will be posted here after being reviewed.</div>`)</script>
+<script>function setCommentStatus(b,c){const a=document.getElementById('comment-notification');a.innerText=b,a.setAttribute('class',c),a.setAttribute('style','')}function submitComment(c){const b=document.getElementById('comment-submit');b.disabled=!0,setCommentStatus('Submitting...','notification'),c.preventDefault();const d=document.getElementById('comment-message').value,e=document.getElementById('comment-email').value,f=document.getElementById('comment-name').value,g=document.getElementById('comment-slug').value,h={comment:d,email:e,name:f,subdir:g};let a=new XMLHttpRequest;a.addEventListener('load',a=>{setCommentStatus('Comment submitted!  Your comment will be posted here after being reviewed.','notification'),b.disabled=!1}),a.addEventListener('error',a=>{console.log('Error',a),setCommentStatus('Error submitting comment.  If it continues not to work, please email us.','notification error'),b.disabled=!1}),a.open('POST','https://7nd5a97217.execute-api.us-east-1.amazonaws.com/default/GitHubJekyllComments'),a.send(JSON.stringify(h))}XMLHttpRequest&&document.getElementById('comment-form').setAttribute('style','')</script>
+<form method=post class=comment-form onsubmit="return submitComment(event),!1">
+<input type=hidden id=comment-slug value=mobile-app-update-march-2021>
+<label>Name:<br><input id=comment-name type=text></label>
+<label>Email (optional&mdash;not displayed):<br><input id=comment-email type=email></label>
+<label>Message:</label>
+<textarea id=comment-message></textarea>
+<button type=submit id=comment-submit>Add comment</button>
+</form>
+<div id=comment-notification style=display:none></div>
+</div>
+<div class=mailing-list-main style=margin-top:2rem>
+<div class=mailing-list-title>Get these posts in your email, monthly:</div>
+<p>
+<link href=//cdn-images.mailchimp.com/embedcode/classic-10_7.css rel=stylesheet type=text/css>
+<style type=text/css>#mc_embed_signup{background:0 0;clear:left}#mc_embed_signup form{padding:0}#mc_embed_signup input{border-radius:3px}#mc_embed_signup input[type=submit]{background-color:#08c}</style>
+<div id=mc_embed_signup>
+<form action="https://bucketsisbetter.us8.list-manage.com/subscribe/post?u=bc109895c8df246ae54ad4d71&id=0960a6d05e" method=post id=mc-embedded-subscribe-form name=mc-embedded-subscribe-form class=validate target=_blank novalidate>
+<div id=mc_embed_signup_scroll>
+<div class=mc-field-group>
+<label for=mce-EMAIL>Email Address
+</label>
+<input type=email name=EMAIL class="required email" id=mce-EMAIL>
+</div>
+<div class=mc-field-group>
+<label for=mce-FNAME>First Name
+</label>
+<input type=text name=FNAME class=required id=mce-FNAME>
+</div>
+<div id=mce-responses class=clear>
+<div class=response id=mce-error-response style=display:none></div>
+<div class=response id=mce-success-response style=display:none></div>
+</div>
+<div style=position:absolute;left:-5000px aria-hidden=true><input type=text name=b_bc109895c8df246ae54ad4d71_0960a6d05e tabindex=-1></div>
+<div class=clear><input type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe class=button></div>
+</div>
+</form>
+</div>
+</p>
+</div>
+</div>
+</div>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<footer>
+<div><a href=https://onepartrain.com target=_blank>&copy; One Part Rain, LLC</a></div>
+<div><a href=mailto:hello@budgetwithbuckets.com>hello@budgetwithbuckets.com</a></div>
+<div><a href=https://www.patreon.com/iffy target=_blank>Donar</a></div>
+<div><a href=https://github.com/buckets/policies/blob/master/privacy-policy.md target=_blank>Privacidad</a></div>
+<div>
+<details>
+<summary>español</summary>
+<div><a href=https://www.budgetwithbuckets.com/blog/2021/03/15/mobile-app-update-march-2021.html/>English</a></div>
+</details>
+</div>
+</footer>
+<script type=text/javascript>var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date;(function(){var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.async=!0,a.src='https://embed.tawk.to/59835f8ed1385b2b2e285765/default',a.charset='UTF-8',a.setAttribute('crossorigin','*'),b.parentNode.insertBefore(a,b)})()</script>
+</body>
+</html>

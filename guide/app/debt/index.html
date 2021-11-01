@@ -1,0 +1,200 @@
+<!doctype html><html>
+<head>
+<title>
+Debt
+</title>
+<link rel="shortcut icon" href=/img/favicon.png type=image/png>
+<link rel=stylesheet type=text/css href=/css/buckets.css>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=stylesheet type=text/css href=/css/buckets-guide.css>
+<link rel=alternate hreflang=es href=https://www.budgetwithbuckets.com/es/guide/app/debt/>
+</head>
+<body>
+<div class=buckets-nav>
+<section>
+<a class=logo href=/>
+<img src=/img/logo.png>
+</a>
+<a class=active href=/guide/>Guide</a>
+<a href=/blog/>Blog</a>
+<a target=_blank href=https://github.com/buckets/application/blob/master/CHANGELOG.md>Changelog</a>
+<a target=_blank href=https://github.com/buckets/application/issues>Issue Tracker</a>
+</section>
+<section>
+<a class=download-button href=/download/>
+<img src=/images/download.svg width=15 height=15>
+Download
+</a>
+<a class=buy-button href=/buy/>Buy $49</a>
+</section>
+</div>
+<div class=main-wrap>
+<div class=main-nav>
+<a href=/guide/getting-started/ class=subheading>Getting Started</a>
+<div class=sub>
+<a href=/guide/getting-started/1-principles/>Principles</a>
+<a href=/guide/getting-started/2-method/>Buckets Method</a>
+</div>
+<a href=/guide/app/ class=subheading>Using Buckets</a>
+<div class=sub>
+<a href=/guide/app/accounts/>Accounts</a>
+<a href=/guide/app/buckets/>Buckets</a>
+<a href=/guide/app/transactions/>Transactions</a>
+<a href=/guide/app/categorizing/>Categorizing</a>
+<a href=/guide/app/debt/ class=active>Debt</a>
+<a href=/guide/app/general/>General</a>
+</div>
+<a href=/guide/fileformat/ class=subheading>File Format</a>
+</div>
+<div class=main-body>
+<h1>Debt</h1>
+<p>If you are trying to pay off debt, there are a few things Buckets can offer you.</p>
+<h2 id=mortgageloan>Mortgage/Loan<a class=anchor-link href=#mortgageloan>&para;</a></h2>
+<p>Many users treat fixed-payment credit (e.g. mortgages and car loans) as expenses to the budget rather than accounts within the budget. It makes sense to mark these kinds of debt accounts as <strong>Off Budget</strong> rather than <strong>Debt</strong>.</p>
+<h2 id=credit-cards-and-other-debt>Credit Cards and Other Debt<a class=anchor-link href=#credit-cards-and-other-debt>&para;</a></h2>
+<p>If you always pay off your credit card in full every statement, then you are safe to leave your credit card account as a <strong>Normal</strong> account.</p>
+<p>If, however, you are trying to pay off a credit card balance, it may be helpful to mark the account as <strong>Debt</strong>. Click the account details and change the account type from <strong>Normal</strong> to <strong>Debt</strong>.</p>
+<h2 id=debt-accounts>Debt Accounts<a class=anchor-link href=#debt-accounts>&para;</a></h2>
+<p>Changing an account to a <strong>Debt</strong> account causes two things to happen:</p>
+<ol>
+<li>The account&rsquo;s negative balance is removed from your total rain.</li>
+<li>A debt payment bucket is automatically created.</li>
+</ol>
+<h3 id=rain-without-debt-explanation>Rain without debt explanation<a class=anchor-link href=#rain-without-debt-explanation>&para;</a></h3>
+<p>Suppose you have the following account balances:</p>
+<table>
+<thead>
+<tr>
+<th>Account</th>
+<th style=text-align:right>Balance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Credit Card</td>
+<td style=text-align:right>-3,000</td>
+</tr>
+<tr>
+<td>Checking</td>
+<td style=text-align:right>2,000</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style=text-align:right><strong>-1,000</strong></td>
+</tr>
+</tbody>
+</table>
+<p>If your Credit Card account is a normal account, in order to get your Rain to 0, your bucket balances will have to total to -1,000 also. For example:</p>
+<table>
+<thead>
+<tr>
+<th>Bucket</th>
+<th style=text-align:right>Balance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Food</td>
+<td style=text-align:right>-250</td>
+</tr>
+<tr>
+<td>Rent</td>
+<td style=text-align:right>-500</td>
+</tr>
+<tr>
+<td>Clothing</td>
+<td style=text-align:right>-250</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style=text-align:right><strong>-1,000</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Budgeting with a bunch of negative amounts doesn&rsquo;t match reality, though. In real life, you would never allocate a negative amount for food. So, when you mark an account as <strong>Debt</strong> it removes that debt from your rain amount so that you can budget like this:</p>
+<table>
+<thead>
+<tr>
+<th>Bucket</th>
+<th style=text-align:right>Balance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Food</td>
+<td style=text-align:right>750</td>
+</tr>
+<tr>
+<td>Rent</td>
+<td style=text-align:right>1,000</td>
+</tr>
+<tr>
+<td>Clothing</td>
+<td style=text-align:right>250</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style=text-align:right><strong>2,000</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id=debt-payment-bucket>Debt Payment Bucket<a class=anchor-link href=#debt-payment-bucket>&para;</a></h3>
+<p>The debt payment bucket will mirror every transaction into your account. For instance:</p>
+<ul>
+<li>if you deposit $50 into your debt account, the payment bucket balance will decrease by $50 indicating that your pending payment has gone down.</li>
+<li>if you withdraw $50 from your debt account, the payment bucket balance will increase by $50 indicating that your pending payment has gone up.</li>
+</ul>
+<p>You are also welcome to put additional funds into the debt payment bucket as you have them.</p>
+<p><warning>Because of complicated deadlines associated with credit card billing, don&rsquo;t assume that the amount in the payment bucket is the exact amount you should pay. See the next section for help with this.</warning></p>
+<h3 id=how-to-categorize-debt-transactions>How to categorize debt transactions<a class=anchor-link href=#how-to-categorize-debt-transactions>&para;</a></h3>
+<p><img src=../debt_img/debt_categories.png alt="How to categorize debt transactions"></p>
+<ul>
+<li><strong>Expenses</strong>: Categorize credit card expenses as the bucket the expense was for (e.g. food expenses should be categorized as <em>Food</em>)</li>
+<li><strong>Payments</strong>: Categorize credit card payments as transfers (one transfer <em>from</em> an account and a matching transactions <em>to</em> the credit card account). Transactions should match your bank statements.</li>
+<li><strong>Interest</strong>: Categorize credit card interest as <em>Debt</em>.</li>
+</ul>
+<h2 id=syncing-the-payment-balance-with-the-billing-cycle>Syncing the payment balance with the billing cycle<a class=anchor-link href=#syncing-the-payment-balance-with-the-billing-cycle>&para;</a></h2>
+<p>Credit cards can have very complicated billing cycles. And even the simplest cycles can create confusion. In the simplest case, you&rsquo;ll have one billing cycle&rsquo;s payment due just as the next billing cycle ends, as shown here:</p><svg viewBox="0 0 500 150" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrow" viewBox="0 0 10 10" markerWidth="6" markerHeight="6" refX="8" refY="5" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z"/></marker></defs><sline x1="10" y1="100" x2="490" y2="100" stroke="grey"/><g name="cycle1" transform="translate(50,50)"><rect x="0" y="-5" height="10" width="100" fill="rgba(52, 152, 219, 1)"/><rect x="100" y="-5" height="10" width="100" fill="rgba(189, 195, 199, 1)"/><path d="M1e2 5q50 55 1e2.0" stroke="#000" fill="none" stroke-width="2" marker-end="url(#arrow)"/><text x="0" y="0" dy="-10" text-anchor="middle">Start</text><text x="100" y="0" dy="-10" text-anchor="middle">End</text><text x="200" y="0" dy="-10" text-anchor="middle">Due</text></g><g name="cycle2" transform="translate(150,100)"><rect x="0" y="-5" height="10" width="100" fill="rgba(52, 152, 219, 1)"/><rect x="100" y="-5" height="10" width="100" fill="rgba(189, 195, 199, 1)"/><path d="M1e2 5q50 55 1e2.0" stroke="#000" fill="none" stroke-width="2" marker-end="url(#arrow)"/><text x="0" y="0" dy="-10" text-anchor="middle">Start</text><text x="100" y="0" dy="-10" text-anchor="middle">End</text><text x="200" y="0" dy="-10" text-anchor="middle">Due</text></g></svg>
+<p>If you&rsquo;re using a <strong>Debt</strong> account, this means that your debt payment bucket can often include money meant for 2 or more cycles at once. Here are some tips to help ease the confusion:</p>
+<ol>
+<li>
+<p>Pay off each billing cycle as close to the end date as you can. This limits the amount of overlap with other cycles.</p>
+</li>
+<li>
+<p>The first month you use a <strong>Debt</strong> account, just before you make your first payment, add your payment amount to the debt payment bucket.</p>
+<p>For instance, if your debt payment bucket has accumulated $400 and you&rsquo;re about to pay $600 for the previous billing cycle, first add $600 to your debt payment bucket to bring the balance to $1000. Make your payment and the balance should now reflect the amount due on your next cycle.</p>
+</li>
+<li>
+<p>Consult the debt payment bucket&rsquo;s transaction list and use the balance <em>at the end of the previous billing cycle</em> as your payment amount.</p>
+<p>For instance, if your billing cycle ends on the 4th of the month, though your bucket might have $690 in it <em>now</em>, at the end of the previous billing cycle it only had $450. Pay $450 rather than $690.
+<img src=../debt_img/btrans_balanceasof.png alt="Bucket transaction list"></p>
+</li>
+</ol>
+<p>Always double check that the amount you plan to pay matches what you&rsquo;ve been billed.</p>
+<h2 id=another-great-idea>Another Great Idea<a class=anchor-link href=#another-great-idea>&para;</a></h2>
+<p>You&rsquo;ll have more success paying off your debt if you budget for it. Consider these two ideas:</p>
+<ol>
+<li>Create an <em>additional</em> recurring expense bucket and choose an amount to pay toward your debt every month. After making it rain each month, transfer the balance to the debt payment bucket.</li>
+<li>After making it rain each month, put any extra money into the debt payment bucket.</li>
+</ol>
+<h2>Next</h2>
+<a href=/guide/app/general/>General</a>
+</div>
+</div>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<footer>
+<div><a href=https://onepartrain.com target=_blank>&copy; One Part Rain, LLC</a></div>
+<div><a href=mailto:hello@budgetwithbuckets.com>hello@budgetwithbuckets.com</a></div>
+<div><a href=https://www.patreon.com/iffy target=_blank>Donate</a></div>
+<div><a href=https://github.com/buckets/policies/blob/master/privacy-policy.md target=_blank>Privacy</a></div>
+<div>
+<details>
+<summary>English</summary>
+<div><a href=https://www.budgetwithbuckets.com/es/guide/app/debt/>español</a></div>
+</details>
+</div>
+</footer>
+<script type=text/javascript>var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date;(function(){var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.async=!0,a.src='https://embed.tawk.to/59835f8ed1385b2b2e285765/default',a.charset='UTF-8',a.setAttribute('crossorigin','*'),b.parentNode.insertBefore(a,b)})()</script>
+</body>
+</html>

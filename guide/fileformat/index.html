@@ -1,0 +1,93 @@
+<!doctype html><html>
+<head>
+<title>
+File Format
+</title>
+<link rel="shortcut icon" href=/img/favicon.png type=image/png>
+<link rel=stylesheet type=text/css href=/css/buckets.css>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=stylesheet type=text/css href=/css/buckets-guide.css>
+<link rel=alternate hreflang=es href=https://www.budgetwithbuckets.com/es/guide/fileformat/>
+</head>
+<body>
+<div class=buckets-nav>
+<section>
+<a class=logo href=/>
+<img src=/img/logo.png>
+</a>
+<a class=active href=/guide/>Guide</a>
+<a href=/blog/>Blog</a>
+<a target=_blank href=https://github.com/buckets/application/blob/master/CHANGELOG.md>Changelog</a>
+<a target=_blank href=https://github.com/buckets/application/issues>Issue Tracker</a>
+</section>
+<section>
+<a class=download-button href=/download/>
+<img src=/images/download.svg width=15 height=15>
+Download
+</a>
+<a class=buy-button href=/buy/>Buy $49</a>
+</section>
+</div>
+<div class=main-wrap>
+<div class=main-nav>
+<a href=/guide/getting-started/ class=subheading>Getting Started</a>
+<div class=sub>
+<a href=/guide/getting-started/1-principles/>Principles</a>
+<a href=/guide/getting-started/2-method/>Buckets Method</a>
+</div>
+<a href=/guide/app/ class=subheading>Using Buckets</a>
+<div class=sub>
+<a href=/guide/app/accounts/>Accounts</a>
+<a href=/guide/app/buckets/>Buckets</a>
+<a href=/guide/app/transactions/>Transactions</a>
+<a href=/guide/app/categorizing/>Categorizing</a>
+<a href=/guide/app/debt/>Debt</a>
+<a href=/guide/app/general/>General</a>
+</div>
+<a href=/guide/fileformat/ class="subheading active">File Format</a>
+</div>
+<div class=main-body>
+<h1>File Format</h1>
+<p class=notice>
+<strong>NOTE:</strong> This article is intended for programmers who want to write programs that interface with budget files. You don't need this if you just want to use the Buckets app.
+</p>
+<p>Buckets budget files are SQLite databases. The schema is mostly self-explanatory, but this document points out some things that aren&rsquo;t.</p>
+<p class=warning>
+<strong>WARNING:</strong> The schema is not final and may change without warning in future versions of Buckets.
+</p>
+<p>If you still have questions after reading this, feel free to chat with me.</p>
+<h2 id=concurrency>Concurrency<a class=anchor-link href=#concurrency>&para;</a></h2>
+<p>It&rsquo;s not a good idea to do data-manipulating operations (<code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>, etc&mldr;) on the same budget file from more than one process at a time. So before you manipulate data outside of Buckets, close the budget file inside Buckets.</p>
+<h2 id=amounts>Amounts<a class=anchor-link href=#amounts>&para;</a></h2>
+<p>Amounts are stored as integers, not floats. For USD (and most other currencies), this means that amounts are integer cents.</p>
+<p>In this example, account 1 has a balance of $6,500:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>sqlite&gt; SELECT balance FROM account WHERE id=1;
+650000
+sqlite&gt; SELECT printf(&#34;%.2f&#34;, balance/100.0) AS balance FROM account WHERE id=1;
+6500.00</code></pre></div>
+<h2 id=inserting-transactions>Inserting transactions<a class=anchor-link href=#inserting-transactions>&para;</a></h2>
+<p>Insert bank/account transactions into the <code>account_transaction</code> table. Be aware of the following:</p>
+<ul>
+<li>The <code>fi_id</code> column represents an account-unique ID (typically assigned by the bank) for a transaction.</li>
+<li><code>general_cat</code> should be one of the strings <code>""</code>, <code>"income"</code>, or <code>"transfer"</code>.</li>
+</ul>
+<p>Account and bucket balances are automatically updated (by SQLite triggers) when transactions are inserted/updated/deleted.</p>
+</div>
+</div>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<footer>
+<div><a href=https://onepartrain.com target=_blank>&copy; One Part Rain, LLC</a></div>
+<div><a href=mailto:hello@budgetwithbuckets.com>hello@budgetwithbuckets.com</a></div>
+<div><a href=https://www.patreon.com/iffy target=_blank>Donate</a></div>
+<div><a href=https://github.com/buckets/policies/blob/master/privacy-policy.md target=_blank>Privacy</a></div>
+<div>
+<details>
+<summary>English</summary>
+<div><a href=https://www.budgetwithbuckets.com/es/guide/fileformat/>español</a></div>
+</details>
+</div>
+</footer>
+<script type=text/javascript>var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date;(function(){var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.async=!0,a.src='https://embed.tawk.to/59835f8ed1385b2b2e285765/default',a.charset='UTF-8',a.setAttribute('crossorigin','*'),b.parentNode.insertBefore(a,b)})()</script>
+</body>
+</html>
