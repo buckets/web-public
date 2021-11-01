@@ -29,7 +29,6 @@ html {
   align-items: center;
   position: relative;
 }
-
 .buckets-nav a {
   color: white;
   white-space: nowrap;
@@ -74,6 +73,9 @@ html {
 .buckets-nav a.buy-button:hover,
 .buckets-nav a.buy-button.active {
   background-color: #3498db;
+}
+.buckets-nav .nav-toggle {
+  display: none;
 }
 
 a {
@@ -184,4 +186,58 @@ a.anchor-link:hover {
 }
 a.anchor-link:visited {
   color: grey;
+}
+
+@media (max-width: 700px) {
+  .buckets-nav {
+    flex-direction: column;
+  }
+}
+@media (max-width: 500px) {
+  .buckets-nav a.nav-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+  .buckets-nav a.nav-toggle img {
+    height: 3rem;
+    padding-right: 1rem;
+  }
+  .buckets-nav.nav-open a.nav-toggle img {
+    display: none;
+  }
+  .buckets-nav {
+    max-width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  .buckets-nav section {
+    display: none;
+    max-width: 100%;
+  }
+  .buckets-nav a,
+  .buckets-nav a.download-button,
+  .buckets-nav a.buy-button {
+    width: 100%;
+    padding: .5rem 0;
+    margin: .5rem 0 .25rem;
+  }
+  .buckets-nav.nav-open section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  footer {
+    flex-wrap: wrap;
+  }
+  footer a,
+  footer details {
+    font-size: 1rem;
+    display: block;
+    padding: .75rem;
+  }
 }

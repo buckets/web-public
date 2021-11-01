@@ -13,6 +13,7 @@
   flex-basis: 15rem;
   background-color: rgba(236, 240, 241,1.0);
   padding-top: 1rem;
+  padding-bottom: 1rem;
   border-radius: 0 0 12px 0;
 }
 .main-nav a {
@@ -131,4 +132,14 @@ th:first-child {
 p {
   font-size: initial;
   line-height: initial;
+}
+
+@media (max-width: 700px) {
+  .main-wrap {
+    flex-direction: column;
+    min-height: initial;
+  } 
+  .main-nav {
+    border-radius: 0;
+  }
 }
