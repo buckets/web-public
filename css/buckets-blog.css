@@ -46,6 +46,11 @@ p {
   font-weight: 300;
   color: #111;
 }
+li {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
 
 .post-list img {
   max-width: 100%;
