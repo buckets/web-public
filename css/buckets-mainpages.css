@@ -2,9 +2,23 @@ p, li {
   font-size: 1.25rem;
   line-height: 2rem;
 }
-p em {
+p em,
+li em {
   color: rgba(26, 188, 156,1.0);
   font-size: 1.75rem;
   font-style: normal;
   font-weight: bold
+}
+
+
+.message {
+  border: 2px solid #2eaef1;
+  color: #2eaef1;
+  border-radius: 3px;
+  padding: .5rem;
+  margin: 2rem 0 1rem;
+}
+.message.error {
+  color: red;
+  border-color: red;
 }

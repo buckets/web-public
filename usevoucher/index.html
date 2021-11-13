@@ -1,0 +1,69 @@
+<!doctype html><html>
+<head>
+<title>
+Redeem Voucher
+</title>
+<link rel="shortcut icon" href=/img/favicon.png type=image/png>
+<link rel=stylesheet type=text/css href=/css/buckets.css>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=stylesheet type=text/css href=/css/buckets-mainpages.css>
+<link rel=alternate hreflang=es href=https://www.budgetwithbuckets.com/es/usevoucher/>
+</head>
+<body>
+<div class=buckets-nav>
+<section>
+<a class=logo href=/>
+<img src=/img/logo.png>
+</a>
+<a href=/guide/>Guide</a>
+<a href=/blog/>Blog</a>
+<a href=/changelog/>Changelog</a>
+<a target=_blank href=https://github.com/buckets/application/issues>Issue Tracker</a>
+</section>
+<section>
+<a class=download-button href=/download/>
+<img src=/images/download.svg width=15 height=15>
+Download
+</a>
+<a class=buy-button href=/buy/>Buy $49</a>
+</section>
+<a href=javascript:void(0); class=nav-toggle onclick="this.parentElement.classList.toggle('nav-open')">
+<img src=/img/logo.png>
+<div>Menu</div>
+</a>
+</div>
+<style>.main{max-width:30rem;padding:0 0 5rem;margin:0 auto}</style>
+<div class=main>
+<style>.voucher-wrap{perspective:2800px}.voucher-top{position:relative;transform:rotateX(-80deg);transform-origin:bottom center;background-color:#34495e;width:30rem;height:23rem;margin-bottom:0;border:1px solid lightgrey;background-color:#fff;border-radius:6px 6px 0 0;z-index:2;transition:transform .2s;background:#fff url(/images/logo.png);background-repeat:no-repeat;background-position:50%}.voucher-wrap:hover .voucher-top{transform:rotateX(-70deg)}.voucher-card{position:relative;transform:scale(.95)rotateX(15deg);box-shadow:0 25px 30px -8px rgba(0,0,0,.4);width:30rem;height:23rem;display:flex;justify-content:;background:url(/images/voucherpostcard.png);background-repeat:repeat;background-size:auto;background-repeat:repeat;background-size:auto;background-repeat:repeat;background-size:auto;background-size:100%;background-repeat:no-repeat;transform-style:preserve-3d;transform-origin:center center;margin-top:0;margin-bottom:3rem;border-radius:6px 6px 6px 6px;z-index:1}.voucher-card input{font-weight:900;font-size:3rem;text-align:center;padding:1rem;font-family:monospace;border-radius:24px;background-color:#fff;border:6px solid #3498db;width:322px;height:5rem;position:absolute;bottom:43px;right:26px}</style>
+<h1>Redeem Voucher</h1>
+<div id=messages></div>
+<form method=post action=https://service.budgetwithbuckets.com/voucher/redeem>
+<input type=hidden name=code1 id=code1>
+<div class=voucher-wrap>
+<div class=voucher-card>
+<input autofocus type=text name=code2 id=code2 maxlength=7>
+</div>
+</div>
+<div style=text-align:center>
+<button>Submit</button>
+</div>
+</form>
+<script>let searchParams=new URLSearchParams(window.location.search),code1=searchParams.get("code");document.getElementById('code1').value=code1;function showError(b){let a=document.createElement('div');a.innerText=b,a.classList.add('message'),a.classList.add('error'),document.getElementById('messages').appendChild(a)}let error=searchParams.get("error");error==="wrongcode"?showError('Invalid code'):error&&showError('Error')</script>
+</div>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<footer>
+<div><a href=https://onepartrain.com target=_blank>&copy; One Part Rain, LLC</a></div>
+<div><a href=mailto:hello@budgetwithbuckets.com>hello@budgetwithbuckets.com</a></div>
+<div><a href=https://www.patreon.com/iffy target=_blank>Donate</a></div>
+<div><a href=https://github.com/buckets/policies/blob/master/privacy-policy.md target=_blank>Privacy</a></div>
+<div>
+<details>
+<summary>English</summary>
+<div><a href=/es/usevoucher/>español</a></div>
+</details>
+</div>
+</footer>
+<script type=text/javascript>var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date;(function(){var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.async=!0,a.src='https://embed.tawk.to/59835f8ed1385b2b2e285765/default',a.charset='UTF-8',a.setAttribute('crossorigin','*'),b.parentNode.insertBefore(a,b)})()</script>
+</body>
+</html>
