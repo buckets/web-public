@@ -38,7 +38,8 @@ Download
 There was an error completing the purchase. Your card <strong>may have been charged.</strong>
 Please email us at hello@budgetwithbuckets.com to figure out what happened.
 </p>
-<style>.payment-options{display:flex;width:100%;justify-content:stretch}.payment-options div{border:1px solid lightgrey;border-width:1px 1px 1px 0;padding:1.5rem 2rem;flex-basis:50%;text-align:center}.payment-options div:first-child{border-left-width:1px;border-radius:6px 0 0 6px}.payment-options div:last-child{border-radius:0 6px 6px 0}.address,.email{display:flex;font-size:.9rem;font-family:monospace;line-height:1rem;margin:1rem auto;padding:1rem;border-radius:5px;background:rgba(241,196,15,.2)}ol{padding-left:1em}</style>
+<style>.payment-options{display:flex;width:100%;justify-content:stretch}.payment-options div{border:1px solid lightgrey;border-width:1px 1px 1px 0;padding:1.5rem 2rem;flex-basis:50%;text-align:center}.payment-options div:first-child{border-left-width:1px;border-radius:6px 0 0 6px}.payment-options div:last-child{border-radius:0 6px 6px 0}.address,.email{display:flex;font-size:.9rem;font-family:monospace;line-height:1.75rem;margin:1rem auto;padding:1rem;border-radius:5px;background:rgba(241,196,15,.2)}ol{padding-left:1em}</style>
+<h1>Buy Buckets v1 License</h1>
 <div id=messages></div>
 <template id=product-mailedvoucher>
 <p>
@@ -47,12 +48,14 @@ After completing the purchase:
 </p>
 <ol>
 <li>
-We will <em>mail</em> you a letter with a voucher code.
-<div class=address id=redemption-address></div>
-</li>
-<li>
 We will <em>email</em> you instructions.
 <div class=email id=redemption-email></div>
+</li>
+<li>
+We will <em>mail</em> a letter with a voucher code to this address exactly as written:
+<div class=address id=redemption-address></div>
+Are the line breaks correct?
+If something is wrong with this address, email us before paying.
 </li>
 </ol>
 </template>
@@ -86,7 +89,7 @@ If you ever lose your license, email us at hello@budgetwithbuckets.com
 <p>
 &mdash;Matt
 </p>
-<script>let searchParams=new URLSearchParams(window.location.search),coupon=searchParams.get("coupon"),price="4900",user_email='';function centsToDecimal(b){b=Number(b);let a=b%100,c=Math.floor((b-a)/100);return a=(a+'00').substr(0,2),a==='00'?c:`${c}.${a}`}function addMessage(c,b){let a=document.createElement("div");a.innerText=c,a.classList.add("message"),b&&a.classList.add(b),document.getElementById('messages').appendChild(a)}function setValue(a,b){document.querySelectorAll(a).forEach(a=>{a.innerText=b})}async function main(){let b=document.getElementById('product-explanation');try{if(coupon){console.log("getting coupon details...");let a=await fetch("https://service.budgetwithbuckets.com/check-coupon/"+coupon);try{let b=await a.clone().json()}catch(b){throw console.error("Error parsing check-coupon response:",b),console.log("response: ",await a.clone().text()),b}if(a.ok)if(b.innerHTML=document.getElementById('product-mailedvoucher').innerHTML,console.log("coupon details: ",data),user_email=data.email,setValue('#redemption-email',user_email),setValue('#redemption-address',data.address),document.querySelectorAll('.coupon-message').forEach(a=>{a.classList.add('activated')}),document.querySelectorAll('input[name=coupon]').forEach(a=>{a.value=coupon}),price=data.price,price){let a='$'+centsToDecimal(price);document.querySelectorAll('.price-display').forEach(b=>{b.innerText=a})}else price="4900";else addMessage(`Invalid coupon`,'error')}}catch(a){console.error(a)}let a=document.createElement('script');a.classList.add("stripe-button"),a.setAttribute("src","https://checkout.stripe.com/checkout.js"),a.setAttribute("data-image","/images/logo.png"),a.setAttribute("data-key","pk_live_Wnk0BnoZxKPUkW03VR06TEq8"),a.setAttribute("data-amount",price),a.setAttribute("data-name","Buckets"),a.setAttribute("data-label","Credit Card"),a.setAttribute("data-description","Buckets v1 License"),a.setAttribute("data-zip-code","true"),a.setAttribute("data-billing-address","false"),a.setAttribute("data-locale","auto"),a.setAttribute("data-allow-remember-me","false"),user_email&&a.setAttribute("data-email",user_email),document.getElementById("stripe-form").appendChild(a)}main()</script>
+<script>let searchParams=new URLSearchParams(window.location.search),coupon=searchParams.get("coupon"),price="4900",user_email='';function centsToDecimal(b){b=Number(b);let a=b%100,c=Math.floor((b-a)/100);return a=(a+'00').substr(0,2),a==='00'?c:`${c}.${a}`}function addMessage(c,b){let a=document.createElement("div");a.innerText=c,a.classList.add("message"),b&&a.classList.add(b),document.getElementById('messages').appendChild(a)}function setValue(a,b){document.querySelectorAll(a).forEach(a=>{a.innerText=b})}async function main(){let b=document.getElementById('product-explanation');try{if(coupon){console.log("getting coupon details...");let d="https://service.budgetwithbuckets.com/check-coupon/"+coupon;console.log("fetching from",d);let c=await fetch(d),a={};try{a=await c.clone().json()}catch(a){throw console.error("Error parsing check-coupon response:",a),console.log("response: ",await c.clone().text()),a}if(c.ok)if(b.innerHTML=document.getElementById('product-mailedvoucher').innerHTML,console.log("coupon details: ",a),user_email=a.email,setValue('#redemption-email',user_email),setValue('#redemption-address',a.address),document.querySelectorAll('.coupon-message').forEach(a=>{a.classList.add('activated')}),document.querySelectorAll('input[name=coupon]').forEach(a=>{a.value=coupon}),price=a.price,price){let a='$'+centsToDecimal(price);document.querySelectorAll('.price-display').forEach(b=>{b.innerText=a})}else price="4900";else addMessage(`Invalid coupon`,'error')}}catch(a){console.error(a)}let a=document.createElement('script');a.classList.add("stripe-button"),a.setAttribute("src","https://checkout.stripe.com/checkout.js"),a.setAttribute("data-image","/images/logo.png"),a.setAttribute("data-key","pk_live_Wnk0BnoZxKPUkW03VR06TEq8"),a.setAttribute("data-amount",price),a.setAttribute("data-name","Buckets"),a.setAttribute("data-label","Credit Card"),a.setAttribute("data-description","Buckets v1 License"),a.setAttribute("data-zip-code","true"),a.setAttribute("data-billing-address","false"),a.setAttribute("data-locale","auto"),a.setAttribute("data-allow-remember-me","false"),user_email&&a.setAttribute("data-email",user_email),document.getElementById("stripe-form").appendChild(a)}main()</script>
 </div>
 <div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
 </div>
