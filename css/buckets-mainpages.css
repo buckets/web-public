@@ -22,3 +22,14 @@ li em {
   color: red;
   border-color: red;
 }
+
+.main {
+  max-width: 30rem;
+  padding: 0 0 5rem;
+  margin: 0 auto;
+}
+@media (max-width: 500px) {
+  .main {
+    padding: 0 1rem 5rem;
+  }
+}
