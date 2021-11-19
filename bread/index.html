@@ -69,8 +69,8 @@ USA"></textarea>
 <script>let form=document.getElementById('breadform');function clearMessages(){document.querySelectorAll(".form-message").forEach(a=>{a.parentNode.removeChild(a)})}function showMessage(c,d,b){let e=document.querySelector("*[name="+c+"]"),a=document.createElement('div');a.classList.add("form-message"),b&&a.classList.add(b),a.innerText=d,e.insertAdjacentElement('afterend',a)}function showError(a,b){showMessage(a,b,'error')}function asyncSubmit(a){clearMessages();let b=fetch(form.action,{method:'post',mode:'cors',body:new FormData(form)});return b.then(async a=>{let b=await a.json();if(a.ok){showMessage("button","Application submitted!");let a=document.getElementById("form-button");a.parentNode.removeChild(a)}else b.errors.forEach(a=>{showError(a.field,a.error)})}).catch(a=>{console.log("err",a),showError("button","Error")}),a.preventDefault(),!1}form.addEventListener('submit',asyncSubmit)</script>
 <h2>Step 2: Purchase</h2>
 <p>
-Once your application is approved, we'll email you a link to complete your purchase.
-After purchasing, we'll mail you a letter containing a code.
+Once your application is approved, we'll <em>email</em> you a link to complete your purchase.
+After purchasing, we'll <em>mail</em> you a letter containing a code.
 Follow the emailed instructions to redeem your code for a Buckets License!
 </p>
 </div>
