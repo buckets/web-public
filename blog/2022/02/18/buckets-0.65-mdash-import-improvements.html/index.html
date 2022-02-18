@@ -1,31 +1,31 @@
 <!doctype html><html>
 <head>
 <title>
-Launching the 2021 Buckets Community Survey
+Buckets 0.65 &amp;mdash; Import Improvements
 </title>
 <link rel="shortcut icon" href=/img/favicon.png type=image/png>
 <link rel=stylesheet type=text/css href=/css/buckets.css>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <link rel=stylesheet type=text/css href=/css/buckets-blog.css>
-<link rel=alternate hreflang=en href=https://www.budgetwithbuckets.com/blog/2021/12/04/launching-the-2021-buckets-community-survey.html/>
+<link rel=alternate hreflang=es href=https://www.budgetwithbuckets.com/es/blog/2022/02/18/buckets-0.65-mdash-import-improvements.html/>
 </head>
 <body>
 <div class=buckets-nav>
 <section>
-<a class=logo href=/es/>
+<a class=logo href=/>
 <img src=/img/logo.png>
 </a>
-<a href=/es/guide/>Guía</a>
+<a href=/guide/>Guide</a>
 <a class=active href=/blog/>Blog</a>
-<a href=/changelog/>Cambios</a>
-<a target=_blank href=https://github.com/buckets/application/issues>Cuestiones</a>
+<a href=/changelog/>Changelog</a>
+<a target=_blank href=https://github.com/buckets/application/issues>Issue Tracker</a>
 </section>
 <section>
-<a class=download-button href=/es/download/>
+<a class=download-button href=/download/>
 <img src=/images/download.svg width=15 height=15>
-Descargar
+Download
 </a>
-<a class=buy-button href=/es/buy/>Comprar $49</a>
+<a class=buy-button href=/buy/>Buy $49</a>
 </section>
 <a href=javascript:void(0); class=nav-toggle onclick="this.parentElement.classList.toggle('nav-open')">
 <img src=/img/logo.png>
@@ -36,60 +36,57 @@ Descargar
 <div class=post>
 <header class=post-header>
 <div class=next-prev-links>
-<a class=prev href=/es/blog/2021/11/30/hi-christy.html/>&larr; Prev</a>
-<a class=next href=/es/blog/2022/02/18/buckets-0.65-mdash-import-improvements.html/>Next &rarr;</a>
+<a class=prev href=/blog/2021/12/04/launching-the-2021-buckets-community-survey.html/>&larr; Prev</a>
 </div>
-<h1 class=blog-title>Launching the 2021 Buckets Community Survey</h1>
+<h1 class=blog-title>Buckets 0.65 &mdash; Import Improvements</h1>
 <div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
 </div>
 <p class=post-meta>
-Dec 4, 2021
+Feb 18, 2022
 • Matt
 </p>
 </header>
 <article class=post-content>
-<p>We&rsquo;re pleased to announce our third annual-except-for-2020-because-well-it-was-2020 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfoxkYqYTInmD2hScA37gf-Iwnmk_n4bmzDcQOurgm3NGLTCg/viewform?usp=sf_link">Buckets Community Survey!</a> Whether you use Buckets or not, your feedback will help us understand Buckets' strengths and weaknesses, get to know who&rsquo;s using it and help determine where we go in the future.</p>
-<div style=text-align:center;padding:2rem><a style="background-color:#2ecc71;padding:.75rem 1rem;color:#fff;border-radius:2px" href="https://docs.google.com/forms/d/e/1FAIpQLSfoxkYqYTInmD2hScA37gf-Iwnmk_n4bmzDcQOurgm3NGLTCg/viewform?usp=sf_link">Answer Survey</a></div>
-<p>It shouldn&rsquo;t take longer than 3-5 minutes. Submissions will be accepted for a month or two depending on the response rate. After the survey closes, we&rsquo;ll publish results here on this blog.</p>
-<p>See <a href=/es/blog/2020/01/08/surveyresults2019.html/>2019&rsquo;s survey results here.</a></p>
-<p>Thank you for your time!</p>
-<p>— Matt & Christy</p>
+<p>We just released Buckets Beta v0.65.0 which includes over 20 fixes and improvements. Download it <a href=/download/#beta>here</a> or wait a few weeks for the stable version. All the changes are on the <a href=/changelog>changelog</a>.</p>
+<h2 id=csv-importing>CSV Importing<a class=anchor-link href=#csv-importing>&para;</a></h2>
+<p>CSV importing received some much needed attention.</p>
+<ul>
+<li>You now get a live preview of what will be imported while configuring the import.</li>
+<li>You can <strong>cancel</strong> an import!</li>
+<li>However your file is delimited (comma, semicolon, the letter &lsquo;g&rsquo;) Buckets will now parse it.</li>
+<li>Does your bank include extra info above or below the transaction data? Now Buckets can ignore that.</li>
+</ul>
+<div style=text-align:center>
+<img alt="Screenshot of new CSV import interface" src=./csv_import.png style="border-radius:6px;border:1px solid lightgrey">
+</div>
+<h2 id=ofx-importing>OFX Importing<a class=anchor-link href=#ofx-importing>&para;</a></h2>
+<p>Similarly, OFX importing is more streamlined, includes a live preview, offers better number and date parsing support AND you can now ignore accounts you don&rsquo;t want to import! Finally, that notification badge can go away!</p>
+<h2 id=and-more>and more&mldr;<a class=anchor-link href=#and-more>&para;</a></h2>
+<p>This release also introduces support for currencies that have three digits after the decimal place by means of the new number format chooser:</p>
+<div style=text-align:center>
+<img alt="Screenshot of new number format chooser" src=./number_format.png style="border-radius:6px;border:1px solid lightgrey">
+</div>
+<p>Ever wanted to search for a transaction by amount? Now you can on the search page:</p>
+<div style=text-align:center>
+<img alt="Demo of new search by number feature" src=./search_by_amount.png style="border-radius:6px;border:1px solid lightgrey">
+</div>
+<p>Several contributors translated many more things into French, Română, Español, Deutsch and Русский!</p>
+<p>Now it&rsquo;s on to getting the Android app out!</p>
+<p>Happy budgeting!</p>
+<p>— Matt</p>
 </article>
 <div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
 </div>
 <div class="next-prev-links close" style=margin-top:1rem>
-<a class=prev href=/es/blog/2021/11/30/hi-christy.html/>&larr; Prev</a>
-<a class=next href=/es/blog/2022/02/18/buckets-0.65-mdash-import-improvements.html/>Next &rarr;</a>
+<a class=prev href=/blog/2021/12/04/launching-the-2021-buckets-community-survey.html/>&larr; Prev</a>
 </div>
 <h2 style=margin-top:2rem>Comments</h2>
-<div class=comment>
-<img src="https://www.gravatar.com/avatar/?s=64">
-<div>
-<div class=details>
-<div class=author>long-time user</div>
-<div class=date>mar. dic. 7, 2021 1:12</div>
-</div>
-<div class=message>Hi Matt! :)
-First post here; just wanted to say to keep up the great work!
-Started to use Buckets in January 2018. Really changed my financial life for the better, thank you very much! :)</div>
-</div>
-</div>
-<div class=comment>
-<img src="https://www.gravatar.com/avatar/?s=64">
-<div>
-<div class=details>
-<div class=author>Zachariah</div>
-<div class=date>mié. dic. 8, 2021 2:45</div>
-</div>
-<div class=message>Hey! Just one recommendation about the survey - if a user selects that they do not currently use buckets then you should follow up and ask what software they do use. May be interesting to see what competitive users interact with you but haven't committed.</div>
-</div>
-</div>
 <div id=comment-form style=display:none>
 <a name=comment-form></a>
 <script>window.location.search.substr(1).indexOf('comment=submitted')!==-1&&document.write(`<div class="notification">Comment submitted!  Your comment will be posted here after being reviewed.</div>`)</script>
 <script>function setCommentStatus(b,c){const a=document.getElementById('comment-notification');a.innerText=b,a.setAttribute('class',c),a.setAttribute('style','')}function submitComment(c){const b=document.getElementById('comment-submit');b.disabled=!0,setCommentStatus('Submitting...','notification'),c.preventDefault();const d=document.getElementById('comment-message').value,e=document.getElementById('comment-email').value,f=document.getElementById('comment-name').value,g=document.getElementById('comment-slug').value,h={comment:d,email:e,name:f,subdir:g};let a=new XMLHttpRequest;a.addEventListener('load',a=>{setCommentStatus('Comment submitted!  Your comment will be posted here after being reviewed.','notification'),b.disabled=!1}),a.addEventListener('error',a=>{console.log('Error',a),setCommentStatus('Error submitting comment.  If it continues not to work, please email us.','notification error'),b.disabled=!1}),a.open('POST','https://7nd5a97217.execute-api.us-east-1.amazonaws.com/default/GitHubJekyllComments'),a.send(JSON.stringify(h))}XMLHttpRequest&&document.getElementById('comment-form').setAttribute('style','')</script>
 <form method=post class=comment-form onsubmit="return submitComment(event),!1">
-<input type=hidden id=comment-slug value=2021-survey>
+<input type=hidden id=comment-slug value=buckets-0.65-import-improvements>
 <label>Name:<br><input id=comment-name type=text></label>
 <label>Email (optional&mdash;not displayed):<br><input id=comment-email type=email></label>
 <label>Message:</label>
@@ -134,12 +131,12 @@ Started to use Buckets in January 2018. Really changed my financial life for the
 <footer>
 <div><a href=https://onepartrain.com target=_blank>&copy; One Part Rain, LLC</a></div>
 <div><a href=mailto:hello@budgetwithbuckets.com>hello@budgetwithbuckets.com</a></div>
-<div><a href=https://www.patreon.com/iffy target=_blank>Donar</a></div>
-<div><a href=https://github.com/buckets/policies/blob/master/privacy-policy.md target=_blank>Privacidad</a></div>
+<div><a href=https://www.patreon.com/iffy target=_blank>Donate</a></div>
+<div><a href=https://github.com/buckets/policies/blob/master/privacy-policy.md target=_blank>Privacy</a></div>
 <div>
 <details>
-<summary>español</summary>
-<div><a href=/blog/2021/12/04/launching-the-2021-buckets-community-survey.html/>English</a></div>
+<summary>English</summary>
+<div><a href=/es/blog/2022/02/18/buckets-0.65-mdash-import-improvements.html/>español</a></div>
 </details>
 </div>
 </footer>
