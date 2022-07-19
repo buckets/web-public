@@ -2,12 +2,17 @@ p, li {
   font-size: 1.25rem;
   line-height: 2rem;
 }
-p em,
-li em {
+.bigem p em,
+.bigem li em {
   color: rgba(26, 188, 156,1.0);
   font-size: 1.75rem;
   font-style: normal;
   font-weight: bold
+}
+.smalltext p,
+.smalltext li {
+  font-size: 1em;
+  line-height: 1.75rem;
 }
 
 
@@ -28,8 +33,17 @@ li em {
   padding: 0 0 5rem;
   margin: 0 auto;
 }
+.wide .main {
+  max-width: 60rem;
+}
 @media (max-width: 500px) {
   .main {
     padding: 0 1rem 5rem;
   }
+}
+code {
+  font-family: monospace;
+  background-color: rgba(0,0,0,0.1);
+  padding: 0.2rem 0.3rem;
+  border-radius: 3px;
 }
