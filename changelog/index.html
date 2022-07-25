@@ -54,10 +54,22 @@ v0.66.5
 <img style=vertical-align:middle src=/images/logo_beta.png width=26>
 </td>
 <td>
-v0.67.0
+v0.67.1
 </td>
 </tr>
 </table>
+<h1 id=v0671---2022-07-25>v0.67.1 - 2022-07-25<a class=anchor-link href=#v0671---2022-07-25>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> A bucket&rsquo;s <em>Activity</em> and <em>In</em> amounts are now correctly updated when you undo a prior deposit or withdrawal (<a href=https://github.com/buckets/application/issues/591>#591</a>)</li>
+<li><strong>FIX:</strong> Document that Rain only makes sense when transactions have all been categorized (<a href=https://github.com/buckets/application/issues/508>#508</a>)</li>
+<li><strong>FIX:</strong> CSV imports will treat parentheses-enclosed numbers as negative (<a href=https://github.com/buckets/application/issues/740>#740</a>)</li>
+<li><strong>FIX:</strong> Syncing from SimpleFIN will no longer overwrite the memo unless it&rsquo;s blank (<a href=https://github.com/buckets/application/issues/746>#746</a>)</li>
+<li><strong>FIX:</strong> In the case where 0-amount transactions are created (typically via import/sync) you can now categorize them so they no longer show as uncategorized (<a href=https://github.com/buckets/application/issues/700>#700</a>)</li>
+<li><strong>FIX:</strong> When importing from YNAB4, Buckets now looks for <code>Budget.ymeta</code> and <code>Budget.yfull</code> files in more places (<a href=https://github.com/buckets/application/issues/429>#429</a>, <a href=https://github.com/buckets/application/issues/493>#493</a>)</li>
+<li><strong>FIX:</strong> Fuzzy searching when categorizing will now highlight the best option consistently (<a href=https://github.com/buckets/application/issues/773>#773</a>)</li>
+<li><strong>FIX:</strong> Prior to this change, if you kicked the Buckets License bucket it would reappear next time you opened the budget. This was confusing. Now, you can no longer kick it at all with the Trial Version. (<a href=https://github.com/buckets/application/issues/609>#609</a>)</li>
+<li><strong>FIX:</strong> Removed up/down buttons on all date inputs because they are buggy and the keyboard up/down keys can achieve the same effect. (<a href=https://github.com/buckets/application/issues/764>#764</a>)</li>
+</ul>
 <h1 id=v0670---2022-07-18>v0.67.0 - 2022-07-18<a class=anchor-link href=#v0670---2022-07-18>&para;</a></h1>
 <ul>
 <li><strong>BREAKING CHANGE:</strong> When entering transaction amounts, typing <code>-</code> before the number will no longer flip the sign. Sorry, we know this is going to ruin your muscle memory! Instead, type <code>+</code> for positive numbers and use no prefix (or type <code>-</code>) to use negative numbers. You can also click on the big <code>-</code> before the amount to toggle between positive and negative numbers (<a href=https://github.com/buckets/application/issues/725>#725</a>, <a href=https://github.com/buckets/application/issues/496>#496</a>)</li>
