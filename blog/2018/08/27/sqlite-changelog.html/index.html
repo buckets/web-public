@@ -199,20 +199,20 @@ sqlite<span style=color:#f92672>&gt;</span> <span style=color:#66d9ef>select</sp
       )
     );
 <span style=color:#66d9ef>END</span>;
-</code></pre></div><pre tabindex=0><code>sqlite&gt; INSERT INTO people (name, age) VALUES ('Alice', 30), ('Bob', 42);
+</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>sqlite&gt; INSERT INTO people (name, age) VALUES (&#39;Alice&#39;, 30), (&#39;Bob&#39;, 42);
 sqlite&gt; UPDATE people SET age = age + 2;
-sqlite&gt; UPDATE people SET name = 'Eva' WHERE name='Alice';
-sqlite&gt; DELETE FROM people WHERE name = 'Bob';
+sqlite&gt; UPDATE people SET name = &#39;Eva&#39; WHERE name=&#39;Alice&#39;;
+sqlite&gt; DELETE FROM people WHERE name = &#39;Bob&#39;;
 sqlite&gt; SELECT * FROM change_log;
 id   created     action      table_name  obj_id  changes                                                                         
 ---  ----------  ----------  ----------  ------  --------------------------------------------------------------------------------
-1    2018-08-27  INSERT      people      1       {&quot;id&quot;:[null,1],&quot;created&quot;:[null,&quot;2018-08-27 21:53:02&quot;],&quot;name&quot;:[null,&quot;Alice&quot;],&quot;age
-2    2018-08-27  INSERT      people      2       {&quot;id&quot;:[null,2],&quot;created&quot;:[null,&quot;2018-08-27 21:53:02&quot;],&quot;name&quot;:[null,&quot;Bob&quot;],&quot;age&quot;:
-3    2018-08-27  UPDATE      people      1       {&quot;id&quot;:[1,1],&quot;created&quot;:[&quot;2018-08-27 21:53:02&quot;,&quot;2018-08-27 21:53:02&quot;],&quot;name&quot;:[&quot;Ali
-4    2018-08-27  UPDATE      people      2       {&quot;id&quot;:[2,2],&quot;created&quot;:[&quot;2018-08-27 21:53:02&quot;,&quot;2018-08-27 21:53:02&quot;],&quot;name&quot;:[&quot;Bob
-5    2018-08-27  UPDATE      people      1       {&quot;id&quot;:[1,1],&quot;created&quot;:[&quot;2018-08-27 21:53:02&quot;,&quot;2018-08-27 21:53:02&quot;],&quot;name&quot;:[&quot;Ali
-6    2018-08-27  DELETE      people      2       {&quot;id&quot;:[2,null],&quot;created&quot;:[&quot;2018-08-27 21:53:02&quot;,null],&quot;name&quot;:[&quot;Bob&quot;,null],&quot;age&quot;:
-</code></pre><h3 id=version-2---only-track-changes>Version 2 - Only Track Changes<a class=anchor-link href=#version-2---only-track-changes>&para;</a></h3>
+1    2018-08-27  INSERT      people      1       {&#34;id&#34;:[null,1],&#34;created&#34;:[null,&#34;2018-08-27 21:53:02&#34;],&#34;name&#34;:[null,&#34;Alice&#34;],&#34;age
+2    2018-08-27  INSERT      people      2       {&#34;id&#34;:[null,2],&#34;created&#34;:[null,&#34;2018-08-27 21:53:02&#34;],&#34;name&#34;:[null,&#34;Bob&#34;],&#34;age&#34;:
+3    2018-08-27  UPDATE      people      1       {&#34;id&#34;:[1,1],&#34;created&#34;:[&#34;2018-08-27 21:53:02&#34;,&#34;2018-08-27 21:53:02&#34;],&#34;name&#34;:[&#34;Ali
+4    2018-08-27  UPDATE      people      2       {&#34;id&#34;:[2,2],&#34;created&#34;:[&#34;2018-08-27 21:53:02&#34;,&#34;2018-08-27 21:53:02&#34;],&#34;name&#34;:[&#34;Bob
+5    2018-08-27  UPDATE      people      1       {&#34;id&#34;:[1,1],&#34;created&#34;:[&#34;2018-08-27 21:53:02&#34;,&#34;2018-08-27 21:53:02&#34;],&#34;name&#34;:[&#34;Ali
+6    2018-08-27  DELETE      people      2       {&#34;id&#34;:[2,null],&#34;created&#34;:[&#34;2018-08-27 21:53:02&#34;,null],&#34;name&#34;:[&#34;Bob&#34;,null],&#34;age&#34;:
+</code></pre></div><h3 id=version-2---only-track-changes>Version 2 - Only Track Changes<a class=anchor-link href=#version-2---only-track-changes>&para;</a></h3>
 <p>There&rsquo;s a lot of duplicate information in the above version (for instance, the created timestamp never changes after INSERT but is recorded twice for every UPDATE). This version improves on the other by only recording values that have changed.</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#75715e>-- Data table
 </span><span style=color:#75715e></span><span style=color:#66d9ef>CREATE</span> <span style=color:#66d9ef>TABLE</span> people (
@@ -318,20 +318,20 @@ id   created     action      table_name  obj_id  changes
       )
     );
 <span style=color:#66d9ef>END</span>;
-</code></pre></div><pre tabindex=0><code>sqlite&gt; INSERT INTO people (name, age) VALUES ('Alice', 30), ('Bob', 42);
+</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>sqlite&gt; INSERT INTO people (name, age) VALUES (&#39;Alice&#39;, 30), (&#39;Bob&#39;, 42);
 sqlite&gt; UPDATE people SET age = age + 2;
-sqlite&gt; UPDATE people SET name = 'Eva' WHERE name='Alice';
-sqlite&gt; DELETE FROM people WHERE name = 'Bob';
+sqlite&gt; UPDATE people SET name = &#39;Eva&#39; WHERE name=&#39;Alice&#39;;
+sqlite&gt; DELETE FROM people WHERE name = &#39;Bob&#39;;
 sqlite&gt; SELECT * FROM change_log;
 id   created     action      table_name  obj_id  changes                                                                         
 ---  ----------  ----------  ----------  ------  --------------------------------------------------------------------------------
-1    2018-08-27  INSERT      people      1       {&quot;id&quot;:[null,1],&quot;created&quot;:[null,&quot;2018-08-27 21:53:25&quot;],&quot;name&quot;:[null,&quot;Alice&quot;],&quot;age
-2    2018-08-27  INSERT      people      2       {&quot;id&quot;:[null,2],&quot;created&quot;:[null,&quot;2018-08-27 21:53:25&quot;],&quot;name&quot;:[null,&quot;Bob&quot;],&quot;age&quot;:
-3    2018-08-27  UPDATE      people      1       {&quot;age&quot;:[30,32]}                                                                 
-4    2018-08-27  UPDATE      people      2       {&quot;age&quot;:[42,44]}                                                                 
-5    2018-08-27  UPDATE      people      1       {&quot;name&quot;:[&quot;Alice&quot;,&quot;Eva&quot;]}                                                        
-6    2018-08-27  DELETE      people      2       {&quot;id&quot;:[2,null],&quot;created&quot;:[&quot;2018-08-27 21:53:25&quot;,null],&quot;name&quot;:[&quot;Bob&quot;,null],&quot;age&quot;:
-</code></pre><h3 id=version-3---only-old-values>Version 3 - Only Old Values<a class=anchor-link href=#version-3---only-old-values>&para;</a></h3>
+1    2018-08-27  INSERT      people      1       {&#34;id&#34;:[null,1],&#34;created&#34;:[null,&#34;2018-08-27 21:53:25&#34;],&#34;name&#34;:[null,&#34;Alice&#34;],&#34;age
+2    2018-08-27  INSERT      people      2       {&#34;id&#34;:[null,2],&#34;created&#34;:[null,&#34;2018-08-27 21:53:25&#34;],&#34;name&#34;:[null,&#34;Bob&#34;],&#34;age&#34;:
+3    2018-08-27  UPDATE      people      1       {&#34;age&#34;:[30,32]}                                                                 
+4    2018-08-27  UPDATE      people      2       {&#34;age&#34;:[42,44]}                                                                 
+5    2018-08-27  UPDATE      people      1       {&#34;name&#34;:[&#34;Alice&#34;,&#34;Eva&#34;]}                                                        
+6    2018-08-27  DELETE      people      2       {&#34;id&#34;:[2,null],&#34;created&#34;:[&#34;2018-08-27 21:53:25&#34;,null],&#34;name&#34;:[&#34;Bob&#34;,null],&#34;age&#34;:
+</code></pre></div><h3 id=version-3---only-old-values>Version 3 - Only Old Values<a class=anchor-link href=#version-3---only-old-values>&para;</a></h3>
 <p>In Buckets, most records are inserted and never updated, and very few are deleted. So to save on space, there&rsquo;s another optimization that favors this use case. Instead of storing both old and new values, only storing old values means that:</p>
 <ul>
 <li>no information is duplicated for INSERTS</li>
@@ -421,27 +421,27 @@ id   created     action      table_name  obj_id  changes
       )
     );
 <span style=color:#66d9ef>END</span>;
-</code></pre></div><pre tabindex=0><code>sqlite&gt; INSERT INTO people (name, age) VALUES ('Alice', 30), ('Bob', 42);
+</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>sqlite&gt; INSERT INTO people (name, age) VALUES (&#39;Alice&#39;, 30), (&#39;Bob&#39;, 42);
 sqlite&gt; UPDATE people SET age = age + 2;
-sqlite&gt; UPDATE people SET name = 'Eva' WHERE name='Alice';
-sqlite&gt; DELETE FROM people WHERE name = 'Bob';
+sqlite&gt; UPDATE people SET name = &#39;Eva&#39; WHERE name=&#39;Alice&#39;;
+sqlite&gt; DELETE FROM people WHERE name = &#39;Bob&#39;;
 sqlite&gt; SELECT * FROM change_log;
 id   created     action      table_name  obj_id  oldvals                                                                         
 ---  ----------  ----------  ----------  ------  --------------------------------------------------------------------------------
 1    2018-08-27  INSERT      people      1                                                                                       
 2    2018-08-27  INSERT      people      2                                                                                       
-3    2018-08-27  UPDATE      people      1       {&quot;age&quot;:30}                                                                      
-4    2018-08-27  UPDATE      people      2       {&quot;age&quot;:42}                                                                      
-5    2018-08-27  UPDATE      people      1       {&quot;name&quot;:&quot;Alice&quot;}                                                                
-6    2018-08-27  DELETE      people      2       {&quot;id&quot;:2,&quot;created&quot;:&quot;2018-08-27 21:53:53&quot;,&quot;name&quot;:&quot;Bob&quot;,&quot;age&quot;:44}                  
-</code></pre><p>You can also query the changelog using JSON functions. Here&rsquo;s every change involving the <code>age</code> field:</p>
-<pre tabindex=0><code>sqlite&gt; SELECT * FROM change_log WHERE json_type(oldvals, '$.age') IS NOT NULL;
+3    2018-08-27  UPDATE      people      1       {&#34;age&#34;:30}                                                                      
+4    2018-08-27  UPDATE      people      2       {&#34;age&#34;:42}                                                                      
+5    2018-08-27  UPDATE      people      1       {&#34;name&#34;:&#34;Alice&#34;}                                                                
+6    2018-08-27  DELETE      people      2       {&#34;id&#34;:2,&#34;created&#34;:&#34;2018-08-27 21:53:53&#34;,&#34;name&#34;:&#34;Bob&#34;,&#34;age&#34;:44}                  
+</code></pre></div><p>You can also query the changelog using JSON functions. Here&rsquo;s every change involving the <code>age</code> field:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>sqlite&gt; SELECT * FROM change_log WHERE json_type(oldvals, &#39;$.age&#39;) IS NOT NULL;
 id   created     action      table_name  obj_id  oldvals                                                                         
 ---  ----------  ----------  ----------  ------  --------------------------------------------------------------------------------
-3    2018-08-27  UPDATE      people      1       {&quot;age&quot;:30}                                                                      
-4    2018-08-27  UPDATE      people      2       {&quot;age&quot;:42}                                                                      
-6    2018-08-27  DELETE      people      2       {&quot;id&quot;:2,&quot;created&quot;:&quot;2018-08-27 22:02:23&quot;,&quot;name&quot;:&quot;Bob&quot;,&quot;age&quot;:44}                  
-</code></pre><h2 id=using-sqlite_master-and-table_info>Using sqlite_master and table_info<a class=anchor-link href=#using-sqlite_master-and-table_info>&para;</a></h2>
+3    2018-08-27  UPDATE      people      1       {&#34;age&#34;:30}                                                                      
+4    2018-08-27  UPDATE      people      2       {&#34;age&#34;:42}                                                                      
+6    2018-08-27  DELETE      people      2       {&#34;id&#34;:2,&#34;created&#34;:&#34;2018-08-27 22:02:23&#34;,&#34;name&#34;:&#34;Bob&#34;,&#34;age&#34;:44}                  
+</code></pre></div><h2 id=using-sqlite_master-and-table_info>Using sqlite_master and table_info<a class=anchor-link href=#using-sqlite_master-and-table_info>&para;</a></h2>
 <p>To make sure I never miss a column, I use <code>sqlite_master</code> and <code>PRAGMA table_info(TABLENAME)</code> to generate the trigger SQL as in this pseudo code:</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>rows <span style=color:#f92672>=</span> Query(<span style=color:#e6db74>&#34;SELECT name FROM sqlite_master WHERE type=&#39;table&#39;&#34;</span>)
 <span style=color:#66d9ef>for</span> row <span style=color:#f92672>in</span> rows:
