@@ -56,37 +56,52 @@ Download
 </div>
 <div class=main-body>
 <h1>Sharing</h1>
-<p>Buckets currently supports sharing budget files between your devices in a one-way manner over the local network.</p>
-<p>In the future, it will support two-way sharing both locally and across the Internet using your choice of the built in sync protocol or third party file-sharing services (e.g. Dropbox, Google Drive, iCloud, etc&mldr;).</p>
-<h2 id=sharing-a-budget-with-the-mobile-app>Sharing a budget with the mobile app<a class=anchor-link href=#sharing-a-budget-with-the-mobile-app>&para;</a></h2>
-<p>Your mobile app and desktop computer must be on the same local network (e.g. same WiFi) and be able to see each other.</p>
-<h3 id=on-the-desktop-computer>On the desktop computer<a class=anchor-link href=#on-the-desktop-computer>&para;</a></h3>
+<p class=warning>
+Currently, we recommend only syncing <strong>one way</strong> to avoid the possibility of scrambling your budget. Choose one device to be the main device where you edit the budget and all other devices download the budget from the main device for viewing.
+</p>
+<p>Buckets provides a way to share your budget between devices, which can be summarized as:</p>
 <ol>
-<li>Open Buckets and open a budget file</li>
-<li>Click <em>Tools</em></li>
+<li>Create avenues for the devices to reach each other</li>
+<li>Pair the devices</li>
+<li>Expose a budget file from one device</li>
+<li>Save the exposed budget file on the other device</li>
+</ol>
+<p>To manage sharing on Buckets Desktop:</p>
+<ol>
+<li>Open Buckets</li>
+<li>Open <em>Preferences</em> (macOS: <code>⌘ ,</code> — Window/Linux: <code>Ctrl ,</code>)</li>
 <li>Click <em>Sharing</em></li>
-<li>Give your desktop a name (this is optional)</li>
-<li>Enable <em>Share from this computer</em></li>
-<li>Enable <em>Allow new device requests</em></li>
-<li>Scroll down and note the Channel URL near the bottom of the page</li>
 </ol>
-<p><img src=../sharing_img/desktop_initial.png alt="Initial appearance of desktop sharing screen"></p>
-<h3 id=on-the-mobile-app>On the mobile app<a class=anchor-link href=#on-the-mobile-app>&para;</a></h3>
+<p>To manage sharing on Buckets Mobile:</p>
 <ol>
-<li>From the Buckets home screen, tap <em>Sharing</em></li>
-<li>Give your phone a name (this is optional)</li>
-<li>Enable <em>Allow new device requests</em></li>
-<li>Enter the Channel URL from your desktop computer</li>
-<li>Tap <em>Add channel</em></li>
+<li>Open Buckets</li>
+<li>On the main screen, click <em>Sharing</em></li>
 </ol>
-<p><img src=../sharing_img/mobile_initial.png alt="Initial appearance of mobile sharing screen"></p>
-<p>Follow the prompts to mutually authenticate each device. <strong>NOTE:</strong> Only choose &ldquo;Yes&rdquo; if both the image and code match.</p>
-<h3 id=on-the-desktop-computer-1>On the desktop computer<a class=anchor-link href=#on-the-desktop-computer-1>&para;</a></h3>
-<p>In the <em>Shared budgets</em> dropdown of the newly added remote device, choose which budget files you want to share with the mobile app.</p>
-<h3 id=on-the-mobile-app-1>On the mobile app<a class=anchor-link href=#on-the-mobile-app-1>&para;</a></h3>
-<p>Tap the checkbox next to each budget file you want to have on your mobile device.</p>
-<p>You&rsquo;re done! Whenever you are on the same network and have both applications open, your phone should download a new copy of the budget file.</p>
-<p>Optionally, you can disable <em>Allow new device requests</em> to prevent other machines on your network from requesting access to your budgets.</p>
+<p class=notice>
+Make sure <em>Allow new connections</em> is enabled.
+</p>
+<h2 id=avenues>Avenues<a class=anchor-link href=#avenues>&para;</a></h2>
+<p>First, create an avenue for your devices to reach each other. Buckets currently supports the following avenues, which are described more below:</p>
+<ol>
+<li>Relay client</li>
+<li>Local network (server and client)</li>
+</ol>
+<p>In the future, Buckets will support two-way sharing using the above avenues or your own file-sharing service (e.g. Dropbox, Google Drive, iCloud, Syncthing, etc&mldr;).</p>
+<h3 id=relay-client>Relay client<a class=anchor-link href=#relay-client>&para;</a></h3>
+<p>A Buckets Relay is a server that you can use to bounce your data from one device to another. The relay does not store any budget information and so requires that both devices be online and connected to the relay at the same time to communicate.</p>
+<p>We host a public relay at <a href=https://relay.budgetwithbuckets.com>relay.budgetwithbuckets.com</a>. Use of this relay may be revoked at any time for any reason, but we intend for it to be available. Since the code is open source, you are welcome to <a href=https://github.com/buckets/relay#deployment-to-flyio>host your own</a>.</p>
+<h4 id=authentication>Authentication<a class=anchor-link href=#authentication>&para;</a></h4>
+<p>You may authenticate to the public relay with your Buckets License, if you have purchased one. Or, if you are using a trial version, you can authenticate with an email and password by clicking the <em>Create or manage account</em> link.</p>
+<h3 id=local-network-server-and-client>Local network (server and client)<a class=anchor-link href=#local-network-server-and-client>&para;</a></h3>
+<p>You may connect devices directly to each other on your local network, assuming they can see each other. One device will act as a server (add the server avenue) and other devices will act as clients to that server.</p>
+<p>You will need to know the local IP address of the server and provide it when creating the <em>Local network client</em> avenue.</p>
+<h2 id=pairing-devices>Pairing devices<a class=anchor-link href=#pairing-devices>&para;</a></h2>
+<p>The first time your devices see each other, you must pair them by comparing some images and codes. All images, colors and codes must match to guarantee that your devices are communicating securely.</p>
+<h2 id=exposing-budgets>Exposing budgets<a class=anchor-link href=#exposing-budgets>&para;</a></h2>
+<p>After pairing devices, you may choose which budget files to expose from one device to another. Toggle the controls to expose or hide each budget file.</p>
+<h2 id=saving-files>Saving files<a class=anchor-link href=#saving-files>&para;</a></h2>
+<p>Once a budget is exposed to a device, you can choose to download the budget. Once downloaded, the budget will automatically be downloaded in the future when updated.</p>
+<p>You should now be able to see the shared budget on your device!</p>
 <h2>Next</h2>
 <a href=/guide/app/general/>General</a>
 </div>
