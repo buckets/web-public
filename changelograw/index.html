@@ -32,6 +32,16 @@ Download
 </a>
 </div>
 <div class=main>
+<h1 id=v0710---2023-07-06>v0.71.0 - 2023-07-06<a class=anchor-link href=#v0710---2023-07-06>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Closed accounts no longer show in the Transaction page dropdown. If you need to create a transaction for a closed account, go to the page for closed account. (<a href=https://github.com/buckets/application/issues/470>#470</a>)</li>
+<li><strong>NEW:</strong> After adding a transaction, focus will go to the date input rather than the memo. This way, you should be able to only ever press <code>Tab</code> and not have to press <code>Shift</code>-<code>Tab</code> to go back to the date. (<a href=https://github.com/buckets/application/issues/476>#476</a>)</li>
+<li><strong>NEW:</strong> Improved the transaction date picker, including fixing a bug that caused both day and month to change when adjusting with the keyboard (<a href=https://github.com/buckets/application/issues/728>#728</a>, <a href=https://github.com/buckets/application/issues/240>#240</a>, <a href=https://github.com/buckets/application/issues/258>#258</a>, <a href=https://github.com/buckets/application/issues/721>#721</a>)</li>
+<li><strong>FIX:</strong> Bug reports now include log files formatted correctly.</li>
+<li><strong>FIX:</strong> While the clickable arrows aren&rsquo;t back, you can use the keyboard to adjust each part of the date now (<a href=https://github.com/buckets/application/issues/824>#824</a>)</li>
+<li><strong>FIX:</strong> Removed clutter from log for backups (<a href=https://github.com/buckets/application/issues/912>#912</a>)</li>
+<li><strong>FIX:</strong> Some OFX files lack account information for banks that reuse transaction ids across different accounts. You can now import those transactions and see which transactions are duplicates. (<a href=https://github.com/buckets/application/issues/894>#894</a>)</li>
+</ul>
 <h1 id=v0705---2023-06-08>v0.70.5 - 2023-06-08<a class=anchor-link href=#v0705---2023-06-08>&para;</a></h1>
 <ul>
 <li><strong>FIX:</strong> Fixed an error that prevented pasting a Buckets License in when trying to use the Buckets Relay (<a href=https://github.com/buckets/application/issues/884>#884</a>)</li>
