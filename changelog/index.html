@@ -56,10 +56,29 @@ v0.71.1
 <img style=vertical-align:middle src=/images/logo_beta.png width=26>
 </td>
 <td>
-v0.71.1
+v0.72.0
 </td>
 </tr>
 </table>
+<h1 id=v0720---2023-09-28>v0.72.0 - 2023-09-28<a class=anchor-link href=#v0720---2023-09-28>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> You can now print (to paper or PDF) various pages! Some screens will look better than others. This is mostly to make the new Income and Expense report printable. (<a href=https://github.com/buckets/application/issues/285>#285</a>)</li>
+<li><strong>NEW:</strong> Added a first draft of a simple Income and Expense report under Analysis (<a href=https://github.com/buckets/application/issues/927>#927</a>)</li>
+<li><strong>NEW:</strong> Buckets is now built for Apple Silicon (M1/M2/ARM64) machines in addition to Intel macOS machines (<a href=https://github.com/buckets/application/issues/688>#688</a>, <a href=https://github.com/buckets/application/issues/906>#906</a>)</li>
+<li><strong>NEW:</strong> Buckets is now built for Linux ARM64 devices (<a href=https://github.com/buckets/application/issues/735>#735</a>, <a href=https://github.com/buckets/application/issues/763>#763</a>)</li>
+<li><strong>FIX:</strong> Export date range inputs now work again. Also, the list of available date range presets has expanded and exported transaction filenames now include the date range (<a href=https://github.com/buckets/application/issues/922>#922</a>)</li>
+<li><strong>FIX:</strong> Fixed a startup failure on various Linux distributions that required passing <code>--no-sandbox</code> when launching. You should no longer need to pass that flag. (<a href=https://github.com/buckets/application/issues/916>#916</a>, <a href=https://github.com/buckets/application/issues/781>#781</a>)</li>
+<li><strong>FIX:</strong> Fixed a common logging error that happened in languages other than English (<a href=https://github.com/buckets/application/issues/852>#852</a>, <a href=https://github.com/buckets/application/issues/873>#873</a>)</li>
+<li><strong>FIX:</strong> Fixed a crash that would happen when importing from malformed nYNAB files (<a href=https://github.com/buckets/application/issues/642>#642</a>)</li>
+<li><strong>FIX:</strong> Find on page functionality has been rewritten and should be much less prone to errors (<a href=https://github.com/buckets/application/issues/465>#465</a>)</li>
+<li><strong>FIX:</strong> The <em>cents</em> part of the Expenses number at the top is now affixed to the top like all the other numbers in that area (<a href=https://github.com/buckets/application/issues/349>#349</a>)</li>
+<li><strong>FIX:</strong> Resizing windows on Windows should no longer result in a black screen (<a href=https://github.com/buckets/application/issues/791>#791</a>)</li>
+<li><strong>FIX:</strong> Fixed a launch crash that happened on Ubuntu 22.10 (<a href=https://github.com/buckets/application/issues/829>#829</a>, <a href=https://github.com/buckets/application/issues/724>#724</a>)</li>
+<li><strong>FIX:</strong> Off-budget accounts show up in the dropdowns for creating transactions and transfers again (<a href=https://github.com/buckets/application/issues/929>#929</a>)</li>
+<li><strong>FIX:</strong> Update license price to $64</li>
+<li><strong>FIX:</strong> macOS fonts will no longer turn blurry (<a href=https://github.com/buckets/application/issues/848>#848</a>)</li>
+<li>Upgraded to Electron 26 (<a href=https://github.com/buckets/application/issues/885>#885</a>, <a href=https://github.com/buckets/application/issues/559>#559</a>)</li>
+</ul>
 <h1 id=v0711---2023-08-10>v0.71.1 - 2023-08-10<a class=anchor-link href=#v0711---2023-08-10>&para;</a></h1>
 <ul>
 <li><strong>FIX:</strong> Move calendar in new date picker to the front of the input to transaction-entry require one less tab (<a href=https://github.com/buckets/application/issues/917>#917</a>)</li>
