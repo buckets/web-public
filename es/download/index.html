@@ -33,7 +33,7 @@ Descargar
 </a>
 </div>
 <div class=main>
-<style>a.dl-button{display:flex;align-items:center;margin:.25rem 0 0;text-decoration:none;background-color:#eee;border-radius:4px}a.dl-button img{background-color:#3498db;padding:.7rem;border-radius:4px 0 0 4px;height:2.5rem;margin-right:.5rem;opacity:.9}a.dl-button.beta img{background-color:#2ecc71}a.dl-button:hover{background-color:rgba(241,196,15,.2)}a.dl-button:hover img{opacity:1}a.dl-button .name{color:#000;font-size:1rem}.header{text-align:center;margin-top:3rem;margin-bottom:1rem}.header img{width:5rem;height:5rem;position:relative;margin-right:1rem}.header h2{text-align:center;margin:0}.download-list{width:100%}.download-list td,.download-list th{border:0;vertical-align:top}.download-list th{padding:1.2rem .5rem 0;background-color:transparent;font-size:1.2rem;text-align:left;width:25%}.download-list th .subtitle{font-size:.9rem;font-weight:400}</style>
+<style>a.dl-button{display:flex;align-items:center;margin:.25rem 0 0;text-decoration:none;background-color:#eee;border-radius:4px}a.dl-button img{background-color:#3498db;padding:.7rem;border-radius:4px 0 0 4px;height:2.5rem;margin-right:.5rem;opacity:.9}a.dl-button.beta img{background-color:#2ecc71}a.dl-button:hover{background-color:rgba(241,196,15,.2)}a.dl-button:hover img{opacity:1}a.dl-button .name{color:#000;font-size:1rem}.header{text-align:center;margin-top:3rem;margin-bottom:1rem}.header img{width:5rem;height:5rem;position:relative;margin-right:1rem}.header h2{text-align:center;margin:0}.download-list{width:100%}.download-list td,.download-list th{border:0;vertical-align:top}.download-list th{padding:1.2rem .5rem 0;background-color:transparent;font-size:1.2rem;text-align:left;width:25%}.download-list th .subtitle{font-size:.9rem;font-weight:400}.hidden{display:none}.relative{position:relative}#flatpak-beta-instructions{min-height:3rem}pre{font-family:monospace;font-size:.75rem;overflow:auto;position:absolute}</style>
 <div class=header id=stable>
 <img src=/images/logo.png>
 <h2>
@@ -82,6 +82,12 @@ Buckets v0.71.1
 <img src=/images/download.svg>
 <div>
 <div class=name>deb</div>
+</div>
+</a>
+<a class=dl-button target=_blank href=https://flathub.org/apps/com.budgetwithbuckets.Buckets>
+<img src=/images/download.svg>
+<div>
+<div class=name>Flatpak</div>
 </div>
 </a>
 </td>
@@ -183,6 +189,17 @@ Esta versión contiene las últimas funciones, pero también puede contener erro
 <div class=name>deb ARM64</div>
 </div>
 </a>
+<script>function showFlatpakBeta(){document.getElementById('flatpak-beta-instructions').classList.toggle('hidden')}</script>
+<a class="dl-button beta" href=javascript:void(0); onclick=showFlatpakBeta()>
+<img src=/images/download.svg>
+<div>
+<div class=name>Flatpak</div>
+</div>
+</a>
+<div id=flatpak-beta-instructions class="relative hidden">
+<pre>flatpak remote-add --if-not-exists flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo
+flatpak install flathub-beta com.budgetwithbuckets.Buckets</pre>
+</div>
 </td>
 </tr>
 <tr>
