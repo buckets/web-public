@@ -1,0 +1,262 @@
+<!doctype html><html>
+<head>
+<title>
+Budgets, Budgets Everywhere!
+</title>
+<link rel="shortcut icon" href=/img/favicon.png type=image/png>
+<link rel=stylesheet type=text/css href=/css/buckets.css>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=stylesheet type=text/css href=/css/buckets-blog.css>
+<link rel=alternate hreflang=es href=https://www.budgetwithbuckets.com/es/blog/2024/01/04/budgets-budgets-everywhere.html/>
+</head>
+<body>
+<div class=buckets-nav>
+<section>
+<a class=logo href=/>
+<img src=/img/logo.png>
+</a>
+<a href=/guide/>Guide</a>
+<a class=active href=/blog/>Blog</a>
+<a href=/changelog/>Changelog</a>
+<a target=_blank href=https://github.com/buckets/application/issues>Issue Tracker</a>
+</section>
+<section>
+<a class=download-button href=/download/>
+<img src=/images/download.svg width=15 height=15>
+Download
+</a>
+<a class=buy-button href=/buy/>Buy $64</a>
+</section>
+<a href=javascript:void(0); class=nav-toggle onclick="this.parentElement.classList.toggle('nav-open')">
+<img src=/img/logo.png>
+<div>Menu</div>
+</a>
+</div>
+<div class=wrapper>
+<div class=post>
+<header class=post-header>
+<div class=next-prev-links>
+<a class=prev href=/blog/2023/11/24/why-buckets.html/>&larr; Prev</a>
+</div>
+<h1 class=blog-title>Budgets, Budgets Everywhere!</h1>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<p class=post-meta>
+Jan 4, 2024
+• Matt
+</p>
+</header>
+<article class=post-content>
+<p>Happy New Year! I&rsquo;m very excited to announce the beta release of Buckets v0.73.0 which includes two major features:</p>
+<ol>
+<li>Budgets from different devices can now be merged together</li>
+<li>You can now share budgets using a shared network folder</li>
+</ol>
+<p>Buckets is one step closer to working seamlessly on mobile!</p>
+<img alt="Conflict resolution tool" src=./merge.jpg style=border-radius:6px>
+<div class=photo-credit>Photo by <a href="https://unsplash.com/@lg17?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Lance Grandahl</a> on <a href="https://unsplash.com/photos/brown-metal-train-rail-near-rocky-mountain-during-daytime-nShLC-WruxQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+</div>
+<h2 id=a-few-important-caveats>A few important caveats<a class=anchor-link href=#a-few-important-caveats>&para;</a></h2>
+<p>If you&rsquo;d like to give this a try, there are some things to be aware of:</p>
+<ol>
+<li>Once you open a budget with this new beta version, you will <strong>not</strong> be able to open it with an older version of Buckets. Make a backup of your budget!</li>
+<li>This beta release is <strong>incompatible with the current iOS and Android versions</strong>. We&rsquo;re hoping to get compatible mobile versions out soon, but they&rsquo;re not ready yet.</li>
+<li>We&rsquo;ve tested <strong>a lot</strong> but there might be some bugs. Again, make a backup of your budget :)</li>
+</ol>
+<h2 id=if-you-didnt-read-above>If you didn&rsquo;t read above<a class=anchor-link href=#if-you-didnt-read-above>&para;</a></h2>
+<p>Make a backup copy of your budget.</p>
+<h2 id=so-what-does-it-look-like>So what does it look like?<a class=anchor-link href=#so-what-does-it-look-like>&para;</a></h2>
+<p>The Sharing preference pane has a new Avenue type called &ldquo;Shared folder.&rdquo; Select the same shared folder on both devices (via Google Drive, Dropbox, iCloud, Syncthing or whatever else you use to sync files) and your devices will eventually see each other and let you share between them. Here&rsquo;s what it looks like on Alice&rsquo;s computer who&rsquo;s sharing with Bobby:</p>
+<img alt="Sharing preference pane" src=./sharingpane.png>
+<p>See the Guide included with the release (<em>Help</em> > <em>Guide</em> > <em>Sharing</em>) for particulars.</p>
+<p>Once both devices are using the same folder, whenever a device sees an update, you&rsquo;ll get a notification badge on the <em>Tools</em> sidebar menu directing you to the new <em>Merge Budgets</em> tool:</p>
+<img alt="Tools notification badge" src=./mergetool.png style="border-radius:6px;border:1px solid lightgrey">
+<p>For now merging will be manually triggered so that it&rsquo;s easier to tell what&rsquo;s going on. But once real world testing reveals the problems we missed, we&rsquo;ll gradually make things more automatic.</p>
+<h2 id=and-its-all-encrypted-by-default>And it&rsquo;s all encrypted by default<a class=anchor-link href=#and-its-all-encrypted-by-default>&para;</a></h2>
+<p>To maintain your privacy, all data is encrypted before saving it in shared folders. And you don&rsquo;t even have to pick a password!</p>
+<p>If you&rsquo;re up for giving it a try (and want your budget on multiple computers), <a href=/download/#beta>download the latest beta here.</a></p>
+<p>Happy Budgeting!</p>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<h2 id=technical-details>Technical details<a class=anchor-link href=#technical-details>&para;</a></h2>
+<p>If you&rsquo;re interested in all the nitty gritty technical details, keep reading—implementing this has been a very challenging and fun programming problem.</p>
+<h3 id=tracking-changes>Tracking changes<a class=anchor-link href=#tracking-changes>&para;</a></h3>
+<p>I started working on the ability to merge budget files sometime in 2018 and posted about a way to <a href=/blog/2018/08/27/sqlite-changelog.html/>track changes with JSON in SQLite</a>. I&rsquo;ve nearly released different versions of change-tracking since then, but wasn&rsquo;t satisfied with how they worked. For an evolving program like Buckets, change tracking needs to be fast, small, flexible and resilient.</p>
+<p>My first idea was to just start tracking every change and figure out merging later. Essentially, there was a table like this:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>&gt; select * from changelog;
+id  created              action  obj     data                              
+--  -------------------  ------  ------  ------------------------------------
+1   2024-01-04 02:54:30  INSERT  bucket  {&#34;id&#34;:5,&#34;name&#34;:&#34;Food&#34;,&#34;color&#34;:&#34;red&#34;}
+2   2024-01-04 02:54:52  UPDATE  bucket  {&#34;id&#34;:5,&#34;name&#34;:&#34;Groceries&#34;}         
+3   2024-01-04 02:55:03  UPDATE  bucket  {&#34;id&#34;:5,&#34;color&#34;:&#34;green&#34;}     
+</code></pre></div><p>I&rsquo;m <em>really</em> glad this wasn&rsquo;t released. It isn&rsquo;t small since every piece of data is duplicated at least twice. Also, since Buckets is very <code>INSERT</code> heavy and much more light on <code>UPDATEs</code> and <code>DELETEs</code>, I really wanted a solution that avoided tracking <code>INSERTs</code>.</p>
+<p>So, as described in <a href=(/blog/2018/08/27/sqlite-changelog.html/)>the JSON SQLite blog post</a> I got something working that only tracked <code>UPDATEs</code> and <code>DELETEs</code>. Again I nearly released it, but tried to implement merging just to see what it was like. While simple merging worked, it exposed a big problem: ID reconciliation among independent devices using sequential integer IDs is very difficult.</p>
+<p>For instance, if Alice adds a new bucket to her budget, she&rsquo;ll take the next ID (say 5). But if Bob adds a new bucket to his budget before merging in Alice&rsquo;s changes, his bucket&rsquo;s ID will be 5 as well. When it comes time to merge those budgets, it&rsquo;s <em>possible</em> but very annoying and error-prone to keep track of whose 5 is who&rsquo;s and then update one of the 5&rsquo;s to 6 in the end.</p>
+<h3 id=crdt>CRDT<a class=anchor-link href=#crdt>&para;</a></h3>
+<p>I should pause here, since some of you are yelling at your computer, to mention that I&rsquo;ve read about <em>conflict-free replicated data types</em> (CRDTs), and while I&rsquo;m open to the possibility of one day using CRDTs in Buckets, it&rsquo;s not the right tool for now since it would require too much restructuring of the budget format <em>and</em> because it might be more rigid than I want (read on).</p>
+<p>Back to sequential IDs and their problems&mldr;</p>
+<h3 id=guids>GUIDs<a class=anchor-link href=#guids>&para;</a></h3>
+<p>After thinking through and partially implementing many ideas for doing merging while keeping sequential numeric IDs (because SQLite makes them so easy), including:</p>
+<ul>
+<li>Adding a random hash column to every table</li>
+<li>Identifying records by both their ID and their timestamp</li>
+<li>Adding a device ID column to every table</li>
+</ul>
+<p>I bit the bullet and just switched the numeric ID over to a proper GUID. Sort of. 😁</p>
+<p>Initially, I wanted to save space so desperately that I tried to pack all the GUID information into a 64-bit integer. There was a timestamp portion, a sequential portion and a random portion all consuming what I thought were just enough bits to avoid collisions. Here is one version of that:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-nim data-lang=nim><span style=color:#66d9ef>const</span>
+  ID_SIZE <span style=color:#f92672>=</span> <span style=color:#ae81ff>53</span> <span style=color:#75715e># 53 because JavaScript can&#39;t handle 64-bit integers</span>
+  ID_TS_SIZE <span style=color:#f92672>=</span> <span style=color:#ae81ff>31</span> <span style=color:#75715e># 31 bits will allow for 68 years before wrap-around</span>
+  ID_RANDOM_SIZE <span style=color:#f92672>=</span> <span style=color:#ae81ff>16</span>
+  ID_SEQ_SIZE <span style=color:#f92672>=</span> ID_SIZE <span style=color:#f92672>-</span> ID_TS_SIZE <span style=color:#f92672>-</span> ID_RANDOM_SIZE
+  UUID_TS_SHIFT<span style=color:#f92672>*</span> <span style=color:#f92672>=</span> ID_SEQ_SIZE <span style=color:#f92672>+</span> ID_RANDOM_SIZE
+  UUID_TS_MOD<span style=color:#f92672>*</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>2</span> ^ ID_TS_SIZE
+  UUID_SEQ_SHIFT<span style=color:#f92672>*</span> <span style=color:#f92672>=</span> ID_RANDOM_SIZE
+  UUID_SEQ_MOD<span style=color:#f92672>*</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>2</span> ^ ID_SEQ_SIZE
+  UUID_RANDOM_MOD<span style=color:#f92672>*</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>2</span> ^ ID_RANDOM_SIZE
+
+<span style=color:#66d9ef>const</span>
+  uuiddef <span style=color:#f92672>=</span> (<span style=color:#f92672>&amp;</span><span style=color:#e6db74>&#34;&#34;&#34;(
+</span><span style=color:#e6db74>    ((CAST(strftime(&#39;%s&#39;, &#39;now&#39;) AS INT) % {UUID_TS_MOD}) &lt;&lt; {UUID_TS_SHIFT})
+</span><span style=color:#e6db74>    + ((last_insert_rowid() % {UUID_SEQ_MOD}) &lt;&lt; {UUID_SEQ_SHIFT})
+</span><span style=color:#e6db74>    + (abs(random()) % {UUID_RANDOM_MOD})
+</span><span style=color:#e6db74>  )&#34;&#34;&#34;</span>).replace(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>, <span style=color:#e6db74>&#34;&#34;</span>)
+  uuidprimarykey<span style=color:#f92672>*</span> <span style=color:#f92672>=</span> <span style=color:#f92672>&amp;</span><span style=color:#e6db74>&#34;INT PRIMARY KEY DEFAULT {uuiddef}&#34;</span>
+</code></pre></div><p>But you&rsquo;ll notice that&rsquo;s not a 64-bit number because JavaScript&rsquo;s <code>Number.MAX_SAFE_INTEGER</code> is only <a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER>53 bits</a>. The hours it took to realize this were very painful.</p>
+<p>At this point, trying to decide between always converting a 64-bit integer to a string for JavaScript or using a 53-bit integer was made easier when my testing revealed that the 53-bit UUID ran into collisions. Rather than deal with converting IDs between strings and integers (though SQLite is very friendly about situations like this), I opted to just go with strings.</p>
+<p>So now IDs in Buckets are strings with a big timestamp in front (ordering by ID is still useful) and a big chunk of random at the end:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#66d9ef>SELECT</span> ( printf(<span style=color:#e6db74>&#39;%x&#39;</span>, julianday(<span style=color:#e6db74>&#39;now&#39;</span>)<span style=color:#f92672>*</span><span style=color:#ae81ff>86400000</span>) <span style=color:#f92672>||</span> <span style=color:#e6db74>&#39;-&#39;</span> <span style=color:#f92672>||</span> <span style=color:#66d9ef>lower</span>(hex(randomblob(<span style=color:#ae81ff>10</span>))) );
+c15510e0dc0d<span style=color:#f92672>-</span>b2bfa93a683e4ded298e
+</code></pre></div><p>It has increased the size of our budget a bit, but it&rsquo;s an acceptable amount.</p>
+<h3 id=schema-changes>Schema changes<a class=anchor-link href=#schema-changes>&para;</a></h3>
+<p>After switching to GUIDs, merging became much simpler. I was again almost ready to release, but paused to work on another feature that required a database schema change. As I made the change, it hit me that once the changelog became active, I would have to duplicate the same schema change <em>within</em> the data contained in the changelog.</p>
+<p>For instance, if the <code>notes</code> column were removed from the <code>account</code> table, we&rsquo;d need to remove the <code>notes</code> key from anywhere it appeared within the JSON list of changed columns. Maintaining these schema changes in the changelog is possible and some applications might decide to do this&mldr;</p>
+<p>But at this point, after having worked on change tracking and merging for so long, I took a step back and realized: it doesn&rsquo;t need to be perfect—it only needs to be good enough 99% of the time and resilient enough that it can be fixed the other 1%. And I don&rsquo;t want to apply schema changes to history if I can help it!</p>
+<p>So here&rsquo;s how a change log looks in the beta release:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>&gt; select obj, obj_id, action from change_log;
+obj                  obj_id                             action
+-------------------  ---------------------------------  ------
+bucket               c1550f6ce47a-9078a1c0a72495cd6d0c  U     
+bucket               c1550f6ce5b3-93c8713f4166b73593c8  U     
+bucket               c1550f62cf7c-faa7603c46a24e98b405  U     
+account              c1550f5d8c76-ffe9072c4b2f6c65b12a  U     
+account              c1550bc23e3b-7b97d5248c833320ecc2  U     
+account              c1550bc08d49-0cfff4e2a0e74e2597b9  U     
+bucket               c15510e0dc0d-b2bfa93a683e4ded298e  D     
+account_transaction  c15510e0dc0d-a24e9a3a67d5248d298e  U     
+</code></pre></div><p>Only the fact that an <code>UPDATE</code> or <code>DELETE</code> happened is tracked. <code>INSERTs</code> are determined by computing the difference of each database. And the set of fields that changed by an <code>UPDATE</code> are also determined by comparing the two databases.</p>
+<p>This is small and very flexible in the face of schema changes.</p>
+<h3 id=conflicts>Conflicts<a class=anchor-link href=#conflicts>&para;</a></h3>
+<p>Fixing conflicts is left up to users, because in most Buckets usage (lots of <code>INSERTs</code> and typically only one device doing stuff at a time), conflicts should be rare rather than common. But when conflicts do arise, here&rsquo;s how they&rsquo;re resolved within the <em>Merge Budgets</em> tool:</p>
+<img alt="Conflict resolution tool" src=./conflicts.png style="border-radius:6px;border:1px solid lightgrey">
+<p>For each conflict click on either the existing version or the incoming version before completing the merge. The above image shows that an account was renamed differently on each device and a transaction was split differently between the Apple and Banana buckets.</p>
+<h3 id=merging-two-databases>Merging two databases<a class=anchor-link href=#merging-two-databases>&para;</a></h3>
+<p>SQLite is great software. Merging two budgets involves <a href=https://www.sqlite.org/lang_attach.html>attaching</a> the incoming budget to the destination budget, querying across both databases to determine differences, copying changes over and then detaching.</p>
+<p>At one point, my goal was to make The Ultimate SQLite Database Merging Algorithm™ that could merge any database you could throw at it. But I eventually calmed down and the merging algorithm is more bespoke for Buckets, much simpler and more accurate.</p>
+<h3 id=shared-folder-format>Shared folder format<a class=anchor-link href=#shared-folder-format>&para;</a></h3>
+<p>The new <em>Shared folder</em> avenue is another satisfying piece of work. Here&rsquo;s an example of the directory structure. When you get it working on your computer, feel free to poke around and look at these files.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>sharedfolder/
+├── buckets.share.txt
+└── devices
+    ├── 868664ED40D4C8E238F154110EB49F1F
+    │   ├── device.json
+    │   └── device.json.hash
+    └── A0F2D74B5644C91F87F436EDCB40C34C
+        ├── budgets
+        │   └── 1
+        │       ├── budget-20240103232703-683528.gz.enc
+        │       ├── info.json
+        │       └── info.json.sig
+        ├── device.json
+        └── device.json.hash
+</code></pre></div><p>Each device gets its own directory under <code>devices/$DEVICE_ID</code> where its public signing key and signed public encryption key are published. Any number of devices can use the same shared folder.</p>
+<p>Before you can share with another device, the same manual trust verification is done as for the other sharing avenues. It&rsquo;s hopefully very difficult to accidentally share a budget with someone.</p>
+<p>Each device will publish budgets for other devices within its own <code>budgets/$BUDGET_ID</code> directory. Each budget is compressed and encrypted with a symmetric key. That symmetric key is then encrypted with each destination device&rsquo;s public encryption key and stored in <code>info.json</code>. By doing it this way, each budget only needs to be encrypted and stored once, but is readable by multiple devices.</p>
+<p>To avoid a race condition if one device is reading a budget while a new version is being uploaded, the prior version of the budget is retained alongside the newest version, with <code>info.json</code> being updated only after the new budget is in place.</p>
+<h3 id=testing>Testing<a class=anchor-link href=#testing>&para;</a></h3>
+<p>Automated testing for all these changes has been essential. Of the hundreds of tests, many are handcrafted but others are generated by assembling scenarios from a list of possible actions. Writing tests in Nim, with its macro/template system is very satisfying.</p>
+<p>This tests updating an account name in both budgets and having one budget ignore the other&rsquo;s changes:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-nim data-lang=nim>  test <span style=color:#e6db74>&#34;UU discard UU take&#34;</span>:
+    <span style=color:#66d9ef>let</span> t <span style=color:#f92672>=</span> tester()
+    t.setup: a.insert(<span style=color:#e6db74>&#34;account&#34;</span>, <span style=color:#e6db74>&#34;a1&#34;</span>, {<span style=color:#e6db74>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;0&#34;</span>})
+    t.go:
+      a.update(<span style=color:#e6db74>&#34;account&#34;</span>, <span style=color:#e6db74>&#34;a1&#34;</span>, {<span style=color:#e6db74>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;a1&#34;</span>})
+      b.update(<span style=color:#e6db74>&#34;account&#34;</span>, <span style=color:#e6db74>&#34;a1&#34;</span>, {<span style=color:#e6db74>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;b1&#34;</span>})
+      a.discardIncoming(b)
+      a.update(<span style=color:#e6db74>&#34;account&#34;</span>, <span style=color:#e6db74>&#34;a1&#34;</span>, {<span style=color:#e6db74>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;a2&#34;</span>})
+      b.update(<span style=color:#e6db74>&#34;account&#34;</span>, <span style=color:#e6db74>&#34;a1&#34;</span>, {<span style=color:#e6db74>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;b2&#34;</span>})
+      b.takeIncoming(a)
+      check a.has(<span style=color:#e6db74>&#34;account&#34;</span>, {<span style=color:#e6db74>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;a2&#34;</span>})
+      check b.has(<span style=color:#e6db74>&#34;account&#34;</span>, {<span style=color:#e6db74>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;a2&#34;</span>})
+</code></pre></div><p>I&rsquo;m very excited for this long-time-coming change. After we get the mobile apps to be compatible with these changes, you&rsquo;ll be able to categorize transactions on mobile!</p>
+<p>Happy Budgeting v2!</p>
+<p>— Matt</p>
+</article>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<div class="next-prev-links close" style=margin-top:1rem>
+<a class=prev href=/blog/2023/11/24/why-buckets.html/>&larr; Prev</a>
+</div>
+<h2 style=margin-top:2rem>Comments</h2>
+<div id=comment-form style=display:none>
+<a name=comment-form></a>
+<script>window.location.search.substr(1).indexOf('comment=submitted')!==-1&&document.write(`<div class="notification">Comment submitted!  Your comment will be posted here after being reviewed.</div>`)</script>
+<script>function setCommentStatus(b,c){const a=document.getElementById('comment-notification');a.innerText=b,a.setAttribute('class',c),a.setAttribute('style','')}function submitComment(c){const b=document.getElementById('comment-submit');b.disabled=!0,setCommentStatus('Submitting...','notification'),c.preventDefault();const d=document.getElementById('comment-message').value,e=document.getElementById('comment-email').value,f=document.getElementById('comment-name').value,g=document.getElementById('comment-slug').value,h={comment:d,email:e,name:f,subdir:g};let a=new XMLHttpRequest;a.addEventListener('load',a=>{setCommentStatus('Comment submitted!  Your comment will be posted here after being reviewed.','notification'),b.disabled=!1}),a.addEventListener('error',a=>{console.log('Error',a),setCommentStatus('Error submitting comment.  If it continues not to work, please email us.','notification error'),b.disabled=!1}),a.open('POST','https://7nd5a97217.execute-api.us-east-1.amazonaws.com/default/GitHubJekyllComments'),a.send(JSON.stringify(h))}XMLHttpRequest&&document.getElementById('comment-form').setAttribute('style','')</script>
+<form method=post class=comment-form onsubmit="return submitComment(event),!1">
+<input type=hidden id=comment-slug value=merging>
+<label>Name:<br><input id=comment-name type=text></label>
+<label>Email (optional&mdash;not displayed):<br><input id=comment-email type=email></label>
+<label>Message:</label>
+<textarea id=comment-message></textarea>
+<button type=submit id=comment-submit>Add comment</button>
+</form>
+<div id=comment-notification style=display:none></div>
+</div>
+<div class=mailing-list-main style=margin-top:2rem>
+<div class=mailing-list-title>Get these posts in your email, monthly:</div>
+<p>
+<link href=//cdn-images.mailchimp.com/embedcode/classic-10_7.css rel=stylesheet type=text/css>
+<style type=text/css>#mc_embed_signup{background:0 0;clear:left}#mc_embed_signup form{padding:0}#mc_embed_signup input{border-radius:3px}#mc_embed_signup input[type=submit]{background-color:#08c}</style>
+<div id=mc_embed_signup>
+<form action="https://bucketsisbetter.us8.list-manage.com/subscribe/post?u=bc109895c8df246ae54ad4d71&id=0960a6d05e" method=post id=mc-embedded-subscribe-form name=mc-embedded-subscribe-form class=validate target=_blank novalidate>
+<div id=mc_embed_signup_scroll>
+<div class=mc-field-group>
+<label for=mce-EMAIL>Email Address
+</label>
+<input type=email name=EMAIL class="required email" id=mce-EMAIL>
+</div>
+<div class=mc-field-group>
+<label for=mce-FNAME>First Name
+</label>
+<input type=text name=FNAME class=required id=mce-FNAME>
+</div>
+<div id=mce-responses class=clear>
+<div class=response id=mce-error-response style=display:none></div>
+<div class=response id=mce-success-response style=display:none></div>
+</div>
+<div style=position:absolute;left:-5000px aria-hidden=true><input type=text name=b_bc109895c8df246ae54ad4d71_0960a6d05e tabindex=-1></div>
+<div class=clear><input type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe class=button></div>
+</div>
+</form>
+</div>
+</p>
+</div>
+</div>
+</div>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<footer>
+<div><a href=https://onepartrain.com target=_blank>&copy; One Part Rain, LLC</a></div>
+<div><a href=mailto:hello@budgetwithbuckets.com>hello@budgetwithbuckets.com</a></div>
+<div><a href=https://www.patreon.com/iffy target=_blank>Donate</a></div>
+<div><a href=/guide/privacypolicy>Privacy</a></div>
+<div>
+<details>
+<summary>English</summary>
+<div><a href=/es/blog/2024/01/04/budgets-budgets-everywhere.html/>español</a></div>
+</details>
+</div>
+</footer>
+<script type=text/javascript>var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date;(function(){var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.async=!0,a.src='https://embed.tawk.to/59835f8ed1385b2b2e285765/default',a.charset='UTF-8',a.setAttribute('crossorigin','*'),b.parentNode.insertBefore(a,b)})()</script>
+</body>
+</html>

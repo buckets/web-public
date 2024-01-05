@@ -32,6 +32,17 @@ Download
 </a>
 </div>
 <div class=main>
+<h1 id=v0730---2024-01-04>v0.73.0 - 2024-01-04<a class=anchor-link href=#v0730---2024-01-04>&para;</a></h1>
+<ul>
+<li><strong>BREAKING CHANGE:</strong> <strong>If you open a budget with this version, you will likely not be able to open it with a prior version.</strong> This version changes all sequential database IDs to non-sequential GUIDs to prepare for device-to-device syncing.</li>
+<li><strong>NEW:</strong> Budget files can now be merged! Go to <em>Tools</em> > <em>Merge Budgets</em> to try it out. (<a href=https://github.com/buckets/application/issues/134>#134</a>)</li>
+<li><strong>NEW:</strong> Upgraded SQLite to 3.44.0</li>
+<li><strong>NEW:</strong> Account starting balance is now stored explicitly (rather than being computed from the recorded balance and all balance-affecting transactions)</li>
+<li><strong>NEW:</strong> Budgets can be shared between devices using a shared folder, such as is offered by Dropbox, Google Drive, iCloud and others. (<a href=https://github.com/buckets/application/issues/276>#276</a>, <a href=https://github.com/buckets/application/issues/548>#548</a>, <a href=https://github.com/buckets/application/issues/633>#633</a>, <a href=https://github.com/buckets/application/issues/712>#712</a>, <a href=https://github.com/buckets/application/issues/891>#891</a>)</li>
+<li><strong>FIX:</strong> Generic linux builds use <code>linux-latest</code> rather than <code>ubuntu-22.04</code> in their filename. (<a href=https://github.com/buckets/application/issues/937>#937</a>)</li>
+<li><strong>FIX:</strong> Fixed translations for Estonian, Spanish, Turkish, Romanian and Portuguese. Thank you, translators!</li>
+<li><strong>FIX:</strong> Add Беларуская translations &ndash; thank you Yahor!</li>
+</ul>
 <h1 id=v0721---2023-10-06>v0.72.1 - 2023-10-06<a class=anchor-link href=#v0721---2023-10-06>&para;</a></h1>
 <ul>
 <li><strong>FIX:</strong> On Windows and Linux, Buckets will do better at reopening the last set of windows you had opened when you closed it. (<a href=https://github.com/buckets/application/issues/406>#406</a>, <a href=https://github.com/buckets/application/issues/751>#751</a>)</li>
