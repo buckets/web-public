@@ -13,6 +13,9 @@ jobs:
       run: |
         sudo apt-get update -q
         sudo apt-get install -y linkchecker
+    - name: Wait for publish to complete
+      run: |
+        sleep 60
     - name: Check
       run: |
         linkchecker www.budgetwithbuckets.com --no-status --check-extern --timeout=10
