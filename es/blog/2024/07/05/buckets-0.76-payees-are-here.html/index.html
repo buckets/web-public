@@ -1,31 +1,31 @@
 <!doctype html><html>
 <head>
 <title>
-Roadmap Update
+Buckets 0.76 - Payees are here!
 </title>
 <link rel="shortcut icon" href=/img/favicon.png type=image/png>
 <link rel=stylesheet type=text/css href=/css/buckets.css>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <link rel=stylesheet type=text/css href=/css/buckets-blog.css>
-<link rel=alternate hreflang=es href=https://www.budgetwithbuckets.com/es/blog/2024/04/04/roadmap-update.html/>
+<link rel=alternate hreflang=en href=https://www.budgetwithbuckets.com/blog/2024/07/05/buckets-0.76-payees-are-here.html/>
 </head>
 <body>
 <div class=buckets-nav>
 <section>
-<a class=logo href=/>
+<a class=logo href=/es/>
 <img src=/img/logo.png>
 </a>
-<a href=/guide/>Guide</a>
+<a href=/es/guide/>Guía</a>
 <a class=active href=/blog/>Blog</a>
-<a href=/changelog/>Changelog</a>
-<a target=_blank href=https://github.com/buckets/application/issues>Issue Tracker</a>
+<a href=/changelog/>Cambios</a>
+<a target=_blank href=https://github.com/buckets/application/issues>Cuestiones</a>
 </section>
 <section>
-<a class=download-button href=/download/>
+<a class=download-button href=/es/download/>
 <img src=/images/download.svg width=15 height=15>
-Download
+Descargar
 </a>
-<a class=buy-button href=/buy/>Buy $64</a>
+<a class=buy-button href=/es/buy/>Comprar $64</a>
 </section>
 <a href=javascript:void(0); class=nav-toggle onclick="this.parentElement.classList.toggle('nav-open')">
 <img src=/img/logo.png>
@@ -36,98 +36,53 @@ Download
 <div class=post>
 <header class=post-header>
 <div class=next-prev-links>
-<a class=prev href=/blog/2024/02/28/categorizing-on-mobile.html/>&larr; Prev</a>
-<a class=next href=/blog/2024/07/05/buckets-0.76-payees-are-here.html/>Next &rarr;</a>
+<a class=prev href=/es/blog/2024/04/04/roadmap-update.html/>&larr; Prev</a>
 </div>
-<h1 class=blog-title>Roadmap Update</h1>
+<h1 class=blog-title>Buckets 0.76 - Payees are here!</h1>
 <div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
 </div>
 <p class=post-meta>
-Apr 4, 2024
+Jul 5, 2024
 • Matt
 </p>
 </header>
 <article class=post-content>
-<p>Here&rsquo;s a quick update on what we&rsquo;ve got planned for Buckets for the next three months. While I can&rsquo;t guarantee when these things will be completed, this is the current plan ordered somewhat close to when we expect they&rsquo;ll happen.</p>
-<p>For this quarter, we&rsquo;re going to try using the <a href=https://github.com/buckets/application/milestone/3>milestone feature</a> of GitHub to track progress and see how everyone likes it.</p>
-<h2 id=beta-to-stable-and-bug-fixes>Beta to stable and bug fixes<a class=anchor-link href=#beta-to-stable-and-bug-fixes>&para;</a></h2>
-<p>The latest <a href=/download/#beta>Buckets Beta (the green one)</a> has a lot of great features, and after a few more bug fixes, I&rsquo;m hoping to get it released generally as Buckets stable (the blue one).</p>
-<h2 id=sharing>Sharing<a class=anchor-link href=#sharing>&para;</a></h2>
-<p>We plan to fix several bugs in device-to-device sharing and also simplify the process so it doesn&rsquo;t require so much fiddling to get it to work. We also want Buckets to provide more visibility into what&rsquo;s happening when something doesn&rsquo;t work.</p>
+<p>We&rsquo;re really excited to announce that Buckets v0.76.0 is now in Beta and includes support for payees and a much improved transaction page. <a href=/es/download/#beta>Download the latest beta here,</a> or wait for the stable version to be released in the future.</p>
+<img alt="Screenshot of new transaction page" src=./overview.png style="border-radius:6px;border:1px solid grey">
+</div>
+<p>Read on for details about all the new features.</p>
 <h2 id=payees>Payees<a class=anchor-link href=#payees>&para;</a></h2>
-<p>We&rsquo;re finally going to add <a href=https://github.com/buckets/application/issues/101>Payees</a>! This is one of the most requested missing features. I&rsquo;m still working on the full scope of what&rsquo;s involved with this change. There are several other related features that it might make sense to do in tandem with this change. So the goal is to <em>at least</em> add Payees, with the possibility of other bonus features.</p>
-<h2 id=ios-release>iOS Release<a class=anchor-link href=#ios-release>&para;</a></h2>
-<p>We plan to get the iOS app into the real App Store so that you don&rsquo;t have to use TestFlight anymore!</p>
-<h2 id=eula>EULA<a class=anchor-link href=#eula>&para;</a></h2>
-<p>Our lawyers have long suggested it be a requirement that users accept the End User License Agreement when downloading the app. So we&rsquo;ll be making that a requirement at some point in the next three months. There&rsquo;s nothing strange or new in the <a href=/guide/eula/>agreement</a>—we&rsquo;re just tying up loose ends.</p>
-<h2 id=dark-mode>Dark Mode<a class=anchor-link href=#dark-mode>&para;</a></h2>
-<p>This one might be a stretch to get done before July, but I know those of you who want this <a href=https://github.com/buckets/application/issues/293><em>really, REALLY</em> want it</a>.</p>
-<p>Happy budgeting!</p>
+<p>Adding a Payee field to transactions has been one of the most requested features for a long time. It&rsquo;s here! And it comes with fuzzy matching auto-complete.</p>
+<p>In the future, we&rsquo;ll plan on creating some reports that will take advantage of this feature, so you can see how much money you spend on Amazon every year. Unless you&rsquo;d rather not know 😉</p>
+<h2 id=mass-editing>Mass editing<a class=anchor-link href=#mass-editing>&para;</a></h2>
+<p>Another long-requested feature that arrives in this version of Buckets is mass editing of transactions. You can now update multiple transaction dates, accounts, payees and memos at once.</p>
+<p>Click the &ldquo;Edit&rdquo; button at the top of the page to get started.</p>
+<img alt="Screen recording of editing multiple transactions at once" src=./massedit.gif style="border-radius:6px;border:1px solid grey">
+<p>As part of this change, you can now select or deselect all the visible transaction at once by clicking on the checkbox in the header of the table. I know, I know—this should have been a feature 10 years ago.</p>
+<h2 id=filtering-and-sorting>Filtering and Sorting<a class=anchor-link href=#filtering-and-sorting>&para;</a></h2>
+<p>Alongside the new &ldquo;Edit&rdquo; button, you&rsquo;ll see another one for filtering transactions by Account, Payee, Memo, Amount and whether it&rsquo;s categorized or not.</p>
+<img alt="Screenshot of filtering feature" src=./filter.png style="border-radius:6px;border:1px solid grey;width:100%">
+<p>In addition, you can now click the headers to sort by any of the columns. I&rsquo;m pretty sure our new workflow will be to sort by category and categorize until all the transactions drop to the bottom of the list!</p>
+<h2 id=but-wait-theres-more>But wait, there&rsquo;s more!<a class=anchor-link href=#but-wait-theres-more>&para;</a></h2>
+<p>Not only has the regular monthy-by-month transaction list been updated with these features, but the Search page now has them, too.</p>
+<img alt="Screenshot of search page transactions" src=./search.png style="border-radius:6px;border:1px solid grey;width:100%">
+<p>Categorize on the search page; mass edit memos or payees, all without being bounded by month boundaries.</p>
+<p>We hope you enjoy using these new features as much as we&rsquo;ve enjoyed developing them.</p>
+<p>Happy Budgeting!</p>
 <p>— Matt</p>
 </article>
 <div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
 </div>
 <div class="next-prev-links close" style=margin-top:1rem>
-<a class=prev href=/blog/2024/02/28/categorizing-on-mobile.html/>&larr; Prev</a>
-<a class=next href=/blog/2024/07/05/buckets-0.76-payees-are-here.html/>Next &rarr;</a>
+<a class=prev href=/es/blog/2024/04/04/roadmap-update.html/>&larr; Prev</a>
 </div>
 <h2 style=margin-top:2rem>Comments</h2>
-<div class=comment>
-<img src="https://www.gravatar.com/avatar/?s=64">
-<div>
-<div class=details>
-<div class=author>Tonch</div>
-<div class=date>Fri Apr 5, 2024 4:53</div>
-</div>
-<div class=message>Awesome to hear! I love buckets and I'm excited to see these features on the horizon. Keep up the good work</div>
-</div>
-</div>
-<div class=comment>
-<img src="https://www.gravatar.com/avatar/?s=64">
-<div>
-<div class=details>
-<div class=author>wyatt</div>
-<div class=date>Fri Apr 5, 2024 7:31</div>
-</div>
-<div class=message>really excited for the mobile app and better sync! I can't wait to edit my budget on the go</div>
-</div>
-</div>
-<div class=comment>
-<img src="https://www.gravatar.com/avatar/?s=64">
-<div>
-<div class=details>
-<div class=author>Ryan</div>
-<div class=date>Fri Apr 5, 2024 9:19</div>
-</div>
-<div class=message>Matt this is awesome to hear! Really looking forward to the Payees. And a Bonus will be Dark Mode. I really appreciate your work and effort into this Program/app. Keep up the great work!</div>
-</div>
-</div>
-<div class=comment>
-<img src="https://www.gravatar.com/avatar/?s=64">
-<div>
-<div class=details>
-<div class=author>Jaime</div>
-<div class=date>Sat Apr 6, 2024 12:38</div>
-</div>
-<div class=message>Yes! So excited. Thanks for your commitment to this. Looking forward to the iOS app and better syncing! Also, love the privacy aspect that no other app does like yours</div>
-</div>
-</div>
-<div class=comment>
-<img src="https://www.gravatar.com/avatar/?s=64">
-<div>
-<div class=details>
-<div class=author>InfoWar1776</div>
-<div class=date>Thu Apr 11, 2024 4:43</div>
-</div>
-<div class=message>I recommend this program to everyone. Keep up the great work. I don't need a rewards program to recommend but would be cool if when someone downloaded it, they could say where they got from.</div>
-</div>
-</div>
 <div id=comment-form style=display:none>
 <a name=comment-form></a>
 <script>window.location.search.substr(1).indexOf('comment=submitted')!==-1&&document.write(`<div class="notification">Comment submitted!  Your comment will be posted here after being reviewed.</div>`)</script>
 <script>function setCommentStatus(b,c){const a=document.getElementById('comment-notification');a.innerText=b,a.setAttribute('class',c),a.setAttribute('style','')}function submitComment(c){const b=document.getElementById('comment-submit');b.disabled=!0,setCommentStatus('Submitting...','notification'),c.preventDefault();const d=document.getElementById('comment-message').value,e=document.getElementById('comment-email').value,f=document.getElementById('comment-name').value,g=document.getElementById('comment-slug').value,h={comment:d,email:e,name:f,subdir:g};let a=new XMLHttpRequest;a.addEventListener('load',a=>{setCommentStatus('Comment submitted!  Your comment will be posted here after being reviewed.','notification'),b.disabled=!1}),a.addEventListener('error',a=>{console.log('Error',a),setCommentStatus('Error submitting comment.  If it continues not to work, please email us.','notification error'),b.disabled=!1}),a.open('POST','https://7nd5a97217.execute-api.us-east-1.amazonaws.com/default/GitHubJekyllComments'),a.send(JSON.stringify(h))}XMLHttpRequest&&document.getElementById('comment-form').setAttribute('style','')</script>
 <form method=post class=comment-form onsubmit="return submitComment(event),!1">
-<input type=hidden id=comment-slug value=roadmap-update>
+<input type=hidden id=comment-slug value=payees-are-here>
 <label>Name:<br><input id=comment-name type=text></label>
 <label>Email (optional&mdash;not displayed):<br><input id=comment-email type=email></label>
 <label>Message:</label>
@@ -172,12 +127,12 @@ Apr 4, 2024
 <footer>
 <div><a href=https://onepartrain.com target=_blank>&copy; One Part Rain, LLC</a></div>
 <div><a href=mailto:hello@budgetwithbuckets.com>hello@budgetwithbuckets.com</a></div>
-<div><a href=https://www.patreon.com/iffy target=_blank>Donate</a></div>
-<div><a href=/guide/privacypolicy>Privacy</a></div>
+<div><a href=https://www.patreon.com/iffy target=_blank>Donar</a></div>
+<div><a href=/guide/privacypolicy>Privacidad</a></div>
 <div>
 <details>
-<summary>English</summary>
-<div><a href=/es/blog/2024/04/04/roadmap-update.html/>español</a></div>
+<summary>español</summary>
+<div><a href=/blog/2024/07/05/buckets-0.76-payees-are-here.html/>English</a></div>
 </details>
 </div>
 </footer>
