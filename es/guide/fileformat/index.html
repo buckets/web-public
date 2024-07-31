@@ -17,7 +17,7 @@ File Format
 </a>
 <a class=active href=/es/guide/>Guía</a>
 <a href=/blog/>Blog</a>
-<a target=_blank href=https://github.com/buckets/application/blob/master/CHANGELOG.md>Cambios</a>
+<a href=/changelog/>Cambios</a>
 <a target=_blank href=https://github.com/buckets/application/issues>Cuestiones</a>
 </section>
 <section>
@@ -25,7 +25,7 @@ File Format
 <img src=/images/download.svg width=15 height=15>
 Descargar
 </a>
-<a class=buy-button href=/es/buy/>Comprar $49</a>
+<a class=buy-button href=/es/buy/>Comprar $64</a>
 </section>
 <a href=javascript:void(0); class=nav-toggle onclick="this.parentElement.classList.toggle('nav-open')">
 <img src=/img/logo.png>
@@ -46,10 +46,13 @@ Descargar
 <a href=/es/guide/app/transactions/>Transactions</a>
 <a href=/es/guide/app/categorizing/>Categorizing</a>
 <a href=/es/guide/app/debt/>Debt</a>
+<a href=/es/guide/app/sharing/>Sharing</a>
 <a href=/es/guide/app/general/>General</a>
 </div>
 <a href=/es/guide/faq/ class=subheading>FAQ</a>
 <a href=/es/guide/fileformat/ class="subheading active">File Format</a>
+<a href=/es/guide/eula/ class=subheading>EULA</a>
+<a href=/es/guide/privacypolicy/ class=subheading>Privacy Policy</a>
 </div>
 <div class=main-body>
 <h1>File Format</h1>
@@ -77,6 +80,12 @@ sqlite&gt; SELECT printf(&#34;%.2f&#34;, balance/100.0) AS balance FROM account 
 <li><code>general_cat</code> should be one of the strings <code>""</code>, <code>"income"</code>, or <code>"transfer"</code>.</li>
 </ul>
 <p>Account and bucket balances are automatically updated (by SQLite triggers) when transactions are inserted/updated/deleted.</p>
+<h2 id=custom-tables-views-and-triggers>Custom tables, views and triggers<a class=anchor-link href=#custom-tables-views-and-triggers>&para;</a></h2>
+<p>You are welcome to add custom tables, views and triggers to your budget file at your own risk. Please follow these conventions:</p>
+<ol>
+<li>Prefix the name of all custom things with <code>c_</code> (e.g. <code>CREATE TABLE c_mytable ...</code>)</li>
+<li>When merging budgets, custom tables are combined additively. So you may need to manually delete records in both budgets.</li>
+</ol>
 </div>
 </div>
 <div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
@@ -85,7 +94,7 @@ sqlite&gt; SELECT printf(&#34;%.2f&#34;, balance/100.0) AS balance FROM account 
 <div><a href=https://onepartrain.com target=_blank>&copy; One Part Rain, LLC</a></div>
 <div><a href=mailto:hello@budgetwithbuckets.com>hello@budgetwithbuckets.com</a></div>
 <div><a href=https://www.patreon.com/iffy target=_blank>Donar</a></div>
-<div><a href=https://github.com/buckets/policies/blob/master/privacy-policy.md target=_blank>Privacidad</a></div>
+<div><a href=/guide/privacypolicy>Privacidad</a></div>
 <div>
 <details>
 <summary>español</summary>

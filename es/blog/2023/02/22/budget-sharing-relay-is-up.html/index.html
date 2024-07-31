@@ -1,0 +1,205 @@
+<!doctype html><html>
+<head>
+<title>
+Budget Sharing: Relay is Up!
+</title>
+<link rel="shortcut icon" href=/img/favicon.png type=image/png>
+<link rel=stylesheet type=text/css href=/css/buckets.css>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=stylesheet type=text/css href=/css/buckets-blog.css>
+<link rel=alternate hreflang=en href=https://www.budgetwithbuckets.com/blog/2023/02/22/budget-sharing-relay-is-up.html/>
+</head>
+<body>
+<div class=buckets-nav>
+<section>
+<a class=logo href=/es/>
+<img src=/img/logo.png>
+</a>
+<a href=/es/guide/>Guía</a>
+<a class=active href=/blog/>Blog</a>
+<a href=/changelog/>Cambios</a>
+<a target=_blank href=https://github.com/buckets/application/issues>Cuestiones</a>
+</section>
+<section>
+<a class=download-button href=/es/download/>
+<img src=/images/download.svg width=15 height=15>
+Descargar
+</a>
+<a class=buy-button href=/es/buy/>Comprar $64</a>
+</section>
+<a href=javascript:void(0); class=nav-toggle onclick="this.parentElement.classList.toggle('nav-open')">
+<img src=/img/logo.png>
+<div>Menu</div>
+</a>
+</div>
+<div class=wrapper>
+<div class=post>
+<header class=post-header>
+<div class=next-prev-links>
+<a class=prev href=/es/blog/2022/12/19/december-update.html/>&larr; Prev</a>
+<a class=next href=/es/blog/2023/03/03/price-increase-in-september.html/>Next &rarr;</a>
+</div>
+<h1 class=blog-title>Budget Sharing: Relay is Up!</h1>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<p class=post-meta>
+Feb 22, 2023
+• Matt
+</p>
+</header>
+<article class=post-content>
+<p>I&rsquo;m very excited to announce the release of the Bucket Relay! It&rsquo;s now much easier to share your budget between devices. Let me take you on a tour of how it works and how it keeps your data secure as it travels across the Internet.</p>
+<img alt="Photo of a satellite orbiting Earth" src=./satellite.jpg style=border-radius:6px>
+<div class=photo-credit>Photo by <a href="https://unsplash.com/@nasa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">NASA</a> on <a href="https://unsplash.com/photos/yZygONrUBe8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></div>
+<h2 id=alice-and-bob>Alice and Bob<a class=anchor-link href=#alice-and-bob>&para;</a></h2>
+<p>To explain how this system works, let&rsquo;s walk through connecting two devices: a phone and a laptop. In describing cryptographic communication systems, it&rsquo;s common to use the fictional characters <a href=https://en.wikipedia.org/wiki/Alice_and_Bob>Alice and Bob</a>, two people who want to talk securely.</p>
+<p>In fact, most of the code tests for using the Buckets Relay feature Alice and Bob:</p>
+<img alt="Photo of a some code" src=./alicebobbytest.png style=border-radius:6px>
+<p>Let&rsquo;s follow that convention: Alice has a laptop and Bob has a mobile phone. They just got married 🎉 and Alice wants to share the budget with Bob.</p>
+<p><img alt="Drawing of Alice and Bob holding their devices" src=./shareflow_1.png></p>
+<p>This might get long and technical, so if you don&rsquo;t want to read it all, the gist is:</p>
+<ol>
+<li>Download the newest <a href=/es/download/#beta>Beta version of Buckets</a> to get access to the relay</li>
+<li>Sign up for an account <a href=https://relay.budgetwithbuckets.com>on the relay</a>, or use your Buckets license</li>
+<li>Read <a href=/es/guide/app/sharing/>the instructions</a> and get your budget on all your devices!</li>
+</ol>
+<h2 id=buckets-is-old-school>Buckets is Old School<a class=anchor-link href=#buckets-is-old-school>&para;</a></h2>
+<p>If Buckets were a web app, Alice and Bob would just sign in to the website and we&rsquo;d send their budget from our servers to their devices.</p>
+<p>But Buckets isn&rsquo;t a web app—it&rsquo;s an old-school, downloaded, install-on-your-computer, no-subscription, completely private app. We don&rsquo;t have Alice&rsquo;s budget. Or your budget. (And, no offense, we don&rsquo;t even want your budget. You can keep it 😁)</p>
+<p>Instead, Bob&rsquo;s phone needs to get the budget directly from Alice&rsquo;s laptop. But how?</p>
+<h2 id=where-are-you>Where are you?<a class=anchor-link href=#where-are-you>&para;</a></h2>
+<p>In the current version of Buckets, Alice can share the budget with Bob on their local home network. But it sometimes doesn&rsquo;t work very well because of firewall and network configurations that prevent Alice&rsquo;s laptop from seeing Bob&rsquo;s phone. Both devices might never connect, wondering where the other is.</p>
+<p>This is where the Buckets Relay comes in. It&rsquo;s a central server that Alice and Bob can connect to so their laptop and phone can find each other.</p>
+<p><img alt="Drawing of Alice and Bob with a satellite floating above them" src=./shareflow_2.png></p>
+<h2 id=how-can-a-shared-server-be-secure>How can a shared server be secure?<a class=anchor-link href=#how-can-a-shared-server-be-secure>&para;</a></h2>
+<p>&ldquo;Wait a second,&rdquo; Alice says, &ldquo;how can that be secure? I thought Buckets didn&rsquo;t store our budget.&rdquo;</p>
+<p>&ldquo;Alice,&rdquo; I reply, &ldquo;I didn&rsquo;t know you had a speaking part in this article!&rdquo;</p>
+<p>The relay doesn&rsquo;t store your budget. In fact, as I&rsquo;ll show you below, the relay <em>can&rsquo;t see your budget</em> even as it passes it along. Think of the relay like a satellite orbiting the earth. Alice can bounce her budget off of the relay onto Bob&rsquo;s phone.</p>
+<p>Here&rsquo;s how it works:</p>
+<h2 id=step-1-connect-with-tls>Step 1: Connect with TLS<a class=anchor-link href=#step-1-connect-with-tls>&para;</a></h2>
+<p>Alice and Bob each connect to the relay with <a href=https://en.wikipedia.org/wiki/Transport_Layer_Security>Transport Layer Security (TLS)</a> on port 443, the standard HTTPS port. TLS is what your bank and every other website uses to encrypt communication between you and them. TLS provides an encrypted shield that prevents anyone on the Internet from snooping on or changing the information you send.</p>
+<p><img alt="Same image as above, but with a TLS connection between the people and the satellite" src=./shareflow_tls.png></p>
+<h2 id=step-2-tell-the-relay-who-you-are>Step 2: Tell the relay who you are<a class=anchor-link href=#step-2-tell-the-relay-who-you-are>&para;</a></h2>
+<p>The relay needs to know who its users are, to prevent people from using it for things unrelated to Buckets <em>and</em> to make it easy for you to connect your devices. So, the relay will know your email address.</p>
+<p>Alice purchased a Buckets license years ago, so she and Bob decide to use her license to authenticate with the relay. If they were still using the trial version of Buckets, they could <a href=https://relay.budgetwithbuckets.com>sign up for an account on the relay</a>.</p>
+<h2 id=step-3-tell-the-relay-who-you-are-again>Step 3: Tell the relay who you are, again<a class=anchor-link href=#step-3-tell-the-relay-who-you-are-again>&para;</a></h2>
+<p>Since Alice and Bob are sharing their license (which is totally fine, since they are members of the same immediate family living in the same house), the relay needs a way to distinguish which device it&rsquo;s talking to.</p>
+<p>Alice&rsquo;s laptop then generates a public and secret key pair. Public and secret keys can do two important things:</p>
+<ol>
+<li>If you have someone&rsquo;s public key, you can use it to encrypt a message that can only be decrypted with the matching secret key.</li>
+<li>You can use your secret key to sign a message. Anyone who has your public key can verify that the message was signed with the secret key (even though they don&rsquo;t have the secret key). This proves that the message was signed by you.</li>
+</ol>
+<p>So Alice sends her public key to the relay as a kind of mailing address, essentially saying, &ldquo;if anyone on the relay wants to talk to me, this public key is how to address me.&rdquo;</p>
+<p>Bob does the same.</p>
+<p><img alt="Same image as above, but with Alice and Bob sending a key to the satellite" src=./shareflow_sendkey.png></p>
+<h2 id=step-4-connect-the-pair>Step 4: Connect the pair<a class=anchor-link href=#step-4-connect-the-pair>&para;</a></h2>
+<p>Since Alice and Bob used the same license to sign in to the relay, the relay notifies Alice that Bob&rsquo;s public key connected and notifies Bob that Alice&rsquo;s public key connected. Alice and Bob see each other&rsquo;s public keys in Buckets and decide to connect.</p>
+<p>Each will then be shown some pairing images and codes that represent their public key, the other device&rsquo;s public key, and a checksum. If the images and codes match, it means that future communication is guaranteed to only go to the people that possess the secret keys.</p>
+<p>Alice now trusts Bob, Bob trusts Alice, and the relay is happy to pass data between the two.</p>
+<p><img alt="Same image as above, but Alice and Bob have pairing code images floating above their heads" src=./shareflow_pair.png></p>
+<h2 id=step-5-more-encryption-please>Step 5: More encryption, please!<a class=anchor-link href=#step-5-more-encryption-please>&para;</a></h2>
+<p>But Alice and Bob don&rsquo;t trust the relay. Rightly wary of some Internet Stranger hosting some server, they start yet another layer of encryption between themselves. This is achieved with a <a href=https://libsodium.gitbook.io/doc/key_exchange>libsodium key exchange</a> which allows Alice to encrypt messages that only Bob can decrypt, and vice versa.</p>
+<p>With this encryption in place, the relay can no longer read anything they send to each other. Alice and Bob can communicate from one end to the other with complete privacy.</p>
+<p><img alt="Same image as above, but with Alice and Bob connected by an arc labeled end-to-end encryption" src=./shareflow_e2e.png></p>
+<h2 id=step-6-doubt>Step 6: Doubt<a class=anchor-link href=#step-6-doubt>&para;</a></h2>
+<p>&ldquo;Now, hold on,&rdquo; Alice demands, arms folded and eyes narrowed. &ldquo;I don&rsquo;t believe you! I think your relay server actually saves our budget and sells the information! Probably to advertisers! They&rsquo;re going to see all the money in our doughnut bucket and spam us with gooey, glazed specials and apple fritter ads!&rdquo;</p>
+<p>&ldquo;Woah, Alice,&rdquo; I respond. &ldquo;I completely understand. But you don&rsquo;t have to trust me. You can run a relay server yourself if you want. All the relay code is <a href=https://github.com/buckets/relay>open source</a>. Your doughnut bucket is safe.&rdquo;</p>
+<img alt="Photo of a some really delicious-looking doughnuts." src=./doughnut.jpg style=border-radius:6px>
+<div class=photo-credit>Photo by <a href="https://unsplash.com/@eli7_gohar?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Elisheva Gohar</a> on <a href="https://unsplash.com/photos/nyekPQwZbgw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></div>
+<h2 id=other-interesting-stuff>Other interesting stuff<a class=anchor-link href=#other-interesting-stuff>&para;</a></h2>
+<p>One thing I&rsquo;m quite happy about is the efficient way that Buckets sends budget files between devices. Budget files are normal <a href=/es/guide/fileformat/>SQLite</a> files, and as such they are divided evenly into blocks, called pages. When Bob first requests the budget from Alice, the whole thing will be sent. But afterward, only the changed pages are sent. This is achieved by Bob sending Alice a short summary of the pages he has, and Alice responding with only what he&rsquo;s missing. Since budgets tend to have new stuff added to the end more often than stuff changed in the middle, this should make syncing very fast.</p>
+<h2 id=next-steps>Next steps<a class=anchor-link href=#next-steps>&para;</a></h2>
+<p>As mentioned previously, now that it&rsquo;s easy for devices to share among themselves, the next step is to make it possible to alter the budget on multiple devices at the same time. After some bug fixes and possibly some other features, look for budget merging as the next major feature.</p>
+<p>Happy Budgeting!</p>
+<p>— Matt</p>
+<p><em>I&rsquo;m going to go get a doughnut.</em></p>
+</article>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<div class="next-prev-links close" style=margin-top:1rem>
+<a class=prev href=/es/blog/2022/12/19/december-update.html/>&larr; Prev</a>
+<a class=next href=/es/blog/2023/03/03/price-increase-in-september.html/>Next &rarr;</a>
+</div>
+<h2 style=margin-top:2rem>Comments</h2>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/56082d590871fe4f5cf248ea727f9654?s=64">
+<div>
+<div class=details>
+<div class=author>Matt F</div>
+<div class=date>mié. mar. 1, 2023 5:38</div>
+</div>
+<div class=message>Amazing work Matt, Budget with Buckets just keeps getting better, really appreciate the work you're putting in and the blog posts.</div>
+</div>
+</div>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/7ee4c0cab698e283574447263a3ba336?s=64">
+<div>
+<div class=details>
+<div class=author>Reef</div>
+<div class=date>mié. mar. 1, 2023 7:04</div>
+</div>
+<div class=message>Excellent article and I like the design. And thank you for open sourcing the relay, I think I'll be one of the people self-hosting just for the fun of it!</div>
+</div>
+</div>
+<div id=comment-form style=display:none>
+<a name=comment-form></a>
+<script>window.location.search.substr(1).indexOf('comment=submitted')!==-1&&document.write(`<div class="notification">Comment submitted!  Your comment will be posted here after being reviewed.</div>`)</script>
+<script>function setCommentStatus(b,c){const a=document.getElementById('comment-notification');a.innerText=b,a.setAttribute('class',c),a.setAttribute('style','')}function submitComment(c){const b=document.getElementById('comment-submit');b.disabled=!0,setCommentStatus('Submitting...','notification'),c.preventDefault();const d=document.getElementById('comment-message').value,e=document.getElementById('comment-email').value,f=document.getElementById('comment-name').value,g=document.getElementById('comment-slug').value,h={comment:d,email:e,name:f,subdir:g};let a=new XMLHttpRequest;a.addEventListener('load',a=>{setCommentStatus('Comment submitted!  Your comment will be posted here after being reviewed.','notification'),b.disabled=!1}),a.addEventListener('error',a=>{console.log('Error',a),setCommentStatus('Error submitting comment.  If it continues not to work, please email us.','notification error'),b.disabled=!1}),a.open('POST','https://7nd5a97217.execute-api.us-east-1.amazonaws.com/default/GitHubJekyllComments'),a.send(JSON.stringify(h))}XMLHttpRequest&&document.getElementById('comment-form').setAttribute('style','')</script>
+<form method=post class=comment-form onsubmit="return submitComment(event),!1">
+<input type=hidden id=comment-slug value=relay-available>
+<label>Name:<br><input id=comment-name type=text></label>
+<label>Email (optional&mdash;not displayed):<br><input id=comment-email type=email></label>
+<label>Message:</label>
+<textarea id=comment-message></textarea>
+<button type=submit id=comment-submit>Add comment</button>
+</form>
+<div id=comment-notification style=display:none></div>
+</div>
+<div class=mailing-list-main style=margin-top:2rem>
+<div class=mailing-list-title>Get these posts in your email, monthly:</div>
+<p>
+<link href=//cdn-images.mailchimp.com/embedcode/classic-10_7.css rel=stylesheet type=text/css>
+<style type=text/css>#mc_embed_signup{background:0 0;clear:left}#mc_embed_signup form{padding:0}#mc_embed_signup input{border-radius:3px}#mc_embed_signup input[type=submit]{background-color:#08c}</style>
+<div id=mc_embed_signup>
+<form action="https://bucketsisbetter.us8.list-manage.com/subscribe/post?u=bc109895c8df246ae54ad4d71&id=0960a6d05e" method=post id=mc-embedded-subscribe-form name=mc-embedded-subscribe-form class=validate target=_blank novalidate>
+<div id=mc_embed_signup_scroll>
+<div class=mc-field-group>
+<label for=mce-EMAIL>Email Address
+</label>
+<input type=email name=EMAIL class="required email" id=mce-EMAIL>
+</div>
+<div class=mc-field-group>
+<label for=mce-FNAME>First Name
+</label>
+<input type=text name=FNAME class=required id=mce-FNAME>
+</div>
+<div id=mce-responses class=clear>
+<div class=response id=mce-error-response style=display:none></div>
+<div class=response id=mce-success-response style=display:none></div>
+</div>
+<div style=position:absolute;left:-5000px aria-hidden=true><input type=text name=b_bc109895c8df246ae54ad4d71_0960a6d05e tabindex=-1></div>
+<div class=clear><input type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe class=button></div>
+</div>
+</form>
+</div>
+</p>
+</div>
+</div>
+</div>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<footer>
+<div><a href=https://onepartrain.com target=_blank>&copy; One Part Rain, LLC</a></div>
+<div><a href=mailto:hello@budgetwithbuckets.com>hello@budgetwithbuckets.com</a></div>
+<div><a href=https://www.patreon.com/iffy target=_blank>Donar</a></div>
+<div><a href=/guide/privacypolicy>Privacidad</a></div>
+<div>
+<details>
+<summary>español</summary>
+<div><a href=/blog/2023/02/22/budget-sharing-relay-is-up.html/>English</a></div>
+</details>
+</div>
+</footer>
+<script type=text/javascript>var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date;(function(){var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.async=!0,a.src='https://embed.tawk.to/59835f8ed1385b2b2e285765/default',a.charset='UTF-8',a.setAttribute('crossorigin','*'),b.parentNode.insertBefore(a,b)})()</script>
+</body>
+</html>

@@ -1,0 +1,1008 @@
+<!doctype html><html>
+<head>
+<title>
+Changelog - Buckets Desktop
+</title>
+<link rel="shortcut icon" href=/img/favicon.png type=image/png>
+<link rel=stylesheet type=text/css href=/css/buckets.css>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=stylesheet type=text/css href=/css/buckets-mainpages.css>
+<link rel=alternate hreflang=en href=https://www.budgetwithbuckets.com/changelog/>
+</head>
+<body class="smalltext wide">
+<div class=buckets-nav>
+<section>
+<a class=logo href=/es/>
+<img src=/img/logo.png>
+</a>
+<a href=/es/guide/>Guía</a>
+<a href=/blog/>Blog</a>
+<a href=/changelog/>Cambios</a>
+<a target=_blank href=https://github.com/buckets/application/issues>Cuestiones</a>
+</section>
+<section>
+<a class=download-button href=/es/download/>
+<img src=/images/download.svg width=15 height=15>
+Descargar
+</a>
+<a class=buy-button href=/es/buy/>Comprar $64</a>
+</section>
+<a href=javascript:void(0); class=nav-toggle onclick="this.parentElement.classList.toggle('nav-open')">
+<img src=/img/logo.png>
+<div>Menu</div>
+</a>
+</div>
+<div class=main>
+<h1 id=buckets-desktop-changelog>Buckets Desktop Changelog<a class=anchor-link href=#buckets-desktop-changelog>&para;</a></h1>
+<p><a href=/es/mobile_changelog/>Buckets Mobile Changelog</a></p>
+<p>Following are the changes included with each desktop version of Buckets. The date next to each version corresponds to beta releases, not stable releases.</p>
+<table>
+<tr>
+<td style=vertical-align:middle>
+<a href=/es/download/>Latest stable version</a>
+</td>
+<td style=vertical-align:middle>
+<img style=vertical-align:middle src=/images/logo.png width=26>
+</td>
+<td>
+v0.75.0
+</td>
+</tr>
+<tr>
+<td style=vertical-align:middle>
+<a href=/es/download/#beta>Latest beta version</a>
+</td>
+<td style=vertical-align:middle>
+<img style=vertical-align:middle src=/images/logo_beta.png width=26>
+</td>
+<td>
+v0.76.0
+</td>
+</tr>
+</table>
+<h1 id=v0760---2024-07-05>v0.76.0 - 2024-07-05<a class=anchor-link href=#v0760---2024-07-05>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Search page: you can now categorize and edit transactions on the search page (<a href=https://github.com/buckets/application/issues/675>#675</a>)</li>
+<li><strong>NEW:</strong> Transaction payees, memo, date and amount can be changed en masse (<a href=https://github.com/buckets/application/issues/311>#311</a>)</li>
+<li><strong>NEW:</strong> Transactions can be filtered now (<a href=https://github.com/buckets/application/issues/334>#334</a>)</li>
+<li><strong>NEW:</strong> Transactions now have Payees (<a href=https://github.com/buckets/application/issues/101>#101</a>, <a href=https://github.com/buckets/application/issues/106>#106</a>)</li>
+<li><strong>NEW:</strong> Accounts can be chosen by fuzzy search (<a href=https://github.com/buckets/application/issues/807>#807</a>)</li>
+<li><strong>NEW:</strong> You can now sort transactions (<a href=https://github.com/buckets/application/issues/198>#198</a>, <a href=https://github.com/buckets/application/issues/267>#267</a>)</li>
+<li><strong>NEW:</strong> You can now select and deselect all transactions by clicking the checkbox in the header row (<a href=https://github.com/buckets/application/issues/226>#226</a>)</li>
+<li><strong>FIX:</strong> When filtering the transaction list to only show uncategorized transactions, newly added transactions are now immediately shown and categorized transactions are immediately removed from the list (<a href=https://github.com/buckets/application/issues/467>#467</a>, <a href=https://github.com/buckets/application/issues/919>#919</a>)</li>
+</ul>
+<h1 id=v0750---2024-06-29>v0.75.0 - 2024-06-29<a class=anchor-link href=#v0750---2024-06-29>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Slow internal commands are now logged to make debugging slowness easier (<a href=https://github.com/buckets/application/issues/1000>#1000</a>)</li>
+<li><strong>FIX:</strong> On Windows, GPU rendering is now disabled by default to fix some extreme slowness on some machines. To reenable it set <code>BUCKETS_ENABLE_HARDWARE_ACCELERATION=1</code> when running Buckets. (<a href=https://github.com/buckets/application/issues/1000>#1000</a>)</li>
+</ul>
+<h1 id=v0741---2024-06-13>v0.74.1 - 2024-06-13<a class=anchor-link href=#v0741---2024-06-13>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> When there&rsquo;s already a problem, errors localizing the menu won&rsquo;t cause extra errors (<a href=https://github.com/buckets/application/issues/956>#956</a>)</li>
+<li><strong>FIX:</strong> Sharing folders now include a creation timestamp so you can distinguish and old and new version in the case where a device gets new keys (<a href=https://github.com/buckets/application/issues/970>#970</a>)</li>
+<li><strong>FIX:</strong> Misc group buckets that disappeared in the last few versions will return and be visible (<a href=https://github.com/buckets/application/issues/990>#990</a>)</li>
+<li><strong>FIX:</strong> When keys used for encrypting shared folders are broken, there is now a way to regenerate the keys in the Sharing preference pane (<a href=https://github.com/buckets/application/issues/969>#969</a>)</li>
+<li><strong>FIX:</strong> Merging errors are now diplayed consistently between desktop and mobile</li>
+</ul>
+<h1 id=v0740---2024-03-06>v0.74.0 - 2024-03-06<a class=anchor-link href=#v0740---2024-03-06>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> You can now skip updating to certain versions on Linux (<a href=https://github.com/buckets/application/issues/980>#980</a>)</li>
+<li><strong>NEW:</strong> Added a &lsquo;Show Budget File&rsquo; menu option to quickly locate the current budget file in Finder/Explorer (<a href=https://github.com/buckets/application/issues/977>#977</a>)</li>
+<li><strong>NEW:</strong> There is now a total at the top of the Recurring Expenses report (<a href=https://github.com/buckets/application/issues/954>#954</a>)</li>
+<li><strong>FIX:</strong> The Recurring Expense report now computes expenses the same way the buckets page does. (<a href=https://github.com/buckets/application/issues/565>#565</a>, <a href=https://github.com/buckets/application/issues/854>#854</a>)</li>
+<li><strong>FIX:</strong> Updated translations for several languages</li>
+<li><strong>FIX:</strong> When merging, schema difference detection now ignores whitespace (<a href=https://github.com/buckets/application/issues/978>#978</a>)</li>
+<li><strong>FIX:</strong> Clarify that SimpleFIN is likely not free (<a href=https://github.com/buckets/application/issues/827>#827</a>)</li>
+</ul>
+<h1 id=v0734---2024-02-28>v0.73.4 - 2024-02-28<a class=anchor-link href=#v0734---2024-02-28>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> When merging budgets, equivalent categorizations are no longer shown as conflicts (<a href=https://github.com/buckets/application/issues/973>#973</a>)</li>
+</ul>
+<h1 id=v0733---2024-01-30>v0.73.3 - 2024-01-30<a class=anchor-link href=#v0733---2024-01-30>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Fixed a crash that sometimes happened with the Find on page feature (<a href=https://github.com/buckets/application/issues/963>#963</a>)</li>
+<li><strong>FIX:</strong> Verified fix for white screen issue on Linux (<a href=https://github.com/buckets/application/issues/946>#946</a>)</li>
+<li><strong>FIX:</strong> Upgrade Electron to 26.6.7</li>
+<li><strong>FIX:</strong> Fixed a crash caused by trying to access windows that are already closed (<a href=https://github.com/buckets/application/issues/966>#966</a>)</li>
+<li><strong>FIX:</strong> Fixed an error that caused no windows to show up on Linux when trying to open last saved windows. (<a href=https://github.com/buckets/application/issues/965>#965</a>)</li>
+</ul>
+<h1 id=v0732---2024-01-16>v0.73.2 - 2024-01-16<a class=anchor-link href=#v0732---2024-01-16>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Fixed minor logging typo with shared folders (<a href=https://github.com/buckets/application/issues/955>#955</a>)</li>
+<li><strong>FIX:</strong> Fixed slowness introduced in latest version (<a href=https://github.com/buckets/application/issues/957>#957</a>)</li>
+</ul>
+<h1 id=v0731---2024-01-15>v0.73.1 - 2024-01-15<a class=anchor-link href=#v0731---2024-01-15>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Fixed a bug that prevented deleting existing sharing avenues when upgrading to v0.73.0 (<a href=https://github.com/buckets/application/issues/949>#949</a>)</li>
+<li><strong>FIX:</strong> On Linux, GPU rendering is now disabled by default to fix a rendering bug on many Linux machines. To reenable it set <code>BUCKETS_ENABLE_HARDWARE_ACCELERATION=1</code> when running Buckets. (<a href=https://github.com/buckets/application/issues/946>#946</a>)</li>
+<li><strong>FIX:</strong> Fixed a crash that happened when a shared folder becomes unavailable (<a href=https://github.com/buckets/application/issues/953>#953</a>)</li>
+<li><strong>FIX:</strong> Errors during merging are now shown as specific error messages (<a href=https://github.com/buckets/application/issues/950>#950</a>)</li>
+<li><strong>FIX:</strong> Catch more errors during update instead of crashing (<a href=https://github.com/buckets/application/issues/934>#934</a>, <a href=https://github.com/buckets/application/issues/939>#939</a>, <a href=https://github.com/buckets/application/issues/941>#941</a>)</li>
+<li><strong>FIX:</strong> Fixed rare crash from translation misconfiguration (<a href=https://github.com/buckets/application/issues/938>#938</a>)</li>
+</ul>
+<h1 id=v0730---2024-01-04>v0.73.0 - 2024-01-04<a class=anchor-link href=#v0730---2024-01-04>&para;</a></h1>
+<ul>
+<li><strong>BREAKING CHANGE:</strong> <strong>If you open a budget with this version, you will likely not be able to open it with a prior version.</strong> This version changes all sequential database IDs to non-sequential GUIDs to prepare for device-to-device syncing.</li>
+<li><strong>NEW:</strong> Budget files can now be merged! Go to <em>Tools</em> > <em>Merge Budgets</em> to try it out. (<a href=https://github.com/buckets/application/issues/134>#134</a>)</li>
+<li><strong>NEW:</strong> Upgraded SQLite to 3.44.0</li>
+<li><strong>NEW:</strong> Account starting balance is now stored explicitly (rather than being computed from the recorded balance and all balance-affecting transactions)</li>
+<li><strong>NEW:</strong> Budgets can be shared between devices using a shared folder, such as is offered by Dropbox, Google Drive, iCloud and others. (<a href=https://github.com/buckets/application/issues/276>#276</a>, <a href=https://github.com/buckets/application/issues/548>#548</a>, <a href=https://github.com/buckets/application/issues/633>#633</a>, <a href=https://github.com/buckets/application/issues/712>#712</a>, <a href=https://github.com/buckets/application/issues/891>#891</a>)</li>
+<li><strong>FIX:</strong> Generic linux builds use <code>linux-latest</code> rather than <code>ubuntu-22.04</code> in their filename. (<a href=https://github.com/buckets/application/issues/937>#937</a>)</li>
+<li><strong>FIX:</strong> Fixed translations for Estonian, Spanish, Turkish, Romanian and Portuguese. Thank you, translators!</li>
+<li><strong>FIX:</strong> Add Беларуская translations &ndash; thank you Yahor!</li>
+</ul>
+<h1 id=v0722---2024-01-30>v0.72.2 - 2024-01-30<a class=anchor-link href=#v0722---2024-01-30>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Verified fix for white screen issue on Linux (<a href=https://github.com/buckets/application/issues/946>#946</a>)</li>
+<li><strong>FIX:</strong> Upgrade Electron to 26.6.7</li>
+</ul>
+<h1 id=v0721---2023-10-06>v0.72.1 - 2023-10-06<a class=anchor-link href=#v0721---2023-10-06>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> On Windows and Linux, Buckets will do better at reopening the last set of windows you had opened when you closed it. (<a href=https://github.com/buckets/application/issues/406>#406</a>, <a href=https://github.com/buckets/application/issues/751>#751</a>)</li>
+<li><strong>FIX:</strong> Fix error when accounts used in syncing were deleted but not fully cleaned up (<a href=https://github.com/buckets/application/issues/931>#931</a>)</li>
+<li><strong>FIX:</strong> When Buckets fails to get a valid SimpleFIN Access URL, it no longer stores it as if it&rsquo;s a good one (<a href=https://github.com/buckets/application/issues/930>#930</a>)</li>
+<li><strong>FIX:</strong> When a new update is available for Buckets Beta on Linux, it will send you to the Beta download page rather than the Stable download page. (<a href=https://github.com/buckets/application/issues/933>#933</a>)</li>
+<li><strong>FIX:</strong> The calendar popup no longer hangs around when you focus on the next field (<a href=https://github.com/buckets/application/issues/924>#924</a>)</li>
+</ul>
+<h1 id=v0720---2023-09-28>v0.72.0 - 2023-09-28<a class=anchor-link href=#v0720---2023-09-28>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> You can now print (to paper or PDF) various pages! Some screens will look better than others. This is mostly to make the new Income and Expense report printable. (<a href=https://github.com/buckets/application/issues/285>#285</a>)</li>
+<li><strong>NEW:</strong> Added a first draft of a simple Income and Expense report under Analysis (<a href=https://github.com/buckets/application/issues/927>#927</a>)</li>
+<li><strong>NEW:</strong> Buckets is now built for Apple Silicon (M1/M2/ARM64) machines in addition to Intel macOS machines (<a href=https://github.com/buckets/application/issues/688>#688</a>, <a href=https://github.com/buckets/application/issues/906>#906</a>)</li>
+<li><strong>NEW:</strong> Buckets is now built for Linux ARM64 devices (<a href=https://github.com/buckets/application/issues/735>#735</a>, <a href=https://github.com/buckets/application/issues/763>#763</a>)</li>
+<li><strong>FIX:</strong> Export date range inputs now work again. Also, the list of available date range presets has expanded and exported transaction filenames now include the date range (<a href=https://github.com/buckets/application/issues/922>#922</a>)</li>
+<li><strong>FIX:</strong> Fixed a startup failure on various Linux distributions that required passing <code>--no-sandbox</code> when launching. You should no longer need to pass that flag. (<a href=https://github.com/buckets/application/issues/916>#916</a>, <a href=https://github.com/buckets/application/issues/781>#781</a>)</li>
+<li><strong>FIX:</strong> Fixed a common logging error that happened in languages other than English (<a href=https://github.com/buckets/application/issues/852>#852</a>, <a href=https://github.com/buckets/application/issues/873>#873</a>)</li>
+<li><strong>FIX:</strong> Fixed a crash that would happen when importing from malformed nYNAB files (<a href=https://github.com/buckets/application/issues/642>#642</a>)</li>
+<li><strong>FIX:</strong> Find on page functionality has been rewritten and should be much less prone to errors (<a href=https://github.com/buckets/application/issues/465>#465</a>)</li>
+<li><strong>FIX:</strong> The <em>cents</em> part of the Expenses number at the top is now affixed to the top like all the other numbers in that area (<a href=https://github.com/buckets/application/issues/349>#349</a>)</li>
+<li><strong>FIX:</strong> Resizing windows on Windows should no longer result in a black screen (<a href=https://github.com/buckets/application/issues/791>#791</a>)</li>
+<li><strong>FIX:</strong> Fixed a launch crash that happened on Ubuntu 22.10 (<a href=https://github.com/buckets/application/issues/829>#829</a>, <a href=https://github.com/buckets/application/issues/724>#724</a>)</li>
+<li><strong>FIX:</strong> Off-budget accounts show up in the dropdowns for creating transactions and transfers again (<a href=https://github.com/buckets/application/issues/929>#929</a>)</li>
+<li><strong>FIX:</strong> Update license price to $64</li>
+<li><strong>FIX:</strong> macOS fonts will no longer turn blurry (<a href=https://github.com/buckets/application/issues/848>#848</a>)</li>
+<li>Upgraded to Electron 26 (<a href=https://github.com/buckets/application/issues/885>#885</a>, <a href=https://github.com/buckets/application/issues/559>#559</a>)</li>
+</ul>
+<h1 id=v0711---2023-08-10>v0.71.1 - 2023-08-10<a class=anchor-link href=#v0711---2023-08-10>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Move calendar in new date picker to the front of the input to transaction-entry require one less tab (<a href=https://github.com/buckets/application/issues/917>#917</a>)</li>
+</ul>
+<h1 id=v0710---2023-07-06>v0.71.0 - 2023-07-06<a class=anchor-link href=#v0710---2023-07-06>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Closed accounts no longer show in the Transaction page dropdown. If you need to create a transaction for a closed account, go to the page for closed account. (<a href=https://github.com/buckets/application/issues/470>#470</a>)</li>
+<li><strong>NEW:</strong> After adding a transaction, focus will go to the date input rather than the memo. This way, you should be able to only ever press <code>Tab</code> and not have to press <code>Shift</code>-<code>Tab</code> to go back to the date. (<a href=https://github.com/buckets/application/issues/476>#476</a>)</li>
+<li><strong>NEW:</strong> Improved the transaction date picker, including fixing a bug that caused both day and month to change when adjusting with the keyboard (<a href=https://github.com/buckets/application/issues/728>#728</a>, <a href=https://github.com/buckets/application/issues/240>#240</a>, <a href=https://github.com/buckets/application/issues/258>#258</a>, <a href=https://github.com/buckets/application/issues/721>#721</a>)</li>
+<li><strong>FIX:</strong> Bug reports now include log files formatted correctly.</li>
+<li><strong>FIX:</strong> While the clickable arrows aren&rsquo;t back, you can use the keyboard to adjust each part of the date now (<a href=https://github.com/buckets/application/issues/824>#824</a>)</li>
+<li><strong>FIX:</strong> Removed clutter from log for backups (<a href=https://github.com/buckets/application/issues/912>#912</a>)</li>
+<li><strong>FIX:</strong> Some OFX files lack account information for banks that reuse transaction ids across different accounts. You can now import those transactions and see which transactions are duplicates. (<a href=https://github.com/buckets/application/issues/894>#894</a>)</li>
+</ul>
+<h1 id=v0705---2023-06-08>v0.70.5 - 2023-06-08<a class=anchor-link href=#v0705---2023-06-08>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Fixed an error that prevented pasting a Buckets License in when trying to use the Buckets Relay (<a href=https://github.com/buckets/application/issues/884>#884</a>)</li>
+<li><strong>FIX:</strong> Show local sharing server as &ldquo;Running&rdquo; instead of &ldquo;Starting&rdquo; when it&rsquo;s actually running.</li>
+<li><strong>FIX:</strong> Bug reports work again and failed report submissions are no longer reported as successes in the log (<a href=https://github.com/buckets/application/issues/909>#909</a>)</li>
+<li><strong>FIX:</strong> When checking for updates fails for network problems outside of Buckets' control, an error is no longer shown to the user (<a href=https://github.com/buckets/application/issues/898>#898</a>)</li>
+<li><strong>FIX:</strong> In sidebar list of accounts, a consistent number of decimal places is now shown, even if the &ldquo;cents&rdquo; part is 0 (<a href=https://github.com/buckets/application/issues/910>#910</a>)</li>
+</ul>
+<h1 id=v0704---2023-04-11>v0.70.4 - 2023-04-11<a class=anchor-link href=#v0704---2023-04-11>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Fixed SimpleFIN Bridge certificate errors by using a more forward-compatible method of making HTTP requests (<a href=https://github.com/buckets/application/issues/895>#895</a>)</li>
+</ul>
+<h1 id=v0703---2023-03-21>v0.70.3 - 2023-03-21<a class=anchor-link href=#v0703---2023-03-21>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Update translations for Polski, Español, Português and Română. Thank you, translators!</li>
+<li><strong>FIX:</strong> A failed backup will no longer crash Buckets (<a href=https://github.com/buckets/application/issues/879>#879</a>)</li>
+<li><strong>FIX:</strong> Fix bug with a missing function in <code>libSystem</code> on macOS High Sierra (<a href=https://github.com/buckets/application/issues/881>#881</a>)</li>
+</ul>
+<h1 id=v0702---2023-03-07>v0.70.2 - 2023-03-07<a class=anchor-link href=#v0702---2023-03-07>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Fix failure to run on Windows 11 due to missing <code>libwinpthread-1.dll</code> (<a href=https://github.com/buckets/application/issues/876>#876</a>)</li>
+</ul>
+<h1 id=v0701---2023-03-06>v0.70.1 - 2023-03-06<a class=anchor-link href=#v0701---2023-03-06>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Fix missing symbol on older macOS versions (<a href=https://github.com/buckets/application/issues/870>#870</a>, <a href=https://github.com/buckets/application/issues/808>#808</a>)</li>
+<li><strong>FIX:</strong> Statically link libsodium on Linux again (<a href=https://github.com/buckets/application/issues/861>#861</a>, <a href=https://github.com/buckets/application/issues/825>#825</a>)</li>
+<li><strong>FIX:</strong> Include bug report ID in bug report submission body so we can find old bug reports more easily</li>
+<li><strong>FIX:</strong> Prevent rare error when updating an account balance without a transaction (<a href=https://github.com/buckets/application/issues/835>#835</a>)</li>
+<li><strong>FIX:</strong> Fixed a bug that prevented you from entering two transactions in a row for the same account (<a href=https://github.com/buckets/application/issues/868>#868</a>)</li>
+</ul>
+<h1 id=v0700---2023-03-01>v0.70.0 - 2023-03-01<a class=anchor-link href=#v0700---2023-03-01>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Sharing between devices is much more straightforward now. Also, you many now share using the public relay (or your own relay if you&rsquo;d like to host one). (<a href=https://github.com/buckets/application/issues/670>#670</a>, <a href=https://github.com/buckets/application/issues/866>#866</a>, <a href=https://github.com/buckets/application/issues/850>#850</a>)</li>
+<li><strong>FIX:</strong> Support sharing on older macOS computers (<a href=https://github.com/buckets/application/issues/687>#687</a>)</li>
+<li><strong>FIX:</strong> Make various transient errors that sometimes happen during auto updates less annoying and only pop up the update window when there&rsquo;s something a user can do (<a href=https://github.com/buckets/application/issues/570>#570</a>, <a href=https://github.com/buckets/application/issues/817>#817</a>, <a href=https://github.com/buckets/application/issues/822>#822</a>, <a href=https://github.com/buckets/application/issues/830>#830</a>, <a href=https://github.com/buckets/application/issues/839>#839</a>, <a href=https://github.com/buckets/application/issues/840>#840</a>, <a href=https://github.com/buckets/application/issues/859>#859</a>, <a href=https://github.com/buckets/application/issues/864>#864</a>)</li>
+<li><strong>FIX:</strong> Fix auto update on Windows due to certificate Common Name case mismatch (<a href=https://github.com/buckets/application/issues/836>#836</a>)</li>
+</ul>
+<h1 id=v0690---2022-11-30>v0.69.0 - 2022-11-30<a class=anchor-link href=#v0690---2022-11-30>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Added End User License Agreement and Privacy Policy to Guide. Also, you may choose to accept the EULA through App Settings. In a future version all users will be <strong>required</strong> to accept the EULA to continue using Buckets.</li>
+<li><strong>NEW:</strong> Made bucket names in the Recurring Expense report link to the individual bucket view (<a href=https://github.com/buckets/application/issues/314>#314</a>)</li>
+<li><strong>NEW:</strong> Accounts balances in the sidebar now include cents (<a href=https://github.com/buckets/application/issues/601>#601</a>)</li>
+<li><strong>NEW:</strong> If a budget has only one account, it will be automatically chosen in the transaction-creation form (<a href=https://github.com/buckets/application/issues/441>#441</a>)</li>
+<li><strong>NEW:</strong> More prominently display &ldquo;Undo&rdquo; after deleting and account. (<a href=https://github.com/buckets/application/issues/813>#813</a>)</li>
+<li><strong>NEW:</strong> Added more default time formats for CSV importing, including single-digit months and days (<a href=https://github.com/buckets/application/issues/826>#826</a>)</li>
+<li><strong>FIX:</strong> The Recurring Expense report now includes the current month (<a href=https://github.com/buckets/application/issues/337>#337</a>)</li>
+<li><strong>FIX:</strong> Preferences, Bank macro recorder and bug report windows no longer have a menu on Windows and Linux (<a href=https://github.com/buckets/application/issues/617>#617</a>, <a href=https://github.com/buckets/application/issues/806>#806</a>, <a href=https://github.com/buckets/application/issues/805>#805</a>)</li>
+<li><strong>FIX:</strong> You can now categorize 0-amount transactions (<a href=https://github.com/buckets/application/issues/700>#700</a>)</li>
+<li><strong>FIX:</strong> Fixed failure to parse OFX timestamps with a &lsquo;GMT&rsquo; at the end (<a href=https://github.com/buckets/application/issues/815>#815</a>)</li>
+<li><strong>FIX:</strong> The plus button to add a bucket is aligned correctly on the Misc group (<a href=https://github.com/buckets/application/issues/501>#501</a>)</li>
+<li><strong>FIX:</strong> The bucket settings and trash can icon is now separated to make it less goofy (<a href=https://github.com/buckets/application/issues/562>#562</a>)</li>
+<li><strong>FIX:</strong> Upgrade SQLite to 3.39.4</li>
+<li><strong>FIX:</strong> The bucket settings acceptance button (the checkmark) is now lined up better with the settings box (<a href=https://github.com/buckets/application/issues/242>#242</a>)</li>
+<li><strong>FIX:</strong> On the account list table, you can now click anywhere in the name cell to go to an account&rsquo;s details (so that it&rsquo;s easier to click on accounts with short names) (<a href=https://github.com/buckets/application/issues/578>#578</a>)</li>
+<li><strong>FIX:</strong> Changed the Rain/mo tooltip to specifically mention <em>want</em> (since it&rsquo;s a sum of all the bucket wants) (<a href=https://github.com/buckets/application/issues/326>#326</a>)</li>
+</ul>
+<h1 id=v0680---2022-09-22>v0.68.0 - 2022-09-22<a class=anchor-link href=#v0680---2022-09-22>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Automatic backups are now created for your budgets. (<a href=https://github.com/buckets/application/issues/74>#74</a>)</li>
+<li><strong>FIX:</strong> Fixed regression that prevented importing into off-budget accounts (<a href=https://github.com/buckets/application/issues/284>#284</a>)</li>
+<li><strong>FIX:</strong> Restored some of the readability of the category-choosing dropdown by removing whitespace and allowing the popup menu to expand its width (<a href=https://github.com/buckets/application/issues/780>#780</a>)</li>
+<li><strong>FIX:</strong> Fixed license entry field so that copying and pasting works on all machines (<a href=https://github.com/buckets/application/issues/587>#587</a>)</li>
+<li><strong>FIX:</strong> If automatic updates fail, users are prompted to download from the website instead (<a href=https://github.com/buckets/application/issues/786>#786</a>)</li>
+</ul>
+<h1 id=v0672---2022-09-05>v0.67.2 - 2022-09-05<a class=anchor-link href=#v0672---2022-09-05>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Several translation fixes for Türkçe, Español and Eesti. Thank you, contributors!</li>
+<li><strong>FIX:</strong> Log OS version for debugging help</li>
+<li><strong>FIX:</strong> Fixed bug in OFX importing where later transactions would get copies of data from earlier transactions (<a href=https://github.com/buckets/application/issues/778>#778</a>)</li>
+<li><strong>FIX:</strong> If you accidentally give an account a blank name, you can now rename it (<a href=https://github.com/buckets/application/issues/785>#785</a>)</li>
+<li><strong>FIX:</strong> Restore ability to import CSV files with separate credit/debit columns where both are positive (<a href=https://github.com/buckets/application/issues/790>#790</a>)</li>
+</ul>
+<h1 id=v0671---2022-07-25>v0.67.1 - 2022-07-25<a class=anchor-link href=#v0671---2022-07-25>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> A bucket&rsquo;s <em>Activity</em> and <em>In</em> amounts are now correctly updated when you undo a prior deposit or withdrawal (<a href=https://github.com/buckets/application/issues/591>#591</a>)</li>
+<li><strong>FIX:</strong> Document that Rain only makes sense when transactions have all been categorized (<a href=https://github.com/buckets/application/issues/508>#508</a>)</li>
+<li><strong>FIX:</strong> CSV imports will treat parentheses-enclosed numbers as negative (<a href=https://github.com/buckets/application/issues/740>#740</a>)</li>
+<li><strong>FIX:</strong> Syncing from SimpleFIN will no longer overwrite the memo unless it&rsquo;s blank (<a href=https://github.com/buckets/application/issues/746>#746</a>)</li>
+<li><strong>FIX:</strong> In the case where 0-amount transactions are created (typically via import/sync) you can now categorize them so they no longer show as uncategorized (<a href=https://github.com/buckets/application/issues/700>#700</a>)</li>
+<li><strong>FIX:</strong> When importing from YNAB4, Buckets now looks for <code>Budget.ymeta</code> and <code>Budget.yfull</code> files in more places (<a href=https://github.com/buckets/application/issues/429>#429</a>, <a href=https://github.com/buckets/application/issues/493>#493</a>)</li>
+<li><strong>FIX:</strong> Fuzzy searching when categorizing will now highlight the best option consistently (<a href=https://github.com/buckets/application/issues/773>#773</a>)</li>
+<li><strong>FIX:</strong> Prior to this change, if you kicked the Buckets License bucket it would reappear next time you opened the budget. This was confusing. Now, you can no longer kick it at all with the Trial Version. (<a href=https://github.com/buckets/application/issues/609>#609</a>)</li>
+<li><strong>FIX:</strong> Removed up/down buttons on all date inputs because they are buggy and the keyboard up/down keys can achieve the same effect. (<a href=https://github.com/buckets/application/issues/764>#764</a>)</li>
+</ul>
+<h1 id=v0670---2022-07-18>v0.67.0 - 2022-07-18<a class=anchor-link href=#v0670---2022-07-18>&para;</a></h1>
+<ul>
+<li><strong>BREAKING CHANGE:</strong> When entering transaction amounts, typing <code>-</code> before the number will no longer flip the sign. Sorry, we know this is going to ruin your muscle memory! Instead, type <code>+</code> for positive numbers and use no prefix (or type <code>-</code>) to use negative numbers. You can also click on the big <code>-</code> before the amount to toggle between positive and negative numbers (<a href=https://github.com/buckets/application/issues/725>#725</a>, <a href=https://github.com/buckets/application/issues/496>#496</a>)</li>
+<li><strong>NEW:</strong> Added 8 new colorblind-friendly default bucket colors <em>and</em> added a color picker so you can choose whatever hue hue want! (<a href=https://github.com/buckets/application/issues/690>#690</a>)</li>
+<li><strong>NEW:</strong> Buckets with the same name will now also include their group name in the categorizing dropdown list. (<a href=https://github.com/buckets/application/issues/594>#594</a>)</li>
+<li><strong>NEW:</strong> Handle new SimpleFIN <code>pending</code> transaction attribute. At this point, the attribute is used to ignore pending transactions but will be used in the future to add the transactions once pending transactions are added to Buckets.</li>
+<li><strong>NEW:</strong> You can now do fuzzy searching when categorizing transactions. That is, you can type &ldquo;Insurance&rdquo; and it will match both &ldquo;Car Insurance&rdquo; and &ldquo;Dog insurance&rdquo; buckets. (<a href=https://github.com/buckets/application/issues/153>#153</a>)</li>
+<li><strong>FIX:</strong> Silence Dbus-related errors on Linux when keychain access fails (<a href=https://github.com/buckets/application/issues/755>#755</a>)</li>
+</ul>
+<h1 id=v0665---2022-06-20>v0.66.5 - 2022-06-20<a class=anchor-link href=#v0665---2022-06-20>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Fix startup error on Windows (<a href=https://github.com/buckets/application/issues/762>#762</a>)</li>
+<li><strong>FIX:</strong> Updates to various translations. Thank you, all!</li>
+</ul>
+<h1 id=v0664---2022-06-13>v0.66.4 - 2022-06-13<a class=anchor-link href=#v0664---2022-06-13>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Changed how <em>Activity</em> is computed so that it <em>only</em> includes real life income/expenses for a bucket. Also changed <em>In</em> to only include money directly deposited into or withdrawn from a bucket via the In/Out input. (<a href=https://github.com/buckets/application/issues/362>#362</a>)</li>
+<li><strong>FIX:</strong> When categorizing, you can now enter a number higher than the total amount so you can do math with it. (<a href=https://github.com/buckets/application/issues/118>#118</a>)</li>
+<li><strong>FIX:</strong> CSV date format chooser now explicitly mentions that you can type a custom format (<a href=https://github.com/buckets/application/issues/752>#752</a>)</li>
+<li><strong>FIX:</strong> Remove the &ldquo;running balance does not match the last synced balance&rdquo; warning, as it was almost always unhelpful (<a href=https://github.com/buckets/application/issues/706>#706</a>)</li>
+<li><strong>FIX:</strong> Removed notice about Amazon tool not working, because it still works (<a href=https://github.com/buckets/application/issues/528>#528</a>)</li>
+<li><strong>FIX:</strong> Removed closed accounts from the transfer to/from dropdown (<a href=https://github.com/buckets/application/issues/543>#543</a>)</li>
+<li><strong>FIX:</strong> Fix race condition error on application startup (<a href=https://github.com/buckets/application/issues/580>#580</a>)</li>
+<li><strong>FIX:</strong> Bug reports now include version number in the subject line (internal change).</li>
+</ul>
+<h1 id=v0663---2022-04-19>v0.66.3 - 2022-04-19<a class=anchor-link href=#v0663---2022-04-19>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Exporting tool now honors the date range you pick (<a href=https://github.com/buckets/application/issues/563>#563</a>)</li>
+<li><strong>FIX:</strong> Activity no longer shows up in the wrong month (<a href=https://github.com/buckets/application/issues/744>#744</a>)</li>
+</ul>
+<h1 id=v0662---2022-04-14>v0.66.2 - 2022-04-14<a class=anchor-link href=#v0662---2022-04-14>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Restore proper ordering to transactions (<a href=https://github.com/buckets/application/issues/739>#739</a>)</li>
+</ul>
+<h1 id=v0661---2022-04-13>v0.66.1 - 2022-04-13<a class=anchor-link href=#v0661---2022-04-13>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Improved logging when importing transaction data.</li>
+<li><strong>FIX:</strong> Fixed regression preventing imports in budgets with a mix of manually-entered and imported transactions (<a href=https://github.com/buckets/application/issues/739>#739</a>)</li>
+</ul>
+<h1 id=v0660---2022-04-05>v0.66.0 - 2022-04-05<a class=anchor-link href=#v0660---2022-04-05>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> When importing OFX/QFX files, you may now swap the <code>&lt;NAME></code> and <code>&lt;MEMO></code> fields (<a href=https://github.com/buckets/application/issues/366>#366</a>)</li>
+<li><strong>FIX:</strong> When importing CSV or OFX files, you can now invert the sign of transaction amounts <em>per account.</em> (<a href=https://github.com/buckets/application/issues/574>#574</a>)</li>
+<li><strong>FIX:</strong> When importing from CSV/OFX, duplicates aren&rsquo;t created anymore and existing data is left intact. (<a href=https://github.com/buckets/application/issues/338>#338</a>)</li>
+<li><strong>FIX:</strong> When creating a new budget file, it no longer hangs sometimes before opening the budget (<a href=https://github.com/buckets/application/issues/611>#611</a>)</li>
+<li><strong>FIX:</strong> When importing CSV files, you can use patterns with periods in them now, like <code>dd.MM.yyyy</code> (<a href=https://github.com/buckets/application/issues/723>#723</a>)</li>
+</ul>
+<h1 id=v0650---2022-02-17>v0.65.0 - 2022-02-17<a class=anchor-link href=#v0650---2022-02-17>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> CSV files delimited by semicolons and tabs can now be imported (<a href=https://github.com/buckets/application/issues/530>#530</a>)</li>
+<li><strong>NEW:</strong> Buckets now supports currencies with 3 (or more) decimal places and any thousands or decimal separator (<a href=https://github.com/buckets/application/issues/597>#597</a>)</li>
+<li><strong>NEW:</strong> You can now search for numbers on the search page. (<a href=https://github.com/buckets/application/issues/422>#422</a>)</li>
+<li><strong>NEW:</strong> You can choose the number format when importing OFX files (<a href=https://github.com/buckets/application/issues/583>#583</a>)</li>
+<li><strong>NEW:</strong> Added a keyboard shortcut and menu item to quickly get to the search page (<code>Command /</code> or <code>Control /</code>)</li>
+<li><strong>NEW:</strong> Exports now include transaction notes (<a href=https://github.com/buckets/application/issues/717>#717</a>)</li>
+<li><strong>FIX:</strong> Fixed link to purchase license and ability to paste license for some macOS users (<a href=https://github.com/buckets/application/issues/587>#587</a>)</li>
+<li><strong>FIX:</strong> When importing, you can now ignore unknown/unlinked accounts (<a href=https://github.com/buckets/application/issues/408>#408</a>)</li>
+<li><strong>FIX:</strong> Fixed crash when importing from nYNAB without a delimiter (<a href=https://github.com/buckets/application/issues/716>#716</a>)</li>
+<li><strong>FIX:</strong> When importing CSV files, selecting multiple columns for &lsquo;Memo&rsquo; will now concatenate the chosen fields (<a href=https://github.com/buckets/application/issues/331>#331</a>)</li>
+<li><strong>FIX:</strong> When importing CSV files, dates are no longer incorrectly flagged as invalid (<a href=https://github.com/buckets/application/issues/581>#581</a>,<a href=https://github.com/buckets/application/issues/573>#573</a>,<a href=https://github.com/buckets/application/issues/533>#533</a>)</li>
+<li><strong>FIX:</strong> You can now cancel CSV imports (<a href=https://github.com/buckets/application/issues/324>#324</a>)</li>
+<li><strong>FIX:</strong> CSV import can now handle dates of the format 01 JAN 2020 (<a href=https://github.com/buckets/application/issues/702>#702</a>)</li>
+<li><strong>FIX:</strong> Fixed various errors encountered while importing transactions from OFX and CSV files (<a href=https://github.com/buckets/application/issues/340>#340</a>, <a href=https://github.com/buckets/application/issues/463>#463</a>, <a href=https://github.com/buckets/application/issues/545>#545</a>, <a href=https://github.com/buckets/application/issues/536>#536</a>, <a href=https://github.com/buckets/application/issues/502>#502</a>)</li>
+<li><strong>FIX:</strong> OFX files with mismatched <code>&lt;CCSTMTRS></code> and <code>&lt;/STMTRS></code> tags can now be imported (<a href=https://github.com/buckets/application/issues/378>#378</a>)</li>
+<li><strong>FIX:</strong> CSV importing can handle much bigger files now (<a href=https://github.com/buckets/application/issues/459>#459</a>)</li>
+<li><strong>FIX:</strong> Fixed a bug that discarded pending bucket name changes when you updated a bucket groups name. (<a href=https://github.com/buckets/application/issues/231>#231</a>, <a href=https://github.com/buckets/application/issues/661>#661</a>)</li>
+<li><strong>FIX:</strong> When importing CSV files, you can now exclude rows from the top and bottom of the CSV file (<a href=https://github.com/buckets/application/issues/300>#300</a>)</li>
+<li><strong>FIX:</strong> Fixed error on search page (<a href=https://github.com/buckets/application/issues/644>#644</a>)</li>
+<li><strong>FIX:</strong> When importing CSV files, fixed a bug where columns were duplicated if they had the same header (<a href=https://github.com/buckets/application/issues/460>#460</a>)</li>
+<li><strong>FIX:</strong> When importing CSV files, removed <em>Unique ID</em> column in favor of computing it automatically (<a href=https://github.com/buckets/application/issues/556>#556</a>)</li>
+<li><strong>FIX:</strong> More French translations!</li>
+<li><strong>FIX:</strong> OFX files with lone <code>&</code> characters are now supported (<a href=https://github.com/buckets/application/issues/627>#627</a>)</li>
+<li><strong>FIX:</strong> When importing from CSV, you may reverse the order transactions are imported if the CSV list transactions from most to least recent (<a href=https://github.com/buckets/application/issues/329>#329</a>)</li>
+<li><strong>FIX:</strong> New translations for Română, Español, Deutsch and Русский!</li>
+</ul>
+<h1 id=v0640---2021-12-14>v0.64.0 - 2021-12-14<a class=anchor-link href=#v0640---2021-12-14>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Added documentation for sharing tool, describing how to get budget files from the Desktop app to the mobile app. (<a href=https://github.com/buckets/application/issues/655>#655</a>)</li>
+<li><strong>NEW:</strong> Updated sharing tool to match most recent mobile app version.</li>
+<li><strong>FIX:</strong> Updated German translations</li>
+<li><strong>FIX:</strong> Fixed month names for Swedish (<a href=https://github.com/buckets/application/issues/616>#616</a>)</li>
+</ul>
+<h1 id=v0632---2021-11-10>v0.63.2 - 2021-11-10<a class=anchor-link href=#v0632---2021-11-10>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> More Turkish translations.</li>
+<li><strong>FIX:</strong> During nYNAB import, decimal and thousands separators are now honored. (<a href=https://github.com/buckets/application/issues/641>#641</a>)</li>
+<li><strong>FIX:</strong> When importing from nNYAB, Buckets attempts to guess the date format if it doesn&rsquo;t match what was given (<a href=https://github.com/buckets/application/issues/634>#634</a>)</li>
+<li><strong>FIX:</strong> More Norwegian translations.</li>
+<li><strong>FIX:</strong> More Hungarian translations.</li>
+<li><strong>FIX:</strong> More Spanish translations. Thanks, osanchez!</li>
+</ul>
+<h1 id=v0631---2021-11-06>v0.63.1 - 2021-11-06<a class=anchor-link href=#v0631---2021-11-06>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> In nYNAB import, don&rsquo;t stop if there&rsquo;s an unknown category (<a href=https://github.com/buckets/application/issues/614>#614</a>)</li>
+</ul>
+<h1 id=v0630---2021-11-05>v0.63.0 - 2021-11-05<a class=anchor-link href=#v0630---2021-11-05>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Buckets is now partially translated into Magyar. Thanks Peter!</li>
+<li><strong>NEW:</strong> Buckets is now translated into Svenska. Tack, Therese!</li>
+<li><strong>NEW:</strong> Buckets is now partially translated into Eesti. Thanks, Indrek!</li>
+<li><strong>FIX:</strong> When importing from nYNAB, there&rsquo;s now an indication that something is actually happening :) (<a href=https://github.com/buckets/application/issues/598>#598</a>)</li>
+<li><strong>FIX:</strong> When importing from nYNAB, Buckets does better at keeping activity in past months instead of all in the current month (<a href=https://github.com/buckets/application/issues/603>#603</a>)</li>
+<li><strong>FIX:</strong> When importing from nYNAB, reconciled transactions are now marked as cleared. (<a href=https://github.com/buckets/application/issues/610>#610</a>)</li>
+<li>Rename Bokmål to Norsk</li>
+</ul>
+<h1 id=v0620---2021-11-03>v0.62.0 - 2021-11-03<a class=anchor-link href=#v0620---2021-11-03>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Buckets is now available in Bokmål. Takk, Viggo!</li>
+<li><strong>FIX:</strong> When importing from web YNAB, dates with periods <code>.</code> are now parsed correctly.</li>
+<li><strong>FIX:</strong> Kubuntu users can now import YNAB4 files (<a href=https://github.com/buckets/application/issues/582>#582</a>)</li>
+<li><strong>FIX:</strong> Fix on Windows to let users select the YNAB .zip file instead of just directories (<a href=https://github.com/buckets/application/issues/595>#595</a>)</li>
+<li><strong>FIX:</strong> When importing from Web YNAB, buckets retain more category history than before (<a href=https://github.com/buckets/application/issues/596>#596</a>)</li>
+</ul>
+<h1 id=v0610---2021-11-03>v0.61.0 - 2021-11-03<a class=anchor-link href=#v0610---2021-11-03>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Added the ability to import from nYNAB&rsquo;s exported zip files. (<a href=https://github.com/buckets/application/issues/110>#110</a>)</li>
+<li><strong>NEW:</strong> Faint cents are now disabled by default. You can re-enable them in preferences if you like squinting :) (<a href=https://github.com/buckets/application/issues/344>#344</a>)</li>
+</ul>
+<h1 id=v0601---2021-10-05>v0.60.1 - 2021-10-05<a class=anchor-link href=#v0601---2021-10-05>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Allow Kubuntu users to navigate filesystem when looking for YNAB4 files to import (<a href=https://github.com/buckets/application/issues/582>#582</a>)</li>
+<li><strong>FIX:</strong> Buckets no longer crashes on startup on Windows (<a href=https://github.com/buckets/application/issues/584>#584</a>)</li>
+</ul>
+<h1 id=v0600---2021-09-13>v0.60.0 - 2021-09-13<a class=anchor-link href=#v0600---2021-09-13>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Builds are more automated now.</li>
+<li><strong>FIX:</strong> When submitting bugs, redirects are followed now.</li>
+<li>Updated bug-reporting server URL.</li>
+</ul>
+<h1 id=v0590---2021-07-14>v0.59.0 - 2021-07-14<a class=anchor-link href=#v0590---2021-07-14>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Updated computer-to-computer sync protocol to be forward compatible</li>
+<li><strong>NEW:</strong> Upgrade SQLite to v3.35.0</li>
+<li><strong>FIX:</strong> Fixed a crash caused by goal buckets with very large goals (<a href=https://github.com/buckets/application/issues/547>#547</a>)</li>
+<li><strong>FIX:</strong> Fix a few errors that happened when choosing months in the month pickers (<a href=https://github.com/buckets/application/issues/546>#546</a>, <a href=https://github.com/buckets/application/issues/568>#568</a>)</li>
+<li><strong>FIX:</strong> Fixed a bug that made it seem like undo/redo wasn&rsquo;t working when in fact it was just not updating the screen in some cases (<a href=https://github.com/buckets/application/issues/564>#564</a>, <a href=https://github.com/buckets/application/issues/552>#552</a>)</li>
+</ul>
+<h1 id=v0580---2020-11-19>v0.58.0 - 2020-11-19<a class=anchor-link href=#v0580---2020-11-19>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Accounts are now sorted alphabetically (<a href=https://github.com/buckets/application/issues/148>#148</a>)</li>
+<li><strong>FIX:</strong> Fixed bug that prevented entering some years in a goal bucket target date (<a href=https://github.com/buckets/application/issues/539>#539</a>)</li>
+<li><strong>FIX:</strong> Fixed crash caused by invalid transaction dates (<a href=https://github.com/buckets/application/issues/537>#537</a>)</li>
+<li><strong>FIX:</strong> Windows 10 may auto-update again (on the next version, though) (<a href=https://github.com/buckets/application/issues/538>#538</a>)</li>
+</ul>
+<h1 id=v0575---2020-11-12>v0.57.5 - 2020-11-12<a class=anchor-link href=#v0575---2020-11-12>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Added a debugging tool for those extra tricky bugs</li>
+<li><strong>FIX:</strong> Tooltip flickering on calculator has been fixed (<a href=https://github.com/buckets/application/issues/498>#498</a>)</li>
+<li><strong>FIX:</strong> Now you can&rsquo;t accidentally make duplicate transactions by pressing enter really quickly (<a href=https://github.com/buckets/application/issues/487>#487</a>)</li>
+<li><strong>FIX:</strong> Application no longer crashes when trying to open a non-existent file (<a href=https://github.com/buckets/application/issues/488>#488</a>)</li>
+<li><strong>FIX:</strong> Fix goal date picker going to wrong year (<a href=https://github.com/buckets/application/issues/527>#527</a>)</li>
+<li><strong>FIX:</strong> Newly created &ldquo;Save X by Y date&rdquo; buckets now immediately show the required deposit after you enter a goal (<a href=https://github.com/buckets/application/issues/526>#526</a>)</li>
+<li><strong>FIX:</strong> Fixed bug where a invalid timestamp caused an error when attempting to turn it into a date (<a href=https://github.com/buckets/application/issues/529>#529</a>)</li>
+<li><strong>FIX:</strong> The <em>Make it so</em> button again clears out all the current values in In/Out (<a href=https://github.com/buckets/application/issues/531>#531</a>)</li>
+<li>Reduced error logging for missing locales (<a href=https://github.com/buckets/application/issues/489>#489</a>)</li>
+<li>Deprecated Amazon Reconciliation tool, <em>sniff</em></li>
+</ul>
+<h1 id=v0574---2020-10-14>v0.57.4 - 2020-10-14<a class=anchor-link href=#v0574---2020-10-14>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Make SimpleFIN sync faster by requesting whole time period at once (<a href=https://github.com/buckets/application/issues/511>#511</a>)</li>
+<li><strong>FIX:</strong> Fixed several date/time and timezone bugs, especially for our friends down under. (<a href=https://github.com/buckets/application/issues/515>#515</a>, <a href=https://github.com/buckets/application/issues/516>#516</a>, <a href=https://github.com/buckets/application/issues/518>#518</a>, <a href=https://github.com/buckets/application/issues/519>#519</a>)</li>
+<li><strong>FIX:</strong> Fixed error that caused too many requests to SimpleFIN server (<a href=https://github.com/buckets/application/issues/522>#522</a>)</li>
+<li>Made null-checking more strict to prevent TypeErrors (<a href=https://github.com/buckets/application/issues/517>#517</a>)</li>
+</ul>
+<h1 id=v0573---2020-10-05>v0.57.3 - 2020-10-05<a class=anchor-link href=#v0573---2020-10-05>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Remove need to select timezone (<a href=https://github.com/buckets/application/issues/180>#180</a>)</li>
+<li><strong>FIX:</strong> Fix goal bucket being off by one month (<a href=https://github.com/buckets/application/issues/407>#407</a>)</li>
+<li><strong>FIX:</strong> Fixed end-of-month, disappearing transactions bug (<a href=https://github.com/buckets/application/issues/514>#514</a>, <a href=https://github.com/buckets/application/issues/510>#510</a>, <a href=https://github.com/buckets/application/issues/170>#170</a>)</li>
+</ul>
+<h1 id=v0572---2020-08-21>v0.57.2 - 2020-08-21<a class=anchor-link href=#v0572---2020-08-21>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Show on the import page that Buckets can import OFX, QFX and CSV files (<a href=https://github.com/buckets/application/issues/445>#445</a>)</li>
+<li><strong>FIX:</strong> Fix undo/redo bug that would sometimes break budget files (<a href=https://github.com/buckets/application/issues/484>#484</a>)</li>
+<li>Changing between months is faster now.</li>
+</ul>
+<h1 id=v0571---2020-08-12>v0.57.1 - 2020-08-12<a class=anchor-link href=#v0571---2020-08-12>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Fix bug where opening multiple budgets caused interference between them. It was never reported from users, so it may never have been a problem other than in development.</li>
+<li><strong>FIX:</strong> Fixed bug that prevented transaction data from being updated (<a href=https://github.com/buckets/application/issues/479>#479</a>)</li>
+</ul>
+<h1 id=v0570---2020-07-31>v0.57.0 - 2020-07-31<a class=anchor-link href=#v0570---2020-07-31>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Fix excessive use of file descriptors crash (<a href=https://github.com/buckets/application/issues/474>#474</a>)</li>
+<li><strong>FIX:</strong> Fix macOS notarization for Catalina (<a href=https://github.com/buckets/application/issues/478>#478</a>)</li>
+<li>Refactored the computation of most budget values to make it consistent with mobile app.</li>
+<li>Better explanation of how to categorize debt transactions.</li>
+</ul>
+<h1 id=v0562---2020-06-12>v0.56.2 - 2020-06-12<a class=anchor-link href=#v0562---2020-06-12>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Turned a silent crash into a reported crash (<a href=https://github.com/buckets/application/issues/464>#464</a>)</li>
+<li><strong>FIX:</strong> Fix date-formatting bug that caused crash (<a href=https://github.com/buckets/application/issues/468>#468</a>)</li>
+<li><strong>FIX:</strong> CSV importing with separate &ldquo;sign&rdquo; column works again (<a href=https://github.com/buckets/application/issues/442>#442</a>)</li>
+<li><strong>FIX:</strong> Fix issue where currency symbol would get corrupted when changing it (<a href=https://github.com/buckets/application/issues/469>#469</a>)</li>
+<li><strong>FIX:</strong> Attempted fix for macOS 10.10 failure to run after update. (<a href=https://github.com/buckets/application/issues/472>#472</a>)</li>
+<li>Removed the part on the export page asking why you&rsquo;re exporting data.</li>
+</ul>
+<h1 id=v0561---2020-05-21>v0.56.1 - 2020-05-21<a class=anchor-link href=#v0561---2020-05-21>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Fix random, discrepency between uncategorized transaction count and the transaction badge. (<a href=https://github.com/buckets/application/issues/453>#453</a>, <a href=https://github.com/buckets/application/issues/454>#454</a>)</li>
+<li><strong>FIX:</strong> No more security error on macOS Catalina (<a href=https://github.com/buckets/application/issues/428>#428</a>)</li>
+<li><strong>FIX:</strong> Fixed OFX import error when accounts have no name (<a href=https://github.com/buckets/application/issues/386>#386</a>)</li>
+<li><strong>FIX:</strong> Fixed various TypeErrors (<a href=https://github.com/buckets/application/issues/458>#458</a>, <a href=https://github.com/buckets/application/issues/414>#414</a>, <a href=https://github.com/buckets/application/issues/413>#413</a>, <a href=https://github.com/buckets/application/issues/461>#461</a>)</li>
+<li><strong>FIX:</strong> Fixed error when reopening the same budget file without quitting (<a href=https://github.com/buckets/application/issues/451>#451</a>)</li>
+<li><strong>FIX:</strong> Undoing of large actions now works (<a href=https://github.com/buckets/application/issues/450>#450</a>)</li>
+</ul>
+<h1 id=v0560---2020-04-20>v0.56.0 - 2020-04-20<a class=anchor-link href=#v0560---2020-04-20>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Buckets is now available in Italiano! Grazie!</li>
+<li><strong>NEW:</strong> Various translation additions/changes for Polski, Deutsch and Français.</li>
+<li><strong>FIX:</strong> Guide navigation in Windows fixed (<a href=https://github.com/buckets/application/issues/452>#452</a>)</li>
+</ul>
+<h1 id=v0554---2019-06-11>v0.55.4 - 2019-06-11<a class=anchor-link href=#v0554---2019-06-11>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Added keyboard shortcuts for going forward and back a year.</li>
+<li><strong>FIX:</strong> Year-to-Year and Month-to-Month analysis charts now clearly indicate the period being averaged and totaled. (<a href=https://github.com/buckets/application/issues/343>#343</a>)</li>
+<li><strong>FIX:</strong> Analysis chart dots are finally lined up (<a href=https://github.com/buckets/application/issues/158>#158</a>)</li>
+<li><strong>FIX:</strong> Clicking on a bucket&rsquo;s <em>Want</em> column will no longer try to remove money from a bucket that has been overfilled. (<a href=https://github.com/buckets/application/issues/396>#396</a>)</li>
+<li><strong>FIX:</strong> Daylight savings time no longer confuses the goal date calculations. (<a href=https://github.com/buckets/application/issues/288>#288</a>)</li>
+<li><strong>FIX:</strong> When searching on the page for something, the find next/find prev buttons now work (<a href=https://github.com/buckets/application/issues/353>#353</a>)</li>
+<li><strong>FIX:</strong> Guide is reachable again on Windows/Linux (<a href=https://github.com/buckets/application/issues/402>#402</a>)</li>
+<li><strong>FIX:</strong> You can now access invalid years (e.g. 200 AD) to fix mistakenly added transactions. (<a href=https://github.com/buckets/application/issues/400>#400</a>)</li>
+<li><strong>FIX:</strong> The month selector will now show even if the content below it is very wide. (<a href=https://github.com/buckets/application/issues/257>#257</a>)</li>
+<li><strong>FIX:</strong> Off-budget transactions no longer show up in analysis charts (<a href=https://github.com/buckets/application/issues/397>#397</a>, <a href=https://github.com/buckets/application/issues/296>#296</a>)</li>
+<li><strong>FIX:</strong> When entering transfers, the same date is now used for both transactions. (<a href=https://github.com/buckets/application/issues/391>#391</a>)</li>
+</ul>
+<h1 id=v0553---2019-05-27>v0.55.3 - 2019-05-27<a class=anchor-link href=#v0553---2019-05-27>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Fixed bug that was labelling Income as Debt when entering transactions. (<a href=https://github.com/buckets/application/issues/390>#390</a>)</li>
+<li><strong>FIX:</strong> Sidebar calculator now correctly honors chosen number format. (<a href=https://github.com/buckets/application/issues/398>#398</a>)</li>
+<li><strong>FIX:</strong> Fixed it so that clicking on the want bubble doesn&rsquo;t fill in the in/out amount so as to prevent the tooltip from staying open annoyingly. (<a href=https://github.com/buckets/application/issues/395>#395</a>)</li>
+<li><strong>FIX:</strong> Fixed it so that when entering a transfer, the +/- toggle will correctly toggle between Transfer From/To. (<a href=https://github.com/buckets/application/issues/348>#348</a>)</li>
+<li><strong>FIX:</strong> Importing from YNAB4 no longer appears to hang (though it is still a little choppy). (<a href=https://github.com/buckets/application/issues/399>#399</a>)</li>
+<li><strong>FIX:</strong> Fixed bug where YNAB4 import multiplied numbers by 100 (<a href=https://github.com/buckets/application/issues/387>#387</a>)</li>
+</ul>
+<h1 id=v0552---2019-05-15>v0.55.2 - 2019-05-15<a class=anchor-link href=#v0552---2019-05-15>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Upgraded font to better support Cyrillic characters (<a href=https://github.com/buckets/application/issues/381>#381</a>)</li>
+<li><strong>FIX:</strong> Search box now appears on top of everything, including faint cents (<a href=https://github.com/buckets/application/issues/356>#356</a>)</li>
+<li><strong>FIX:</strong> Fixed bug where Linux Beta version would offer to update to latest non-Beta version (<a href=https://github.com/buckets/application/issues/383>#383</a>)</li>
+<li><strong>FIX:</strong> Long numbers no longer split across lines. (<a href=https://github.com/buckets/application/issues/389>#389</a>)</li>
+<li><strong>FIX:</strong> When you have many accounts showing in the left navigation bar, you can now scroll down to see all nagivation items. (<a href=https://github.com/buckets/application/issues/380>#380</a>)</li>
+<li><strong>FIX:</strong> Added more logging for unhandled errors</li>
+<li><strong>FIX:</strong> Fixed a bug in the <em>Want</em> for <em>Save X by Y date</em> buckets where the amount would change incorrectly after depositing an amount during a month. (<a href=https://github.com/buckets/application/issues/346>#346</a>)</li>
+<li><strong>FIX:</strong> Fixed error during some YNAB4 imports. (<a href=https://github.com/buckets/application/issues/392>#392</a>)</li>
+</ul>
+<h1 id=v0551---2019-03-26>v0.55.1 - 2019-03-26<a class=anchor-link href=#v0551---2019-03-26>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Fixed bug with want values not showing up (<a href=https://github.com/buckets/application/issues/377>#377</a>)</li>
+</ul>
+<h1 id=v0550---2019-03-16>v0.55.0 - 2019-03-16<a class=anchor-link href=#v0550---2019-03-16>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Made internal changes to allow for portable Windows versions of Buckets to work (<a href=https://github.com/buckets/application/issues/292>#292</a>)</li>
+<li><strong>FIX:</strong> Debt account payment buckets now correctly show up in the transaction categorization dropdown (<a href=https://github.com/buckets/application/issues/368>#368</a>)</li>
+<li><strong>FIX:</strong> Fix Uncaught TypeError for old debt payment buckets (<a href=https://github.com/buckets/application/issues/367>#367</a>)</li>
+<li><strong>FIX:</strong> Fixed bug that prevented importing GnuCash OFX files (<a href=https://github.com/buckets/application/issues/332>#332</a>)</li>
+<li><strong>FIX:</strong> You no longer have to switch between importing CSV files or QFX/OFX (<a href=https://github.com/buckets/application/issues/342>#342</a>)</li>
+<li><strong>FIX:</strong> OFX files which lack unique transaction ids can now be imported (<a href=https://github.com/buckets/application/issues/336>#336</a>)</li>
+</ul>
+<h1 id=v0541---2019-03-09>v0.54.1 - 2019-03-09<a class=anchor-link href=#v0541---2019-03-09>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Fix Windows 64-bit installation</li>
+</ul>
+<h1 id=v0540---2019-02-28>v0.54.0 - 2019-02-28<a class=anchor-link href=#v0540---2019-02-28>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Removed Beta preference (since there&rsquo;s now a separate Buckets Beta application)</li>
+<li><strong>NEW:</strong> Your email address is remembered when you report a bug (so you don&rsquo;t have to enter each time you report a bug).</li>
+</ul>
+<h1 id=v0531---2018-12-13>v0.53.1 - 2018-12-13<a class=anchor-link href=#v0531---2018-12-13>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Fix erroneous SignMismatch error (<a href=https://github.com/buckets/application/issues/323>#323</a>)</li>
+</ul>
+<h1 id=v0530---2018-12-12>v0.53.0 - 2018-12-12<a class=anchor-link href=#v0530---2018-12-12>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Accounts and balances can now optionally be shown in the side bar if you want. Use the per-budget settings page to toggle. (<a href=https://github.com/buckets/application/issues/99>#99</a>)</li>
+<li><strong>NEW:</strong> Total Want is now shown for each bucket group. (<a href=https://github.com/buckets/application/issues/274>#274</a>)</li>
+<li><strong>NEW:</strong> This change might annoy you at first, but once you get used to it, you&rsquo;ll like it :) When entering transactions, the amount now defaults to a <strong>negative</strong> amount since most transactions are expenses. You can enter positive amounts by clicking the big <em>minus</em> button or by entering a negative number. (<a href=https://github.com/buckets/application/issues/307>#307</a>)</li>
+<li><strong>NEW:</strong> Money inputs now stay the same width even when doing math inside of them. Computed values are displayed in a floating tag above the input rather than to the side.</li>
+<li><strong>FIX:</strong> Fix CSV import error when CSV contains blank header cells. (<a href=https://github.com/buckets/application/issues/316>#316</a>)</li>
+<li><strong>FIX:</strong> Top bar expenses are no longer red so that red is reserved for problem-like situations. (<a href=https://github.com/buckets/application/issues/291>#291</a>)</li>
+<li><strong>FIX:</strong> Clicking account names now opens up the account details rather than editing the account name. You can still edit account names by clicking on the name in the details pane. (<a href=https://github.com/buckets/application/issues/244>#244</a>)</li>
+<li><strong>FIX:</strong> When importing from YNAB4, you can choose the YNAB4 file or as a convenience to users, any file inside it (<a href=https://github.com/buckets/application/issues/318>#318</a>)</li>
+</ul>
+<h1 id=v0521---2018-11-26>v0.52.1 - 2018-11-26<a class=anchor-link href=#v0521---2018-11-26>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Fixed a bug where calculator wouldn&rsquo;t work if you had whitespace (<a href=https://github.com/buckets/application/issues/313>#313</a>)</li>
+<li><strong>FIX:</strong> Dutch translation corrections</li>
+<li><strong>FIX:</strong> French translation corrections</li>
+</ul>
+<h1 id=v0520---2018-09-17>v0.52.0 - 2018-09-17<a class=anchor-link href=#v0520---2018-09-17>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Attempted fix at unreproducible account deletion error. (<a href=https://github.com/buckets/application/issues/301>#301</a>)</li>
+<li><strong>FIX:</strong> Attempted fix of goal date inconsistency (<a href=https://github.com/buckets/application/issues/288>#288</a>)</li>
+<li><strong>FIX:</strong> Errors related to entering licenses are better logged now. (<a href=https://github.com/buckets/application/issues/229>#229</a>)</li>
+<li><strong>FIX:</strong> OFX files with multiple accounts inside can now be imported. (<a href=https://github.com/buckets/application/issues/302>#302</a>)</li>
+<li><strong>FIX:</strong> Make sure newly-created budget files end with the correct extension. (<a href=https://github.com/buckets/application/issues/304>#304</a>)</li>
+<li><strong>FIX:</strong> Fixed bug where tooltip would flicker at the edge of the screenstatus (<a href=https://github.com/buckets/application/issues/299>#299</a>)</li>
+<li>More internal refactoring for mobile apps.</li>
+</ul>
+<h1 id=v0511---2018-08-08>v0.51.1 - 2018-08-08<a class=anchor-link href=#v0511---2018-08-08>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Pressing Enter while editing bucket details will close the details. (<a href=https://github.com/buckets/application/issues/235>#235</a>)</li>
+<li><strong>FIX:</strong> Fix false warning about using an older version of buckets on a newer budget file. (<a href=https://github.com/buckets/application/issues/280>#280</a>)</li>
+<li><strong>FIX:</strong> You can now import transactions for off-budget accounts. (<a href=https://github.com/buckets/application/issues/284>#284</a>)</li>
+</ul>
+<h1 id=v0510---2018-08-06>v0.51.0 - 2018-08-06<a class=anchor-link href=#v0510---2018-08-06>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Added some Net Wealth charts (<a href=https://github.com/buckets/application/issues/171>#171</a>)</li>
+<li><strong>NEW:</strong> When transactions are created for a month other than the one you&rsquo;re looking at, a notification will pop up to let you know that it was successfully created. (<a href=https://github.com/buckets/application/issues/283>#283</a>)</li>
+<li><strong>NEW:</strong> Added shortcut keys for going to next and previous month. Also included them in the Budget, Go To&mldr; menu. (<a href=https://github.com/buckets/application/issues/266>#266</a>)</li>
+<li><strong>NEW:</strong> Using an old version of Buckets to open a newer budget file displays a warning now. (<a href=https://github.com/buckets/application/issues/280>#280</a>)</li>
+<li><strong>FIX:</strong> Restored Buckets License bucket for the trial version. It accidentally got removed a few versions back.</li>
+<li><strong>FIX:</strong> Fixed a bug so that now, when you change a transaction&rsquo;s date to another month, the transaction will disappear from the current month as it should. (<a href=https://github.com/buckets/application/issues/275>#275</a>)</li>
+<li><strong>FIX:</strong> Fixed bug where Linux Beta installations would offer to downgrade to latest non-beta version. (<a href=https://github.com/buckets/application/issues/279>#279</a>)</li>
+<li><strong>FIX:</strong> Fewer characters are swallowed when searching on the page. (<a href=https://github.com/buckets/application/issues/270>#270</a>)</li>
+</ul>
+<h1 id=v0500---2018-07-30>v0.50.0 - 2018-07-30<a class=anchor-link href=#v0500---2018-07-30>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Paying off credit cards and some other debt is now easier with the addition of Debt accounts. (<a href=https://github.com/buckets/application/issues/277>#277</a>)</li>
+<li>More internal refactoring to prepare for mobile apps</li>
+</ul>
+<h1 id=v0490---2018-07-16>v0.49.0 - 2018-07-16<a class=anchor-link href=#v0490---2018-07-16>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Added DD/MMM/YY as date format for CSV importing. Also made it so you can type in whatever format you want. (<a href=https://github.com/buckets/application/issues/263>#263</a>)</li>
+<li><strong>FIX:</strong> Fixed a bug that would clear a transaction&rsquo;s income/transfer designation if you changed the amount. (<a href=https://github.com/buckets/application/issues/265>#265</a>)</li>
+</ul>
+<h1 id=v0480---2018-07-09>v0.48.0 - 2018-07-09<a class=anchor-link href=#v0480---2018-07-09>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> You can now kick buckets right from the buckets list view. (<a href=https://github.com/buckets/application/issues/225>#225</a>)</li>
+<li><strong>FIX:</strong> Possible duplicate transaction detection is now limited to transactions that have nearby dates and is expanded to look for transactions in adjacent months. (<a href=https://github.com/buckets/application/issues/261>#261</a>)</li>
+</ul>
+<h1 id=v0470---2018-07-02>v0.47.0 - 2018-07-02<a class=anchor-link href=#v0470---2018-07-02>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Added a calculator for doing quick calculations. (<a href=https://github.com/buckets/application/issues/255>#255</a>)</li>
+<li><strong>NEW:</strong> You can now see the cleared balance and uncleared total on individual accounts. (<a href=https://github.com/buckets/application/issues/194>#194</a>)</li>
+<li><strong>NEW:</strong> You can now dismiss notifications if they are covering up some things you want to see. (<a href=https://github.com/buckets/application/issues/223>#223</a>)</li>
+<li><strong>NEW:</strong> Pressing escape while focused on the Buckets In/Out field will clear the selected field now. (<a href=https://github.com/buckets/application/issues/241>#241</a>)</li>
+<li><strong>NEW:</strong> Added a new &lsquo;Go To This Month&rsquo; menu option and shortcut key. (<a href=https://github.com/buckets/application/issues/246>#246</a>)</li>
+<li><strong>NEW:</strong> Individual account views now include the amount in/out for that account for the current month. (<a href=https://github.com/buckets/application/issues/216>#216</a>)</li>
+<li><strong>NEW:</strong> Now available in Polski, thanks to Piotr Bielaska!</li>
+<li><strong>FIX:</strong> Amazon reconciliation is much easier to use now. (<a href=https://github.com/buckets/application/issues/124>#124</a>)</li>
+<li><strong>FIX:</strong> Fixed bug where budget failed to load after error. (<a href=https://github.com/buckets/application/issues/253>#253</a>)</li>
+<li><strong>FIX:</strong> Fixed the situation where sometimes the update available window would get covered up by the last opened budget window. (<a href=https://github.com/buckets/application/issues/177>#177</a>)</li>
+<li>It&rsquo;s now a little more clear how (Budget Specific) Settings differ from (Application) Preferences.</li>
+<li>Clearly indicated to translators which instances of <em>Buckets</em> refers to the application rather than buckets within the program. (<a href=https://github.com/buckets/application/issues/173>#173</a>)</li>
+</ul>
+<h1 id=v0462---2018-06-27>v0.46.2 - 2018-06-27<a class=anchor-link href=#v0462---2018-06-27>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Fix missing locale bug (<a href=https://github.com/buckets/application/issues/252>#252</a>)</li>
+</ul>
+<h1 id=v0461---2018-06-26>v0.46.1 - 2018-06-26<a class=anchor-link href=#v0461---2018-06-26>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Renamed bucket transaction &ldquo;Misc&rdquo; column to &ldquo;Account&rdquo; (<a href=https://github.com/buckets/application/issues/245>#245</a>)</li>
+<li><strong>FIX:</strong> Fixed bug that prevented removing categories while editing a transaction (<a href=https://github.com/buckets/application/issues/239>#239</a>)</li>
+</ul>
+<h1 id=v0460---2018-06-25>v0.46.0 - 2018-06-25<a class=anchor-link href=#v0460---2018-06-25>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Now available in Deutsch!</li>
+<li><strong>FIX:</strong> Added more verbose logging for Linux file read/write issues, including a message to instruct the user about how to possibly fix the problem. (<a href=https://github.com/buckets/application/issues/224>#224</a>)</li>
+<li><strong>FIX:</strong> Override number format set in Preferences is now honored (<a href=https://github.com/buckets/application/issues/237>#237</a>)</li>
+<li>Massive code refactoring to get ready for the mobile app.</li>
+<li>Added a little more context for translators. (<a href=https://github.com/buckets/application/issues/234>#234</a>)</li>
+</ul>
+<h1 id=v0450---2018-06-18>v0.45.0 - 2018-06-18<a class=anchor-link href=#v0450---2018-06-18>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Added a preference for getting Beta releases of Buckets.</li>
+<li><strong>FIX:</strong> You can now negate values when importing from CSV files. This allows you to handle banks that list both debits and credits as positive values. (<a href=https://github.com/buckets/application/issues/222>#222</a>)</li>
+</ul>
+<h1 id=v0442---2018-06-04>v0.44.2 - 2018-06-04<a class=anchor-link href=#v0442---2018-06-04>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> When you create a new account, the account&rsquo;s details are shown (<a href=https://github.com/buckets/application/issues/176>#176</a>)</li>
+<li><strong>FIX:</strong> Fix the bug where a category is removed when editing a transaction in the account view. (<a href=https://github.com/buckets/application/issues/217>#217</a>)</li>
+<li><strong>FIX:</strong> Exclude off-budget accounts from analysis ending balance field. Don&rsquo;t worry, there will be more reports later that include off-budget accounts :) (<a href=https://github.com/buckets/application/issues/220>#220</a>)</li>
+<li><strong>FIX:</strong> [afcu.com-209 4cf27da] Fixed bank macro bug where a bank&rsquo;s short HTTP-only domain did not properly redirect to the full HTTPS domain. (<a href=https://github.com/buckets/application/issues/209>#209</a>)
+1 file changed, 1 insertion(+), 1 deletion(-)</li>
+<li><strong>FIX:</strong> You can now transfer to/from off-budget accounts when making transactions. (<a href=https://github.com/buckets/application/issues/213>#213</a>)</li>
+<li><strong>FIX:</strong> Prevent accidentally opening the same file twice (as with a double click) from the starting file-chooser pane (<a href=https://github.com/buckets/application/issues/211>#211</a>)</li>
+<li><strong>FIX:</strong> You can now unlink accounts from import files so that the next time you import a file for that account, you will be prompted to choose which account the file belongs to. (<a href=https://github.com/buckets/application/issues/210>#210</a>)</li>
+<li>Internal refactorings to get ready for mobile app</li>
+</ul>
+<h1 id=v0441---2018-05-25>v0.44.1 - 2018-05-25<a class=anchor-link href=#v0441---2018-05-25>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Fix analysis reports so that they no longer include off-budget accounts. There will be other reports for off-budget accounts. (<a href=https://github.com/buckets/application/issues/206>#206</a>)</li>
+<li><strong>FIX:</strong> Handle non-unicode CSV files. (<a href=https://github.com/buckets/application/issues/202>#202</a>)</li>
+<li><strong>FIX:</strong> Potential fix for update error on start on Ubuntu (<a href=https://github.com/buckets/application/issues/207>#207</a>)</li>
+</ul>
+<h1 id=v0440---2018-05-10>v0.44.0 - 2018-05-10<a class=anchor-link href=#v0440---2018-05-10>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Buckets is now signed for macOS and Windows! This means you shouldn&rsquo;t get as many warnings when trying to install it. (<a href=https://github.com/buckets/application/issues/150>#150</a>)</li>
+<li><strong>FIX:</strong> Indicate that you might have to download the new version manually (<a href=https://github.com/buckets/application/issues/203>#203</a>)</li>
+<li>Switched out sqlite for sqlite3-offline (<a href=https://github.com/buckets/application/issues/183>#183</a>)</li>
+</ul>
+<h1 id=v0431---2018-05-08>v0.43.1 - 2018-05-08<a class=anchor-link href=#v0431---2018-05-08>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Fix bug preventing the remapping of CSV files (<a href=https://github.com/buckets/application/issues/199>#199</a>)</li>
+<li><strong>FIX:</strong> Fix for bug with CSV importing where numbers were multiplied by 100 because the chosen language&rsquo;s default number format was not honored. (<a href=https://github.com/buckets/application/issues/200>#200</a>)</li>
+</ul>
+<h1 id=v0430---2018-05-07>v0.43.0 - 2018-05-07<a class=anchor-link href=#v0430---2018-05-07>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> You can now choose a currency symbol to be displayed with the top summary numbers. Go to the new <em>Settings</em> tab (look on the bottom left corner) and type in your favorite symbol. (<a href=https://github.com/buckets/application/issues/107>#107</a>)</li>
+<li><strong>FIX:</strong> Fixed alignment on Buckets table headings. (<a href=https://github.com/buckets/application/issues/193>#193</a>)</li>
+<li><strong>FIX:</strong> Fix CSV import bug (<a href=https://github.com/buckets/application/issues/190>#190</a>)</li>
+<li><strong>FIX:</strong> Dates are properly formatted according to your chosen locale again. (<a href=https://github.com/buckets/application/issues/186>#186</a>)</li>
+<li><strong>FIX:</strong> &ldquo;Save X by depositing Z/mo&rdquo; buckets no longer keep wanting after the goal has been reached (<a href=https://github.com/buckets/application/issues/192>#192</a>)</li>
+<li><strong>FIX:</strong> When launching from the command line, look for custom BUCKETS_LANG environment variable instead of LANG.</li>
+<li><strong>FIX:</strong> Fix no-internet false positive error (<a href=https://github.com/buckets/application/issues/195>#195</a>)</li>
+<li><strong>FIX:</strong> The Recurring Expenses month slider is no longer impossible to use (<a href=https://github.com/buckets/application/issues/188>#188</a>)</li>
+<li><strong>FIX:</strong> Fix Starting over bug when you want to delete everything, including buckets (<a href=https://github.com/buckets/application/issues/191>#191</a>)</li>
+</ul>
+<h1 id=v0420---2018-04-30>v0.42.0 - 2018-04-30<a class=anchor-link href=#v0420---2018-04-30>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Transactions can now be marked as cleared or not. (<a href=https://github.com/buckets/application/issues/172>#172</a>)</li>
+<li><strong>NEW:</strong> CSV importing supports CSVs where the postive/negative amount is broken out into a column separate from the amount. (<a href=https://github.com/buckets/application/issues/185>#185</a>)</li>
+<li><strong>NEW:</strong> Now translated into Nederlands!</li>
+<li><strong>FIX:</strong> Fixed CSV parsing bug with Amazon Reconiler (<a href=https://github.com/buckets/application/issues/178>#178</a>)</li>
+<li><strong>FIX:</strong> You can now import CSV files that don&rsquo;t have a header row (<a href=https://github.com/buckets/application/issues/119>#119</a>)</li>
+<li><strong>FIX:</strong> CSV import supports amounts that use commas for decimal points. (<a href=https://github.com/buckets/application/issues/184>#184</a>)</li>
+<li><strong>FIX:</strong> Fix date picker problem with macOS High Sierra (<a href=https://github.com/buckets/application/issues/112>#112</a>)</li>
+<li><strong>FIX:</strong> Removed &lsquo;Chat&rsquo; as an option when an error occurs.</li>
+<li><strong>FIX:</strong> Semicolon-delimited CSVs (so SSV?) are now supported. (<a href=https://github.com/buckets/application/issues/181>#181</a>)</li>
+<li><strong>FIX:</strong> You can now set the timezone in Preferences in case Buckets detects your timezone incorrectly.</li>
+</ul>
+<h1 id=v0410---2018-04-24>v0.41.0 - 2018-04-24<a class=anchor-link href=#v0410---2018-04-24>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> You can now click on a bucket&rsquo;s want to fill in the remaining amount. (<a href=https://trello.com/c/ZFU7DkdT>#ZFU7DkdT</a>)</li>
+<li><strong>NEW:</strong> French translation now available! Merci, Raoul de Limézy !</li>
+<li><strong>NEW:</strong> Loading screen is nicer (<a href=https://trello.com/c/7q3euALq>#7q3euALq</a>)</li>
+<li><strong>NEW:</strong> Accounts can now be designated as <em>Off Budget.</em> Currently, it is of little use, but makes the way for tracking assets and debts (such as mortgages and investment accounts) over time. (<a href=https://trello.com/c/6Vo5DIEu>#6Vo5DIEu</a>)</li>
+<li><strong>NEW:</strong> After importing from YNAB4, a list of transactions to review is now shown. Also there&rsquo;s a progress bar. (<a href=https://trello.com/c/KS5dedMe>#KS5dedMe</a>)</li>
+<li><strong>FIX:</strong> Now &lsquo;About Buckets&rsquo; works consistently on macOS, Windows and Linux (<a href=https://trello.com/c/Hvkf87aR>#Hvkf87aR</a>)</li>
+<li><strong>FIX:</strong> Balance as of date listed in account detail view now lists the date of the latest transaction instead of the end of the month. (<a href=https://trello.com/c/hMSy6JbF>#hMSy6JbF</a>)</li>
+<li><strong>FIX:</strong> A different icon is now used for the <em>clear-the-categories</em> button. It was an X; now it&rsquo;s a circle with a line through it. (<a href=https://trello.com/c/Iz84zvni>#Iz84zvni</a>)</li>
+<li><strong>FIX:</strong> Fixed bug where kicking a bucket would change the top right month. (<a href=https://trello.com/c/qTNqjNav>#qTNqjNav</a>)</li>
+<li><strong>FIX:</strong> Safety switches (the ones that require to clicks to do the action) don&rsquo;t bleed now. (<a href=https://trello.com/c/1zvGUn99>#1zvGUn99</a>)</li>
+<li><strong>FIX:</strong> When you create a transaction without a category, it won&rsquo;t flash a warning anymore (<a href=https://trello.com/c/YwcStIKB>#YwcStIKB</a>)</li>
+<li><strong>FIX:</strong> Transactions are sorted by date first, instead of account also. This will make transfers that happen at the same time appear next to each other. (<a href=https://trello.com/c/D6Ftd0rZ>#D6Ftd0rZ</a>)</li>
+<li><strong>FIX:</strong> Notes with just whitespace are considered empty now (<a href=https://trello.com/c/RZBnnlKJ>#RZBnnlKJ</a>)</li>
+<li>Slimmed down and alphabetized translation files to make it easier for translators and to make fewer conflicts. (<a href=https://trello.com/c/wMIaJ47X>#wMIaJ47X</a>)</li>
+<li>Upgraded internal libraries and platform. (<a href=https://trello.com/c/hcyvkiIZ>#hcyvkiIZ</a>, <a href=https://trello.com/c/dwtG0GDO>#dwtG0GDO</a>)</li>
+</ul>
+<h1 id=v0401---2018-03-29>v0.40.1 - 2018-03-29<a class=anchor-link href=#v0401---2018-03-29>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Let us check for updates again if an update fails to download. (<a href=https://trello.com/c/Qtufqzis>#Qtufqzis</a>)</li>
+<li><strong>FIX:</strong> Fix YNAB4 import error for transactions with mixed-sign categorizations (<a href=https://trello.com/c/KiDm6dZS>#KiDm6dZS</a>)</li>
+</ul>
+<h1 id=v0400---2018-03-26>v0.40.0 - 2018-03-26<a class=anchor-link href=#v0400---2018-03-26>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Added a &lsquo;Start Over&rsquo; tool. (<a href=https://trello.com/c/gMedmoLD>#gMedmoLD</a>)</li>
+<li><strong>FIX:</strong> Letters are no longer eaten when writing a note on <em>any</em> object. (<a href=https://trello.com/c/ZQa6alQo>#ZQa6alQo</a>)</li>
+<li><strong>FIX:</strong> You can choose a number format independent of your language. (<a href=https://trello.com/c/ZaP9MCUO>#ZaP9MCUO</a>)</li>
+</ul>
+<h1 id=v0392---2018-03-23>v0.39.2 - 2018-03-23<a class=anchor-link href=#v0392---2018-03-23>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Fix white on white text in transaction dropdown on Windows (<a href=https://trello.com/c/Cb24GGRR>#Cb24GGRR</a>)</li>
+</ul>
+<h1 id=v0391---2018-03-22>v0.39.1 - 2018-03-22<a class=anchor-link href=#v0391---2018-03-22>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Fixed a bug in CSV importing (<a href=https://trello.com/c/2KYzgBet>#2KYzgBet</a>)</li>
+<li><strong>FIX:</strong> Sync time range alert is not correct.</li>
+</ul>
+<h1 id=v0390---2018-03-21>v0.39.0 - 2018-03-21<a class=anchor-link href=#v0390---2018-03-21>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> It&rsquo;s now much easier to record transfers between accounts. When creating a transaction, simply mark it as a transfer and choose the account the funds are coming from or going to. (<a href=https://trello.com/c/W1s6v7WU>#W1s6v7WU</a>)</li>
+<li><strong>NEW:</strong> The Buckets tab is cleaner (less busy) through the following changes. The balance of each bucket is now the first number. &ldquo;Out&rdquo; and &ldquo;Transfer&rdquo; columns have been combined into a single &ldquo;Activity&rdquo; column. When there is an amount in the &ldquo;In/Out&rdquo; field, the current and future balance no longer make the table expand horizontally. The heading labels are repeated for each bucket group. Effective balance is no longer shown when in debt. (<a href=https://trello.com/c/VSy1vj99>#VSy1vj99</a>, <a href=https://trello.com/c/6T7u0kWO>#6T7u0kWO</a>)</li>
+<li><strong>NEW:</strong> You can now categorize transactions as you enter them, instead of having to categorize them after adding them.</li>
+<li><strong>NEW:</strong> The Recurring Expenses analysis chart now remembers the time period you chose. (<a href=https://trello.com/c/2yalBubk>#2yalBubk</a>)</li>
+<li><strong>NEW:</strong> Names of translation contributors appear in the source file of each language. (<a href=https://trello.com/c/1s7TvSdi>#1s7TvSdi</a>)</li>
+<li><strong>FIX:</strong> For labels with a bright yellow background, black text is now used instead of white. In other words, you can read the words now :)</li>
+<li><strong>FIX:</strong> Simple categorization is preserved after editing transactions. (<a href=https://trello.com/c/L7jULmPb>#L7jULmPb</a>)</li>
+<li><strong>FIX:</strong> Only list recently-opened files that still exist. (<a href=https://trello.com/c/OvGiy3pc>#OvGiy3pc</a>)</li>
+<li><strong>FIX:</strong> Refunds/returns now add money to the &lsquo;Activity&rsquo; column rather than the &lsquo;Rain&rsquo; column on the Buckets view. (<a href=https://trello.com/c/zmXmsVbp>#zmXmsVbp</a>)</li>
+</ul>
+<h1 id=v0382---2018-03-15>v0.38.2 - 2018-03-15<a class=anchor-link href=#v0382---2018-03-15>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Don&rsquo;t overwrite non-null account balances to fix daylight saving problem.</li>
+</ul>
+<h1 id=v0381---2018-03-14>v0.38.1 - 2018-03-14<a class=anchor-link href=#v0381---2018-03-14>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Prevent NULL amounts in transactions. (<a href=https://trello.com/c/FJHZHCxx>#FJHZHCxx</a>)</li>
+</ul>
+<h1 id=v0380---2018-03-14>v0.38.0 - 2018-03-14<a class=anchor-link href=#v0380---2018-03-14>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Handle daylight saving time (<a href=https://trello.com/c/9MfU7pAj>#9MfU7pAj</a>)</li>
+</ul>
+<h1 id=v0370---2018-03-12>v0.37.0 - 2018-03-12<a class=anchor-link href=#v0370---2018-03-12>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Several visual changes. The Accounts view uses horizontal space better. The Month-to-Month analysis view no longer includes the year on the first date. (<a href=https://trello.com/c/4MgmeJq9>#4MgmeJq9</a>, <a href=https://trello.com/c/5oypmRTm>#5oypmRTm</a>, <a href=https://trello.com/c/Ljy70cM6>#Ljy70cM6</a>)</li>
+<li><strong>FIX:</strong> Rain tooltip no longer has faded cents. (<a href=https://trello.com/c/TlvT3o2a>#TlvT3o2a</a>)</li>
+<li><strong>FIX:</strong> When downloading an update, release notes stay visible. (<a href=https://trello.com/c/N6ZbcQvk>#N6ZbcQvk</a>)</li>
+</ul>
+<h1 id=v0360---2018-03-06>v0.36.0 - 2018-03-06<a class=anchor-link href=#v0360---2018-03-06>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Numbers are localized according to language now (i.e. in Portuguese and Spanish the decimal separator is now a comma) (<a href=https://trello.com/c/0iXa6tJR>#0iXa6tJR</a>)</li>
+<li><strong>FIX:</strong> It&rsquo;s more obvious how to close notes. (<a href=https://trello.com/c/2qffJJW9>#2qffJJW9</a>)</li>
+<li><strong>FIX:</strong> Emoji in Bucket names no longer causes height problems in macOS (<a href=https://trello.com/c/XTu7f4EW>#XTu7f4EW</a>)</li>
+<li><strong>FIX:</strong> Recurring expense chart labels aren&rsquo;t cut off anymore. (<a href=https://trello.com/c/dl6Rupnn>#dl6Rupnn</a>)</li>
+<li><strong>FIX:</strong> Fixed an internal input warning. (<a href=https://trello.com/c/LaBarRXx>#LaBarRXx</a>)</li>
+<li><strong>FIX:</strong> If there&rsquo;s no internet connection, an error about not being able to update is no longer displayed on start (<a href=https://trello.com/c/hjnugHpN>#hjnugHpN</a>)</li>
+</ul>
+<h1 id=v0351---2018-02-28>v0.35.1 - 2018-02-28<a class=anchor-link href=#v0351---2018-02-28>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Another fix for another kind of YNAB4 import failure. (<a href=https://trello.com/c/MpmFZutK>#MpmFZutK</a>)</li>
+</ul>
+<h1 id=v0350---2018-02-28>v0.35.0 - 2018-02-28<a class=anchor-link href=#v0350---2018-02-28>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Added <em>Start with a template</em> button for getting started with Buckets. (<a href=https://trello.com/c/2kWWcMGa>#2kWWcMGa</a>)</li>
+<li><strong>FIX:</strong> Handle CSV files that don&rsquo;t have a consistent number of columns throughout. (<a href=https://trello.com/c/TvFClGGM>#TvFClGGM</a>)</li>
+<li><strong>FIX:</strong> Fixed a bug when importing YNAB4 files with transactions that are split, but not split into categories (<a href=https://trello.com/c/rJgT119e>#rJgT119e</a>)</li>
+</ul>
+<h1 id=v0340---2018-02-23>v0.34.0 - 2018-02-23<a class=anchor-link href=#v0340---2018-02-23>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Replaced confusing line and dot chart with a bar chart of historical expenses in Analysis > Recurring Expenses section. Also, now you can choose the time period being shown. (<a href=https://trello.com/c/cY5uD7Y5>#cY5uD7Y5</a>)</li>
+<li><strong>NEW:</strong> You can now click on a bucket&rsquo;s balance to quickly set it to 0. For instance, if the balance is -54 and you click it, it will prepare to deposit 54 into the bucket. (<a href=https://trello.com/c/WLOgdR67>#WLOgdR67</a>)</li>
+<li><strong>NEW:</strong> Now translated into Portuguese, graças a Carlos. Obrigado!</li>
+<li><strong>NEW:</strong> You can now attach screenshots to bug reports</li>
+<li><strong>NEW:</strong> You can now undo/redo <em>most</em> actions that modify your budget. So if you accidentally deposited $500 into the wrong bucket, press Control/Command Z to reverse the last change. (<a href=https://trello.com/c/JE9sINCG>#JE9sINCG</a>)</li>
+<li><strong>FIX:</strong> Balance chart for high numbers is now more than just a flat line (<a href=https://trello.com/c/rYUgiuQh>#rYUgiuQh</a>)</li>
+<li><strong>FIX:</strong> Fixed bug where deleting an account would not always clean up associated records.</li>
+<li><strong>FIX:</strong> Cents are shown by default now for all numbers (<a href=https://trello.com/c/yUin1iGJ>#yUin1iGJ</a>)</li>
+<li><strong>FIX:</strong> Potentially fixed slowness when entering notes and goal/deposit amounts on buckets. (<a href=https://trello.com/c/AbqgETOV>#AbqgETOV</a>)</li>
+<li>Now only the language you are using is loaded (resulting in slightly faster load times)</li>
+</ul>
+<h1 id=v0330---2018-02-08>v0.33.0 - 2018-02-08<a class=anchor-link href=#v0330---2018-02-08>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> You can now delete bucket groups (<a href=https://trello.com/c/02VRaU99>#02VRaU99</a>)</li>
+<li><strong>NEW:</strong> The Buckets view now shows the amounts put in and taken out of each bucket. (<a href=https://trello.com/c/wU1gc6wz>#wU1gc6wz</a>)</li>
+<li><strong>NEW:</strong> If you attempt to use more rain than you have available, a warning is displayed and the &lsquo;Make it so&rsquo; button requires confirmation. (<a href=https://trello.com/c/4T1eVgov>#4T1eVgov</a>)</li>
+<li><strong>FIX:</strong> Bucket balance chart will divide into more than just months if it makes sense (<a href=https://trello.com/c/fVPOUQzl>#fVPOUQzl</a>)</li>
+<li><strong>FIX:</strong> The Buckets view is faster(less visual lag) when entering amounts to be deposited/withdrawn.</li>
+<li><strong>FIX:</strong> You can now edit blank group/bucket names (<a href=https://trello.com/c/7krRuUOo>#7krRuUOo</a>)</li>
+<li><strong>FIX:</strong> Fixed a timezone bug in Analysis > Recurring expenses that made &lsquo;Last month&rsquo; always 0. Also changed the labels to be explicit about which month is being shown. (<a href=https://trello.com/c/kxaoRW0W>#kxaoRW0W</a>)</li>
+<li><strong>FIX:</strong> In the Transactions view, you can now click on the words &lsquo;Show uncategorized&rsquo; instead of having to hit the small checkbox (<a href=https://trello.com/c/oEuSlRsZ>#oEuSlRsZ</a>)</li>
+<li><strong>FIX:</strong> Bucket transactions are now sorted the same (descending date) as account transactions (<a href=https://trello.com/c/1y6rFkMD>#1y6rFkMD</a>)</li>
+<li><strong>FIX:</strong> Include more verbose debugging when YNAB4 import fails.</li>
+</ul>
+<h1 id=v0320---2018-02-02>v0.32.0 - 2018-02-02<a class=anchor-link href=#v0320---2018-02-02>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> You can delete bucket transactions (Issue <a href=https://trello.com/c/q2PpU2iV>#q2PpU2iV</a>)</li>
+<li><strong>NEW:</strong> Added a &lsquo;Quit&rsquo; option for Windows/Linux users. (<a href=https://trello.com/c/XjHhptE6>#XjHhptE6</a>)</li>
+<li><strong>FIX:</strong> Budget always opened to the month before the current month, by default. Now it opens to the current month. (<a href=https://trello.com/c/tE6BlTgh>#tE6BlTgh</a>)</li>
+<li><strong>FIX:</strong> You can now adjust the Buckets License amount so that different currencies can be made to work (<a href=https://trello.com/c/j8rA12Fu>#j8rA12Fu</a>)</li>
+<li><strong>FIX:</strong> Fixed math being wrong on money inputs (<a href=https://trello.com/c/wtnk1A92>#wtnk1A92</a>)</li>
+<li><strong>FIX:</strong> When there are no recurring expense buckets, the analysis page no longer looks like a broken page. (<a href=https://trello.com/c/6snqIshs>#6snqIshs</a>)</li>
+<li><strong>FIX:</strong> Posted date of newly created transactions will now always be (by default) in the month you are looking at. (<a href=https://trello.com/c/LauMJXLI>#LauMJXLI</a>)</li>
+</ul>
+<h1 id=v0312---2018-01-30>v0.31.2 - 2018-01-30<a class=anchor-link href=#v0312---2018-01-30>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Fixed <em>Used in future</em> to not include kicked buckets.</li>
+<li><strong>FIX:</strong> Fixed future rain missed update with multiple windows (<a href=https://trello.com/c/dXwraTOl>#dXwraTOl</a>)</li>
+<li>Moved to Trello for issue/bug tracking (<a href=https://trello.com/c/JeaRIFN9>#JeaRIFN9</a>)</li>
+</ul>
+<h1 id=v0311---2018-01-29>v0.31.1 - 2018-01-29<a class=anchor-link href=#v0311---2018-01-29>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Fix error in want-to-buy message</li>
+</ul>
+<h1 id=v0310---2018-01-29>v0.31.0 - 2018-01-29<a class=anchor-link href=#v0310---2018-01-29>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Added a transaction export tool. (Issue <a href=https://github.com/buckets/application/issues/28>#28</a>)</li>
+<li><strong>NEW:</strong> Rain in the current month now takes into account any amount spoken for in future months. This allows for budgeting future months. (Issue <a href=https://github.com/buckets/application/issues/38>#38</a>)</li>
+<li><strong>NEW:</strong> When reopening buckets, the last set of opened windows is restored. (Issue <a href=https://github.com/buckets/application/issues/59>#59</a>)</li>
+<li><strong>FIX:</strong> Another attempt at the off by one problem. (Issue <a href=https://github.com/buckets/application/issues/40>#40</a>)</li>
+</ul>
+<h1 id=v0300---2018-01-25>v0.30.0 - 2018-01-25<a class=anchor-link href=#v0300---2018-01-25>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Date format is now suggested when importing from CSV</li>
+<li><strong>NEW:</strong> Added a preference to disable money animations.</li>
+<li><strong>NEW:</strong> When doing multiple buckets transactions at once, the math regarding what is happening now appears in the top action bar. (Issue <a href=https://github.com/buckets/application/issues/54>#54</a>)</li>
+<li><strong>NEW:</strong> Renamed &lsquo;Transact&rsquo; to &lsquo;In/Out&rsquo; on Buckets page.</li>
+<li><strong>FIX:</strong> Long bucket/group names are no longer cut off (Issue <a href=https://github.com/buckets/application/issues/14>#14</a>)</li>
+<li><strong>FIX:</strong> Fixed help prompt text-wrapping issue on Buckets tab Rain header. (Issue <a href=https://github.com/buckets/application/issues/57>#57</a>)</li>
+<li><strong>FIX:</strong> Default logging is more verbose</li>
+<li><strong>FIX:</strong> Special misc group is no longer editable. (Issue <a href=https://github.com/buckets/application/issues/41>#41</a>)</li>
+<li><strong>FIX:</strong> Maybe fixed off by one month issue. (Issue <a href=https://github.com/buckets/application/issues/40>#40</a>)</li>
+<li><strong>FIX:</strong> Account-style parenthesis-delimited negative numbers are supported in CSV importing. (Issue <a href=https://github.com/buckets/application/issues/60>#60</a>)</li>
+<li><strong>FIX:</strong> Subheader on Buckets/Transactions/Accounts page is now always visible even when your scroll down. (Issue <a href=https://github.com/buckets/application/issues/58>#58</a>)</li>
+<li>The Guide mentions that it&rsquo;s a work in progress now. (Issue <a href=https://github.com/buckets/application/issues/48>#48</a>)</li>
+</ul>
+<h1 id=v0290---2018-01-22>v0.29.0 - 2018-01-22<a class=anchor-link href=#v0290---2018-01-22>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Added a preference to disable money animations</li>
+<li><strong>NEW:</strong> CSV importing is now supported. (Issue <a href=https://github.com/buckets/application/issues/5>#5</a>)</li>
+</ul>
+<h1 id=v0280---2018-01-19>v0.28.0 - 2018-01-19<a class=anchor-link href=#v0280---2018-01-19>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Now there&rsquo;s a way to submit bugs from within Buckets. (Issue <a href=https://github.com/buckets/application/issues/43>#43</a>)</li>
+</ul>
+<h1 id=v0271---2018-01-18>v0.27.1 - 2018-01-18<a class=anchor-link href=#v0271---2018-01-18>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Added some options in the Help menu to allow for more verbose log reports.</li>
+<li><strong>FIX:</strong> Fix some database schema issues.</li>
+</ul>
+<h1 id=v0270---2018-01-17>v0.27.0 - 2018-01-17<a class=anchor-link href=#v0270---2018-01-17>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Check for updates, and version information is now available for Windows and Linux users. (Issue <a href=https://github.com/buckets/application/issues/43>#43</a>)</li>
+<li><strong>FIX:</strong> Fix a bug that prevented adding transactions in the account view. (Issue <a href=https://github.com/buckets/application/issues/44>#44</a>)</li>
+<li><strong>FIX:</strong> Make update window not be so small (especially on Windows) (Issue <a href=https://github.com/buckets/application/issues/45>#45</a>)</li>
+</ul>
+<h1 id=v0260---2018-01-17>v0.26.0 - 2018-01-17<a class=anchor-link href=#v0260---2018-01-17>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Added Amazon reconciliation tool. (Issue <a href=https://github.com/buckets/application/issues/33>#33</a>)</li>
+<li><strong>FIX:</strong> Database migrations are less flakey now.</li>
+</ul>
+<h1 id=v0251---2018-01-15>v0.25.1 - 2018-01-15<a class=anchor-link href=#v0251---2018-01-15>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Hopefully fix issue <a href=https://github.com/buckets/application/issues/39>#39</a> so that importing from YNAB4 works.</li>
+<li><strong>FIX:</strong> Make month selector more resilient to different timezones. (Issue <a href=https://github.com/buckets/application/issues/40>#40</a>)</li>
+</ul>
+<h1 id=v0250---2018-01-15>v0.25.0 - 2018-01-15<a class=anchor-link href=#v0250---2018-01-15>&para;</a></h1>
+<ul>
+<li><strong>NEW:</strong> Numbers in most tables are now always dollar-aligned with faded cents when it&rsquo;s an even dollar.</li>
+<li><strong>NEW:</strong> Transactions can now be edited. (Issue: <a href=https://github.com/buckets/application/issues/10>#10</a>)</li>
+<li><strong>NEW:</strong> The Buckets Guide (still largely unwritten) is now mirrored online and in the Buckets app through the Help menu</li>
+<li><strong>NEW:</strong> Now you can add notes to accounts, buckets, transactions and groups. (Issue <a href=https://github.com/buckets/application/issues/31>#31</a>)</li>
+<li><strong>NEW:</strong> Added a <em>Possible Duplicates</em> section to the <em>Transactions</em> tab (in the case where there are possible dupes). (Issue <a href=https://github.com/buckets/application/issues/37>#37</a>)</li>
+<li><strong>NEW:</strong> A running balance column has been added to transaction lists for single accounts and buckets. (Issue <a href=https://github.com/buckets/application/issues/17>#17</a>)</li>
+<li><strong>NEW:</strong> There&rsquo;s now a search tab, for searching for transactions, accounts and buckets. (Issue <a href=https://github.com/buckets/application/issues/30>#30</a>)</li>
+<li><strong>FIX:</strong> When viewing account details, the pane takes up more space so you can see more of the transactions. (Issue <a href=https://github.com/buckets/application/issues/36>#36</a>)</li>
+<li><strong>FIX:</strong> Horizontal scrolling now works on all pages. (Issue <a href=https://github.com/buckets/application/issues/18>#18</a>)</li>
+<li><strong>FIX:</strong> On the Buckets page, the <em>New bucket</em> button does not make the graph icon cell stretch anymore.</li>
+</ul>
+<h1 id=v0240---2018-01-08>v0.24.0 - 2018-01-08<a class=anchor-link href=#v0240---2018-01-08>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> You can no longer make 0-amount bucket transactions (Issue <a href=https://github.com/buckets/application/issues/22>#22</a>)</li>
+<li><strong>FIX:</strong> Include more information to distinguish between similar accounts when using SimpleFIN Sync</li>
+<li><strong>FIX:</strong> Clarify that most U.S. banks are supported by SimpleFIN (Issue <a href=https://github.com/buckets/application/issues/24>#24</a>)</li>
+<li>NEW: Accounts can now be closed, and you can shoot yourself in the foot by completely deleting accounts and all linked transactions. You&rsquo;re welcome. (Issue <a href=https://github.com/buckets/application/issues/2>#2</a>)</li>
+</ul>
+<h1 id=v0230---2018-01-05>v0.23.0 - 2018-01-05<a class=anchor-link href=#v0230---2018-01-05>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Account balance table aligns balance to the right.</li>
+<li><strong>FIX:</strong> Report bug feature now works on Windows (Issue <a href=https://github.com/buckets/application/issues/11>#11</a>)</li>
+<li><strong>FIX:</strong> Fix YNAB importing for budgets that have categories without subcategories. (Issue <a href=https://github.com/buckets/application/issues/12>#12</a>)</li>
+<li>NEW: When updating Buckets, release notes are shown in the notification window, a progress bar shows progress and you can opt to skip a version to prevent more notifications. (Issues <a href=https://github.com/buckets/application/issues/3>#3</a>, <a href=https://github.com/buckets/application/issues/9>#9</a>)</li>
+<li>NEW: Under <em>Analysis</em> the <em>Regular Expenses</em> section includes helpful number line charts and groups buckets according to whether expenses appear monthly v. yearly (or somewhat yearly) and groups them by relative budgeted amount. In short, it&rsquo;s prettier :)</li>
+</ul>
+<h1 id=v0221---2018-01-02>v0.22.1 - 2018-01-02<a class=anchor-link href=#v0221---2018-01-02>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Fix <a href=https://github.com/buckets/application/issues/8>issue #8</a> by allowing users to select directories and files for import</li>
+</ul>
+<h1 id=v0220---2017-12-29>v0.22.0 - 2017-12-29<a class=anchor-link href=#v0220---2017-12-29>&para;</a></h1>
+<ul>
+<li>NEW: Added first (experimental) version of creating macros to download transaction data from banks automatically. (Not yet translated into Spanish).</li>
+</ul>
+<h1 id=v0210---2017-11-17>v0.21.0 - 2017-11-17<a class=anchor-link href=#v0210---2017-11-17>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Improved the explanation of what rain is</li>
+<li>NEW: Switch from bucketsisbetter.com to budgetwithbuckets.com</li>
+</ul>
+<h1 id=v0200---2017-11-06>v0.20.0 - 2017-11-06<a class=anchor-link href=#v0200---2017-11-06>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Light grey on charts is now less light and more visible</li>
+<li><strong>FIX:</strong> When turning a bucket from a specialized type back into a regular bucket, the rain is now reported correctly (as zero)</li>
+<li><strong>FIX:</strong> Set default save directory to ~/Documents (or OS equivalent) so that the default is no longer /</li>
+<li>NEW: All budget-related menu options have been moved to a single &lsquo;Budget&rsquo; menu (rather than being dispersed over several other menus)</li>
+<li>NEW: Buckets can now import You Need a Budget (YNAB) v4 budget files.</li>
+</ul>
+<h1 id=v0190---2017-11-03>v0.19.0 - 2017-11-03<a class=anchor-link href=#v0190---2017-11-03>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Translate the preferences page</li>
+<li>NEW: Buckets files format is documented</li>
+<li>NEW: Auto-updating is now supported on Linux for AppImage installs</li>
+<li>NEW: Reduce license price from $40 to $29 (and intro price from $20 to $15)</li>
+</ul>
+<h1 id=v0180>v0.18.0<a class=anchor-link href=#v0180>&para;</a></h1>
+<ul>
+<li>NEW: Buckets is now available in Spanish!</li>
+</ul>
+<h1 id=v0170---2017-09-12>v0.17.0 - 2017-09-12<a class=anchor-link href=#v0170---2017-09-12>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Fixed a bug that prevented actually linking SimpleFIN accounts</li>
+<li>NEW: Added better logging for times where there are silent errors</li>
+</ul>
+<h1 id=v0160---2017-09-01>v0.16.0 - 2017-09-01<a class=anchor-link href=#v0160---2017-09-01>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Got rid of scary balance-mismatch warnings that weren&rsquo;t actually actionable. And a better explanation of what mismatches mean is included.</li>
+<li><strong>FIX:</strong> Now, when you sync transactions, it will only sync the current month</li>
+<li><strong>FIX:</strong> The update process is even <em>more</em> clear.</li>
+</ul>
+<h1 id=v0150>v0.15.0<a class=anchor-link href=#v0150>&para;</a></h1>
+<ul>
+<li>
+<p><strong>FIX:</strong> If you try to open/create a file that&rsquo;s unreadable and error is displayed instead of failing silently</p>
+</li>
+<li>
+<p>NEW: You can now click &lsquo;Make it Rain&rsquo; as many times as you want. Each bucket will only take what it needs <em>per month</em></p>
+</li>
+<li>
+<p><strong>FIX:</strong> Fixed bug where &lsquo;Duplicate Window&rsquo; would sometimes throw an error.</p>
+</li>
+<li>
+<p><strong>FIX:</strong> Recurring expense report doesn&rsquo;t report false information for newly-made buckets anymore</p>
+</li>
+<li>
+<p>NEW: Added new charts to bucket information pages</p>
+</li>
+<li>
+<p>NEW: You can now explicitly mark bucket transactions as transfers</p>
+</li>
+</ul>
+<h1 id=v0140>v0.14.0<a class=anchor-link href=#v0140>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> When updating an account balance in a month that isn&rsquo;t the current month, it now does the right thing.</li>
+<li><strong>FIX:</strong> Removed the mystery of what&rsquo;s going on during update download/install.</li>
+<li>NEW: Added a bucket expense analysis section.</li>
+</ul>
+<h1 id=v0130>v0.13.0<a class=anchor-link href=#v0130>&para;</a></h1>
+<ul>
+<li>NEW: Added a new &lsquo;Analysis&rsquo; section with helpful month-to-month and year-to-year charts</li>
+<li>NEW: Added <em>Chat with Matt</em> navigation item</li>
+</ul>
+<h1 id=v0120>v0.12.0<a class=anchor-link href=#v0120>&para;</a></h1>
+<ul>
+<li>NEW: Now you can get instant help with the &lsquo;Chat&mldr;&rsquo; option in the Help menu.</li>
+<li>NEW: Added <em>Effective Balance</em> column to buckets for when there are buckets in debt (so you don&rsquo;t think you have more money than you do).</li>
+<li>NEW: Windows are labeled with the filename now</li>
+<li>NEW: Linux installs will now be notified of updates, too</li>
+</ul>
+<h1 id=v0110>v0.11.0<a class=anchor-link href=#v0110>&para;</a></h1>
+<ul>
+<li><strong>FIX:</strong> Style fixes and extra tooltip helps</li>
+<li><strong>FIX:</strong> Some menu items are disabled/enabled now when the context justifies it.</li>
+<li><strong>FIX:</strong> Fixed bug where categorizing with math would sometimes make too many rows</li>
+<li>NEW: Categorizing is cleaner now</li>
+<li>NEW: Started changelog.</li>
+<li>NEW: Table rows are now highlighted when you hover over them</li>
+<li>NEW: You can now import OFX/QFX files</li>
+</ul>
+</div>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<footer>
+<div><a href=https://onepartrain.com target=_blank>&copy; One Part Rain, LLC</a></div>
+<div><a href=mailto:hello@budgetwithbuckets.com>hello@budgetwithbuckets.com</a></div>
+<div><a href=https://www.patreon.com/iffy target=_blank>Donar</a></div>
+<div><a href=/guide/privacypolicy>Privacidad</a></div>
+<div>
+<details>
+<summary>español</summary>
+<div><a href=/changelog/>English</a></div>
+</details>
+</div>
+</footer>
+<script type=text/javascript>var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date;(function(){var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.async=!0,a.src='https://embed.tawk.to/59835f8ed1385b2b2e285765/default',a.charset='UTF-8',a.setAttribute('crossorigin','*'),b.parentNode.insertBefore(a,b)})()</script>
+</body>
+</html>

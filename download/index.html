@@ -17,7 +17,7 @@ Download Buckets
 </a>
 <a href=/guide/>Guide</a>
 <a href=/blog/>Blog</a>
-<a target=_blank href=https://github.com/buckets/application/blob/master/CHANGELOG.md>Changelog</a>
+<a href=/changelog/>Changelog</a>
 <a target=_blank href=https://github.com/buckets/application/issues>Issue Tracker</a>
 </section>
 <section>
@@ -25,141 +25,269 @@ Download Buckets
 <img src=/images/download.svg width=15 height=15>
 Download
 </a>
-<a class=buy-button href=/buy/>Buy $49</a>
+<a class=buy-button href=/buy/>Buy $64</a>
 </section>
 <a href=javascript:void(0); class=nav-toggle onclick="this.parentElement.classList.toggle('nav-open')">
 <img src=/img/logo.png>
 <div>Menu</div>
 </a>
 </div>
-<style>.main{max-width:30rem;padding:0 0 5rem;margin:0 auto}</style>
 <div class=main>
-<style>a.button.beta{background-color:#2ecc71}a.button.beta:hover{background-color:#2980b9}a.button{}a.download.button{border-radius:4px;display:flex;padding:.5rem;line-height:1rem;margin-bottom:.5rem;max-width:100%}a.download.button.disabled{background-color:lightgrey}.download img{width:26px;height:26px;margin:0 .5rem 0 .25rem}.download .name{font-size:1.1rem;padding-bottom:.1rem}.download .filename{font-size:.75rem}</style>
-<div style=text-align:center;margin-top:3rem>
-<img src=/images/logo.png width=64>
-<h2 style=text-align:center;margin-top:0>
-Buckets v0.60.1
+<style>a.dl-button{display:flex;align-items:center;margin:.25rem 0 0;text-decoration:none;background-color:#eee;border-radius:4px}a.dl-button img{background-color:#3498db;padding:.7rem;border-radius:4px 0 0 4px;height:2.5rem;margin-right:.5rem;opacity:.9}a.dl-button.beta img{background-color:#2ecc71}a.dl-button:hover{background-color:rgba(241,196,15,.2)}a.dl-button:hover img{opacity:1}a.dl-button .name{color:#000;font-size:1rem}.header{text-align:center;margin-top:3rem;margin-bottom:1rem}.header img{width:5rem;height:5rem;position:relative;margin-right:1rem}.header h2{text-align:center;margin:0}.download-list{width:100%}.download-list td,.download-list th{border:0;vertical-align:top}.download-list th{padding:1.2rem .5rem 0;background-color:transparent;font-size:1.2rem;text-align:left;width:25%}.download-list th .subtitle{font-size:.9rem;font-weight:400}.hidden{display:none}.relative{position:relative}#flatpak-instructions,#flatpak-beta-instructions{min-height:3rem}pre{font-family:monospace;font-size:.75rem;overflow:auto;position:absolute}</style>
+<div class=header id=stable>
+<img src=/images/logo.png>
+<h2>
+Buckets v0.75.0
 </h2>
 </div>
-<a class="button download" href=https://github.com/buckets/application/releases/download/v0.60.1/Buckets-Setup-0.60.1.exe>
+<table class=download-list>
+<tr>
+<th>Windows</th>
+<td>
+<a class=dl-button href=https://github.com/buckets/application/releases/download/v0.75.0/Buckets-Setup-0.75.0.exe>
 <img src=/images/download.svg>
 <div>
 <div class=name>Windows Installer</div>
-<div class=filename>
-Buckets-Setup-0.60.1.exe
-</div>
 </div>
 </a>
-<a class="button download" href=https://github.com/buckets/application/releases/download/v0.60.1/Buckets-0.60.1.exe>
+<a class=dl-button href=https://github.com/buckets/application/releases/download/v0.75.0/Buckets-0.75.0.exe>
 <img src=/images/download.svg>
 <div>
 <div class=name>Windows Portable</div>
-<div class=filename>
-Buckets-0.60.1.exe
-</div>
 </div>
 </a>
-<a class="button download" href=https://github.com/buckets/application/releases/download/v0.60.1/Buckets-0.60.1.dmg>
+</td>
+</tr>
+<tr>
+<th>macOS</th>
+<td>
+<a class=dl-button href=https://github.com/buckets/application/releases/download/v0.75.0/Buckets-arm64-0.75.0.dmg>
 <img src=/images/download.svg>
 <div>
-<div class=name>macOS</div>
-<div class=filename>Buckets-0.60.1.dmg</div>
+<div class=name>macOS Apple Silicon</div>
 </div>
 </a>
-<a class="button download" href=https://github.com/buckets/application/releases/download/v0.60.1/Buckets-0.60.1.AppImage>
+<a class=dl-button href=https://github.com/buckets/application/releases/download/v0.75.0/Buckets-amd64-0.75.0.dmg>
 <img src=/images/download.svg>
 <div>
-<div class=name>Linux AppImage</div>
-<div class=filename>Buckets-0.60.1.AppImage</div>
+<div class=name>macOS Intel</div>
 </div>
 </a>
-<a class="button download" href=https://github.com/buckets/application/releases/download/v0.60.1/Buckets_0.60.1_amd64.deb>
+</td>
+</tr>
+<tr>
+<th>Linux
+<div class=subtitle>Built on Ubuntu 22.04</div>
+</th>
+<td>
+<a class=dl-button href=https://github.com/buckets/application/releases/download/v0.75.0/Buckets-linux-latest-amd64-0.75.0.AppImage>
 <img src=/images/download.svg>
 <div>
-<div class=name>Linux deb</div>
-<div class=filename>Buckets_0.60.1_amd64.deb</div>
+<div class=name>AppImage</div>
 </div>
 </a>
-<a class="button download disabled">
+<a class=dl-button href=https://github.com/buckets/application/releases/download/v0.75.0/Buckets-linux-latest-amd64-0.75.0.deb>
+<img src=/images/download.svg>
+<div>
+<div class=name>deb</div>
+</div>
+</a>
+<a class=dl-button href=https://github.com/buckets/application/releases/download/v0.75.0/Buckets-linux-latest-arm64-0.75.0.AppImage>
+<img src=/images/download.svg>
+<div>
+<div class=name>AppImage ARM64</div>
+</div>
+</a>
+<a class=dl-button href=https://github.com/buckets/application/releases/download/v0.75.0/Buckets-linux-latest-arm64-0.75.0.deb>
+<img src=/images/download.svg>
+<div>
+<div class=name>deb ARM64</div>
+</div>
+</a>
+<script>function showFlatpak(){document.getElementById('flatpak-instructions').classList.toggle('hidden')}</script>
+<a class=dl-button href=javascript:void(0); onclick=showFlatpak()>
+<img src=/images/download.svg>
+<div>
+<div class=name>Flatpak</div>
+</div>
+</a>
+<div id=flatpak-instructions class="relative hidden">
+<pre>flatpak install flathub com.budgetwithbuckets.Buckets</pre>
+</div>
+</td>
+</tr>
+<tr>
+<th>Linux
+<div class=subtitle>Built on Ubuntu 18.04</div>
+</th>
+<td>
+<a class=dl-button href=https://github.com/buckets/application/releases/download/v0.75.0/Buckets-ubuntu-18.04-amd64-0.75.0.AppImage>
+<img src=/images/download.svg>
+<div>
+<div class=name>AppImage</div>
+</div>
+</a>
+<a class=dl-button href=https://github.com/buckets/application/releases/download/v0.75.0/Buckets-ubuntu-18.04-amd64-0.75.0.deb>
+<img src=/images/download.svg>
+<div>
+<div class=name>deb</div>
+</div>
+</a>
+</td>
+</tr>
+<tr>
+<th>Mobile</th>
+<td>
+<a class=dl-button href=https://testflight.apple.com/join/Qg4fHoZM>
 <img src=/images/download.svg>
 <div>
 <div class=name>iOS</div>
-<div class=filename>Coming soon!</div>
 </div>
 </a>
-<a class="button download disabled">
+<a class=dl-button href="https://play.google.com/store/apps/details?id=app.buckets.mobile.stable">
 <img src=/images/download.svg>
 <div>
-<div class=name>Android</div>
-<div class=filename>Coming soon!</div>
+<div class=name>Android Google Play</div>
 </div>
 </a>
-<a href=https://github.com/buckets/application/releases target=_blank>Older versions
+<a class=dl-button href=https://github.com/buckets/mobileapps/releases>
+<img src=/images/download.svg>
+<div>
+<div class=name>Android APK</div>
+</div>
 </a>
-<div style=text-align:center;margin-top:2rem>
-<img src=/images/logo_beta.png width=64>
-<h2 style=text-align:center;margin-top:0>
-Buckets Beta v0.60.1
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<a href=https://github.com/buckets/application/releases target=_blank>Older versions</a>
+</td>
+</tr>
+</table>
+<div class=header id=beta>
+<img src=/images/logo_beta.png>
+<h2>
+Buckets Beta v0.76.0
 </h2>
 </div>
 <p>
 This version contains the latest features, but it may also contain bugs. Most users should choose the normal version unless they're comfortable finding and reporting bugs.
 </p>
-<a class="button download beta" href=https://github.com/buckets/desktop-beta/releases/download/v0.60.1/Buckets-Beta-Setup-0.60.1.exe>
+<table class=download-list>
+<tr>
+<th>Windows</th>
+<td>
+<a class="dl-button beta" href=https://github.com/buckets/desktop-beta/releases/download/v0.76.0/Buckets-Beta-Setup-0.76.0.exe>
 <img src=/images/download.svg>
 <div>
 <div class=name>Windows Installer</div>
-<div class=filename>
-Buckets-Beta-Setup-0.60.1.exe
-</div>
 </div>
 </a>
-<a class="button download beta" href=https://github.com/buckets/desktop-beta/releases/download/v0.60.1/Buckets-Beta-0.60.1.exe>
+<a class="dl-button beta" href=https://github.com/buckets/desktop-beta/releases/download/v0.76.0/Buckets-Beta-0.76.0.exe>
 <img src=/images/download.svg>
 <div>
 <div class=name>Windows Portable</div>
-<div class=filename>
-Buckets-Beta-0.60.1.exe
-</div>
 </div>
 </a>
-<a class="button download beta" href=https://github.com/buckets/desktop-beta/releases/download/v0.60.1/Buckets-Beta-0.60.1.dmg>
+</td>
+</tr>
+<tr>
+<th>macOS</th>
+<td>
+<a class="dl-button beta" href=https://github.com/buckets/desktop-beta/releases/download/v0.76.0/Buckets-Beta-arm64-0.76.0.dmg>
 <img src=/images/download.svg>
 <div>
-<div class=name>macOS</div>
-<div class=filename>Buckets-Beta-0.60.1.dmg</div>
+<div class=name>macOS Apple Silicon</div>
 </div>
 </a>
-<a class="button download beta" href=https://github.com/buckets/desktop-beta/releases/download/v0.60.1/Buckets-Beta-0.60.1.AppImage>
+<a class="dl-button beta" href=https://github.com/buckets/desktop-beta/releases/download/v0.76.0/Buckets-Beta-amd64-0.76.0.dmg>
 <img src=/images/download.svg>
 <div>
-<div class=name>Linux AppImage</div>
-<div class=filename>Buckets-Beta-0.60.1.AppImage</div>
+<div class=name>macOS Intel</div>
 </div>
 </a>
-<a class="button download beta" href=https://github.com/buckets/desktop-beta/releases/download/v0.60.1/BucketsBeta_0.60.1_amd64.deb>
+</td>
+</tr>
+<tr>
+<th>Linux
+<div class=subtitle>Built on Ubuntu 22.04</div>
+</th>
+<td>
+<a class="dl-button beta" href=https://github.com/buckets/desktop-beta/releases/download/v0.76.0/Buckets-Beta-linux-latest-amd64-0.76.0.AppImage>
 <img src=/images/download.svg>
 <div>
-<div class=name>Linux deb</div>
-<div class=filename>BucketsBeta_0.60.1_amd64.deb</div>
+<div class=name>AppImage</div>
 </div>
 </a>
-<a class="button download beta disabled">
+<a class="dl-button beta" href=https://github.com/buckets/desktop-beta/releases/download/v0.76.0/Buckets-Beta-linux-latest-amd64-0.76.0.deb>
+<img src=/images/download.svg>
+<div>
+<div class=name>deb</div>
+</div>
+</a>
+<a class="dl-button beta" href=https://github.com/buckets/desktop-beta/releases/download/v0.76.0/Buckets-Beta-linux-latest-arm64-0.76.0.AppImage>
+<img src=/images/download.svg>
+<div>
+<div class=name>AppImage ARM64</div>
+</div>
+</a>
+<a class="dl-button beta" href=https://github.com/buckets/desktop-beta/releases/download/v0.76.0/Buckets-Beta-linux-latest-arm64-0.76.0.deb>
+<img src=/images/download.svg>
+<div>
+<div class=name>deb ARM64</div>
+</div>
+</a>
+<script>function showFlatpakBeta(){document.getElementById('flatpak-beta-instructions').classList.toggle('hidden')}</script>
+<a class="dl-button beta" href=javascript:void(0); onclick=showFlatpakBeta()>
+<img src=/images/download.svg>
+<div>
+<div class=name>Flatpak</div>
+</div>
+</a>
+<div id=flatpak-beta-instructions class="relative hidden">
+<pre>flatpak remote-add --if-not-exists flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo
+flatpak install flathub-beta com.budgetwithbuckets.Buckets</pre>
+</div>
+</td>
+</tr>
+<tr>
+<th>Linux
+<div class=subtitle>Built on Ubuntu 18.04</div>
+</th>
+<td>
+<a class="dl-button beta" href=https://github.com/buckets/desktop-beta/releases/download/v0.76.0/Buckets-Beta-ubuntu-18.04-amd64-0.76.0.AppImage>
+<img src=/images/download.svg>
+<div>
+<div class=name>AppImage</div>
+</div>
+</a>
+<a class="dl-button beta" href=https://github.com/buckets/desktop-beta/releases/download/v0.76.0/Buckets-Beta-ubuntu-18.04-amd64-0.76.0.deb>
+<img src=/images/download.svg>
+<div>
+<div class=name>deb</div>
+</div>
+</a>
+</td>
+</tr>
+<tr>
+<th>Mobile</th>
+<td>
+<a class="dl-button beta" href=https://testflight.apple.com/join/hVcobpn8>
 <img src=/images/download.svg>
 <div>
 <div class=name>iOS</div>
-<div class=filename>Coming soon!</div>
 </div>
 </a>
-<a class="button download beta disabled">
-<img src=/images/download.svg>
-<div>
-<div class=name>Android</div>
-<div class=filename>Coming soon!</div>
-</div>
-</a>
-<a href=https://github.com/buckets/desktop-beta/releases target=_blank>Older versions
-</a>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<a href=https://github.com/buckets/desktop-beta/releases target=_blank>Older versions</a>
+</td>
+</tr>
+</table>
 </div>
 <div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
 </div>
@@ -167,7 +295,7 @@ Buckets-Beta-0.60.1.exe
 <div><a href=https://onepartrain.com target=_blank>&copy; One Part Rain, LLC</a></div>
 <div><a href=mailto:hello@budgetwithbuckets.com>hello@budgetwithbuckets.com</a></div>
 <div><a href=https://www.patreon.com/iffy target=_blank>Donate</a></div>
-<div><a href=https://github.com/buckets/policies/blob/master/privacy-policy.md target=_blank>Privacy</a></div>
+<div><a href=/guide/privacypolicy>Privacy</a></div>
 <div>
 <details>
 <summary>English</summary>

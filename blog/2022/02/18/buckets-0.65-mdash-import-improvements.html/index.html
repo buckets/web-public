@@ -1,0 +1,170 @@
+<!doctype html><html>
+<head>
+<title>
+Buckets 0.65 &amp;mdash; Import Improvements
+</title>
+<link rel="shortcut icon" href=/img/favicon.png type=image/png>
+<link rel=stylesheet type=text/css href=/css/buckets.css>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=stylesheet type=text/css href=/css/buckets-blog.css>
+<link rel=alternate hreflang=es href=https://www.budgetwithbuckets.com/es/blog/2022/02/18/buckets-0.65-mdash-import-improvements.html/>
+</head>
+<body>
+<div class=buckets-nav>
+<section>
+<a class=logo href=/>
+<img src=/img/logo.png>
+</a>
+<a href=/guide/>Guide</a>
+<a class=active href=/blog/>Blog</a>
+<a href=/changelog/>Changelog</a>
+<a target=_blank href=https://github.com/buckets/application/issues>Issue Tracker</a>
+</section>
+<section>
+<a class=download-button href=/download/>
+<img src=/images/download.svg width=15 height=15>
+Download
+</a>
+<a class=buy-button href=/buy/>Buy $64</a>
+</section>
+<a href=javascript:void(0); class=nav-toggle onclick="this.parentElement.classList.toggle('nav-open')">
+<img src=/img/logo.png>
+<div>Menu</div>
+</a>
+</div>
+<div class=wrapper>
+<div class=post>
+<header class=post-header>
+<div class=next-prev-links>
+<a class=prev href=/blog/2021/12/04/launching-the-2021-buckets-community-survey.html/>&larr; Prev</a>
+<a class=next href=/blog/2022/06/29/2021-survey-results.html/>Next &rarr;</a>
+</div>
+<h1 class=blog-title>Buckets 0.65 &mdash; Import Improvements</h1>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<p class=post-meta>
+Feb 18, 2022
+• Matt
+</p>
+</header>
+<article class=post-content>
+<p>We just released Buckets Beta v0.65.0 which includes over 20 fixes and improvements. Download it <a href=/download/#beta>here</a> or wait a few weeks for the stable version. All the changes are on the <a href=/changelog>changelog</a>.</p>
+<h2 id=csv-importing>CSV Importing<a class=anchor-link href=#csv-importing>&para;</a></h2>
+<p>CSV importing received some much needed attention.</p>
+<ul>
+<li>You now get a live preview of what will be imported while configuring the import.</li>
+<li>You can <strong>cancel</strong> an import!</li>
+<li>However your file is delimited (comma, semicolon, the letter &lsquo;g&rsquo;) Buckets will now parse it.</li>
+<li>Does your bank include extra info above or below the transaction data? Now Buckets can ignore that.</li>
+</ul>
+<div style=text-align:center>
+<img alt="Screenshot of new CSV import interface" src=./csv_import.png style="border-radius:6px;border:1px solid lightgrey">
+</div>
+<h2 id=ofx-importing>OFX Importing<a class=anchor-link href=#ofx-importing>&para;</a></h2>
+<p>Similarly, OFX importing is more streamlined, includes a live preview, offers better number and date parsing support AND you can now ignore accounts you don&rsquo;t want to import! Finally, that notification badge can go away!</p>
+<h2 id=and-more>and more&mldr;<a class=anchor-link href=#and-more>&para;</a></h2>
+<p>This release also introduces support for currencies that have three digits after the decimal place by means of the new number format chooser:</p>
+<div style=text-align:center>
+<img alt="Screenshot of new number format chooser" src=./number_format.png style="border-radius:6px;border:1px solid lightgrey">
+</div>
+<p>Ever wanted to search for a transaction by amount? Now you can on the search page:</p>
+<div style=text-align:center>
+<img alt="Demo of new search by number feature" src=./search_by_amount.png style="border-radius:6px;border:1px solid lightgrey">
+</div>
+<p>Several contributors translated many more things into French, Română, Español, Deutsch and Русский!</p>
+<p>Now it&rsquo;s on to getting the Android app out!</p>
+<p>Happy budgeting!</p>
+<p>— Matt</p>
+</article>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<div class="next-prev-links close" style=margin-top:1rem>
+<a class=prev href=/blog/2021/12/04/launching-the-2021-buckets-community-survey.html/>&larr; Prev</a>
+<a class=next href=/blog/2022/06/29/2021-survey-results.html/>Next &rarr;</a>
+</div>
+<h2 style=margin-top:2rem>Comments</h2>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/5425b878ca550457b7e483c6162ea353?s=64">
+<div>
+<div class=details>
+<div class=author>Qmanol</div>
+<div class=date>Sun Mar 6, 2022 9:06</div>
+</div>
+<div class=message>This finally allows me to import OFX from my second bank - however, the beta is allowing duplicate imports on this account instead of updating existing transactions, and it's also reporting that the synced balance doesn't match - as far as I can tell the OFX file contains no value for synced balance (&lt;LEDGERBAL>), so it's being read as 0?
+I don't think this is quite coherent enough to log as an issue, so I'm putting it here.</div>
+</div>
+</div>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/3a760317157c33e6b977df8e35ae857d?s=64">
+<div>
+<div class=details>
+<div class=author>Matt</div>
+<div class=date>Mon Mar 7, 2022 1:46</div>
+</div>
+<div class=message>Qmanol,
+Sorry about the duplicate imports. This new version changed the way it assigned unique IDs to transactions so newly imported transactions will not be correctly matched (and ignored) with formerly imported transactions. However, this should not be a problem after about a month (or however far back your OFX transaction history goes).
+And I've filed an issue for the synced balance warning. Thank you for saying something!</div>
+</div>
+</div>
+<div id=comment-form style=display:none>
+<a name=comment-form></a>
+<script>window.location.search.substr(1).indexOf('comment=submitted')!==-1&&document.write(`<div class="notification">Comment submitted!  Your comment will be posted here after being reviewed.</div>`)</script>
+<script>function setCommentStatus(b,c){const a=document.getElementById('comment-notification');a.innerText=b,a.setAttribute('class',c),a.setAttribute('style','')}function submitComment(c){const b=document.getElementById('comment-submit');b.disabled=!0,setCommentStatus('Submitting...','notification'),c.preventDefault();const d=document.getElementById('comment-message').value,e=document.getElementById('comment-email').value,f=document.getElementById('comment-name').value,g=document.getElementById('comment-slug').value,h={comment:d,email:e,name:f,subdir:g};let a=new XMLHttpRequest;a.addEventListener('load',a=>{setCommentStatus('Comment submitted!  Your comment will be posted here after being reviewed.','notification'),b.disabled=!1}),a.addEventListener('error',a=>{console.log('Error',a),setCommentStatus('Error submitting comment.  If it continues not to work, please email us.','notification error'),b.disabled=!1}),a.open('POST','https://7nd5a97217.execute-api.us-east-1.amazonaws.com/default/GitHubJekyllComments'),a.send(JSON.stringify(h))}XMLHttpRequest&&document.getElementById('comment-form').setAttribute('style','')</script>
+<form method=post class=comment-form onsubmit="return submitComment(event),!1">
+<input type=hidden id=comment-slug value=buckets-0.65-import-improvements>
+<label>Name:<br><input id=comment-name type=text></label>
+<label>Email (optional&mdash;not displayed):<br><input id=comment-email type=email></label>
+<label>Message:</label>
+<textarea id=comment-message></textarea>
+<button type=submit id=comment-submit>Add comment</button>
+</form>
+<div id=comment-notification style=display:none></div>
+</div>
+<div class=mailing-list-main style=margin-top:2rem>
+<div class=mailing-list-title>Get these posts in your email, monthly:</div>
+<p>
+<link href=//cdn-images.mailchimp.com/embedcode/classic-10_7.css rel=stylesheet type=text/css>
+<style type=text/css>#mc_embed_signup{background:0 0;clear:left}#mc_embed_signup form{padding:0}#mc_embed_signup input{border-radius:3px}#mc_embed_signup input[type=submit]{background-color:#08c}</style>
+<div id=mc_embed_signup>
+<form action="https://bucketsisbetter.us8.list-manage.com/subscribe/post?u=bc109895c8df246ae54ad4d71&id=0960a6d05e" method=post id=mc-embedded-subscribe-form name=mc-embedded-subscribe-form class=validate target=_blank novalidate>
+<div id=mc_embed_signup_scroll>
+<div class=mc-field-group>
+<label for=mce-EMAIL>Email Address
+</label>
+<input type=email name=EMAIL class="required email" id=mce-EMAIL>
+</div>
+<div class=mc-field-group>
+<label for=mce-FNAME>First Name
+</label>
+<input type=text name=FNAME class=required id=mce-FNAME>
+</div>
+<div id=mce-responses class=clear>
+<div class=response id=mce-error-response style=display:none></div>
+<div class=response id=mce-success-response style=display:none></div>
+</div>
+<div style=position:absolute;left:-5000px aria-hidden=true><input type=text name=b_bc109895c8df246ae54ad4d71_0960a6d05e tabindex=-1></div>
+<div class=clear><input type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe class=button></div>
+</div>
+</form>
+</div>
+</p>
+</div>
+</div>
+</div>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<footer>
+<div><a href=https://onepartrain.com target=_blank>&copy; One Part Rain, LLC</a></div>
+<div><a href=mailto:hello@budgetwithbuckets.com>hello@budgetwithbuckets.com</a></div>
+<div><a href=https://www.patreon.com/iffy target=_blank>Donate</a></div>
+<div><a href=/guide/privacypolicy>Privacy</a></div>
+<div>
+<details>
+<summary>English</summary>
+<div><a href=/es/blog/2022/02/18/buckets-0.65-mdash-import-improvements.html/>español</a></div>
+</details>
+</div>
+</footer>
+<script type=text/javascript>var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date;(function(){var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.async=!0,a.src='https://embed.tawk.to/59835f8ed1385b2b2e285765/default',a.charset='UTF-8',a.setAttribute('crossorigin','*'),b.parentNode.insertBefore(a,b)})()</script>
+</body>
+</html>

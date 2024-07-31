@@ -9,7 +9,7 @@ Buy Buckets
 <link rel=stylesheet type=text/css href=/css/buckets-mainpages.css>
 <link rel=alternate hreflang=es href=https://www.budgetwithbuckets.com/es/buy/>
 </head>
-<body>
+<body class=bigem>
 <div class=buckets-nav>
 <section>
 <a class=logo href=/>
@@ -17,7 +17,7 @@ Buy Buckets
 </a>
 <a href=/guide/>Guide</a>
 <a href=/blog/>Blog</a>
-<a target=_blank href=https://github.com/buckets/application/blob/master/CHANGELOG.md>Changelog</a>
+<a href=/changelog/>Changelog</a>
 <a target=_blank href=https://github.com/buckets/application/issues>Issue Tracker</a>
 </section>
 <section>
@@ -25,46 +25,72 @@ Buy Buckets
 <img src=/images/download.svg width=15 height=15>
 Download
 </a>
-<a class="buy-button active" href=/buy/>Buy $49</a>
+<a class="buy-button active" href=/buy/>Buy $64</a>
 </section>
 <a href=javascript:void(0); class=nav-toggle onclick="this.parentElement.classList.toggle('nav-open')">
 <img src=/img/logo.png>
 <div>Menu</div>
 </a>
 </div>
-<style>.main{max-width:30rem;padding:0 0 5rem;margin:0 auto}</style>
 <div class=main>
-<style>table.payment-options{width:100%;margin:0 auto;border-radius:3px;border:1px solid lightgrey}table.payment-options td{padding:1rem;vertical-align:middle;border-top:1px solid lightgrey}table.payment-options td:first-child{text-align:right;width:45%}table.payment-options td:last-child{text-align:left}table.payment-options tr:first-child td{border-top:0}.message{border:2px solid #2eaef1;color:#2eaef1;border-radius:3px;padding:.5rem;margin:2rem 0 1rem}.message.error{color:red;border-color:red}</style>
-<p class=callout style=text-align:center>
+<style>.payment-options{display:flex;width:100%;justify-content:stretch}.payment-options div{border:1px solid lightgrey;border-width:1px 1px 1px 0;padding:1.5rem 2rem;flex-basis:50%;text-align:center}.payment-options div:first-child{border-left-width:1px;border-radius:6px 0 0 6px}.payment-options div:last-child{border-radius:0 6px 6px 0}.address,.email{display:flex;font-size:.9rem;font-family:monospace;line-height:1.75rem;margin:1rem auto;padding:1rem;border-radius:5px;background:rgba(241,196,15,.2)}ol{padding-left:1em}p.banner{background-color:rgba(241,196,15,.3);font-style:italic;padding:1rem 3rem;margin-left:-3rem;margin-right:-3rem}@media(max-width:600px){p.banner{margin-left:0;margin-right:0;padding:1rem}}</style>
+<h1>Buy Buckets v1 License</h1>
+<div id=messages></div>
+<template id=product-mailedvoucher>
+<p>
+You are purchasing a <em><span class=price-display>$64 USD</span> license voucher</em>.
+After completing the purchase:
+</p>
+<ol>
+<li>
+We will <em>email</em> instructions to:
+<div class=email id=redemption-email></div>
+</li>
+<li>
+We will also <em>mail</em> a letter with a voucher code to this address exactly as written:
+<div class=address id=redemption-address></div>
+Are the line breaks correct?
+If something is wrong with this address, email us before paying.
+</li>
+</ol>
+</template>
+<div id=product-explanation>
+<p>
+For a <em>one-time <span class=price-display>$64 USD</span> payment</em>, you will be emailed a Buckets License.
+</p>
+</div>
+<p>
+Please note that since this is a one-time purchase, we cannot offer refunds.
+</p>
+<p>
 How do you want to pay?
 </p>
-<table class=payment-options>
-<tr>
-<td>Credit Card</td>
-<td>
-<form action=https://service.budgetwithbuckets.com/payments/stripe method=post>
-<script src=https://checkout.stripe.com/checkout.js class=stripe-button data-image=/images/logo.png data-key=pk_live_Wnk0BnoZxKPUkW03VR06TEq8 data-amount=4900 data-name=Buckets data-label="Buy Now" data-description="Buckets v1 License" data-zip-code=true data-billing-address=false data-locale=auto data-allow-remember-me=false></script>
+<div class=payment-options>
+<div>
+<form action=https://service.budgetwithbuckets.com/payments/stripe method=post id=stripe-form>
+<input type=hidden name=coupon>
 </form>
-</td>
-</tr>
-<tr>
-<td>PayPal</td>
-<td>
+</div>
+<div>
 <form method=post action=https://service.budgetwithbuckets.com/payments/paypal>
-<input type=image src=https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif border=0 alt="Buy now with PayPal">
+<input type=hidden name=coupon>
+<input type=image src=/images/paypal.png border=0 alt="Buy now with PayPal">
 </form>
-</td>
-</tr>
-</table>
+</div>
+</div>
 <p>
-For a <em>one-time $49 payment</em>, you will be emailed a Buckets License which may be used on any number of computers belonging to you and your immediate family members living in your home.
+A Buckets License may be used on any number of computers belonging to you and your immediate family members living in your home.
 </p>
 <p>
-If you've lost your license, email me at hello@budgetwithbuckets.com
+If you ever lose your license, email us at hello@budgetwithbuckets.com
 </p>
 <p>
-&mdash;Matt
+&mdash;Matt & Christy
 </p>
+<p style=margin-top:4rem id=ps-bread-link>
+P.S. If $64 is too much, we're testing out <a href=/bread/>Buckets by the Loaf</a> for some countries.
+</p>
+<script>let searchParams=new URLSearchParams(window.location.search),coupon=searchParams.get("coupon"),price="6400",user_email='';function centsToDecimal(b){b=Number(b);let a=b%100,c=Math.floor((b-a)/100);return a=(a+'00').substr(0,2),a==='00'?c:`${c}.${a}`}function addMessage(c,b){let a=document.createElement("div");a.innerText=c,a.classList.add("message"),b&&a.classList.add(b),document.getElementById('messages').appendChild(a)}function setValue(a,b){document.querySelectorAll(a).forEach(a=>{a.innerText=b})}async function main(){let b=document.getElementById('product-explanation');try{if(coupon){console.log("getting coupon details...");let d=document.getElementById('ps-bread-link');d.parentNode.removeChild(d);let e="https://service.budgetwithbuckets.com/check-coupon/"+coupon;console.log("fetching from",e);let c=await fetch(e),a={};try{a=await c.clone().json()}catch(a){throw console.error("Error parsing check-coupon response:",a),console.log("response: ",await c.clone().text()),a}if(c.ok)if(console.log("coupon details: ",a),user_email=a.email,b.innerHTML=document.getElementById('product-mailedvoucher').innerHTML,setValue('#redemption-email',user_email),setValue('#redemption-address',a.address),document.querySelectorAll('.coupon-message').forEach(a=>{a.classList.add('activated')}),document.querySelectorAll('input[name=coupon]').forEach(a=>{a.value=coupon}),price=a.price,price){let a='$'+centsToDecimal(price)+' USD';document.querySelectorAll('.price-display').forEach(b=>{b.innerText=a})}else price="6400";else addMessage(`Invalid coupon`,'error')}}catch(a){console.error(a),addMessage(`Invalid coupon`,'error')}let a=document.createElement('script');a.classList.add("stripe-button"),a.setAttribute("src","https://checkout.stripe.com/checkout.js"),a.setAttribute("data-image","/images/logo.png"),a.setAttribute("data-key","pk_live_Wnk0BnoZxKPUkW03VR06TEq8"),a.setAttribute("data-amount",price),a.setAttribute("data-name","Buckets"),a.setAttribute("data-label","Credit Card"),a.setAttribute("data-description","Buckets v1 License"),a.setAttribute("data-zip-code","true"),a.setAttribute("data-billing-address","false"),a.setAttribute("data-locale","auto"),a.setAttribute("data-allow-remember-me","false"),user_email&&a.setAttribute("data-email",user_email),document.getElementById("stripe-form").appendChild(a)}main()</script>
 </div>
 <div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
 </div>
@@ -72,7 +98,7 @@ If you've lost your license, email me at hello@budgetwithbuckets.com
 <div><a href=https://onepartrain.com target=_blank>&copy; One Part Rain, LLC</a></div>
 <div><a href=mailto:hello@budgetwithbuckets.com>hello@budgetwithbuckets.com</a></div>
 <div><a href=https://www.patreon.com/iffy target=_blank>Donate</a></div>
-<div><a href=https://github.com/buckets/policies/blob/master/privacy-policy.md target=_blank>Privacy</a></div>
+<div><a href=/guide/privacypolicy>Privacy</a></div>
 <div>
 <details>
 <summary>English</summary>

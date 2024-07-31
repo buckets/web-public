@@ -1,0 +1,93 @@
+<!doctype html><html>
+<head>
+<title>
+Buckets by the Loaf
+</title>
+<link rel="shortcut icon" href=/img/favicon.png type=image/png>
+<link rel=stylesheet type=text/css href=/css/buckets.css>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=stylesheet type=text/css href=/css/buckets-mainpages.css>
+<link rel=alternate hreflang=en href=https://www.budgetwithbuckets.com/bread/>
+</head>
+<body class=bigem>
+<div class=buckets-nav>
+<section>
+<a class=logo href=/es/>
+<img src=/img/logo.png>
+</a>
+<a href=/es/guide/>Guía</a>
+<a href=/blog/>Blog</a>
+<a href=/changelog/>Cambios</a>
+<a target=_blank href=https://github.com/buckets/application/issues>Cuestiones</a>
+</section>
+<section>
+<a class=download-button href=/es/download/>
+<img src=/images/download.svg width=15 height=15>
+Descargar
+</a>
+<a class=buy-button href=/es/buy/>Comprar $64</a>
+</section>
+<a href=javascript:void(0); class=nav-toggle onclick="this.parentElement.classList.toggle('nav-open')">
+<img src=/img/logo.png>
+<div>Menu</div>
+</a>
+</div>
+<div class=main>
+<style>input[type=text],select{display:block;padding:.5rem;font-size:1rem;width:100%;background-color:#fff;border:1px solid grey;border-radius:3px}form button{width:100%;padding:1rem}form label{margin-top:1.5rem;font-size:1.1rem;display:block;font-weight:700}form .explanation{font-weight:400;font-size:.9rem}textarea{padding:.5rem;font-size:1rem;width:100%;height:8rem;border:1px solid gray;border-radius:10px}.letter-background{background:url(/images/airmail.jpg);background-size:contain;background-repeat:no-repeat;width:30rem;height:16.5rem;padding:5rem 2rem 2rem 7rem;border:1px solid lightgrey;margin-bottom:2rem;box-shadow:0 25px 30px -8px rgba(0,0,0,.4);border-radius:6px}.form-message{background-color:#fff;border:2px solid #3498db;border-radius:3px;padding:.5rem;margin-top:.5rem}.error{color:#e74c3c;border-color:#e74c3c}</style>
+<h1>Buckets by the Loaf</h1>
+<p>
+For some of you, a Buckets license costs more than an <em>entire month's salary</em>.
+Paying so much for an application to help you manage your money doesn't make sense.
+</p>
+<p>
+So we're going to try something.
+Starting with a limited number of users from a few countries, we'll offer Buckets licenses for about the cost of 20 loaves of bread in that country.
+</p>
+<h2>Step 1: Apply to purchase</h2>
+<form method=post id=breadform action=https://service.budgetwithbuckets.com/bread/application>
+<label>
+Country
+<select autofocus name=country><option value>-- Choose --</option><option>Albania ($15.00)</option><option>Algeria ($6.20)</option><option>Argentina ($20.00)</option><option>Armenia ($10.00)</option><option>Azerbaijan ($10.00)</option><option>Bangladesh ($13.00)</option><option>Belarus ($11.00)</option><option>Bolivia ($25.00)</option><option>Bosnia And Herzegovina ($15.00)</option><option>Brazil ($25.00)</option><option>Bulgaria ($20.00)</option><option>Chile ($25.00)</option><option>Colombia ($16.00)</option><option>Croatia ($23.00)</option><option>Czech Republic ($25.00)</option><option>Ecuador ($31.00)</option><option>Egypt ($13.00)</option><option>El Salvador ($30.00)</option><option>Estonia ($20.00)</option><option>Ethiopia ($15.00)</option><option>Ghana ($19.00)</option><option>Greece ($20.00)</option><option>Honduras ($33.00)</option><option>Hungary ($20.00)</option><option>India ($10.00)</option><option>Indonesia ($23.00)</option><option>Iran ($11.00)</option><option>Iraq ($17.00)</option><option>Jordan ($10.00)</option><option>Kazakhstan ($7.00)</option><option>Kenya ($10.00)</option><option>Kosovo ($10.00)</option><option>Kuwait ($20.00)</option><option>Latvia ($25.00)</option><option>Lebanon ($25.00)</option><option>Libya ($13.00)</option><option>Lithuania ($25.00)</option><option>Madagascar ($20.00)</option><option>Malaysia ($16.00)</option><option>Malta ($27.00)</option><option>Mauritius ($15.00)</option><option>Moldova ($10.00)</option><option>Montenegro ($15.00)</option><option>Morocco ($12.00)</option><option>Nepal ($10.00)</option><option>Nigeria ($25.00)</option><option>North Macedonia ($10.00)</option><option>Oman ($21.00)</option><option>Pakistan ($10.00)</option><option>Palestine ($15.00)</option><option>Peru ($30.00)</option><option>Philippines ($25.00)</option><option>Poland ($20.00)</option><option>Portugal ($25.00)</option><option>Qatar ($30.00)</option><option>Romania ($20.00)</option><option>Russia ($15.00)</option><option>Saudi Arabia ($15.00)</option><option>Senegal ($6.20)</option><option>Serbia ($10.00)</option><option>Slovakia ($21.00)</option><option>Slovenia ($30.00)</option><option>South Africa ($20.00)</option><option>Spain ($23.00)</option><option>Sri Lanka ($10.00)</option><option>Syria ($15.00)</option><option>Thailand ($25.00)</option><option>Tunisia ($6.20)</option><option>Turkey ($10.00)</option><option>Ukraine ($13.00)</option><option>United Arab Emirates ($25.00)</option><option>Uzbekistan ($10.00)</option><option>Vietnam ($20.00)</option><option>Zimbabwe ($20.00)</option></select>
+</label>
+<label>
+Email address
+<input type=text name=email placeholder=guy@example.com>
+</label>
+<label>
+Postal address
+<div class=letter-background>
+<textarea rows=7 name=postal_address required placeholder="Mr. Banks
+1060 W Addison St
+Chicago, IL 60613
+USA"></textarea>
+</div>
+</label>
+<div>
+<button name=button id=form-button>Apply</button>
+</div>
+</form>
+<script>let form=document.getElementById('breadform');function clearMessages(){document.querySelectorAll(".form-message").forEach(a=>{a.parentNode.removeChild(a)})}function showMessage(c,d,b){let e=document.querySelector("*[name="+c+"]"),a=document.createElement('div');a.classList.add("form-message"),b&&a.classList.add(b),a.innerText=d,e.insertAdjacentElement('afterend',a)}function showError(a,b){showMessage(a,b,'error')}function asyncSubmit(a){clearMessages();let b=fetch(form.action,{method:'post',mode:'cors',body:new FormData(form)});return b.then(async a=>{let b=await a.json();if(console.log(b),console.log(a),a.ok){showMessage("button","Application submitted!");let a=document.getElementById("form-button");a.parentNode.removeChild(a)}else b.errors.forEach(a=>{showError(a.field,a.error)})}).catch(a=>{console.log("err",a),showError("button","Error")}),a.preventDefault(),!1}form.addEventListener('submit',asyncSubmit)</script>
+<h2>Step 2: Purchase</h2>
+<p>
+Once your application is approved, we'll <em>email</em> you a link to complete your purchase.
+After purchasing, we'll <em>mail</em> you a letter containing a code.
+Follow the emailed instructions to redeem your code for a Buckets License!
+</p>
+</div>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<footer>
+<div><a href=https://onepartrain.com target=_blank>&copy; One Part Rain, LLC</a></div>
+<div><a href=mailto:hello@budgetwithbuckets.com>hello@budgetwithbuckets.com</a></div>
+<div><a href=https://www.patreon.com/iffy target=_blank>Donar</a></div>
+<div><a href=/guide/privacypolicy>Privacidad</a></div>
+<div>
+<details>
+<summary>español</summary>
+<div><a href=/bread/>English</a></div>
+</details>
+</div>
+</footer>
+<script type=text/javascript>var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date;(function(){var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.async=!0,a.src='https://embed.tawk.to/59835f8ed1385b2b2e285765/default',a.charset='UTF-8',a.setAttribute('crossorigin','*'),b.parentNode.insertBefore(a,b)})()</script>
+</body>
+</html>

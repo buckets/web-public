@@ -17,7 +17,7 @@ What's Taking so Long on the Buckets Mobile App?
 </a>
 <a href=/es/guide/>Guía</a>
 <a class=active href=/blog/>Blog</a>
-<a target=_blank href=https://github.com/buckets/application/blob/master/CHANGELOG.md>Cambios</a>
+<a href=/changelog/>Cambios</a>
 <a target=_blank href=https://github.com/buckets/application/issues>Cuestiones</a>
 </section>
 <section>
@@ -25,7 +25,7 @@ What's Taking so Long on the Buckets Mobile App?
 <img src=/images/download.svg width=15 height=15>
 Descargar
 </a>
-<a class=buy-button href=/es/buy/>Comprar $49</a>
+<a class=buy-button href=/es/buy/>Comprar $64</a>
 </section>
 <a href=javascript:void(0); class=nav-toggle onclick="this.parentElement.classList.toggle('nav-open')">
 <img src=/img/logo.png>
@@ -74,7 +74,7 @@ Oct 20, 2020
 <li>Determining self-debt</li>
 <li>etc&mldr;</li>
 </ul>
-<p>It&rsquo;s important that the desktop and mobile app match <em>exactly.</em> It&rsquo;s not acceptable for one version of the application to say you have $1000 Rain and the other to say $999. While I&rsquo;ve explored <a href=/2018/12/13/making-an-app-2018.html>some methods</a> for sharing JavaScript code between desktop apps and mobile apps, after trying to make the mobile app with only JavaScript, it quickly became apparent that the code wasn&rsquo;t as portable as I hoped.</p>
+<p>It&rsquo;s important that the desktop and mobile app match <em>exactly.</em> It&rsquo;s not acceptable for one version of the application to say you have $1000 Rain and the other to say $999. While I&rsquo;ve explored [some methods]({{ relref &ldquo;../2018-12-13-making-an-app-2018/index.md&rdquo; }}) for sharing JavaScript code between desktop apps and mobile apps, after trying to make the mobile app with only JavaScript, it quickly became apparent that the code wasn&rsquo;t as portable as I hoped.</p>
 <p>So I&rsquo;ve been extracting segments of the JavaScript into the <a href=https://nim-lang.org/>Nim</a> language. Nim can emit both C (which is highly portable) and JavaScript. Some logic is also being pushed into SQLite.</p>
 <p>The process looks a bit like this now:</p>
 <style>@keyframes shrink{0%{transform:scale(1)}10%{transform:scale(.95)}100%{transform:scale(1)}}.shrink{animation:shrink 3s ease-out 1s infinite normal}@keyframes grow{0%{transform:scale(1)}10%{transform:scale(1.1)}100%{transform:scale(1)}}.grow{animation:grow 3s ease-out 2.5s infinite normal}</style><svg viewBox="0 0 600 200" width="600" height="200" xmlns="http://www.w3.org/2000/svg"><line x1="150" y1="60" x2="300" y2="60"/><line x1="50" y1="60" x2="100" y2="140"/><line x1="150" y1="60" x2="100" y2="140"/><line x1="100" y1="140" x2="300" y2="140"/><line x1="150" y1="60" x2="300" y2="140"/><line x1="100" y1="140" x2="300" y2="60"/><circle id="jstonim" r="5" cx="150" cy="60" class="nim jstonim"/><animate xlink:href="#jstonim" attributeName="cy" from="60" to="140" dur="3s" repeatCount="indefinite"/><animate xlink:href="#jstonim" attributeName="cx" from="150" to="100" dur="3s" repeatCount="indefinite"/><circle id="jstosqlite" r="5" cx="150" cy="60" class="sqlite jstosqlite"/><animate xlink:href="#jstosqlite" attributeName="cy" from="60" to="60" dur="3s" repeatCount="indefinite"/><animate xlink:href="#jstosqlite" attributeName="cx" from="150" to="50" dur="3s" repeatCount="indefinite"/><circle r="16" cx="50" cy="60" class="sqlite grow" style="transform-origin:50px 60px"/><text x="50" y="12" text-anchor="middle">SQLite</text><circle r="36" cx="150" cy="60" class="javascript shrink" style="transform-origin:150px 60px"/><text x="150" y="12" text-anchor="middle">JavaScript</text><circle r="16" cx="300" cy="60" class="desktop"/><text x="300" y="12" text-anchor="middle">Buckets Desktop</text><circle r="16" cx="100" cy="140" class="nim grow" style="transform-origin:100px 140px"/><text x="100" y="180" text-anchor="middle">Nim</text><circle r="16" cx="300" cy="140" class="mobile"/><text x="300" y="180" text-anchor="middle">Buckets Mobile</text></svg>
@@ -229,7 +229,7 @@ I'm loving Buckets so far and have been telling anyone who would listen about it
 <div><a href=https://onepartrain.com target=_blank>&copy; One Part Rain, LLC</a></div>
 <div><a href=mailto:hello@budgetwithbuckets.com>hello@budgetwithbuckets.com</a></div>
 <div><a href=https://www.patreon.com/iffy target=_blank>Donar</a></div>
-<div><a href=https://github.com/buckets/policies/blob/master/privacy-policy.md target=_blank>Privacidad</a></div>
+<div><a href=/guide/privacypolicy>Privacidad</a></div>
 <div>
 <details>
 <summary>español</summary>

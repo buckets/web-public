@@ -1,0 +1,183 @@
+<!doctype html><html>
+<head>
+<title>
+Short Term Roadmap
+</title>
+<link rel="shortcut icon" href=/img/favicon.png type=image/png>
+<link rel=stylesheet type=text/css href=/css/buckets.css>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=stylesheet type=text/css href=/css/buckets-blog.css>
+<link rel=alternate hreflang=es href=https://www.budgetwithbuckets.com/es/blog/2022/09/13/short-term-roadmap.html/>
+</head>
+<body>
+<div class=buckets-nav>
+<section>
+<a class=logo href=/>
+<img src=/img/logo.png>
+</a>
+<a href=/guide/>Guide</a>
+<a class=active href=/blog/>Blog</a>
+<a href=/changelog/>Changelog</a>
+<a target=_blank href=https://github.com/buckets/application/issues>Issue Tracker</a>
+</section>
+<section>
+<a class=download-button href=/download/>
+<img src=/images/download.svg width=15 height=15>
+Download
+</a>
+<a class=buy-button href=/buy/>Buy $64</a>
+</section>
+<a href=javascript:void(0); class=nav-toggle onclick="this.parentElement.classList.toggle('nav-open')">
+<img src=/img/logo.png>
+<div>Menu</div>
+</a>
+</div>
+<div class=wrapper>
+<div class=post>
+<header class=post-header>
+<div class=next-prev-links>
+<a class=prev href=/blog/2022/09/07/financial-lessons-for-kids.html/>&larr; Prev</a>
+<a class=next href=/blog/2022/12/19/december-update.html/>Next &rarr;</a>
+</div>
+<h1 class=blog-title>Short Term Roadmap</h1>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<p class=post-meta>
+Sep 13, 2022
+• Matt
+</p>
+</header>
+<article class=post-content>
+<p>Here&rsquo;s a quick update about the mobile apps and the short term plan for Buckets: the mobile apps, legal stuff, backups and more.</p>
+<p>The most exciting bit is: look for an iOS invite this week!</p>
+<img alt="Photo of a road" src=./road.jpg style=border-radius:6px>
+<div class=photo-credit>Photo by <a href="https://unsplash.com/@diegojimenez?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Diego Jimenez</a> on <a href="https://unsplash.com/s/photos/road?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></a>
+</div>
+<p>But first, a little celebration: we&rsquo;ve reached Inbox Zero! After the deluge of support requests and &ldquo;Chat with Matt&rdquo; messages from last November, we reworked how we go through them and have finally replied to every last one! We should be more responsive going forward.</p>
+<p>Okay, back to the upcoming plan:</p>
+<h2 id=summary>Summary<a class=anchor-link href=#summary>&para;</a></h2>
+<p>In summary, for the next little while, we&rsquo;re planning to:</p>
+<ul>
+<li>Release another version or two of the desktop app (this and next week)</li>
+<li>Release another iOS app for testing (this week)</li>
+<li>Implement automated backups (not this release, but the next one)</li>
+<li>Add the ability to merge two budget files from different devices.</li>
+<li>Support file-sharing services (e.g. Google Drive, iCloud, Dropbox, etc&mldr;) as a means to share budgets between devices</li>
+<li>Bring up the public relay server as another means to share between devices.</li>
+</ul>
+<p>In tandem with the above we&rsquo;re also going to fix some SimpleFIN syncing issues, do some End User License Agreement (EULA) and Privacy Policy updates and fix as many other bugs as possible.</p>
+<h2 id=ios-coming-this-week>iOS coming this week<a class=anchor-link href=#ios-coming-this-week>&para;</a></h2>
+<p>If you&rsquo;ve signed up to be a mobile app tester for iOS, you should be getting an invite later this week. <strong>Please upgrade to the latest version of Buckets</strong> before you attempt to connect your phone to the desktop version. It will <em>probably</em> work with older versions of Buckets Desktop, but it might not.</p>
+<p>I&rsquo;ve fixed several bugs in the original iOS app, upgraded to the latest SDK and am running it on my phone as a test. It&rsquo;s still read-only and incomplete, but the goal is to get it released generally by the end of the year, if not sooner.</p>
+<h2 id=automated-backups>Automated backups<a class=anchor-link href=#automated-backups>&para;</a></h2>
+<p>To make merging budget files work, we&rsquo;ll be making some changes to the budget database. While we will test things as best we can, now seems like the right time to finally implement automated backups of budget files. This way, if your budget file gets corrupted for whatever reason, you&rsquo;ll be able to restore from a backup!</p>
+<h2 id=merging-budget-files>Merging budget files<a class=anchor-link href=#merging-budget-files>&para;</a></h2>
+<p>Before we&rsquo;ll be able to update our budgets on the mobile app, Buckets needs a way to resolve incompatible changes made to the budget on different devices. For instance, if you kick your &ldquo;Doughnut&rdquo; bucket on your phone, but your wife renames it to &ldquo;Donut&rdquo; on her phone, you&rsquo;ll need to be able to tell Buckets which version of reality should continue.</p>
+<h2 id=file-sharing>File-sharing<a class=anchor-link href=#file-sharing>&para;</a></h2>
+<p>Once budget merging works, it will be a fairly simple task to support using third-party file sharing services to share your budget between devices! Right now, you have to be careful not to make changes in two places at once.</p>
+<h2 id=public-relay-server>Public relay server<a class=anchor-link href=#public-relay-server>&para;</a></h2>
+<p>Currently, you can only share budgets between devices on the same local network. Yes, yes, you could forward ports across the Internet and sync from anywhere, so I should say:</p>
+<p>My <em>mom</em> can only share budgets between devices on the same local network. And it&rsquo;s honestly a little cumbersome to set up. So we&rsquo;ll be hosting a public relay server that Buckets will use be default to sync between devices. You&rsquo;ll still be able to sync on your local network. The relay server will be open source, so you can host your own if you want.</p>
+<p>We haven&rsquo;t yet decided if the relay server will be available to all users or only to those with a license. If we do end up making it a payment-only service, it will <em>not</em> be a subscription! It will either be included with the normal Buckets license or free.</p>
+<h2 id=eula-and-privacy-policy-updates>EULA and Privacy Policy updates<a class=anchor-link href=#eula-and-privacy-policy-updates>&para;</a></h2>
+<p>We prepared a new EULA and Privacy Policy several years ago. The lawyer that helped us said that we needed to have everyone who uses the app accept them. I&rsquo;ll admit that I&rsquo;ve dragged my feet a bit because I love the current, very simple Privacy Policy.</p>
+<p>Anyway, in an upcoming version, you&rsquo;ll be prompted to accept them. Please look them over now and provide feedback if anything looks amiss. Either comment directly in the Pull Request (this is public), or else email <a href=mailto:hello@budgetwithbuckets.com>hello@budgetwithbuckets.com</a> (this is private).</p>
+<ol>
+<li>Privacy Policy: <a href=https://github.com/buckets/policies/blob/privacy-policy-apr2019/privacy-policy.md>Full text</a> • <a href=https://github.com/buckets/policies/pull/2/files>Differences</a> • <a href=https://github.com/buckets/policies/pull/2>Pull Request</a></li>
+<li>EULA: <a href=https://github.com/buckets/policies/blob/dbdf136d2239544674ae0929100a3877cabf3587/eula.md>Full text</a> • <a href=https://github.com/buckets/policies/pull/1>Pull Request</a></li>
+</ol>
+<h2 id=simplefin>SimpleFIN<a class=anchor-link href=#simplefin>&para;</a></h2>
+<p>When CSV and OFX file importing were revamped, SimpleFIN importing got left behind a little. So at some point during all this, we&rsquo;ll be revamping that as well to provide better error-reporting, more control over modifying incorrect data and more visibility into what&rsquo;s going on.</p>
+<h2 id=and-bugs-of-course>And bugs, of course<a class=anchor-link href=#and-bugs-of-course>&para;</a></h2>
+<p>We&rsquo;ll always make fixing bugs a priority. See the <a href=https://github.com/buckets/application/issues>issue tracker</a> to see the list of bugs.</p>
+<p>— Matt</p>
+</article>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<div class="next-prev-links close" style=margin-top:1rem>
+<a class=prev href=/blog/2022/09/07/financial-lessons-for-kids.html/>&larr; Prev</a>
+<a class=next href=/blog/2022/12/19/december-update.html/>Next &rarr;</a>
+</div>
+<h2 style=margin-top:2rem>Comments</h2>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/?s=64">
+<div>
+<div class=details>
+<div class=author>David</div>
+<div class=date>Wed Sep 14, 2022 12:48</div>
+</div>
+<div class=message>Good to see that work on the mobile apps (and the necessary stuff around it) is moving forward. Keep on the good work! :)</div>
+</div>
+</div>
+<div class=comment>
+<img src="https://www.gravatar.com/avatar/e7f7d8abd397d42feb2275052002f1ee?s=64">
+<div>
+<div class=details>
+<div class=author>Willy</div>
+<div class=date>Thu Sep 15, 2022 8:15</div>
+</div>
+<div class=message>Fantastic news! And funny timing for me - I’ve been building a simple web app of my own just to render a page of transactions. With the mobile app and especially iCloud sharing though, that need would be covered. </div>
+</div>
+</div>
+<div id=comment-form style=display:none>
+<a name=comment-form></a>
+<script>window.location.search.substr(1).indexOf('comment=submitted')!==-1&&document.write(`<div class="notification">Comment submitted!  Your comment will be posted here after being reviewed.</div>`)</script>
+<script>function setCommentStatus(b,c){const a=document.getElementById('comment-notification');a.innerText=b,a.setAttribute('class',c),a.setAttribute('style','')}function submitComment(c){const b=document.getElementById('comment-submit');b.disabled=!0,setCommentStatus('Submitting...','notification'),c.preventDefault();const d=document.getElementById('comment-message').value,e=document.getElementById('comment-email').value,f=document.getElementById('comment-name').value,g=document.getElementById('comment-slug').value,h={comment:d,email:e,name:f,subdir:g};let a=new XMLHttpRequest;a.addEventListener('load',a=>{setCommentStatus('Comment submitted!  Your comment will be posted here after being reviewed.','notification'),b.disabled=!1}),a.addEventListener('error',a=>{console.log('Error',a),setCommentStatus('Error submitting comment.  If it continues not to work, please email us.','notification error'),b.disabled=!1}),a.open('POST','https://7nd5a97217.execute-api.us-east-1.amazonaws.com/default/GitHubJekyllComments'),a.send(JSON.stringify(h))}XMLHttpRequest&&document.getElementById('comment-form').setAttribute('style','')</script>
+<form method=post class=comment-form onsubmit="return submitComment(event),!1">
+<input type=hidden id=comment-slug value=short-term-plan>
+<label>Name:<br><input id=comment-name type=text></label>
+<label>Email (optional&mdash;not displayed):<br><input id=comment-email type=email></label>
+<label>Message:</label>
+<textarea id=comment-message></textarea>
+<button type=submit id=comment-submit>Add comment</button>
+</form>
+<div id=comment-notification style=display:none></div>
+</div>
+<div class=mailing-list-main style=margin-top:2rem>
+<div class=mailing-list-title>Get these posts in your email, monthly:</div>
+<p>
+<link href=//cdn-images.mailchimp.com/embedcode/classic-10_7.css rel=stylesheet type=text/css>
+<style type=text/css>#mc_embed_signup{background:0 0;clear:left}#mc_embed_signup form{padding:0}#mc_embed_signup input{border-radius:3px}#mc_embed_signup input[type=submit]{background-color:#08c}</style>
+<div id=mc_embed_signup>
+<form action="https://bucketsisbetter.us8.list-manage.com/subscribe/post?u=bc109895c8df246ae54ad4d71&id=0960a6d05e" method=post id=mc-embedded-subscribe-form name=mc-embedded-subscribe-form class=validate target=_blank novalidate>
+<div id=mc_embed_signup_scroll>
+<div class=mc-field-group>
+<label for=mce-EMAIL>Email Address
+</label>
+<input type=email name=EMAIL class="required email" id=mce-EMAIL>
+</div>
+<div class=mc-field-group>
+<label for=mce-FNAME>First Name
+</label>
+<input type=text name=FNAME class=required id=mce-FNAME>
+</div>
+<div id=mce-responses class=clear>
+<div class=response id=mce-error-response style=display:none></div>
+<div class=response id=mce-success-response style=display:none></div>
+</div>
+<div style=position:absolute;left:-5000px aria-hidden=true><input type=text name=b_bc109895c8df246ae54ad4d71_0960a6d05e tabindex=-1></div>
+<div class=clear><input type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe class=button></div>
+</div>
+</form>
+</div>
+</p>
+</div>
+</div>
+</div>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<footer>
+<div><a href=https://onepartrain.com target=_blank>&copy; One Part Rain, LLC</a></div>
+<div><a href=mailto:hello@budgetwithbuckets.com>hello@budgetwithbuckets.com</a></div>
+<div><a href=https://www.patreon.com/iffy target=_blank>Donate</a></div>
+<div><a href=/guide/privacypolicy>Privacy</a></div>
+<div>
+<details>
+<summary>English</summary>
+<div><a href=/es/blog/2022/09/13/short-term-roadmap.html/>español</a></div>
+</details>
+</div>
+</footer>
+<script type=text/javascript>var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date;(function(){var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.async=!0,a.src='https://embed.tawk.to/59835f8ed1385b2b2e285765/default',a.charset='UTF-8',a.setAttribute('crossorigin','*'),b.parentNode.insertBefore(a,b)})()</script>
+</body>
+</html>

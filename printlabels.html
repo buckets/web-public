@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
+  <title>Label Printer</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Lato', sans-serif;
+    }
+    html, body {
+      width: 8.5in;
+      height: 11in;
+      background: #FFF;
+      overflow:visible;
+    }
+    body {
+      margin: 0.5in 0.5in;
+    }
+    .row {
+      width: 8in;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      justify-content: space-between;
+    }
+    .sticker {
+      border: 1px solid lightgrey;
+      width: 3.875in;
+      height: 2in;
+      padding: 0.1875in;
+      border-radius: 0.1875in;
+      overflow: hidden;
+      resize: none;
+      margin: 0;
+    }
+    .sticker:first-child {
+      padding-left: 0;
+    }
+    .sticker:last-child {
+      padding-right: 0;
+    }
+    @media print {
+      html, body {
+        margin: 0;
+      }
+      @page {
+        size: 8.5in 11in;
+        margin: 0.5in 0.25in;
+      }
+      .sticker {
+        border-color: white;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="row">
+    <textarea class="sticker"></textarea>
+    <textarea class="sticker"></textarea>
+  </div>
+  <div class="row">
+    <textarea class="sticker"></textarea>
+    <textarea class="sticker"></textarea>
+  </div>
+  <div class="row">
+    <textarea class="sticker"></textarea>
+    <textarea class="sticker"></textarea>
+  </div>
+  <div class="row">
+    <textarea class="sticker"></textarea>
+    <textarea class="sticker"></textarea>
+  </div>
+  <div class="row">
+    <textarea class="sticker"></textarea>
+    <textarea class="sticker"></textarea>
+  </div>
+</body>
+</html>
