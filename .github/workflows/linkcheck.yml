@@ -18,4 +18,4 @@ jobs:
         sleep 60
     - name: Check
       run: |
-        linkchecker www.budgetwithbuckets.com --no-status --check-extern --timeout=10 --ignore-url '^https://github.com/buckets/application/issues/'
+        linkchecker www.budgetwithbuckets.com --no-status --check-extern --timeout=10
