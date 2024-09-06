@@ -90,6 +90,9 @@ li {
   spadding-top: 1rem;
   padding-left: 1rem;
 }
+.post-listing-excerpt img {
+  max-width: 100%;
+}
 .post-listing.old .post-listing-meta {
   padding-top: 1rem;
 }
