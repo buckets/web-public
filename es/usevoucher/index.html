@@ -1,7 +1,7 @@
 <!doctype html><html>
 <head>
 <title>
-Redeem Voucher
+Canjear Cupón
 </title>
 <script defer src=https://stats.budgetwithbuckets.com/flow data-website-id=026e077d-2da2-412a-840f-faadf974afbc></script>
 <link rel="shortcut icon" href=/img/favicon.png type=image/png>
@@ -9,6 +9,7 @@ Redeem Voucher
 <meta name=viewport content="width=device-width,initial-scale=1">
 <link rel=stylesheet type=text/css href=/css/buckets-mainpages.css>
 <link rel=alternate hreflang=en href=https://www.budgetwithbuckets.com/usevoucher/>
+<link rel=alternate hreflang=fr href=https://www.budgetwithbuckets.com/fr/usevoucher/>
 </head>
 <body>
 <div class=buckets-nav>
@@ -34,21 +35,14 @@ Descargar
 </a>
 </div>
 <div class=main>
-<style>.voucher-wrap{perspective:2800px}.voucher-top{position:relative;transform:rotateX(-80deg);transform-origin:bottom center;background-color:#34495e;width:30rem;height:23rem;margin-bottom:0;border:1px solid lightgrey;background-color:#fff;border-radius:3px 3px 0 0;z-index:2;transition:transform .2s;background:#fff url(/images/logo.png);background-repeat:no-repeat;background-position:50%}.voucher-wrap:hover .voucher-top{transform:rotateX(-70deg)}.voucher-card{background:url(/images/voucherpostcard.png);background-repeat:no-repeat;background-size:cover;border-radius:3px;box-shadow:0 25px 30px -8px rgba(0,0,0,.4);display:flex;height:300px;margin-bottom:3rem;margin-top:0;position:relative;transform-origin:center center;transform-style:preserve-3d;transform:rotateX(15deg);transition:transform .3s;width:460px;z-index:1}.voucher-card input{background-color:#fff;border-radius:100px;border:6px solid #3498db;font-family:monospace;font-size:3rem;font-weight:900;height:63px;left:113px;position:absolute;text-align:center;top:134px;width:329px}.voucher-card input:focus{outline:none}</style>
-<h1>Redeem Voucher</h1>
-<div id=messages></div>
-<form method=post action=https://service.budgetwithbuckets.com/voucher/redeem autocomplete=off>
-<input type=hidden name=code1 id=code1>
-<div class=voucher-wrap>
-<div class=voucher-card>
-<input autofocus type=text name=code2 id=code2 maxlength=7>
-</div>
-</div>
-<div style=text-align:center>
-<button>Submit</button>
-</div>
-</form>
-<script>let searchParams=new URLSearchParams(window.location.search),code1=searchParams.get("code");document.getElementById('code1').value=code1;function showError(b){let a=document.createElement('div');a.innerText=b,a.classList.add('message'),a.classList.add('error'),document.getElementById('messages').appendChild(a)}let error=searchParams.get("error");error==="wrongcode"?showError('Invalid code'):error&&showError('Error')</script>
+</style>
+<h1>Canjear Cupón</h1>
+<p>
+Después de que compraste, cambiamos el sistema de cupones para hacerlo más rápido. Desafortunadamente, eso significa que necesitarás enviarnos tu código de cupón por correo. Por favor, responde al correo con el asunto "Buckets v1 License Voucher" o envía un correo a hello@budgetwithbuckets.com con tu código de cupón y te enviaremos tu licencia.
+</p>
+<p>
+¡Gracias por tu paciencia!
+</p>
 </div>
 <div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
 </div>
@@ -61,6 +55,7 @@ Descargar
 <details>
 <summary>español</summary>
 <div><a href=/usevoucher/>English</a></div>
+<div><a href=/fr/usevoucher/>français</a></div>
 </details>
 </div>
 </footer>

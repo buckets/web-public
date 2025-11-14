@@ -1,7 +1,7 @@
 <!doctype html><html>
 <head>
 <title>
-Buckets by the Loaf
+Buckets por el Pan
 </title>
 <script defer src=https://stats.budgetwithbuckets.com/flow data-website-id=026e077d-2da2-412a-840f-faadf974afbc></script>
 <link rel="shortcut icon" href=/img/favicon.png type=image/png>
@@ -9,6 +9,7 @@ Buckets by the Loaf
 <meta name=viewport content="width=device-width,initial-scale=1">
 <link rel=stylesheet type=text/css href=/css/buckets-mainpages.css>
 <link rel=alternate hreflang=en href=https://www.budgetwithbuckets.com/bread/>
+<link rel=alternate hreflang=fr href=https://www.budgetwithbuckets.com/fr/bread/>
 </head>
 <body class=bigem>
 <div class=buckets-nav>
@@ -35,45 +36,30 @@ Descargar
 </div>
 <div class=main>
 <style>input[type=text],select{display:block;padding:.5rem;font-size:1rem;width:100%;background-color:#fff;border:1px solid grey;border-radius:3px}form button{width:100%;padding:1rem}form label{margin-top:1.5rem;font-size:1.1rem;display:block;font-weight:700}form .explanation{font-weight:400;font-size:.9rem}textarea{padding:.5rem;font-size:1rem;width:100%;height:8rem;border:1px solid gray;border-radius:10px}.letter-background{background:url(/images/airmail.jpg);background-size:contain;background-repeat:no-repeat;width:30rem;height:16.5rem;padding:5rem 2rem 2rem 7rem;border:1px solid lightgrey;margin-bottom:2rem;box-shadow:0 25px 30px -8px rgba(0,0,0,.4);border-radius:6px}.form-message{background-color:#fff;border:2px solid #3498db;border-radius:3px;padding:.5rem;margin-top:.5rem}.error{color:#e74c3c;border-color:#e74c3c}</style>
-<h1>Buckets by the Loaf</h1>
+<h1>Buckets por el Pan</h1>
 <p>
-For some of you, a Buckets license costs more than an <em>entire month's salary</em>.
-Paying so much for an application to help you manage your money doesn't make sense.
+Para algunos de ustedes, una licencia de Buckets cuesta más que un <em>salario entero de un mes</em>.
+Pagar tanto por una aplicación para ayudarte a manejar tu dinero no tiene sentido.
 </p>
 <p>
-So we're going to try something.
-Starting with a limited number of users from a few countries, we'll offer Buckets licenses for about the cost of 20 loaves of bread in that country.
+Comenzando con algunos países, ofrecemos licencias de Buckets por aproximadamente el costo de 20 panes en ese país.
+Necesitarás usar una tarjeta de crédito emitida en el país donde vives.
 </p>
-<h2>Step 1: Apply to purchase</h2>
-<form method=post id=breadform action=https://service.budgetwithbuckets.com/bread/application>
+<p>
+Ten en cuenta que como esta es una compra única, no podemos ofrecer reembolsos.
+</p>
+<form action=https://service.budgetwithbuckets.com/payments/stripe method=post id=breadform>
 <label>
-Country
-<select autofocus name=country><option value>-- Choose --</option><option>Albania ($15.00)</option><option>Algeria ($6.20)</option><option>Argentina ($20.00)</option><option>Armenia ($10.00)</option><option>Azerbaijan ($10.00)</option><option>Bangladesh ($13.00)</option><option>Belarus ($11.00)</option><option>Bolivia ($25.00)</option><option>Bosnia And Herzegovina ($15.00)</option><option>Brazil ($25.00)</option><option>Bulgaria ($20.00)</option><option>Chile ($25.00)</option><option>Colombia ($16.00)</option><option>Croatia ($23.00)</option><option>Czech Republic ($25.00)</option><option>Ecuador ($31.00)</option><option>Egypt ($13.00)</option><option>El Salvador ($30.00)</option><option>Estonia ($20.00)</option><option>Ethiopia ($15.00)</option><option>Georgia ($10.00)</option><option>Ghana ($19.00)</option><option>Greece ($20.00)</option><option>Honduras ($33.00)</option><option>Hungary ($20.00)</option><option>India ($10.00)</option><option>Indonesia ($23.00)</option><option>Iran ($11.00)</option><option>Iraq ($17.00)</option><option>Jordan ($10.00)</option><option>Kazakhstan ($7.00)</option><option>Kenya ($10.00)</option><option>Kosovo ($10.00)</option><option>Kuwait ($20.00)</option><option>Latvia ($25.00)</option><option>Lebanon ($25.00)</option><option>Libya ($13.00)</option><option>Lithuania ($25.00)</option><option>Madagascar ($20.00)</option><option>Malaysia ($16.00)</option><option>Malta ($27.00)</option><option>Mauritius ($15.00)</option><option>Moldova ($10.00)</option><option>Montenegro ($15.00)</option><option>Morocco ($12.00)</option><option>Nepal ($10.00)</option><option>Nigeria ($25.00)</option><option>North Macedonia ($10.00)</option><option>Oman ($21.00)</option><option>Pakistan ($10.00)</option><option>Palestine ($15.00)</option><option>Peru ($30.00)</option><option>Philippines ($25.00)</option><option>Poland ($20.00)</option><option>Portugal ($25.00)</option><option>Qatar ($30.00)</option><option>Romania ($20.00)</option><option>Russia ($15.00)</option><option>Saudi Arabia ($15.00)</option><option>Senegal ($6.20)</option><option>Serbia ($10.00)</option><option>Slovakia ($21.00)</option><option>Slovenia ($30.00)</option><option>South Africa ($20.00)</option><option>Spain ($23.00)</option><option>Sri Lanka ($10.00)</option><option>Syria ($15.00)</option><option>Thailand ($25.00)</option><option>Tunisia ($6.20)</option><option>Turkey ($10.00)</option><option>Ukraine ($13.00)</option><option>United Arab Emirates ($25.00)</option><option>Uzbekistan ($10.00)</option><option>Vietnam ($20.00)</option><option>Zimbabwe ($20.00)</option></select>
+País y Precio
+<select autofocus required name=country id=countryselect><option value>-- Elegir --</option><option value=al>Albania ($15.00)</option><option value=dz>Algeria ($6.20)</option><option value=ar>Argentina ($20.00)</option><option value=am>Armenia ($10.00)</option><option value=az>Azerbaijan ($10.00)</option><option value=bd>Bangladesh ($13.00)</option><option value=by>Belarus ($11.00)</option><option value=bo>Bolivia ($25.00)</option><option value=ba>Bosnia and Herzegovina ($15.00)</option><option value=br>Brazil ($25.00)</option><option value=bg>Bulgaria ($20.00)</option><option value=cl>Chile ($25.00)</option><option value=co>Colombia ($16.00)</option><option value=hr>Croatia ($23.00)</option><option value=cz>Czech Republic ($25.00)</option><option value=ec>Ecuador ($31.00)</option><option value=eg>Egypt ($13.00)</option><option value=sv>El Salvador ($30.00)</option><option value=ee>Estonia ($20.00)</option><option value=et>Ethiopia ($15.00)</option><option value=ge>Georgia ($10.00)</option><option value=gh>Ghana ($19.00)</option><option value=gr>Greece ($20.00)</option><option value=hn>Honduras ($33.00)</option><option value=hu>Hungary ($20.00)</option><option value=in>India ($15.00)</option><option value=id>Indonesia ($23.00)</option><option value=ir>Iran ($11.00)</option><option value=iq>Iraq ($17.00)</option><option value=jo>Jordan ($10.00)</option><option value=kz>Kazakhstan ($7.00)</option><option value=ke>Kenya ($10.00)</option><option value=xk>Kosovo ($10.00)</option><option value=kw>Kuwait ($20.00)</option><option value=lv>Latvia ($25.00)</option><option value=lb>Lebanon ($25.00)</option><option value=ly>Libya ($13.00)</option><option value=lt>Lithuania ($25.00)</option><option value=mg>Madagascar ($20.00)</option><option value=my>Malaysia ($16.00)</option><option value=mt>Malta ($27.00)</option><option value=mu>Mauritius ($15.00)</option><option value=md>Moldova ($10.00)</option><option value=me>Montenegro ($15.00)</option><option value=ma>Morocco ($12.00)</option><option value=np>Nepal ($10.00)</option><option value=ng>Nigeria ($25.00)</option><option value=mk>North Macedonia ($10.00)</option><option value=om>Oman ($21.00)</option><option value=pk>Pakistan ($10.00)</option><option value=ps>Palestine ($15.00)</option><option value=pe>Peru ($30.00)</option><option value=ph>Philippines ($25.00)</option><option value=pl>Poland ($20.00)</option><option value=pt>Portugal ($25.00)</option><option value=qa>Qatar ($30.00)</option><option value=ro>Romania ($20.00)</option><option value=ru>Russia ($15.00)</option><option value=sa>Saudi Arabia ($15.00)</option><option value=sn>Senegal ($6.20)</option><option value=rs>Serbia ($10.00)</option><option value=sk>Slovakia ($21.00)</option><option value=si>Slovenia ($30.00)</option><option value=za>South Africa ($20.00)</option><option value=es>Spain ($23.00)</option><option value=lk>Sri Lanka ($10.00)</option><option value=sy>Syria ($15.00)</option><option value=th>Thailand ($25.00)</option><option value=tn>Tunisia ($6.20)</option><option value=tr>Turkey ($10.00)</option><option value=ua>Ukraine ($13.00)</option><option value=ae>United Arab Emirates ($25.00)</option><option value=uz>Uzbekistan ($10.00)</option><option value=vn>Vietnam ($20.00)</option><option value=zw>Zimbabwe ($20.00)</option></select>
 </label>
-<label>
-Email address
-<input type=text name=email placeholder=guy@example.com>
-</label>
-<label>
-Postal address
-<div class=letter-background>
-<textarea rows=7 name=postal_address required placeholder="Mr. Banks
-1060 W Addison St
-Chicago, IL 60613
-USA"></textarea>
-</div>
-</label>
-<div>
-<button name=button id=form-button>Apply</button>
+<div style=padding-bottom:1em>
 </div>
 </form>
-<script>let form=document.getElementById('breadform');function clearMessages(){document.querySelectorAll(".form-message").forEach(a=>{a.parentNode.removeChild(a)})}function showMessage(c,d,b){let e=document.querySelector("*[name="+c+"]"),a=document.createElement('div');a.classList.add("form-message"),b&&a.classList.add(b),a.innerText=d,e.insertAdjacentElement('afterend',a)}function showError(a,b){showMessage(a,b,'error')}function asyncSubmit(a){clearMessages();let b=fetch(form.action,{method:'post',mode:'cors',body:new FormData(form)});return b.then(async a=>{let b=await a.json();if(console.log(b),console.log(a),a.ok){showMessage("button","Application submitted!");let a=document.getElementById("form-button");a.parentNode.removeChild(a)}else b.errors.forEach(a=>{showError(a.field,a.error)})}).catch(a=>{console.log("err",a),showError("button","Error")}),a.preventDefault(),!1}form.addEventListener('submit',asyncSubmit)</script>
-<h2>Step 2: Purchase</h2>
 <p>
-Once your application is approved, we'll <em>email</em> you a link to complete your purchase.
-After purchasing, we'll <em>mail</em> you a letter containing a code.
-Follow the emailed instructions to redeem your code for a Buckets License!
+Si encuentras errores al hacer esta compra, por favor envíanos un correo a hello@budgetwithbuckets.com
 </p>
+<script>let s=document.createElement('script');s.classList.add("stripe-button"),s.setAttribute("src","https://checkout.stripe.com/checkout.js"),s.setAttribute("data-image","/images/logo.png"),s.setAttribute("data-key","pk_live_Wnk0BnoZxKPUkW03VR06TEq8"),s.setAttribute("data-name","Buckets"),s.setAttribute("data-label","Comprar Licencia"),s.setAttribute("data-description","Licencia de Buckets v1"),s.setAttribute("data-zip-code","false"),s.setAttribute("data-billing-address","true"),s.setAttribute("data-locale","auto"),s.setAttribute("data-allow-remember-me","true"),document.getElementById("breadform").appendChild(s)</script>
 </div>
 <div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
 </div>
@@ -86,6 +72,7 @@ Follow the emailed instructions to redeem your code for a Buckets License!
 <details>
 <summary>español</summary>
 <div><a href=/bread/>English</a></div>
+<div><a href=/fr/bread/>français</a></div>
 </details>
 </div>
 </footer>

@@ -1,0 +1,98 @@
+<!doctype html><html>
+<head>
+<title>
+Erreur d'achat
+</title>
+<script defer src=https://stats.budgetwithbuckets.com/flow data-website-id=026e077d-2da2-412a-840f-faadf974afbc></script>
+<link rel="shortcut icon" href=/img/favicon.png type=image/png>
+<link rel=stylesheet type=text/css href=/css/buckets.css>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=stylesheet type=text/css href=/css/buckets-mainpages.css>
+<link rel=alternate hreflang=en href=https://www.budgetwithbuckets.com/buy-error-post-charge/>
+<link rel=alternate hreflang=es href=https://www.budgetwithbuckets.com/es/buy-error-post-charge/>
+</head>
+<body class=bigem>
+<div class=buckets-nav>
+<section>
+<a class=logo href=/fr/>
+<img src=/img/logo.png>
+</a>
+<a href=/fr/guide/>Guide</a>
+<a href=/blog/>Blog</a>
+<a href=/changelog/>Journal des modifications</a>
+<a target=_blank href=https://github.com/buckets/application/issues>Suivi des incidents</a>
+</section>
+<section>
+<a class=download-button href=/fr/download/>
+<img src=/images/download.svg width=15 height=15>
+Télécharger
+</a>
+<a class=buy-button href=/fr/buy/>Acheter $64</a>
+</section>
+<a href=javascript:void(0); class=nav-toggle onclick="this.parentElement.classList.toggle('nav-open')">
+<img src=/img/logo.png>
+<div>Menu</div>
+</a>
+</div>
+<div class=main>
+<p class="message error">
+Il y a eu une erreur lors de la finalisation de l'achat. Votre carte <strong>a peut-être été facturée</strong>.
+Veuillez nous envoyer un e-mail à hello@budgetwithbuckets.com pour savoir ce qui s'est passé.
+</p>
+<style>.payment-options{display:flex;width:100%;justify-content:stretch}.payment-options div{border:1px solid lightgrey;border-width:1px 1px 1px 0;padding:1.5rem 2rem;flex-basis:50%;text-align:center}.payment-options div:first-child{border-left-width:1px;border-radius:6px 0 0 6px}.payment-options div:last-child{border-radius:0 6px 6px 0}</style>
+<h1>Acheter la Licence Buckets v1</h1>
+<div id=messages></div>
+<div>
+<p>
+Pour un <em>paiement unique de <span class=price-display>64 USD</span></em>, vous recevrez par e-mail une licence Buckets.
+</p>
+</div>
+<p>
+Veuillez noter que comme il s'agit d'un achat unique, nous ne pouvons pas offrir de remboursements.
+</p>
+<p>
+Comment voulez-vous payer ?
+</p>
+<div class=payment-options>
+<div>
+<form action=https://service.budgetwithbuckets.com/payments/stripe method=post id=stripe-form>
+</form>
+</div>
+<div>
+<form method=post action=https://service.budgetwithbuckets.com/payments/paypal>
+<input type=image src=/images/paypal.png border=0 alt="Buy now with PayPal">
+</form>
+</div>
+</div>
+<p>
+Une licence Buckets peut être utilisée sur n'importe quel nombre d'ordinateurs appartenant à vous et à vos membres de famille immédiats vivant chez vous.
+</p>
+<p>
+Si vous perdez jamais votre licence, envoyez-nous un e-mail à hello@budgetwithbuckets.com
+</p>
+<p>
+&mdash;Matt & Christy
+</p>
+<p style=margin-top:4rem id=ps-bread-link>
+P.S. Si 64 $ est trop, nous testons <a href=/fr/bread/>Buckets par la Miche</a> pour certains pays.
+</p>
+<script>let searchParams=new URLSearchParams(window.location.search),price="6400",user_email='';function centsToDecimal(b){b=Number(b);let a=b%100,c=Math.floor((b-a)/100);return a=(a+'00').substr(0,2),a==='00'?c:`${c}.${a}`}function addMessage(c,b){let a=document.createElement("div");a.innerText=c,a.classList.add("message"),b&&a.classList.add(b),document.getElementById('messages').appendChild(a)}function setValue(a,b){document.querySelectorAll(a).forEach(a=>{a.innerText=b})}async function main(){let a=document.createElement('script');a.classList.add("stripe-button"),a.setAttribute("src","https://checkout.stripe.com/checkout.js"),a.setAttribute("data-image","/images/logo.png"),a.setAttribute("data-key","pk_live_Wnk0BnoZxKPUkW03VR06TEq8"),a.setAttribute("data-amount",price),a.setAttribute("data-name","Buckets"),a.setAttribute("data-label","Carte de crédit"),a.setAttribute("data-description","Licence Buckets v1"),a.setAttribute("data-zip-code","true"),a.setAttribute("data-billing-address","false"),a.setAttribute("data-locale","auto"),a.setAttribute("data-allow-remember-me","false"),user_email&&a.setAttribute("data-email",user_email),document.getElementById("stripe-form").appendChild(a)}main()</script>
+</div>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<footer>
+<div><a href=https://onepartrain.com target=_blank data-umami-event=onepartrainlink>&copy; One Part Rain, LLC</a></div>
+<div><a href=mailto:hello@budgetwithbuckets.com>hello@budgetwithbuckets.com</a></div>
+<div><a href=https://www.patreon.com/iffy target=_blank data-umami-event=donatelink>Donner</a></div>
+<div><a href=/guide/privacypolicy>Confidentialité</a></div>
+<div>
+<details>
+<summary>français</summary>
+<div><a href=/buy-error-post-charge/>English</a></div>
+<div><a href=/es/buy-error-post-charge/>español</a></div>
+</details>
+</div>
+</footer>
+<script type=text/javascript>var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date;(function(){var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.async=!0,a.src='https://embed.tawk.to/59835f8ed1385b2b2e285765/default',a.charset='UTF-8',a.setAttribute('crossorigin','*'),b.parentNode.insertBefore(a,b)})()</script>
+</body>
+</html>

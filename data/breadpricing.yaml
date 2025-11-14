@@ -1,75 +1,75 @@
-Albania: "15.00"
-Algeria: "6.20"
-Argentina: "20.00"
-Armenia: "10.00"
-Azerbaijan: "10.00"
-Bangladesh: "13.00"
-Belarus: "11.00"
-Bolivia: "25.00"
-Bosnia And Herzegovina: "15.00"
-Brazil: "25.00"
-Bulgaria: "20.00"
-Chile: "25.00"
-Colombia: "16.00"
-Croatia: "23.00"
-Czech Republic: "25.00"
-Ecuador: "31.00"
-Egypt: "13.00"
-El Salvador: "30.00"
-Estonia: "20.00"
-Ethiopia: "15.00"
-Georgia: "10.00"
-Ghana: "19.00"
-Greece: "20.00"
-Honduras: "33.00"
-Hungary: "20.00"
-India: "10.00"
-Indonesia: "23.00"
-Iran: "11.00"
-Iraq: "17.00"
-Jordan: "10.00"
-Kazakhstan: "7.00"
-Kenya: "10.00"
-Kosovo: "10.00"
-Kuwait: "20.00"
-Latvia: "25.00"
-Lebanon: "25.00"
-Libya: "13.00"
-Lithuania: "25.00"
-Madagascar: "20.00"
-Malaysia: "16.00"
-Malta: "27.00"
-Mauritius: "15.00"
-Moldova: "10.00"
-Montenegro: "15.00"
-Morocco: "12.00"
-Nepal: "10.00"
-Nigeria: "25.00"
-North Macedonia: "10.00"
-Oman: "21.00"
-Pakistan: "10.00"
-Palestine: "15.00"
-Peru: "30.00"
-Philippines: "25.00"
-Poland: "20.00"
-Portugal: "25.00"
-Qatar: "30.00"
-Romania: "20.00"
-Russia: "15.00"
-Saudi Arabia: "15.00"
-Senegal: "6.20"
-Serbia: "10.00"
-Slovakia: "21.00"
-Slovenia: "30.00"
-South Africa: "20.00"
-Spain: "23.00"
-Sri Lanka: "10.00"
-Syria: "15.00"
-Thailand: "25.00"
-Tunisia: "6.20"
-Turkey: "10.00"
-Ukraine: "13.00"
-United Arab Emirates: "25.00"
-Uzbekistan: "10.00"
-Vietnam: "20.00"
-Zimbabwe: "20.00"
+Albania: ["15.00", "al"]
+Algeria: ["6.20", "dz"]
+Argentina: ["20.00", "ar"]
+Armenia: ["10.00", "am"]
+Azerbaijan: ["10.00", "az"]
+Bangladesh: ["13.00", "bd"]
+Belarus: ["11.00", "by"]
+Bolivia: ["25.00", "bo"]
+Bosnia and Herzegovina: ["15.00", "ba"]
+Brazil: ["25.00", "br"]
+Bulgaria: ["20.00", "bg"]
+Chile: ["25.00", "cl"]
+Colombia: ["16.00", "co"]
+Croatia: ["23.00", "hr"]
+Czech Republic: ["25.00", "cz"]
+Ecuador: ["31.00", "ec"]
+Egypt: ["13.00", "eg"]
+El Salvador: ["30.00", "sv"]
+Estonia: ["20.00", "ee"]
+Ethiopia: ["15.00", "et"]
+Georgia: ["10.00", "ge"]
+Ghana: ["19.00", "gh"]
+Greece: ["20.00", "gr"]
+Honduras: ["33.00", "hn"]
+Hungary: ["20.00", "hu"]
+India: ["15.00", "in"]
+Indonesia: ["23.00", "id"]
+Iran: ["11.00", "ir"]
+Iraq: ["17.00", "iq"]
+Jordan: ["10.00", "jo"]
+Kazakhstan: ["7.00", "kz"]
+Kenya: ["10.00", "ke"]
+Kosovo: ["10.00", "xk"]
+Kuwait: ["20.00", "kw"]
+Latvia: ["25.00", "lv"]
+Lebanon: ["25.00", "lb"]
+Libya: ["13.00", "ly"]
+Lithuania: ["25.00", "lt"]
+Madagascar: ["20.00", "mg"]
+Malaysia: ["16.00", "my"]
+Malta: ["27.00", "mt"]
+Mauritius: ["15.00", "mu"]
+Moldova: ["10.00", "md"]
+Montenegro: ["15.00", "me"]
+Morocco: ["12.00", "ma"]
+Nepal: ["10.00", "np"]
+Nigeria: ["25.00", "ng"]
+North Macedonia: ["10.00", "mk"]
+Oman: ["21.00", "om"]
+Pakistan: ["10.00", "pk"]
+Palestine: ["15.00", "ps"]
+Peru: ["30.00", "pe"]
+Philippines: ["25.00", "ph"]
+Poland: ["20.00", "pl"]
+Portugal: ["25.00", "pt"]
+Qatar: ["30.00", "qa"]
+Romania: ["20.00", "ro"]
+Russia: ["15.00", "ru"]
+Saudi Arabia: ["15.00", "sa"]
+Senegal: ["6.20", "sn"]
+Serbia: ["10.00", "rs"]
+Slovakia: ["21.00", "sk"]
+Slovenia: ["30.00", "si"]
+South Africa: ["20.00", "za"]
+Spain: ["23.00", "es"]
+Sri Lanka: ["10.00", "lk"]
+Syria: ["15.00", "sy"]
+Thailand: ["25.00", "th"]
+Tunisia: ["6.20", "tn"]
+Turkey: ["10.00", "tr"]
+Ukraine: ["13.00", "ua"]
+United Arab Emirates: ["25.00", "ae"]
+Uzbekistan: ["10.00", "uz"]
+Vietnam: ["20.00", "vn"]
+Zimbabwe: ["20.00", "zw"]
