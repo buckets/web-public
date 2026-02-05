@@ -49,19 +49,9 @@ Pour un <em>paiement unique de <span class=price-display>64 USD</span></em>, vou
 <p>
 Veuillez noter que comme il s'agit d'un achat unique, nous ne pouvons pas offrir de remboursements.
 </p>
-<p>
-Comment voulez-vous payer ?
-</p>
-<div class=payment-options>
-<div>
+<div style=text-align:center>
 <form action=https://service.budgetwithbuckets.com/payments/stripe method=post id=stripe-form>
 </form>
-</div>
-<div>
-<form method=post action=https://service.budgetwithbuckets.com/payments/paypal>
-<input type=image src=/images/paypal.png border=0 alt="Buy now with PayPal">
-</form>
-</div>
 </div>
 <p>
 Une licence Buckets peut être utilisée sur n'importe quel nombre d'ordinateurs appartenant à vous et à vos membres de famille immédiats vivant chez vous.
@@ -75,7 +65,7 @@ Si vous perdez jamais votre licence, envoyez-nous un e-mail à hello@budgetwithb
 <p style=margin-top:4rem id=ps-bread-link>
 P.S. Si 64 $ est trop, nous testons <a href=/fr/bread/>Buckets par la Miche</a> pour certains pays.
 </p>
-<script>let searchParams=new URLSearchParams(window.location.search),price="6400",user_email='';function centsToDecimal(b){b=Number(b);let a=b%100,c=Math.floor((b-a)/100);return a=(a+'00').substr(0,2),a==='00'?c:`${c}.${a}`}function addMessage(c,b){let a=document.createElement("div");a.innerText=c,a.classList.add("message"),b&&a.classList.add(b),document.getElementById('messages').appendChild(a)}function setValue(a,b){document.querySelectorAll(a).forEach(a=>{a.innerText=b})}async function main(){let a=document.createElement('script');a.classList.add("stripe-button"),a.setAttribute("src","https://checkout.stripe.com/checkout.js"),a.setAttribute("data-image","/images/logo.png"),a.setAttribute("data-key","pk_live_Wnk0BnoZxKPUkW03VR06TEq8"),a.setAttribute("data-amount",price),a.setAttribute("data-name","Buckets"),a.setAttribute("data-label","Carte de crédit"),a.setAttribute("data-description","Licence Buckets v1"),a.setAttribute("data-zip-code","true"),a.setAttribute("data-billing-address","false"),a.setAttribute("data-locale","auto"),a.setAttribute("data-allow-remember-me","false"),user_email&&a.setAttribute("data-email",user_email),document.getElementById("stripe-form").appendChild(a)}main()</script>
+<script>let searchParams=new URLSearchParams(window.location.search),price="6400",user_email='';function centsToDecimal(b){b=Number(b);let a=b%100,c=Math.floor((b-a)/100);return a=(a+'00').substr(0,2),a==='00'?c:`${c}.${a}`}function addMessage(c,b){let a=document.createElement("div");a.innerText=c,a.classList.add("message"),b&&a.classList.add(b),document.getElementById('messages').appendChild(a)}function setValue(a,b){document.querySelectorAll(a).forEach(a=>{a.innerText=b})}async function main(){let a=document.createElement('script');a.classList.add("stripe-button"),a.setAttribute("src","https://checkout.stripe.com/checkout.js"),a.setAttribute("data-image","/images/logo.png"),a.setAttribute("data-key","pk_live_Wnk0BnoZxKPUkW03VR06TEq8"),a.setAttribute("data-amount",price),a.setAttribute("data-name","Buckets"),a.setAttribute("data-label","Buy Now"),a.setAttribute("data-description","Licence Buckets v1"),a.setAttribute("data-zip-code","true"),a.setAttribute("data-billing-address","false"),a.setAttribute("data-locale","auto"),a.setAttribute("data-allow-remember-me","false"),user_email&&a.setAttribute("data-email",user_email),document.getElementById("stripe-form").appendChild(a)}main()</script>
 </div>
 <div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
 </div>
