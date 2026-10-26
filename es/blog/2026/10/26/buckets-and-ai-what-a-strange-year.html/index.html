@@ -1,0 +1,154 @@
+<!doctype html><html>
+<head>
+<title>
+Buckets and AI: What a Strange Year
+</title>
+<script defer src=https://stats.budgetwithbuckets.com/flow data-website-id=026e077d-2da2-412a-840f-faadf974afbc></script>
+<link rel="shortcut icon" href=/img/favicon.png type=image/png>
+<link rel=stylesheet type=text/css href=/css/buckets.css>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=stylesheet type=text/css href=/css/buckets-blog.css>
+<link rel=alternate hreflang=en href=https://www.budgetwithbuckets.com/blog/2026/10/26/buckets-and-ai-what-a-strange-year.html/>
+<link rel=alternate hreflang=fr href=https://www.budgetwithbuckets.com/fr/blog/2026/10/26/buckets-and-ai-what-a-strange-year.html/>
+</head>
+<body>
+<div class=buckets-nav>
+<section>
+<a class=logo href=/es/>
+<img src=/img/logo.png>
+</a>
+<a href=/es/guide/>Guía</a>
+<a class=active href=/blog/>Blog</a>
+<a href=/changelog/>Cambios</a>
+<a target=_blank href=https://github.com/buckets/application/issues>Cuestiones</a>
+</section>
+<section>
+<a class=download-button href=/es/download/>
+<img src=/images/download.svg width=15 height=15>
+Descargar
+</a>
+<a class=buy-button href=/es/buy/>Comprar $64</a>
+</section>
+<a href=javascript:void(0); class=nav-toggle onclick="this.parentElement.classList.toggle('nav-open')">
+<img src=/img/logo.png>
+<div>Menu</div>
+</a>
+</div>
+<div class=wrapper>
+<div class=post>
+<header class=post-header>
+<div class=next-prev-links>
+<a class=prev href=/es/blog/2025/11/14/buckets-by-the-loaf-now-simpler.html/>&larr; Prev</a>
+</div>
+<h1 class=blog-title>Buckets and AI: What a Strange Year</h1>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<p class=post-meta>
+Oct 26, 2026
+• Matt
+</p>
+</header>
+<article class=post-content>
+<p>The landscape of technology has changed dramatically over the last year. I wanted to provide an update on Buckets and ask your opinion on some things.</p>
+<p>The short summary is: sorry for the slow development of Buckets lately. We&rsquo;ve been busy, but we&rsquo;re still here and I&rsquo;m excited for the future. And we want your thoughts on AI.</p>
+<img alt="Photo of a starry sky" src=./moonsplash.jpg style=border-radius:6px>
+<div class=photo-credit>Photo by <a href="https://unsplash.com/@vorosbenisop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Benjamin Voros</a> on <a href="https://unsplash.com/photos/crescent-moon-above-mountain-U-Kty6HxcQc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></a>
+</div>
+<h2 id=putting-out-fires>Putting out fires<a class=anchor-link href=#putting-out-fires>&para;</a></h2>
+<p>First, many people use <a href=https://bridge.simplefin.org>the SimpleFIN Bridge</a> to connect Buckets to their bank accounts. We operate the SimpleFIN Bridge and its use has grown a bit over the last year, necessitating a lot of changes and attention to keep it running smoothly. Most of my time has been sucked into putting out fires there. Thankfully, while there&rsquo;s still some things to do, I foresee more time for Buckets on the horizon.</p>
+<h2 id=the-artificial-elephant-in-the-room>The artificial elephant in the room<a class=anchor-link href=#the-artificial-elephant-in-the-room>&para;</a></h2>
+<p>Artificial Intelligence (AI) has become exponentially more powerful in the last year, mostly in the form of Large Language Models (LLMs). About 2 years ago, a friend asked me if AI could help him make a medical training app. I answered along the lines of &ldquo;No, it will get you frustratingly close, but never deliver on whatever initial promise you see.&rdquo; I just told him a few weeks ago, &ldquo;It could do it now.&rdquo; It&rsquo;s surreal how quickly LLMs have improved.</p>
+<p>How does this affect Buckets? Well, that&rsquo;s a decision. And it&rsquo;s a decision we&rsquo;re not taking lightly. So I&rsquo;ve been doing some research&mldr;</p>
+<h2 id=ai-experiments>AI Experiments<a class=anchor-link href=#ai-experiments>&para;</a></h2>
+<p>Though I&rsquo;ve dabbled with AI since ChatGPT burst onto the scene, I&rsquo;ve largely used AI as an assistant and advisor—I ask it specific questions about pieces of code or services and incorpoate its response into my projects. But about 6 months ago, I decided to see what 100% AI would look like on 3 different projects.</p>
+<h3 id=1-bearcad>1. BearCAD<a class=anchor-link href=#1-bearcad>&para;</a></h3>
+<img alt="Logo for BearCAD" src=./bearcad.png style=float:left;width:128px;margin:.5rem>
+<p><a href=https://bearcad.com/>BearCAD</a> lets you make models for 3D printing and technical drawings of mechanical parts or structures. This app is 100% AI-made. While buidling our chicken coop, designed in other software, I was frustrated by the limitations of both free and paid apps, so building a CAD app seemed like a great way to test AI. I have intentionally not looked at the source code and I&rsquo;m amazed at how good it is. It&rsquo;s not perfect. It&rsquo;s 90% great, though. I&rsquo;m specifically impressed with the UI polish it has.</p>
+<p>From building that, I&rsquo;ve learned that testability is crucial. An LLM will lie to your face about what it built and if you have no way to independently test it, it will bite you.</p>
+<h3 id=2-invoicing>2. Invoicing<a class=anchor-link href=#2-invoicing>&para;</a></h3>
+<p>The second AI-produced app is a custom invoicing app for my friend&rsquo;s business. I looked more at the code on this one, but it&rsquo;s still very much AI-built. It generates beautiful PDFs, tracks all kinds of numbers and dates, reads uploaded receipts, etc&mldr; The realization here was: I&rsquo;m a capable enough programmer that I could have built every feature, but it would have taken me probably 10x as long. Being able to think, &ldquo;it would be cool if the app didn&rsquo;t just save receipts but read them too&rdquo; and then have that feature appear is empowering.</p>
+<p>I also learned from building that app, that while anyone <em>can</em> make an app nowadays, expertise and knowledge of how computers work is still valuable. After adding an account-balance tracking feature, I realized that there was a chance the app would get slower over time (because of my prior experience with databases). I asked the coding agent if that was the case. It was, and the agent fixed it.</p>
+<h3 id=3-counting-carrots>3. Counting Carrots<a class=anchor-link href=#3-counting-carrots>&para;</a></h3>
+<img alt="Logo for Counting Carrots" src=./carrots.png style=float:left;width:128px;margin:.5rem>
+<p><a href=https://countingcarrots.com>Counting Carrots</a> is the most recent experiment. And I&rsquo;m impressed. This app could be seen as a kind of &ldquo;Buckets for Business.&rdquo; Like Buckets, you can create budgets and categorize transactions to track expenses and income. In the same spirit as Buckets, the app lives on my computer and doesn&rsquo;t require an internet connection. But most importantly for me, Counting Carrots computes payroll taxes and helps filing payroll tax forms.</p>
+<p>Building this app has reinforced an idea regarding AI that keeps tugging at me: <strong>cleaning up manmade messes.</strong> I&rsquo;m a problem-solver at heart. I love fixing broken things. The challenge of overcoming an obstacle is invigorating. But I get a lot more satisfaction out of fixing real problems. Natural problems. The knowledge I gain from learning how to garden or build a chicken coop or play a sport is infinitely more rewarding than, say, figuring out how much I owe for social security. Tax law&rsquo;s complexity is a manmade mess. I find less joy in overcoming the messes created and sustained by others because I can&rsquo;t shake the feeling of: why make the mess in the first place?</p>
+<p>It feels a bit like walking behind someone dropping banana peels.</p>
+<p>I first encountered this when setting up code signing for Windows for Buckets. Without AI, I would have had to become an expert on the complexity juggernaut that is Microsoft Azure Portal. Why should I spend effort becoming an expert in that? It&rsquo;s needlessly complex. I feel so good about asking AI to solve that mess for me. Likewise, I&rsquo;m glad to have AI consume and compile tax law.</p>
+<p>Lastly, the transactions-view amd categorizing in Counting Carrots is frankly more user-friendly than Buckets. Seeing this emerge (I didn&rsquo;t have to be very explicit in my prompting to get a great result) has really caused me to consider using AI for Buckets. It&rsquo;s like I&rsquo;m digging a hole with a shovel and someone offers a backhoe.</p>
+<h2 id=buckets--ai>Buckets + AI?<a class=anchor-link href=#buckets--ai>&para;</a></h2>
+<p>Now I want to know your thoughts! I&rsquo;m leaning toward using AI to help develop more features in Buckets, but not embedding AI features inside Buckets. How do you feel about it?</p>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScb_iUrqiLFpNYYwRHba4UkJl2HS4M0NQyTxtuGU8Aa7sNAzw/viewform?embedded=true" width=640 height=700 frameborder=0 marginheight=0 marginwidth=0>Loading…</iframe>
+<h2 id=theres-a-person-here>There&rsquo;s a person here<a class=anchor-link href=#theres-a-person-here>&para;</a></h2>
+<p>We&rsquo;ve seen some amazing things from AI and we&rsquo;re going to see even more shocking things. Regardless of what&rsquo;s coming, I want you to know that we&rsquo;re still here. We love Buckets and love working on Buckets. I personally love making an app that has helped so many people. AI can&rsquo;t replace that.</p>
+<p>Happy Budgeting!</p>
+<p>— Matt</p>
+</article>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<div class="next-prev-links close" style=margin-top:1rem>
+<a class=prev href=/es/blog/2025/11/14/buckets-by-the-loaf-now-simpler.html/>&larr; Prev</a>
+</div>
+<h2 style=margin-top:2rem>Comments</h2>
+<div id=comment-form style=display:none>
+<a name=comment-form></a>
+<script>window.location.search.substr(1).indexOf('comment=submitted')!==-1&&document.write(`<div class="notification">Comment submitted!  Your comment will be posted here after being reviewed.</div>`)</script>
+<script>function setCommentStatus(b,c){const a=document.getElementById('comment-notification');a.innerText=b,a.setAttribute('class',c),a.setAttribute('style','')}function submitComment(c){const b=document.getElementById('comment-submit');b.disabled=!0,setCommentStatus('Submitting...','notification'),c.preventDefault();const d=document.getElementById('comment-message').value,e=document.getElementById('comment-email').value,f=document.getElementById('comment-name').value,g=document.getElementById('comment-slug').value,h={comment:d,email:e,name:f,subdir:g};let a=new XMLHttpRequest;a.addEventListener('load',a=>{setCommentStatus('Comment submitted!  Your comment will be posted here after being reviewed.','notification'),b.disabled=!1}),a.addEventListener('error',a=>{console.log('Error',a),setCommentStatus('Error submitting comment.  If it continues not to work, please email us.','notification error'),b.disabled=!1}),a.open('POST','https://7nd5a97217.execute-api.us-east-1.amazonaws.com/default/GitHubJekyllComments'),a.send(JSON.stringify(h))}XMLHttpRequest&&document.getElementById('comment-form').setAttribute('style','')</script>
+<form method=post class=comment-form onsubmit="return submitComment(event),!1">
+<input type=hidden id=comment-slug value=what-a-year>
+<label>Name:<br><input id=comment-name type=text></label>
+<label>Email (optional&mdash;not displayed):<br><input id=comment-email type=email></label>
+<label>Message:</label>
+<textarea id=comment-message></textarea>
+<button type=submit id=comment-submit>Add comment</button>
+</form>
+<div id=comment-notification style=display:none></div>
+</div>
+<div class=mailing-list-main style=margin-top:2rem>
+<div class=mailing-list-title>Get these posts in your email, monthly:</div>
+<p>
+<link href=//cdn-images.mailchimp.com/embedcode/classic-10_7.css rel=stylesheet type=text/css>
+<style type=text/css>#mc_embed_signup{background:0 0;clear:left}#mc_embed_signup form{padding:0}#mc_embed_signup input{border-radius:3px}#mc_embed_signup input[type=submit]{background-color:#08c}</style>
+<div id=mc_embed_signup>
+<form action="https://bucketsisbetter.us8.list-manage.com/subscribe/post?u=bc109895c8df246ae54ad4d71&id=0960a6d05e" method=post id=mc-embedded-subscribe-form name=mc-embedded-subscribe-form class=validate target=_blank novalidate>
+<div id=mc_embed_signup_scroll>
+<div class=mc-field-group>
+<label for=mce-EMAIL>Email Address
+</label>
+<input type=email name=EMAIL class="required email" id=mce-EMAIL>
+</div>
+<div class=mc-field-group>
+<label for=mce-FNAME>First Name
+</label>
+<input type=text name=FNAME class=required id=mce-FNAME>
+</div>
+<div id=mce-responses class=clear>
+<div class=response id=mce-error-response style=display:none></div>
+<div class=response id=mce-success-response style=display:none></div>
+</div>
+<div style=position:absolute;left:-5000px aria-hidden=true><input type=text name=b_bc109895c8df246ae54ad4d71_0960a6d05e tabindex=-1></div>
+<div class=clear><input type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe class=button></div>
+</div>
+</form>
+</div>
+</p>
+</div>
+</div>
+</div>
+<div style=text-align:center;margin-top:2rem><svg viewBox="0 0 600 15" xmlns="http://www.w3.org/2000/svg" style="max-width:800px"><rect x="20%" y="7" width="60%" height="1" fill="lightgrey" rx="2"/><rect class="rotate" x="50%" y="4" width="7" height="7" fill="#fff" stroke="lightgrey" stroke-width="1" rx="1"/></svg>
+</div>
+<footer>
+<div><a href=https://onepartrain.com target=_blank data-umami-event=onepartrainlink>&copy; One Part Rain, LLC</a></div>
+<div><a href=mailto:hello@budgetwithbuckets.com>hello@budgetwithbuckets.com</a></div>
+<div><a href=https://www.patreon.com/iffy target=_blank data-umami-event=donatelink>Donar</a></div>
+<div><a href=/guide/privacypolicy>Privacidad</a></div>
+<div>
+<details>
+<summary>español</summary>
+<div><a href=/blog/2026/10/26/buckets-and-ai-what-a-strange-year.html/>English</a></div>
+<div><a href=/fr/blog/2026/10/26/buckets-and-ai-what-a-strange-year.html/>français</a></div>
+</details>
+</div>
+</footer>
+<script type=text/javascript>var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date;(function(){var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.async=!0,a.src='https://embed.tawk.to/59835f8ed1385b2b2e285765/default',a.charset='UTF-8',a.setAttribute('crossorigin','*'),b.parentNode.insertBefore(a,b)})()</script>
+</body>
+</html>
